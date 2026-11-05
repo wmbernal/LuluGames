@@ -1,0 +1,380 @@
+.game-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.game-page {
+  width: min(calc(100% - var(--space-8)), var(--layout-game-max-width));
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-6);
+}
+
+.game-heading {
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.game-heading .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.game-heading h1 {
+  margin-bottom: 0;
+}
+
+.game-card-panel {
+  min-height: var(--size-game-panel-min-height);
+  text-align: center;
+}
+
+#intro-panel,
+#complete-panel {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto;
+}
+
+#intro-panel h2,
+#complete-panel h2 {
+  margin-bottom: var(--space-3);
+}
+
+#intro-panel > p,
+#complete-panel > p:not(.eyebrow) {
+  margin-bottom: var(--space-6);
+  color: var(--color-text-muted);
+}
+
+.intro-art {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-h1);
+}
+
+.round-header {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto var(--space-6);
+}
+
+.round-count {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  font-weight: 700;
+}
+
+.round-progress {
+  height: var(--size-progress);
+  overflow: hidden;
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-pill);
+}
+
+.round-progress span {
+  display: block;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: inherit;
+  transition: width var(--motion-duration) ease;
+}
+
+.scenario-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0 auto var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  text-align: left;
+  background: var(--color-surface-soft);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.scenario-icon {
+  display: grid;
+  flex: 0 0 var(--size-scenario-icon);
+  width: var(--size-scenario-icon);
+  height: var(--size-scenario-icon);
+  place-items: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-control);
+  font-size: var(--font-size-h3);
+}
+
+.scenario-description {
+  flex: 1;
+}
+
+.scenario-label {
+  margin-bottom: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+.scenario-card h2 {
+  margin-bottom: var(--space-1);
+  font-size: var(--font-size-h3);
+}
+
+.scenario-card p:last-child {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+.listen-button {
+  flex: 0 0 auto;
+}
+
+.dress-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size-game-column-min)), 1fr));
+  align-items: start;
+  gap: var(--space-6);
+}
+
+.stage-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.princess-stage {
+  position: relative;
+  width: min(100%, var(--size-stage-max));
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--color-stage);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  touch-action: none;
+}
+
+.princess-stage--celebrate {
+  animation: gentle-celebration var(--motion-duration) ease-out;
+}
+
+@keyframes gentle-celebration {
+  50% {
+    transform: translateY(calc(-1 * var(--space-1)));
+  }
+}
+
+.princess-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.stage-hint {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+.item-tray {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size-category-min-width)), 1fr));
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.category-tray {
+  min-width: 0;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-control);
+  transition:
+    background-color var(--motion-duration) ease,
+    border-color var(--motion-duration) ease;
+}
+
+.category-tray--hint {
+  background: var(--color-highlight-soft);
+  border-color: var(--color-highlight-border);
+}
+
+.category-tray h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-ui);
+  text-align: left;
+}
+
+.item-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--size-item-choice-min)), 1fr));
+  gap: var(--space-2);
+}
+
+.item-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-width: 0;
+  min-height: var(--size-item-choice-height);
+  padding: var(--space-2);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width-medium) solid var(--color-border);
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  line-height: var(--line-height-body);
+  touch-action: none;
+}
+
+.item-choice:hover {
+  background: var(--color-surface-soft);
+}
+
+.item-choice[aria-pressed="true"] {
+  background: var(--color-focus-soft);
+  border-color: var(--color-focus);
+  box-shadow: var(--shadow-selected);
+}
+
+.item-choice--dragging {
+  opacity: var(--opacity-drag);
+}
+
+.item-choice:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.item-choice img {
+  flex: 0 0 var(--size-item-image);
+  width: var(--size-item-image);
+  height: var(--size-item-image);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.item-choice span {
+  font-size: var(--font-size-small);
+}
+
+.feedback-area {
+  min-height: var(--size-feedback-min-height);
+  margin: var(--space-4) auto 0;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-muted);
+  background: var(--color-feedback-soft);
+  border-radius: var(--radius-control);
+  text-align: left;
+}
+
+.feedback-area--success {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border: var(--border-width-thin) solid var(--color-success-border);
+}
+
+.feedback-area--gentle-hint {
+  border: var(--border-width-thin) solid var(--color-highlight-border);
+}
+
+.game-actions {
+  min-height: var(--target-size);
+  margin-top: var(--space-2);
+}
+
+.drag-instruction {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+.completion-art {
+  margin: 0 auto var(--space-4);
+  font-size: var(--font-size-h1);
+  letter-spacing: 0.12em;
+}
+
+.reward-feedback {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto var(--space-6);
+  padding: var(--space-4);
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border: var(--border-width-thin) solid var(--color-success-border);
+  border-radius: var(--radius-control);
+}
+
+.game-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-6) auto 0;
+}
+
+.game-settings {
+  max-width: var(--layout-settings-max-width);
+  margin: var(--space-6) auto 0;
+}
+
+.game-settings summary {
+  min-height: var(--target-size);
+  padding: var(--space-2);
+  color: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.game-settings[open] summary {
+  margin-bottom: var(--space-3);
+}
+
+.leave-dialog {
+  width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
+  padding: var(--space-8);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.leave-dialog::backdrop {
+  background: var(--color-backdrop);
+}
+
+.leave-dialog h2 {
+  font-size: var(--font-size-h3);
+}
+
+.leave-dialog p {
+  color: var(--color-text-muted);
+}
+
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+:root[data-animations="off"] .button:hover:not(:disabled) {
+  transform: none;
+}
+
+:root[data-animations="off"] .round-progress span,
+:root[data-animations="off"] .category-tray {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .round-progress span,
+  .category-tray,
+  .princess-stage--celebrate {
+    transition: none;
+    animation: none;
+  }
+}

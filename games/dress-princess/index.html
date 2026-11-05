@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFF8F3">
+    <title>Vestir a Princesa — Lulu Games</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css">
+    <link rel="stylesheet" href="../../shared/css/base.css">
+    <link rel="stylesheet" href="../../shared/css/components.css">
+    <link rel="stylesheet" href="./game.css">
+    <script type="module" src="./game.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" data-home-link aria-label="Lulu Games, início">
+        <span class="brand__icon" aria-hidden="true">✨</span>
+        <span>Lulu Games</span>
+      </a>
+      <nav class="game-nav" aria-label="Navegação do jogo">
+        <button class="button button--secondary" id="back-button" type="button">← Voltar</button>
+      </nav>
+    </header>
+
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="game-title">
+        <p class="eyebrow">Jogo de contexto e escolhas</p>
+        <h1 id="game-title">Vestir a Princesa</h1>
+      </section>
+
+      <section class="card game-card-panel" id="game-panel">
+        <div id="intro-panel">
+          <div class="intro-art" aria-hidden="true">👸 ✨</div>
+          <h2>Vamos montar um look?</h2>
+          <p>Escolha uma peça para cada categoria. São <strong id="intro-round-count">3</strong> situações, sem pressa.</p>
+          <p>Toque em uma peça para vestir. Toque nela novamente para tirar ou arraste-a até a princesa.</p>
+        </div>
+
+        <div id="playing-panel" hidden>
+          <div class="round-header">
+            <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+            <div class="round-progress" aria-hidden="true">
+              <span id="round-progress-fill"></span>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <span class="scenario-icon" id="scenario-icon" aria-hidden="true"></span>
+            <div class="scenario-description">
+              <p class="scenario-label">A situação é:</p>
+              <h2 id="scenario-title"></h2>
+              <p id="scenario-prompt"></p>
+            </div>
+            <button class="button button--secondary listen-button" id="listen-button" type="button" aria-label="Ouvir a situação" hidden>
+              <span aria-hidden="true">🔊</span>
+              Ouvir
+            </button>
+          </div>
+          <div class="dress-layout">
+            <div class="stage-column">
+              <div class="princess-stage" id="princess-stage" role="img" aria-label="Princesa sem roupas escolhidas">
+                <img class="princess-layer" src="../../assets/images/princess-body.svg" alt="">
+                <img class="princess-layer" data-layer="dress" alt="" hidden>
+                <img class="princess-layer" data-layer="shoes" alt="" hidden>
+                <img class="princess-layer" data-layer="accessory" alt="" hidden>
+                <img class="princess-layer" data-layer="crown" alt="" hidden>
+              </div>
+              <p class="stage-hint">A princesa aparece aqui</p>
+            </div>
+            <div class="item-tray" id="item-tray" role="group" aria-label="Bandeja de roupas"></div>
+          </div>
+          <div class="feedback-area" id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+          <div class="game-actions" id="game-actions">
+            <p class="drag-instruction">Escolha as peças e toque em <strong>Pronto</strong> para conferir.</p>
+          </div>
+        </div>
+
+        <div id="complete-panel" role="status" aria-live="polite" hidden>
+          <div class="completion-art" aria-hidden="true">👑 ✨ 👗</div>
+          <p class="eyebrow">Que jornada bonita!</p>
+          <h2>Terminamos por hoje!</h2>
+          <p>Você pensou em cada situação e ajudou a princesa a escolher roupas para o dia. Muito bem!</p>
+          <p class="reward-feedback" id="reward-feedback"></p>
+        </div>
+      </section>
+
+      <footer class="game-footer" aria-label="Ações do jogo">
+        <button class="button button--primary" id="primary-action" type="button">Começar jogo</button>
+        <a class="button button--secondary" href="../../index.html" data-home-link>Início</a>
+      </footer>
+
+      <details class="card game-settings">
+        <summary>Opções do jogo</summary>
+        <form class="settings-form" id="settings-form">
+          <label class="setting-row" for="sound-enabled">
+            <span>Som suave</span>
+            <input id="sound-enabled" name="soundEnabled" type="checkbox">
+          </label>
+          <label class="setting-row setting-row--range" for="sound-volume">
+            <span>Volume do som</span>
+            <input id="sound-volume" name="soundVolume" type="range" min="0" max="0.25" step="0.05">
+          </label>
+          <label class="setting-row" for="animations-enabled">
+            <span>Animações suaves</span>
+            <input id="animations-enabled" name="animationsEnabled" type="checkbox">
+          </label>
+          <label class="setting-row" for="rounds-per-session">
+            <span>Rodadas por jogo</span>
+            <select id="rounds-per-session" name="roundsPerSession">
+              <option value="3">3 rodadas</option>
+              <option value="4">4 rodadas</option>
+              <option value="5">5 rodadas</option>
+            </select>
+          </label>
+          <p class="settings-form__status" id="settings-status" role="status" aria-live="polite"></p>
+        </form>
+      </details>
+    </main>
+
+    <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
+      <form method="dialog">
+        <h2 id="leave-title">Quer sair do jogo?</h2>
+        <p>O look desta situação não será guardado.</p>
+        <div class="dialog-actions">
+          <button class="button button--secondary" value="cancel">Continuar jogando</button>
+          <button class="button button--primary" value="leave">Sair para o início</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
