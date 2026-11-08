@@ -1,11 +1,13 @@
 import { readStorage, writeStorage } from "./storage.js";
 
 const STORAGE_KEY = "lulu-games-settings";
+const SETTINGS_VERSION = 2;
 const DEFAULT_SETTINGS = Object.freeze({
-  soundEnabled: false,
+  soundEnabled: true,
   soundVolume: 0.1,
   animationsEnabled: true,
   roundsPerSession: 3,
+  settingsVersion: SETTINGS_VERSION,
 });
 const ALLOWED_ROUNDS = [3, 4, 5];
 
@@ -29,7 +31,14 @@ function loadSettings() {
   try {
     const parsedValue = JSON.parse(savedValue);
     if (isValidSettings(parsedValue)) {
-      return { ...DEFAULT_SETTINGS, ...parsedValue };
+      return {
+        ...DEFAULT_SETTINGS,
+        ...parsedValue,
+        soundEnabled: parsedValue.settingsVersion === SETTINGS_VERSION
+          ? parsedValue.soundEnabled
+          : true,
+        settingsVersion: SETTINGS_VERSION,
+      };
     }
     console.warn("Saved game settings are invalid. Default settings will be used.");
   } catch (error) {

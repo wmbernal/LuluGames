@@ -1,5 +1,5 @@
 import { gameCatalog } from "./catalog.js";
-import { getSettings, updateSettings } from "./settings.js";
+import { getSettings, updateSettings } from "./settings.js?v=2";
 
 const catalogElement = document.querySelector("#game-catalog");
 const settingsForm = document.querySelector("#settings-form");

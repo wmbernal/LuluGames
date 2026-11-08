@@ -9,10 +9,10 @@ export const gameCatalog = [
   },
   {
     id: "memory-pairs",
-    title: "Memória das Princesas",
-    description: "Vire as cartas e descubra imagens iguais ou que combinam.",
-    icon: "🃏",
-    href: "./games/memory-pairs/index.html",
+    title: "Jogo dos Pares",
+    description: "Escolha um tema e combine figuras relacionadas.",
+    icon: "🧩",
+    href: "./games/memory-pairs/themes.html",
     available: true,
   },
 ];

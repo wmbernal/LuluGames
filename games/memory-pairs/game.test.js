@@ -1,20 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { THEMES } from "./data.js";
 import {
-  createDeck,
-  createGameState,
-  endPeek,
-  flipCard,
-  getHintCardId,
+  createMatchBoard,
   isGameFinished,
-  resolveMismatch,
+  matchCards,
   shuffleCards,
 } from "./game.js";
 
-const pairs = [
-  { pairId: "crown", cards: [{ image: "crown.svg", label: "Coroa" }] },
-  { pairId: "rose", cards: [{ image: "rose.svg", label: "Rosa" }] },
-];
+const theme = THEMES[0];
 const predictableRandom = () => 0.999;
 
 test("shuffling preserves every card exactly once", () => {
@@ -25,85 +19,123 @@ test("shuffling preserves every card exactly once", () => {
   assert.notEqual(shuffled, original);
 });
 
-test("a matching pair stays visible and completes the game", () => {
-  const deck = createDeck({ pairs }, 1, predictableRandom);
-  let state = createGameState(deck);
-  state = flipCard(state, "crown-1");
-  state = flipCard(state, "crown-2");
+test("every theme has five rounds of six distinct and complete pairings", () => {
+  assert.equal(THEMES.length, 6);
+  for (const entry of THEMES) {
+    assert.equal(entry.rounds.length, 5, entry.label);
+    const roundCombinations = new Set();
+    for (const round of entry.rounds) {
+      assert.equal(round.length, 6, entry.label);
+      assert.equal(new Set(round.map((pair) => pair.pairId)).size, 6, entry.label);
+      assert.equal(
+        round.every((pair) => pair.cards.length === 2
+          && pair.cards.every((card) => card.icon && card.label)
+          && pair.cards[0].icon !== pair.cards[1].icon
+          && pair.cards[0].label !== pair.cards[1].label),
+        true,
+        entry.label,
+      );
+      assert.equal(
+        new Set(round.map((pair) => pair.cards[0].label)).size,
+        6,
+        `${entry.label}: duplicate left-side picture`,
+      );
+      assert.equal(
+        new Set(round.map((pair) => pair.cards[1].label)).size,
+        6,
+        `${entry.label}: duplicate right-side picture`,
+      );
+      assert.equal(
+        new Set(round.map((pair) => pair.cards[0].icon)).size,
+        6,
+        `${entry.label}: duplicate left-side picture`,
+      );
+      assert.equal(
+        new Set(round.map((pair) => pair.cards[1].icon)).size,
+        6,
+        `${entry.label}: duplicate right-side picture`,
+      );
+      roundCombinations.add(round.map((pair) => pair.pairId).sort().join("|"));
+    }
+    assert.equal(roundCombinations.size, 5, `${entry.label}: rounds must vary`);
+  }
+});
 
-  assert.equal(state.matchedPairs, 1);
+test("animal homes and food recipes use the requested related-object pairs", () => {
+  const animals = THEMES.find((entry) => entry.id === "animals");
+  const food = THEMES.find((entry) => entry.id === "food");
+  const animalPairs = new Set(animals.rounds[0].map((pair) => pair.pairId));
+  const firstFoodRound = new Set(food.rounds[0].map((pair) => pair.pairId));
+
+  for (const pairId of ["dog-doghouse", "rabbit-burrow", "bird-tree-nest", "fish-cave"]) {
+    assert.equal(animalPairs.has(pairId), true);
+  }
+  for (const pairId of ["carrot-cake", "bread-sandwich", "strawberry-jam", "banana-split"]) {
+    assert.equal(firstFoodRound.has(pairId), true);
+  }
+});
+
+test("a board has six related pairs with six cards on each side", () => {
+  const state = createMatchBoard(theme, 0, predictableRandom);
+
+  assert.equal(state.leftCards.length, 6);
+  assert.equal(state.rightCards.length, 6);
+  assert.equal(state.leftCards.every((card) => !card.matched), true);
+  assert.equal(state.rightCards.every((card) => !card.matched), true);
+  for (const leftCard of state.leftCards) {
+    const rightCard = state.rightCards.find((card) => card.pairId === leftCard.pairId);
+    assert.notEqual(rightCard.icon, leftCard.icon);
+    assert.notEqual(rightCard.label, leftCard.label);
+  }
+});
+
+test("a correct match marks both cards and finishes after the last pair", () => {
+  let state = createMatchBoard(theme, 0, predictableRandom);
+  for (const leftCard of state.leftCards) {
+    const rightCard = state.rightCards.find((card) => card.pairId === leftCard.pairId);
+    state = matchCards(state, leftCard.id, rightCard.id);
+  }
+
+  assert.equal(state.matchedPairs, 6);
+  assert.equal(state.leftCards.every((card) => card.matched), true);
+  assert.equal(state.rightCards.every((card) => card.matched), true);
   assert.equal(isGameFinished(state), true);
-  assert.equal(state.cards.every((card) => card.matched && card.faceUp), true);
 });
 
-test("different faces with a shared pair id match in relationship mode", () => {
-  const relationshipMode = {
-    pairs: [{
-      pairId: "gown-slipper",
-      cards: [
-        { image: "gown.svg", label: "Vestido de baile" },
-        { image: "slipper.svg", label: "Sapato de cristal" },
-      ],
-    }],
-  };
-  const deck = createDeck(relationshipMode, 1, predictableRandom);
-  let state = createGameState(deck);
-  state = flipCard(state, deck[0].id);
-  state = flipCard(state, deck[1].id);
+test("incorrect matches do not mark cards as found", () => {
+  const state = createMatchBoard(theme, 0, predictableRandom);
+  const firstCard = state.leftCards[0];
+  const wrongCard = state.rightCards.find((card) => card.pairId !== firstCard.pairId);
+  const nextState = matchCards(state, firstCard.id, wrongCard.id);
 
-  assert.equal(state.matchedPairs, 1);
-  assert.equal(isGameFinished(state), true);
-  assert.notEqual(deck[0].label, deck[1].label);
+  assert.equal(nextState.matchedPairs, 0);
+  assert.equal(nextState.leftCards.every((card) => !card.matched), true);
+  assert.equal(nextState.rightCards.every((card) => !card.matched), true);
+  assert.match(nextState.feedback, /combinação não corresponde/i);
 });
 
-test("the peek ends with hidden cards and hints select unmatched cards", () => {
-  const deck = createDeck({ pairs }, 2, predictableRandom);
-  let state = createGameState(deck, true);
+test("cards on the same side cannot be matched", () => {
+  const state = createMatchBoard(theme, 0, predictableRandom);
+  const nextState = matchCards(state, state.leftCards[0].id, state.leftCards[1].id);
 
-  assert.equal(state.phase, "peeking");
-  assert.equal(state.cards.every((card) => card.faceUp), true);
-  state = endPeek(state);
-  assert.equal(state.cards.every((card) => !card.faceUp), true);
-
-  const firstHint = getHintCardId(state);
-  state = flipCard(state, firstHint);
-  const nextHint = getHintCardId(state);
-  assert.notEqual(nextHint, firstHint);
+  assert.equal(nextState.matchedPairs, 0);
+  assert.equal(nextState.leftCards.every((card) => !card.matched), true);
 });
 
-test("a non-matching pair waits to be resolved, then turns back down", () => {
-  const deck = createDeck({ pairs }, 2, predictableRandom);
-  let state = createGameState(deck);
-  state = flipCard(state, "crown-1");
-  state = flipCard(state, "rose-1");
+test("playing the next round selects a different set of pairs", () => {
+  const firstRound = createMatchBoard(theme, 0, predictableRandom);
+  const secondRound = createMatchBoard(theme, 1, predictableRandom);
 
-  assert.equal(state.phase, "checking");
-  assert.equal(state.cards.filter((card) => card.faceUp).length, 2);
-  state = resolveMismatch(state);
-
-  assert.equal(state.phase, "ready");
-  assert.equal(state.cards.every((card) => !card.faceUp), true);
+  assert.notDeepEqual(
+    firstRound.leftCards.map((card) => card.pairId).sort(),
+    secondRound.leftCards.map((card) => card.pairId).sort(),
+  );
 });
 
-test("additional flips are blocked while a mismatch is being checked", () => {
-  const deck = createDeck({ pairs }, 2, predictableRandom);
-  let state = createGameState(deck);
-  state = flipCard(state, "crown-1");
-  state = flipCard(state, "rose-1");
-  const blockedState = flipCard(state, "rose-2");
-
-  assert.equal(blockedState, state);
-  assert.equal(blockedState.cards.filter((card) => card.faceUp).length, 2);
+test("invalid random values are rejected", () => {
+  assert.throws(() => shuffleCards([1, 2], () => 1), RangeError);
 });
 
-test("the finished state is reached only after all pairs are found", () => {
-  const deck = createDeck({ pairs }, 2, predictableRandom);
-  let state = createGameState(deck);
-  state = flipCard(state, "crown-1");
-  state = flipCard(state, "crown-2");
-  assert.equal(isGameFinished(state), false);
-
-  state = flipCard(state, "rose-1");
-  state = flipCard(state, "rose-2");
-  assert.equal(isGameFinished(state), true);
+test("a theme rejects a round that is outside its configured rounds", () => {
+  assert.throws(() => createMatchBoard(theme, 5), RangeError);
 });

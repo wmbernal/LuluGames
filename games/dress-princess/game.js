@@ -1,5 +1,5 @@
-import { playInstructionAudio, playPositiveSound } from "../../shared/js/audio.js";
-import { getSettings, updateSettings } from "../../shared/js/settings.js";
+import { playInstructionAudio, playPositiveSound } from "../../shared/js/audio.js?v=2";
+import { getSettings, updateSettings } from "../../shared/js/settings.js?v=2";
 import { readStorage, writeStorage } from "../../shared/js/storage.js";
 import { CATEGORIES, ITEMS, REWARD_ITEM_ID, SCENARIOS } from "./data.js";
 import { createGameUI } from "./ui.js";

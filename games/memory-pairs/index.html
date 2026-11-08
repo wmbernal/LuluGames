@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FFF8F3">
-    <title>Memória das Princesas — Lulu Games</title>
+    <title>Jogo dos Pares — Lulu Games</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css">
     <link rel="stylesheet" href="../../shared/css/base.css">
     <link rel="stylesheet" href="../../shared/css/components.css">
     <link rel="stylesheet" href="./game.css">
-    <script type="module" src="./session.js"></script>
+    <script type="module" src="./session.js?v=3"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
@@ -19,104 +19,27 @@
         <span>Lulu Games</span>
       </a>
       <nav class="game-nav" aria-label="Navegação do jogo">
-        <button class="button button--secondary" id="back-button" type="button">← Voltar</button>
+        <button class="button button--secondary" id="back-button" type="button">← Temas</button>
       </nav>
     </header>
 
     <main class="game-page" id="main-content">
       <section class="game-heading" aria-labelledby="game-title">
-        <p class="eyebrow">Jogo de atenção e memória</p>
-        <h1 id="game-title">Memória das Princesas</h1>
+        <p class="eyebrow">Jogo de combinar</p>
+        <h1 id="game-title">Jogo dos Pares</h1>
       </section>
 
-      <section class="card memory-panel" aria-label="Jogo da memória">
-        <div id="setup-panel">
-          <div class="memory-intro-art" aria-hidden="true">👑 ✨ 🏰</div>
-          <h2>Vamos encontrar os pares?</h2>
-          <p>Escolha como as cartas combinam e quantos pares quer procurar.</p>
-
-          <form id="setup-form">
-            <fieldset class="setup-group">
-              <legend>Como encontrar os pares?</legend>
-              <div class="setup-options setup-options--modes">
-                <label class="setup-choice">
-                  <input type="radio" name="mode" value="identical" checked>
-                  <span class="setup-choice__icon" aria-hidden="true">👑</span>
-                  <span class="setup-choice__title">Iguais</span>
-                  <span class="setup-choice__description">Duas cartas com a mesma imagem</span>
-                </label>
-                <label class="setup-choice">
-                  <input type="radio" name="mode" value="category">
-                  <span class="setup-choice__icon" aria-hidden="true">👗</span>
-                  <span class="setup-choice__title">Combinam</span>
-                  <span class="setup-choice__description">Duas imagens que formam uma dupla</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="setup-group">
-              <legend>Quantos pares?</legend>
-              <div class="setup-options setup-options--sizes">
-                <label class="setup-choice setup-choice--compact">
-                  <input type="radio" name="pairCount" value="3" checked>
-                  <span class="setup-choice__icon" aria-hidden="true">🌸</span>
-                  <span class="setup-choice__title">3 pares</span>
-                  <span class="setup-choice__description">6 cartas</span>
-                </label>
-                <label class="setup-choice setup-choice--compact">
-                  <input type="radio" name="pairCount" value="4">
-                  <span class="setup-choice__icon" aria-hidden="true">🌷</span>
-                  <span class="setup-choice__title">4 pares</span>
-                  <span class="setup-choice__description">8 cartas</span>
-                </label>
-                <label class="setup-choice setup-choice--compact">
-                  <input type="radio" name="pairCount" value="6">
-                  <span class="setup-choice__icon" aria-hidden="true">🪻</span>
-                  <span class="setup-choice__title">6 pares</span>
-                  <span class="setup-choice__description">12 cartas</span>
-                </label>
-                <label class="setup-choice setup-choice--compact">
-                  <input type="radio" name="pairCount" value="8">
-                  <span class="setup-choice__icon" aria-hidden="true">🌼</span>
-                  <span class="setup-choice__title">8 pares</span>
-                  <span class="setup-choice__description">16 cartas</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="setup-group setup-group--peek">
-              <legend>Espiadinha inicial</legend>
-              <label class="setting-row" for="peek-enabled">
-                <span>Mostrar as cartas antes de começar</span>
-                <input id="peek-enabled" name="peekEnabled" type="checkbox">
-              </label>
-              <label class="setting-row" for="peek-seconds">
-                <span>Tempo para observar</span>
-                <select id="peek-seconds" name="peekSeconds">
-                  <option value="3">3 segundos</option>
-                  <option value="5">5 segundos</option>
-                </select>
-              </label>
-            </fieldset>
-            <p class="setup-session-note" id="session-note"></p>
-            <p class="settings-form__status" id="setup-status" role="status" aria-live="polite"></p>
-            <button class="button button--primary setup-start" id="start-button" type="submit">Começar</button>
-          </form>
-        </div>
-
-        <div id="playing-panel" hidden>
+      <section class="card memory-panel" aria-label="Jogo de combinar">
+        <div id="playing-panel">
           <div class="round-header">
             <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
-            <p class="round-instructions" id="round-instructions" tabindex="-1">Vire duas cartas para encontrar um par.</p>
+            <p class="round-instructions" id="round-instructions">
+              Combine as figuras relacionadas. Arraste ou selecione uma carta de cada lado.
+            </p>
           </div>
-          <div class="memory-board" id="memory-board" role="group" aria-label="Cartas da memória"></div>
+          <p class="theme-label"><span id="theme-icon" aria-hidden="true"></span> <span id="theme-name"></span></p>
+          <div class="match-board" id="memory-board" role="group" aria-label="Cartas para combinar"></div>
           <p class="memory-feedback" id="memory-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
-          <div class="memory-controls">
-            <button class="button button--secondary" id="hint-button" type="button">
-              <span aria-hidden="true">💡</span>
-              Ajuda
-            </button>
-          </div>
         </div>
 
         <div id="complete-panel" hidden>
@@ -124,15 +47,16 @@
           <p class="eyebrow" id="completion-eyebrow">Muito bem!</p>
           <h2 id="completion-title" tabindex="-1">Você encontrou todos os pares!</h2>
           <p id="completion-message"></p>
-          <p class="memory-reward" id="reward-message" hidden></p>
           <div class="completion-actions">
             <button class="button button--primary" id="next-button" type="button">Próxima rodada</button>
+            <a class="button button--secondary" href="./themes.html" data-theme-link>Escolher tema</a>
             <a class="button button--secondary" href="../../index.html" data-home-link>Início</a>
           </div>
         </div>
       </section>
 
       <footer class="game-footer" aria-label="Ações do jogo">
+        <a class="button button--secondary" href="./themes.html" data-theme-link>← Temas</a>
         <a class="button button--secondary" href="../../index.html" data-home-link>⌂ Início</a>
       </footer>
     </main>
@@ -140,10 +64,10 @@
     <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
       <form method="dialog">
         <h2 id="leave-title">Quer voltar ao início?</h2>
-        <p>Esta partida vai terminar. Sua escolha de jogo ficará salva.</p>
+        <p id="leave-message">Esta partida vai terminar. Você poderá jogar de novo quando quiser.</p>
         <div class="dialog-actions">
           <button class="button button--secondary" value="cancel">Continuar jogando</button>
-          <button class="button button--primary" value="leave">Voltar ao início</button>
+          <button class="button button--primary" id="leave-confirm-button" value="leave">Voltar ao início</button>
         </div>
       </form>
     </dialog>

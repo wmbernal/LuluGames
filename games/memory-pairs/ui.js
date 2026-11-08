@@ -1,153 +1,122 @@
-import { MODES, PAIR_COUNTS, SESSION_CONFIG_KEY } from "./data.js";
-import { readStorage, writeStorage } from "../../shared/js/storage.js";
-
-const setupPanel = document.querySelector("#setup-panel");
 const playingPanel = document.querySelector("#playing-panel");
 const completePanel = document.querySelector("#complete-panel");
-const setupForm = document.querySelector("#setup-form");
 const boardElement = document.querySelector("#memory-board");
 const roundCountElement = document.querySelector("#round-count");
-const instructionsElement = document.querySelector("#round-instructions");
 const feedbackElement = document.querySelector("#memory-feedback");
-const hintButton = document.querySelector("#hint-button");
 const nextButton = document.querySelector("#next-button");
 const backButton = document.querySelector("#back-button");
 const homeLinks = document.querySelectorAll("[data-home-link]");
+const themeLinks = document.querySelectorAll("[data-theme-link]");
 const leaveDialog = document.querySelector("#leave-dialog");
-const sessionNote = document.querySelector("#session-note");
+const leaveTitle = document.querySelector("#leave-title");
+const leaveMessage = document.querySelector("#leave-message");
+const leaveConfirmButton = document.querySelector("#leave-confirm-button");
 
-function readSavedConfig() {
-  const savedValue = readStorage(SESSION_CONFIG_KEY);
-  if (!savedValue) {
-    return { mode: "identical", pairCount: 3, peekEnabled: false, peekSeconds: 3 };
+let selectedCardId = null;
+let leaveDestination = "home";
+let renderedMatchedCardIds = new Set();
+
+function updateSelectedCardUI() {
+  for (const button of boardElement.querySelectorAll(".match-card")) {
+    const selected = button.dataset.cardId === selectedCardId;
+    button.classList.toggle("match-card--selected", selected);
+    button.setAttribute("aria-pressed", String(selected || button.classList.contains("match-card--matched")));
   }
-  try {
-    const config = JSON.parse(savedValue);
-    if (
-      Object.hasOwn(MODES, config.mode)
-      && PAIR_COUNTS.includes(config.pairCount)
-      && typeof config.peekEnabled === "boolean"
-      && [3, 5].includes(config.peekSeconds)
-    ) {
-      return config;
-    }
-    console.warn("Saved memory game settings are invalid. Default settings will be used.");
-  } catch (error) {
-    console.warn("Saved memory game settings could not be parsed.", error);
-  }
-  return { mode: "identical", pairCount: 3, peekEnabled: false, peekSeconds: 3 };
 }
 
-function getConfig() {
-  const formData = new FormData(setupForm);
-  return {
-    mode: formData.get("mode"),
-    pairCount: Number(formData.get("pairCount")),
-    peekEnabled: formData.get("peekEnabled") === "on",
-    peekSeconds: Number(formData.get("peekSeconds")),
-  };
-}
+function createCard(card, side, callbacks, newlyMatchedCardIds) {
+  const button = document.createElement("button");
+  button.className = "match-card";
+  button.type = "button";
+  button.draggable = !card.matched;
+  button.dataset.cardId = card.id;
+  button.dataset.side = side;
+  button.disabled = card.matched;
+  button.setAttribute("aria-label", `${card.label}${card.matched ? ", par encontrado" : ""}`);
+  button.setAttribute("aria-pressed", String(card.matched || selectedCardId === card.id));
+  button.classList.toggle("match-card--matched", card.matched);
+  button.classList.toggle("match-card--just-matched", newlyMatchedCardIds.has(card.id));
+  button.classList.toggle("match-card--selected", selectedCardId === card.id);
 
-function saveConfig() {
-  const config = getConfig();
-  const isSaved = writeStorage(SESSION_CONFIG_KEY, JSON.stringify(config));
-  document.querySelector("#setup-status").textContent = isSaved
-    ? "Sua escolha foi guardada."
-    : "Sua escolha vale nesta visita, mas não pode ser guardada neste navegador.";
-  return config;
-}
+  const icon = document.createElement("span");
+  icon.className = "match-card__icon";
+  icon.setAttribute("aria-hidden", "true");
+  icon.textContent = card.icon;
+  const label = document.createElement("span");
+  label.className = "match-card__label";
+  label.textContent = card.label;
+  const mark = document.createElement("span");
+  mark.className = "match-card__mark";
+  mark.setAttribute("aria-hidden", "true");
+  mark.textContent = "✓";
+  button.append(icon, label, mark);
 
-function applyConfig(config) {
-  setupForm.elements.mode.value = config.mode;
-  setupForm.elements.pairCount.value = String(config.pairCount);
-  setupForm.elements.peekEnabled.checked = config.peekEnabled;
-  setupForm.elements.peekSeconds.value = String(config.peekSeconds);
-}
-
-function focusAdjacentCard(cards, currentIndex, columnCount, key) {
-  const directions = {
-    ArrowLeft: [0, -1],
-    ArrowRight: [0, 1],
-    ArrowUp: [-1, 0],
-    ArrowDown: [1, 0],
-  };
-  const [rowDelta, columnDelta] = directions[key];
-  const rowCount = Math.ceil(cards.length / columnCount);
-  let row = Math.floor(currentIndex / columnCount) + rowDelta;
-  let column = (currentIndex % columnCount) + columnDelta;
-
-  while (row >= 0 && row < rowCount && column >= 0 && column < columnCount) {
-    const target = cards[row * columnCount + column];
-    if (target && !target.disabled) {
-      target.focus();
+  button.addEventListener("click", () => {
+    if (card.matched) {
       return;
     }
-    row += rowDelta;
-    column += columnDelta;
-  }
+    if (!selectedCardId) {
+      selectedCardId = card.id;
+      callbacks.onSelectionChange();
+      return;
+    }
+    if (selectedCardId === card.id) {
+      selectedCardId = null;
+      callbacks.onSelectionChange();
+      return;
+    }
+    const previousCardId = selectedCardId;
+    const wasMatched = callbacks.onMatch(previousCardId, card.id);
+    selectedCardId = wasMatched ? null : card.id;
+    callbacks.onSelectionChange();
+  });
+  button.addEventListener("dragstart", (event) => {
+    event.dataTransfer.setData("text/plain", card.id);
+    event.dataTransfer.effectAllowed = "move";
+    button.classList.add("match-card--dragging");
+  });
+  button.addEventListener("dragend", () => {
+    button.classList.remove("match-card--dragging");
+  });
+  button.addEventListener("dragover", (event) => {
+    if (!card.matched) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = "move";
+    }
+  });
+  button.addEventListener("drop", (event) => {
+    event.preventDefault();
+    const draggedCardId = event.dataTransfer.getData("text/plain");
+    if (!draggedCardId || draggedCardId === card.id || card.matched) {
+      return;
+    }
+    if (callbacks.onMatch(draggedCardId, card.id)) {
+      selectedCardId = null;
+    }
+    callbacks.onSelectionChange();
+  });
+
+  return button;
 }
 
-function renderCards(state) {
-  const currentCardId = document.activeElement?.dataset.cardId;
-  const cardCount = state.cards.length;
-  const columnCount = cardCount === 6 ? 3 : 4;
-  boardElement.dataset.columns = String(columnCount);
-  boardElement.classList.toggle("memory-board--starlight", state.starlightBackUnlocked);
+function renderCards(game, callbacks, newlyMatchedCardIds) {
   boardElement.replaceChildren();
-
-  for (const [index, card] of state.cards.entries()) {
-    const button = document.createElement("button");
-    const isRevealed = card.faceUp || card.matched;
-    const isHinted = state.hintCardId === card.id;
-    button.className = "memory-card";
-    button.type = "button";
-    button.dataset.cardId = card.id;
-    button.disabled = state.phase === "checking" || state.phase === "peeking" || card.matched;
-    button.setAttribute("aria-label", isRevealed ? card.label : "Carta virada para baixo");
-    button.setAttribute("aria-pressed", String(isRevealed));
-    button.classList.toggle("memory-card--face-up", isRevealed);
-    button.classList.toggle("memory-card--matched", card.matched);
-    button.classList.toggle("memory-card--hinted", isHinted);
-    button.addEventListener("click", () => state.onFlip(card.id));
-    button.addEventListener("keydown", (event) => {
-      if (!event.key.startsWith("Arrow")) {
-        return;
-      }
-      event.preventDefault();
-      const cards = Array.from(boardElement.querySelectorAll(".memory-card"));
-      focusAdjacentCard(cards, index, columnCount, event.key);
-    });
-
-    const inner = document.createElement("span");
-    inner.className = "memory-card__inner";
-    const back = document.createElement("span");
-    back.className = "memory-card__face memory-card__back";
-    back.setAttribute("aria-hidden", "true");
-    back.textContent = "✦";
-    const front = document.createElement("span");
-    front.className = "memory-card__face memory-card__front";
-    const image = document.createElement("img");
-    image.src = card.image;
-    image.alt = "";
-    image.width = 64;
-    image.height = 64;
-    const label = document.createElement("span");
-    label.className = "memory-card__label";
-    label.textContent = card.label;
-    front.append(image, label);
-    const matchMark = document.createElement("span");
-    matchMark.className = "memory-card__match-mark";
-    matchMark.setAttribute("aria-hidden", "true");
-    matchMark.textContent = "✓";
-    inner.append(back, front);
-    button.append(inner, matchMark);
-    boardElement.append(button);
-  }
-
-  if (currentCardId) {
-    const nextFocus = boardElement.querySelector(`[data-card-id="${currentCardId}"]:not(:disabled)`)
-      ?? boardElement.querySelector(".memory-card:not(:disabled)");
-    nextFocus?.focus();
+  for (const [side, title, cards] of [
+    ["left", "Cartas da esquerda", game.leftCards],
+    ["right", "Cartas da direita", game.rightCards],
+  ]) {
+    const column = document.createElement("section");
+    column.className = "match-column";
+    column.setAttribute("aria-label", title);
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+    const list = document.createElement("div");
+    list.className = "match-column__cards";
+    for (const card of cards) {
+      list.append(createCard(card, side, callbacks, newlyMatchedCardIds));
+    }
+    column.append(heading, list);
+    boardElement.append(column);
   }
 }
 
@@ -155,94 +124,90 @@ function renderCompletion(state) {
   const isSessionComplete = state.phase === "sessionComplete";
   document.querySelector("#completion-eyebrow").textContent =
     isSessionComplete ? "Terminamos por hoje!" : "Muito bem!";
-  document.querySelector("#completion-title").textContent = isSessionComplete
-    ? "Você encontrou todas as princesas e tesouros!"
-    : "Você encontrou todos os pares!";
+  document.querySelector("#completion-title").textContent = "Você encontrou todos os pares!";
   document.querySelector("#completion-message").textContent = isSessionComplete
-    ? "Todas as partidas desta sessão terminaram. Você pode voltar quando quiser."
-    : `Partida ${state.sessionRound} de ${state.sessionRounds} concluída. Pronta para mais uma?`;
-  document.querySelector("#reward-message").hidden = !isSessionComplete;
-  document.querySelector("#reward-message").textContent = !state.rewardUnlocked
-    ? "A partida foi concluída, mas não foi possível guardar a carta especial neste navegador."
-    : state.rewardAlreadyUnlocked
-      ? "O verso especial de estrelas já está na sua coleção!"
-      : "Você desbloqueou um novo verso de carta com estrelas para a sua coleção!";
-  nextButton.hidden = false;
+    ? "Todas as rodadas desta sessão terminaram. Você pode voltar quando quiser."
+    : `Rodada ${state.sessionRound} de ${state.sessionRounds} concluída. A próxima rodada terá outras combinações.`;
   nextButton.textContent = isSessionComplete ? "Jogar de novo" : "Próxima rodada";
   document.querySelector("#completion-title").focus();
 }
 
-export function createGameUI(callbacks, roundsPerSession) {
-  applyConfig(readSavedConfig());
-  sessionNote.textContent =
-    `A sessão tem ${roundsPerSession} partidas curtas. Não há pressa e você pode pedir uma ajuda.`;
-
-  setupForm.addEventListener("change", saveConfig);
-  setupForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    callbacks.onStart(saveConfig());
-  });
-  hintButton.addEventListener("click", callbacks.onHint);
-  nextButton.addEventListener("click", callbacks.onNext);
-  backButton.addEventListener("click", () => {
-    if (callbacks.shouldConfirmLeave()) {
-      leaveDialog.showModal();
-    } else {
-      window.location.href = "../../index.html";
+export function createGameUI(callbacks) {
+  document.querySelector("#game-title").textContent = `Jogo dos Pares: ${callbacks.theme.label}`;
+  document.querySelector("#theme-icon").textContent = callbacks.theme.icon;
+  document.querySelector("#theme-name").textContent = callbacks.theme.label;
+  const cardCallbacks = {
+    onMatch: callbacks.onMatch,
+    onSelectionChange: updateSelectedCardUI,
+  };
+  function confirmNavigation(destination) {
+    if (!callbacks.shouldConfirmLeave()) {
+      window.location.href = destination === "themes" ? "./themes.html" : "../../index.html";
+      return;
     }
-  });
+
+    leaveDestination = destination;
+    leaveTitle.textContent = destination === "themes"
+      ? "Quer escolher outro tema?"
+      : "Quer voltar ao início?";
+    leaveMessage.textContent = destination === "themes"
+      ? "Esta partida vai terminar. Você poderá começar outra quando quiser."
+      : "Esta partida vai terminar. Você poderá jogar de novo quando quiser.";
+    leaveConfirmButton.textContent = destination === "themes"
+      ? "Escolher tema"
+      : "Voltar ao início";
+    leaveDialog.showModal();
+  }
+
+  nextButton.addEventListener("click", callbacks.onNext);
+  backButton.textContent = "← Temas";
+  backButton.addEventListener("click", () => confirmNavigation("themes"));
 
   for (const link of homeLinks) {
     link.addEventListener("click", (event) => {
-      if (!callbacks.shouldConfirmLeave()) {
-        return;
-      }
       event.preventDefault();
-      leaveDialog.showModal();
+      confirmNavigation("home");
+    });
+  }
+  for (const link of themeLinks) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      confirmNavigation("themes");
     });
   }
 
   leaveDialog.addEventListener("close", () => {
     if (leaveDialog.returnValue === "leave") {
-      window.location.href = "../../index.html";
+      window.location.href = leaveDestination === "themes" ? "./themes.html" : "../../index.html";
     }
   });
 
   return {
     focusFirstCard() {
-      const firstCard = boardElement.querySelector(".memory-card:not(:disabled)");
-      if (firstCard) {
-        firstCard.focus();
-      } else {
-        instructionsElement.focus();
-      }
+      boardElement.querySelector(".match-card:not(:disabled)")?.focus();
     },
     render(state) {
-      setupPanel.hidden = state.phase !== "setup";
       playingPanel.hidden = state.phase !== "playing";
       completePanel.hidden = !["roundComplete", "sessionComplete"].includes(state.phase);
-
-      if (state.phase === "setup") {
-        return;
-      }
       if (state.phase === "roundComplete" || state.phase === "sessionComplete") {
         renderCompletion(state);
         return;
       }
 
       roundCountElement.textContent =
-        `Partida ${state.sessionRound} de ${state.sessionRounds} · ${state.game.matchedPairs} de ${state.config.pairCount} pares encontrados`;
-      instructionsElement.textContent = state.game.phase === "peeking"
-        ? "Espiadinha! Observe as cartas."
-        : "Vire duas cartas para encontrar um par.";
-      feedbackElement.textContent = state.game.feedback ?? "";
-      hintButton.disabled = ["checking", "peeking", "finished"].includes(state.game.phase);
-      renderCards({
-        ...state.game,
-        cards: state.game.cards,
-        starlightBackUnlocked: state.starlightBackUnlocked,
-        onFlip: callbacks.onFlip,
-      });
+        `Tema ${state.game.themeLabel} · Partida ${state.sessionRound} de ${state.sessionRounds} · ${state.game.matchedPairs} de ${state.game.totalPairs} pares`;
+      feedbackElement.textContent = state.game.feedback;
+      feedbackElement.classList.toggle("memory-feedback--positive", state.game.feedbackType === "positive");
+      const matchedCardIds = new Set(
+        [...state.game.leftCards, ...state.game.rightCards]
+          .filter((card) => card.matched)
+          .map((card) => card.id),
+      );
+      const newlyMatchedCardIds = new Set(
+        [...matchedCardIds].filter((cardId) => !renderedMatchedCardIds.has(cardId)),
+      );
+      renderCards(state.game, cardCallbacks, newlyMatchedCardIds);
+      renderedMatchedCardIds = matchedCardIds;
     },
   };
 }

@@ -26,6 +26,8 @@ games/
     data.js
     game.css
   memory-pairs/
+    themes.html
+    themes.js
     index.html
     session.js
     game.js
@@ -63,7 +65,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for module responsibilities and
 
 To add clothing or a scenario to **Vestir a Princesa**, add an SVG item with the shared `viewBox` to `assets/images/`, then add its category, image path, and context tags in `games/dress-princess/data.js`. Add the scenario's required tag and an option matching every category. See [docs/GAME_VESTIR_PRINCESA.md](docs/GAME_VESTIR_PRINCESA.md) for the matching rule.
 
-To add matching or relationship pairs to **Memória das Princesas**, add an entry with a unique `pairId` and one or two labeled image faces to `games/memory-pairs/data.js`. Both modes use the same pair model; a future mode can be added there without changing the matching engine. Run the game logic tests with `npm test` or `node --test`.
+**Jogo dos Pares** starts with a theme chooser: Princesas, Casa, Animais, Transportes, Comidas, and Jardim. Every theme has five different rounds of six related picture pairs. The session ends after the configured 3, 4, or 5 rounds. Run the game logic tests with `npm test` or `node --test`.
 
 ## Publish on GitHub Pages
 

@@ -1,5 +1,5 @@
 import { CATEGORIES } from "./data.js";
-import { getSettings } from "../../shared/js/settings.js";
+import { getSettings } from "../../shared/js/settings.js?v=2";
 
 const introPanel = document.querySelector("#intro-panel");
 const playingPanel = document.querySelector("#playing-panel");

@@ -1,82 +1,310 @@
-export const MODES = Object.freeze({
-  identical: Object.freeze({
-    label: "Iguais",
-    description: "Encontre duas cartas com a mesma imagem.",
-    pairs: Object.freeze([
-      { pairId: "crown", cards: [{ image: "../../assets/images/memory/crown.svg", label: "Coroa" }] },
-      { pairId: "dress", cards: [{ image: "../../assets/images/memory/dress.svg", label: "Vestido" }] },
-      { pairId: "tiara", cards: [{ image: "../../assets/images/memory/tiara.svg", label: "Tiara" }] },
-      { pairId: "castle", cards: [{ image: "../../assets/images/memory/castle.svg", label: "Castelo" }] },
-      { pairId: "wand", cards: [{ image: "../../assets/images/memory/wand.svg", label: "Varinha" }] },
-      { pairId: "star", cards: [{ image: "../../assets/images/memory/star.svg", label: "Estrela" }] },
-      { pairId: "heart", cards: [{ image: "../../assets/images/memory/heart.svg", label: "Coração" }] },
-      { pairId: "rose", cards: [{ image: "../../assets/images/memory/rose.svg", label: "Rosa" }] },
+function createRounds(rounds) {
+  return Object.freeze(rounds.map((pairs) => Object.freeze(pairs.map(([
+    pairId,
+    leftIcon,
+    leftLabel,
+    rightIcon,
+    rightLabel,
+  ]) => Object.freeze({
+    pairId,
+    cards: Object.freeze([
+      Object.freeze({ icon: leftIcon, label: leftLabel }),
+      Object.freeze({ icon: rightIcon, label: rightLabel }),
     ]),
-  }),
-  category: Object.freeze({
-    label: "Combinam",
-    description: "Encontre duas imagens que formam uma dupla.",
-    pairs: Object.freeze([
-      {
-        pairId: "gown-slipper",
-        cards: [
-          { image: "../../assets/images/memory/ball-gown.svg", label: "Vestido de baile" },
-          { image: "../../assets/images/memory/glass-slipper.svg", label: "Sapato de cristal" },
-        ],
-      },
-      {
-        pairId: "lipstick-mirror",
-        cards: [
-          { image: "../../assets/images/memory/lipstick.svg", label: "Batom" },
-          { image: "../../assets/images/memory/mirror.svg", label: "Espelho" },
-        ],
-      },
-      {
-        pairId: "wand-star",
-        cards: [
-          { image: "../../assets/images/memory/wand.svg", label: "Varinha" },
-          { image: "../../assets/images/memory/star.svg", label: "Estrela" },
-        ],
-      },
-      {
-        pairId: "necklace-box",
-        cards: [
-          { image: "../../assets/images/memory/necklace.svg", label: "Colar" },
-          { image: "../../assets/images/memory/jewelry-box.svg", label: "Caixinha de joias" },
-        ],
-      },
-      {
-        pairId: "rose-vase",
-        cards: [
-          { image: "../../assets/images/memory/rose.svg", label: "Rosa" },
-          { image: "../../assets/images/memory/vase.svg", label: "Vaso" },
-        ],
-      },
-      {
-        pairId: "comb-hairbrush",
-        cards: [
-          { image: "../../assets/images/memory/comb.svg", label: "Pente" },
-          { image: "../../assets/images/memory/hairbrush.svg", label: "Escova de cabelo" },
-        ],
-      },
-      {
-        pairId: "perfume-ribbon",
-        cards: [
-          { image: "../../assets/images/memory/perfume.svg", label: "Perfume" },
-          { image: "../../assets/images/memory/ribbon.svg", label: "Laço" },
-        ],
-      },
-      {
-        pairId: "fan-carriage",
-        cards: [
-          { image: "../../assets/images/memory/fan.svg", label: "Leque" },
-          { image: "../../assets/images/memory/carriage.svg", label: "Carruagem" },
-        ],
-      },
-    ]),
-  }),
-});
+  })))));
+}
 
-export const PAIR_COUNTS = Object.freeze([3, 4, 6, 8]);
-export const SESSION_CONFIG_KEY = "memory-pairs-last-config";
-export const REWARD_KEY = "memory-pairs-starlight-card-back";
+export const THEMES = Object.freeze([
+  Object.freeze({
+    id: "princess",
+    label: "Princesas",
+    icon: "👑",
+    description: "Objetos de princesa que combinam.",
+    rounds: createRounds([
+      [
+        ["dress-coat", "👗", "Vestido", "🧥", "Casaco"],
+        ["necklace-box", "📿", "Colar", "🎁", "Caixa de joias"],
+        ["rose-vase", "🌹", "Rosa", "🏺", "Vaso"],
+        ["brush-mirror", "🪮", "Escova de cabelo", "🪞", "Espelho"],
+        ["invitation-envelope", "💌", "Convite", "✉️", "Envelope"],
+        ["slipper-foot", "🥿", "Sapatinho", "🦶", "Pé"],
+      ],
+      [
+        ["crown-princess", "👑", "Coroa", "👸", "Princesa"],
+        ["glove-hand", "🧤", "Luva", "🖐️", "Mão"],
+        ["umbrella-rain", "☂️", "Guarda-chuva", "🌧️", "Chuva"],
+        ["candle-cake", "🕯️", "Vela", "🎂", "Bolo"],
+        ["perfume-bottle", "🧴", "Perfume", "👃", "Nariz"],
+        ["castle-flag", "🏰", "Castelo", "🚩", "Bandeira"],
+      ],
+      [
+        ["horse-stable", "🐴", "Cavalo", "🏠", "Estábulo"],
+        ["ring-finger", "💍", "Anel", "☝️", "Dedo"],
+        ["hairbrush-hair", "🪮", "Escova de cabelo", "💇‍♀️", "Cabelo"],
+        ["tea-cup", "🫖", "Bule", "☕", "Xícara"],
+        ["wand-star", "🪄", "Varinha", "⭐", "Estrela"],
+        ["shoe-sock", "👠", "Sapato", "🧦", "Meia"],
+      ],
+      [
+        ["makeup-brush", "🖌️", "Pincel de maquiagem", "💄", "Maquiagem"],
+        ["hair-ribbon", "🎀", "Laço", "💇‍♀️", "Cabelo"],
+        ["earring-ear", "💎", "Brinco", "👂", "Orelha"],
+        ["dress-closet", "👗", "Vestido", "🚪", "Guarda-roupa"],
+        ["cake-fork", "🍰", "Bolo", "🍴", "Garfo"],
+        ["ball-music", "💃", "Dança", "🎵", "Música"],
+      ],
+      [
+        ["pillow-bed", "🛌", "Travesseiro", "🛏️", "Cama"],
+        ["scepter-crown", "🔱", "Cetro", "👑", "Coroa"],
+        ["slipper-princess", "🥿", "Sapatinho", "👸", "Princesa"],
+        ["brush-lipstick", "🖌️", "Pincel de maquiagem", "💋", "Batom"],
+        ["castle-gate", "🏰", "Castelo", "🚪", "Portão"],
+        ["tiara-hair", "👑", "Tiara", "💇‍♀️", "Cabelo"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "home",
+    label: "Casa",
+    icon: "🏠",
+    description: "Objetos de casa e o que usamos com eles.",
+    rounds: createRounds([
+      [
+        ["key-door", "🔑", "Chave", "🚪", "Porta"],
+        ["bed-pillow", "🛏️", "Cama", "🛌", "Travesseiro"],
+        ["lamp-light", "💡", "Lâmpada", "✨", "Luz"],
+        ["table-chair", "🍽️", "Mesa", "🪑", "Cadeira"],
+        ["toothbrush-toothpaste", "🪥", "Escova de dentes", "🦷", "Pasta de dente"],
+        ["cup-water", "🥛", "Copo", "💧", "Água"],
+      ],
+      [
+        ["soap-hands", "🧼", "Sabonete", "👐", "Mãos"],
+        ["book-shelf", "📚", "Livros", "🗄️", "Estante"],
+        ["broom-floor", "🧹", "Vassoura", "🧼", "Chão limpo"],
+        ["remote-tv", "🎮", "Controle remoto", "📺", "Televisão"],
+        ["fridge-food", "🧊", "Geladeira", "🥦", "Legumes"],
+        ["oven-cake", "🔥", "Forno", "🍰", "Bolo"],
+      ],
+      [
+        ["sink-dishes", "🚰", "Pia", "🍽️", "Louça"],
+        ["shower-towel", "🚿", "Chuveiro", "🧖", "Toalha"],
+        ["clock-time", "🕰️", "Relógio", "⏰", "Hora"],
+        ["trash-bin", "🛍️", "Saco de lixo", "🗑️", "Lixeira"],
+        ["pencil-paper", "✏️", "Lápis", "📄", "Papel"],
+        ["laundry-washer", "👕", "Roupa suja", "🫧", "Máquina de lavar"],
+      ],
+      [
+        ["blanket-bed", "🛌", "Cobertor", "🛏️", "Cama"],
+        ["bowl-spoon", "🥣", "Tigela", "🥄", "Colher"],
+        ["glasses-eyes", "👓", "Óculos", "👀", "Olhos"],
+        ["doorbell-door", "🔔", "Campainha", "🚪", "Porta"],
+        ["sponge-sink", "🧽", "Esponja", "🚰", "Pia"],
+        ["basket-laundry", "🧺", "Cesto", "👕", "Roupa suja"],
+      ],
+      [
+        ["pot-soup", "🍲", "Panela", "🥣", "Sopa"],
+        ["knife-vegetable", "🔪", "Faca", "🥕", "Legume"],
+        ["faucet-water", "🚰", "Torneira", "💧", "Água"],
+        ["couch-cushion", "🛋️", "Sofá", "🛌", "Almofada"],
+        ["window-curtain", "🪟", "Janela", "🧵", "Cortina"],
+        ["watering-can-flower", "🚿", "Regador", "🌼", "Flor"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "animals",
+    label: "Animais",
+    icon: "🐱",
+    description: "Animais e lugares ou coisas ligados a eles.",
+    rounds: createRounds([
+      [
+        ["dog-doghouse", "🐶", "Cachorro", "🏠", "Casinha de cachorro"],
+        ["rabbit-burrow", "🐰", "Coelho", "🕳️", "Toca de coelho"],
+        ["bird-tree-nest", "🐦", "Pássaro", "🪺", "Ninho na árvore"],
+        ["fish-cave", "🐠", "Peixe", "🪨", "Caverna no mar"],
+        ["cat-bed", "🐱", "Gato", "🛏️", "Caminha de gato"],
+        ["turtle-pond", "🐢", "Tartaruga", "🪷", "Lagoa"],
+      ],
+      [
+        ["dog-bone", "🐶", "Cachorro", "🦴", "Osso"],
+        ["rabbit-carrot", "🐰", "Coelho", "🥕", "Cenoura"],
+        ["bird-seeds", "🐦", "Pássaro", "🌻", "Sementes"],
+        ["fish-flakes", "🐠", "Peixe", "🦐", "Comida de peixe"],
+        ["cat-yarn", "🐱", "Gato", "🧶", "Novelo de lã"],
+        ["horse-hay", "🐴", "Cavalo", "🌾", "Feno"],
+      ],
+      [
+        ["dog-leash", "🐶", "Cachorro", "🪢", "Guia"],
+        ["rabbit-hutch", "🐰", "Coelho", "🛖", "Casinha de coelho"],
+        ["bird-nest", "🐦", "Pássaro", "🪹", "Ninho"],
+        ["fish-coral", "🐠", "Peixe", "🪸", "Coral"],
+        ["cat-scratcher", "🐱", "Gato", "🪵", "Arranhador"],
+        ["turtle-shell", "🐢", "Tartaruga", "🐚", "Casco"],
+      ],
+      [
+        ["puppy-mother", "🐶", "Filhote de cachorro", "🐕", "Cachorro adulto"],
+        ["kitten-mother", "🐱", "Filhote de gato", "🐈", "Gato adulto"],
+        ["chick-hen", "🐣", "Pintinho", "🐔", "Galinha"],
+        ["lamb-sheep", "🐑", "Cordeiro", "🐏", "Ovelha"],
+        ["foal-horse", "🐴", "Potro", "🐎", "Cavalo"],
+        ["calf-cow", "🐮", "Bezerro", "🐄", "Vaca"],
+      ],
+      [
+        ["dog-ball", "🐶", "Cachorro", "🎾", "Bola"],
+        ["rabbit-cabbage", "🐰", "Coelho", "🥬", "Repolho"],
+        ["bird-feeder", "🐦", "Pássaro", "🪹", "Comedouro"],
+        ["fish-seaweed", "🐠", "Peixe", "🌿", "Alga marinha"],
+        ["cat-mouse", "🐱", "Gato", "🐭", "Rato de brinquedo"],
+        ["turtle-rock", "🐢", "Tartaruga", "🪨", "Pedra para tomar sol"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "transport",
+    label: "Transportes",
+    icon: "🚗",
+    description: "Transportes e caminhos por onde passam.",
+    rounds: createRounds([
+      [
+        ["car-road", "🚗", "Carro", "🛣️", "Estrada"],
+        ["train-rail", "🚂", "Trem", "🛤️", "Trilhos"],
+        ["boat-water", "⛵", "Barco", "🌊", "Água"],
+        ["airplane-sky", "✈️", "Avião", "☁️", "Céu"],
+        ["bicycle-helmet", "🚲", "Bicicleta", "⛑️", "Capacete"],
+        ["bus-stop", "🚌", "Ônibus", "🚏", "Ponto de ônibus"],
+      ],
+      [
+        ["taxi-passenger", "🚕", "Táxi", "🧍", "Passageiro"],
+        ["train-station", "🚂", "Trem", "🚉", "Estação"],
+        ["boat-anchor", "⛵", "Barco", "⚓", "Âncora"],
+        ["airplane-airport", "✈️", "Avião", "🛫", "Aeroporto"],
+        ["bicycle-wheel", "🚲", "Bicicleta", "🛞", "Roda"],
+        ["bus-ticket", "🚌", "Ônibus", "🎫", "Passagem"],
+      ],
+      [
+        ["car-seatbelt", "🚗", "Carro", "💺", "Cinto de segurança"],
+        ["train-conductor", "🚂", "Trem", "🧑‍🔧", "Maquinista"],
+        ["boat-lifejacket", "⛵", "Barco", "🦺", "Colete salva-vidas"],
+        ["airplane-pilot", "✈️", "Avião", "👨‍✈️", "Piloto"],
+        ["bicycle-bell", "🚲", "Bicicleta", "🔔", "Campainha"],
+        ["bus-driver", "🚌", "Ônibus", "🧑‍✈️", "Motorista"],
+      ],
+      [
+        ["car-key", "🚗", "Carro", "🔑", "Chave"],
+        ["train-track", "🚆", "Trem", "🛤️", "Trilho"],
+        ["boat-oar", "🚣", "Barco a remo", "🛶", "Remo"],
+        ["airplane-runway", "✈️", "Avião", "🛬", "Pista de pouso"],
+        ["bicycle-basket", "🚲", "Bicicleta", "🧺", "Cesta"],
+        ["bus-route", "🚌", "Ônibus", "🗺️", "Rota"],
+      ],
+      [
+        ["car-garage", "🚗", "Carro", "🏠", "Garagem"],
+        ["train-ticket", "🚂", "Trem", "🎫", "Passagem"],
+        ["boat-harbor", "🚤", "Barco", "⚓", "Porto"],
+        ["airplane-cloud", "✈️", "Avião", "☁️", "Nuvem"],
+        ["bicycle-pedal", "🚲", "Bicicleta", "🦶", "Pedal"],
+        ["bus-passengers", "🚌", "Ônibus", "🧍", "Passageiros"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "food",
+    label: "Comidas",
+    icon: "🍎",
+    description: "Ingredientes e comidas feitas com eles.",
+    rounds: createRounds([
+      [
+        ["carrot-cake", "🥕", "Cenoura", "🍰", "Bolo de cenoura"],
+        ["bread-sandwich", "🍞", "Pão", "🥪", "Sanduíche"],
+        ["strawberry-jam", "🍓", "Morango", "🫙", "Geleia de morango"],
+        ["banana-split", "🍌", "Banana", "🍨", "Banana split"],
+        ["corn-popcorn", "🌽", "Milho", "🍿", "Pipoca"],
+        ["apple-juice", "🍎", "Maçã", "🧃", "Suco de maçã"],
+      ],
+      [
+        ["tomato-sauce", "🍅", "Tomate", "🥫", "Molho de tomate"],
+        ["grape-juice", "🍇", "Uva", "🧃", "Suco de uva"],
+        ["potato-fries", "🥔", "Batata", "🍟", "Batata frita"],
+        ["milk-cheese", "🥛", "Leite", "🧀", "Queijo"],
+        ["orange-cake", "🍊", "Laranja", "🍰", "Bolo de laranja"],
+        ["cocoa-chocolate", "🫘", "Cacau", "🍫", "Chocolate"],
+      ],
+      [
+        ["lemonade-lemon", "🍋", "Limão", "🥤", "Limonada"],
+        ["pineapple-pizza", "🍍", "Abacaxi", "🍕", "Pizza de abacaxi"],
+        ["egg-omelet", "🥚", "Ovo", "🍳", "Omelete"],
+        ["rice-cooked", "🌾", "Arroz", "🍚", "Arroz cozido"],
+        ["pumpkin-soup", "🎃", "Abóbora", "🥣", "Sopa de abóbora"],
+        ["coconut-water", "🥥", "Coco", "💧", "Água de coco"],
+      ],
+      [
+        ["peach-pie", "🍑", "Pêssego", "🥧", "Torta de pêssego"],
+        ["blueberry-muffin", "🫐", "Mirtilo", "🧁", "Bolinho de mirtilo"],
+        ["cucumber-salad", "🥒", "Pepino", "🥗", "Salada de pepino"],
+        ["mushroom-pasta", "🍄", "Cogumelo", "🍝", "Macarrão com cogumelo"],
+        ["honey-toast", "🍯", "Mel", "🍞", "Pão com mel"],
+        ["lettuce-taco", "🥬", "Alface", "🌮", "Taco com alface"],
+      ],
+      [
+        ["cherry-icecream", "🍒", "Cereja", "🍨", "Sorvete de cereja"],
+        ["watermelon-juice", "🍉", "Melancia", "🥤", "Suco de melancia"],
+        ["cheese-pizza", "🧀", "Queijo", "🍕", "Pizza de queijo"],
+        ["flour-pancake", "🌾", "Farinha", "🥞", "Panqueca"],
+        ["onion-soup", "🧅", "Cebola", "🥣", "Sopa de cebola"],
+        ["bean-soup", "🫘", "Feijão", "🥘", "Sopa de feijão"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "garden",
+    label: "Jardim",
+    icon: "🌷",
+    description: "Plantas, ferramentas e animais do jardim.",
+    rounds: createRounds([
+      [
+        ["bee-flower", "🐝", "Abelha", "🌷", "Flor"],
+        ["watering-plant", "🚿", "Regador", "🪴", "Planta"],
+        ["seed-soil", "🌰", "Semente", "🟫", "Terra"],
+        ["bird-nest", "🐦", "Pássaro", "🪺", "Ninho"],
+        ["butterfly-caterpillar", "🦋", "Borboleta", "🐛", "Lagarta"],
+        ["tree-fruit", "🌳", "Árvore", "🍎", "Fruta"],
+      ],
+      [
+        ["shovel-soil", "🪏", "Pá", "🪴", "Terra"],
+        ["flower-vase", "🌷", "Flor", "🏺", "Vaso"],
+        ["sun-sunflower", "☀️", "Sol", "🌻", "Girassol"],
+        ["mushroom-basket", "🍄", "Cogumelo", "🧺", "Cesta"],
+        ["leaf-tree", "🍃", "Folha", "🌳", "Árvore"],
+        ["bee-hive", "🐝", "Abelha", "🍯", "Colmeia"],
+      ],
+      [
+        ["rose-thorn", "🌹", "Rosa", "🌵", "Espinho"],
+        ["bird-feeder", "🐦", "Pássaro", "🥣", "Comedouro"],
+        ["trowel-seed", "🪏", "Pazinha", "🌰", "Semente"],
+        ["butterfly-flower", "🦋", "Borboleta", "🌸", "Flor"],
+        ["tree-swing", "🌳", "Árvore", "🪢", "Balanço"],
+        ["worm-soil", "🪱", "Minhoca", "🪴", "Terra"],
+      ],
+      [
+        ["watering-flower", "🚿", "Regador", "🌼", "Flor"],
+        ["sunflower-sun", "🌻", "Girassol", "☀️", "Sol"],
+        ["apple-tree", "🍎", "Maçã", "🌳", "Macieira"],
+        ["nest-eggs", "🪺", "Ninho", "🥚", "Ovos"],
+        ["caterpillar-leaf", "🐛", "Lagarta", "🍃", "Folha"],
+        ["rain-plant", "🌧️", "Chuva", "🌱", "Planta"],
+      ],
+      [
+        ["garden-gloves", "🧤", "Luvas de jardim", "🪏", "Pá de jardim"],
+        ["plant-pot", "🪴", "Planta", "🏺", "Vaso"],
+        ["bee-honey", "🐝", "Abelha", "🍯", "Mel"],
+        ["flower-seed", "🌻", "Flor", "🌰", "Semente"],
+        ["tree-bird", "🌳", "Árvore", "🐦", "Pássaro"],
+        ["rain-rainbow", "🌧️", "Chuva", "🌈", "Arco-íris"],
+      ],
+    ]),
+  }),
+]);
+
+export function getTheme(themeId) {
+  return THEMES.find((theme) => theme.id === themeId) ?? THEMES[0];
+}

@@ -11,12 +11,14 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/dress-princess/ui.js`: DOM rendering, item tray, layered outfit, pointer/keyboard interactions, and settings.
 - `games/dress-princess/data.js`: categories, scenario requirements, tagged clothing items, and optional audio paths.
 - `games/dress-princess/game.css`: game-specific layout, using shared tokens.
-- `games/memory-pairs/index.html`: memory game page and accessible selection, board, and completion regions.
-- `games/memory-pairs/game.js`: pure card-deck and game-state logic, independent of the DOM.
-- `games/memory-pairs/session.js`: browser session orchestration, timers, storage, and audio integration for the memory game.
-- `games/memory-pairs/ui.js`: DOM controls, board rendering, keyboard navigation, and saved selection preferences.
-- `games/memory-pairs/data.js`: pair faces, game modes, supported board sizes, and storage keys.
-- `games/memory-pairs/game.css`: memory game styling built from shared design tokens.
+- `games/memory-pairs/themes.html`: theme selector that links to a game board with the selected theme.
+- `games/memory-pairs/themes.js`: renders theme choices from game data.
+- `games/memory-pairs/index.html`: matching game page, board, and completion regions.
+- `games/memory-pairs/game.js`: pure two-column board generation and match-state logic, independent of the DOM.
+- `games/memory-pairs/session.js`: session-round orchestration and optional audio integration for the matching game.
+- `games/memory-pairs/ui.js`: DOM rendering, drag-and-drop, and accessible selection-based matching.
+- `games/memory-pairs/data.js`: five rounds of six related picture pairs for each of six game themes.
+- `games/memory-pairs/game.css`: matching-board styling built from shared design tokens.
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset and global typography/layout defaults.
@@ -27,7 +29,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `shared/js/catalog.js`: data for games shown on the home page.
 - `assets/images/`: temporary SVG clothing layers with a shared `viewBox` of `0 0 240 320`; replace the art by swapping files and updating item paths in `data.js`.
 - `assets/audio/`: optional local scenario instructions. The listen control stays hidden when a scenario has no audio file.
-- `assets/images/memory/`: temporary memory-game SVG faces sharing a `0 0 128 128` viewBox.
+- `assets/images/memory/`: retained SVG memory artwork; Jogo dos Pares currently uses labeled Unicode picture symbols.
 - `docs/`: product, design, accessibility, and contribution specifications.
 
 ## Naming and module conventions
@@ -36,7 +38,7 @@ Use kebab-case for file and folder names, camelCase for JavaScript variables/fun
 
 ## Data organization
 
-Keep game content as plain JavaScript data exports in each game's `data.js`. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Memória das Princesas, modes define pairs with one or two image faces; the pure engine duplicates one-face pairs for identical matching and uses two-face pairs for category relationships. A shared `pairId` identifies matching faces, which also supports a future emotion-and-situation mode. The game logic consumes that data and should not hard-code presentation markup. Persistent user preferences and game rewards use `settings.js`/`storage.js`; a storage failure must not prevent the game from running. The memory game stores its own themed card-back reward instead of coupling to the dress game's clothing reward.
+Keep game content as plain JavaScript data exports in each game's `data.js`. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each of six themes defines five rounds of six related picture pairs. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. Keep data separate from presentation markup.
 
 ## Add a catalog game
 
