@@ -6,6 +6,7 @@ export const gameCatalog = [
     icon: "./assets/images/ui/dress-princess.svg",
     href: "./games/dress-princess/index.html",
     available: true,
+    hidden: true,
   },
   {
     id: "memory-pairs",
@@ -20,7 +21,7 @@ export const gameCatalog = [
     title: "O que está acontecendo?",
     description: "Observe a imagem e escolha a frase que combina.",
     icon: "./assets/images/ui/image-interpretation.svg",
-    href: "./games/image-interpretation/index.html",
+    href: "./games/image-interpretation/themes.html",
     available: true,
   },
 ];

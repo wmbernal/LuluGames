@@ -18,9 +18,6 @@ let dragCandidate = null;
 let suppressNextClick = false;
 
 function renderSettings(settings) {
-  settingsForm.elements.soundEnabled.checked = settings.soundEnabled;
-  settingsForm.elements.soundVolume.value = String(settings.soundVolume);
-  settingsForm.elements.soundVolume.disabled = !settings.soundEnabled;
   settingsForm.elements.animationsEnabled.checked = settings.animationsEnabled;
   settingsForm.elements.roundsPerSession.value = String(settings.roundsPerSession);
 }

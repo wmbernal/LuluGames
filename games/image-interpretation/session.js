@@ -1,15 +1,20 @@
 import { getSettings } from "../../shared/js/settings.js?v=2";
-import { playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=5";
-import { SCENES } from "./data.js?v=2";
-import { chooseAnswer, createSession, nextRound } from "./game.js?v=2";
-import { createGameUI } from "./ui.js?v=3";
+import { celebrateCompletion, playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=6";
+import { THEMES } from "./data.js?v=7";
+import { chooseAnswer, createSession, nextRound } from "./game.js?v=4";
+import { createGameUI } from "./ui.js?v=6";
+
+const requestedTheme = new URLSearchParams(window.location.search).get("theme");
+const theme = THEMES.find((item) => item.id === requestedTheme) ?? THEMES[0];
+const rounds = theme.scenes.length;
 
 let state = { phase: "intro" };
 const ui = createGameUI({
-  rounds: getSettings().roundsPerSession,
+  theme,
+  rounds,
   isActive: () => state.phase === "playing" || state.phase === "correct",
   onStart() {
-    state = createSession(SCENES, getSettings().roundsPerSession);
+    state = createSession(theme.scenes, rounds);
     ui.reset();
     ui.render(state);
     ui.focusFirstAnswer();
@@ -27,9 +32,11 @@ const ui = createGameUI({
     }
   },
   onNext() {
+    const wasComplete = state.phase === "complete";
     state = nextRound(state);
     ui.render(state);
     if (state.phase === "playing") ui.focusFirstAnswer();
+    if (state.phase === "complete" && !wasComplete) void celebrateCompletion(getSettings());
   },
 });
 

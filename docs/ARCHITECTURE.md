@@ -20,7 +20,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/memory-pairs/data.js`: five rounds of six pairs for each game theme, including related-picture and rhyming-word pairs.
 - `games/memory-pairs/game.css`: matching-board styling built from shared design tokens.
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
-- `games/image-interpretation/`: image-to-text game; `data.js` defines scenes, `game.js` provides pure rules, `session.js` orchestrates settings and audio, and `ui.js` renders choices.
+- `games/image-interpretation/`: image-to-text game; `themes.html` and `themes.js` render the theme chooser, `data.js` defines themes and their scenes, `game.js` provides pure rules, `session.js` resolves the selected theme and orchestrates settings and audio, and `ui.js` renders choices and completion.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset and global typography/layout defaults.
 - `shared/css/components.css`: reusable buttons, cards, and form controls.

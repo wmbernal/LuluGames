@@ -1,0 +1,205 @@
+{
+  "$comment": "Buscas do Pexels para as 25 cenas de docs/IMAGE_LIST.md. query = português (locale pt-BR), queryEn = fallback em inglês quando o pt-BR não retorna nada.",
+  "scenes": [
+    {
+      "scene": "house-brushing-teeth",
+      "theme": "Casa",
+      "query": "criança escovando os dentes banheiro",
+      "queryEn": "child brushing teeth bathroom",
+      "mustShow": "Escova dentro da boca, espuma nos lábios",
+      "mustNot": "Toalha no rosto, torneira sobre as mãos"
+    },
+    {
+      "scene": "house-cooking",
+      "theme": "Casa",
+      "query": "mulher cozinhando panela no fogão",
+      "queryEn": "woman cooking pot stove",
+      "mustShow": "Colher de pau dentro da panela",
+      "mustNot": "Tábua, faca, legumes soltos"
+    },
+    {
+      "scene": "house-watering-plants",
+      "theme": "Casa",
+      "query": "criança regando planta no vaso",
+      "queryEn": "child watering potted plant",
+      "mustShow": "Regador inclinado, água caindo na terra",
+      "mustNot": "Pá, flor na mão, cachorro"
+    },
+    {
+      "scene": "house-washing-dishes",
+      "theme": "Casa",
+      "query": "pessoa lavando louça na pia",
+      "queryEn": "person washing dishes sink",
+      "mustShow": "Mãos com espuma na pia, prato sob a água",
+      "mustNot": "Pano de prato na mão, pratos secos"
+    },
+    {
+      "scene": "house-sweeping",
+      "theme": "Casa",
+      "query": "pessoa varrendo o chão com vassoura",
+      "queryEn": "person sweeping floor broom",
+      "mustShow": "Cerdas no chão, monte de sujeira",
+      "mustNot": "Balde, mop, piso molhado"
+    },
+    {
+      "scene": "school-writing",
+      "theme": "Escola",
+      "query": "criança escrevendo no caderno com lápis",
+      "queryEn": "child writing notebook pencil",
+      "mustShow": "Ponta do lápis na folha",
+      "mustNot": "Livro aberto, mochila carregada"
+    },
+    {
+      "scene": "school-raising-hand",
+      "theme": "Escola",
+      "query": "criança levantando a mão na sala de aula",
+      "queryEn": "child raising hand classroom",
+      "mustShow": "Braço acima da cabeça, colegas sentados",
+      "mustNot": "Cabeça na carteira, bandeja de comida"
+    },
+    {
+      "scene": "school-eating-apple",
+      "theme": "Escola",
+      "query": "menino comendo maçã no pátio",
+      "queryEn": "boy eating apple schoolyard",
+      "mustShow": "Maçã com mordida perto da boca",
+      "mustNot": "Garrafa, corda, bola, outras crianças"
+    },
+    {
+      "scene": "school-painting",
+      "theme": "Escola",
+      "query": "criança pintando com pincel e tinta",
+      "queryEn": "child painting paintbrush",
+      "mustShow": "Pincel com tinta tocando o papel",
+      "mustNot": "Tesoura, papel recortado, bola"
+    },
+    {
+      "scene": "school-erasing-board",
+      "theme": "Escola",
+      "query": "professora apagando o quadro com apagador",
+      "queryEn": "teacher erasing chalkboard",
+      "mustShow": "Apagador na lousa, faixa limpa",
+      "mustNot": "Folhas na mão, pia, alunos recebendo"
+    },
+    {
+      "scene": "food-cake-cutting",
+      "theme": "Comidas",
+      "query": "mulher cortando bolo com faca",
+      "queryEn": "woman cutting cake knife",
+      "mustShow": "Faca dentro do bolo, fatia separada",
+      "mustNot": "Saco de confeitar, glacê"
+    },
+    {
+      "scene": "food-soup-stirring",
+      "theme": "Comidas",
+      "query": "menino mexendo sopa na panela",
+      "queryEn": "boy stirring soup pot",
+      "mustShow": "Colher grande dentro da panela",
+      "mustNot": "Prato servido, colher na boca"
+    },
+    {
+      "scene": "food-orange-juice",
+      "theme": "Comidas",
+      "query": "espremendo laranja no espremedor de suco",
+      "queryEn": "squeezing orange juicer",
+      "mustShow": "Mãos na laranja cortada sobre o espremedor",
+      "mustNot": "Copo na boca, tomates, display"
+    },
+    {
+      "scene": "food-bread-butter",
+      "theme": "Comidas",
+      "query": "passando manteiga no pão com faca",
+      "queryEn": "spreading butter on bread knife",
+      "mustShow": "Faca espalhando manteiga, pão no prato",
+      "mustNot": "Pão na boca, marcas de mordida"
+    },
+    {
+      "scene": "food-pizza-oven",
+      "theme": "Comidas",
+      "query": "cozinheiro colocando pizza no forno",
+      "queryEn": "chef putting pizza in oven",
+      "mustShow": "Pizza entrando no forno aberto",
+      "mustNot": "Cortador, caixa de pizza, pratos"
+    },
+    {
+      "scene": "park-kite-flying",
+      "theme": "Parque",
+      "query": "menino soltando pipa no parque",
+      "queryEn": "boy flying kite park",
+      "mustShow": "Linha esticada até a pipa no céu",
+      "mustNot": "Cachorro, banco, pipa no chão"
+    },
+    {
+      "scene": "park-swing-pushing",
+      "theme": "Parque",
+      "query": "pai empurrando filho no balanço",
+      "queryEn": "father pushing child on swing",
+      "mustShow": "Mãos do adulto nas costas da criança",
+      "mustNot": "Cadarço, bebedouro, balanço vazio"
+    },
+    {
+      "scene": "park-flower-watering",
+      "theme": "Parque",
+      "query": "menina regando flores com regador",
+      "queryEn": "girl watering flowers watering can",
+      "mustShow": "Água caindo na terra do canteiro",
+      "mustNot": "Pá, muda, flor na mão"
+    },
+    {
+      "scene": "park-bench-reading",
+      "theme": "Parque",
+      "query": "mulher lendo livro no banco do parque",
+      "queryEn": "woman reading book park bench",
+      "mustShow": "Livro aberto nas mãos, banco de madeira",
+      "mustNot": "Sanduíche, copo, cachorro"
+    },
+    {
+      "scene": "park-sand-castle",
+      "theme": "Parque",
+      "query": "criança enchendo balde de areia com pá",
+      "queryEn": "child bucket sand shovel",
+      "mustShow": "Balde com areia, pá na mão",
+      "mustNot": "Escorregador, corda, bola"
+    },
+    {
+      "scene": "transport-bike-riding",
+      "theme": "Transportes",
+      "query": "menino andando de bicicleta",
+      "queryEn": "boy riding bicycle",
+      "mustShow": "Dois pés nos pedais, bicicleta ereta",
+      "mustNot": "Ferramentas, corrente solta, carro"
+    },
+    {
+      "scene": "transport-boat-rowing",
+      "theme": "Transportes",
+      "query": "homem remando barco no rio",
+      "queryEn": "man rowing boat river",
+      "mustShow": "Dois remos com as pás na água",
+      "mustNot": "Vara de pescar, piscina"
+    },
+    {
+      "scene": "transport-car-fueling",
+      "theme": "Transportes",
+      "query": "homem abastecendo o carro no posto",
+      "queryEn": "man refueling car gas station",
+      "mustShow": "Mangueira no tanque do carro",
+      "mustNot": "Balde, esponja, espuma, display"
+    },
+    {
+      "scene": "transport-truck-unloading",
+      "theme": "Transportes",
+      "query": "motorista descarregando caixas do caminhão",
+      "queryEn": "driver unloading boxes truck",
+      "mustShow": "Caixas no chão, motorista carregando uma",
+      "mustNot": "Mangueira, balde, logo legível"
+    },
+    {
+      "scene": "transport-bus-boarding",
+      "theme": "Transportes",
+      "query": "mulher entrando no ônibus",
+      "queryEn": "woman boarding bus",
+      "mustShow": "Pé no degrau, mão no corrimão",
+      "mustNot": "Fila, placa de ponto, letreiro"
+    }
+  ]
+}

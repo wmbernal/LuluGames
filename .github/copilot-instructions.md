@@ -7,11 +7,22 @@ Lulu Games is a static HTML, CSS, and JavaScript application. Follow the project
 - For gameplay, usability, player flow, instructions, learning value, or missing or confusing audio/visual feedback, use **Game UX Reviewer** (`.github/agents/game-ux-reviewer.agent.md`).
 - For visual design, page layout, responsive presentation, sensory profile, or consistency between screens, use **Game Visual Designer** (`.github/agents/game-visual-designer.agent.md`).
 - For creating, improving, replacing, or reviewing SVG artwork, illustrations, scenes, or layered character assets, use **SVG Illustrator** (`.github/agents/svg-illustrator.agent.md`). The illustrator owns the artwork; Game Visual Designer owns its integration and consistency across screens.
+- For new or revised scenes, situations, answer phrases, alt text, or clues in **O que está acontecendo?**, use **Image Interpretation Theme Designer** (`.github/agents/image-interpretation-theme-designer.agent.md`). It owns the scene concept and wording, and delegates the illustration brief to SVG Illustrator; it does not draw the artwork itself.
+- For learning difficulty, theme relevance, vocabulary level, or teaching methodology, especially for autistic and other atypical learners, use **Atypical Education Specialist** (`.github/agents/atypical-education-specialist.agent.md`). It advises on content and learning design but does not diagnose or change game mechanics.
 - Changes affecting both interaction and presentation should be reviewed by both specialists, with separate scopes and no concurrent edits to the same files. UX owns behavior and feedback requirements; visual design owns presentation. The main agent integrates their results and verifies the complete flow.
 - For artwork that changes a game screen, coordinate the SVG Illustrator and Game Visual Designer; involve Game UX Reviewer when the image conveys gameplay or learning meaning. Keep scopes separate and avoid concurrent edits to the same files.
 - Apply this routing after relevant changes and when adding a game or screen; for review-only requests, specialists should report findings rather than change files unless fixes are requested.
 - Specialist invocation depends on the active environment and available tools. If delegation is unavailable, perform the relevant review directly and report the limitation; do not claim a specialist was invoked.
 - Honor explicit user requests while identifying any conflicts with project guidance. In particular, keep error feedback gentle, optional where appropriate, and never punitive.
+
+## Context and token hygiene
+
+Treat a **theme** and a **game** as separate units of work. Start a fresh session when the unit changes.
+
+- **Hand off at boundaries.** Before switching theme or game, run `/handoff`: durable decisions go to `docs/`, a compact state goes to `.ai/handoff.md` (procedure in `.opencode/skills/handoff/SKILL.md`), then start a fresh session.
+- **Rehydrate from the file.** In a new session, read `.ai/handoff.md` first and open only what it names. Never carry file dumps, diffs, logs, screenshots of verified screens, or design discussion across sessions.
+- **Keep each turn small.** Prefer targeted reads and `grep` over whole files, reference paths instead of quoting, run targeted tests before the full suite, batch independent calls, make surgical edits, and do not re-verify what already passed.
+- **Stay in scope.** One unit of work per session; no speculative refactors or unrelated changes. If the handoff is missing a detail, ask for it instead of reloading the project.
 
 ## Behavioral guidelines
 

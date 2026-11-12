@@ -1,4 +1,4 @@
-import { gameCatalog } from "./catalog.js?v=3";
+import { gameCatalog } from "./catalog.js?v=5";
 import { getSettings, updateSettings } from "./settings.js?v=2";
 
 const catalogElement = document.querySelector("#game-catalog");
@@ -9,6 +9,7 @@ const settingsPanel = document.querySelector("#settings-panel");
 
 function renderCatalog() {
   for (const game of gameCatalog) {
+    if (game.hidden) continue;
     const card = document.createElement("article");
     card.className = "game-card";
 

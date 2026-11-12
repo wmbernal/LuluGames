@@ -61,6 +61,15 @@ export function playCompletionSound(settings) {
   return playToneSequence(settings, [523, 659, 784], 0.12);
 }
 
+export async function celebrateCompletion(settings) {
+  if (!settings.soundEnabled || settings.soundVolume <= 0) {
+    return false;
+  }
+  await playCompletionSound(settings);
+  await new Promise((resolve) => setTimeout(resolve, 520));
+  return speakCardName("Parabéns!", settings);
+}
+
 async function playBellSequence(settings, frequencies, noteInterval, decaySeconds, volumeMultiplier = 1) {
   if (!settings.soundEnabled || settings.soundVolume <= 0) {
     return;

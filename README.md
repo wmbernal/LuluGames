@@ -63,11 +63,13 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for module responsibilities and
 4. Follow [docs/UX_PRINCIPLES.md](docs/UX_PRINCIPLES.md), [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md), and [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
 5. Test keyboard navigation, pointer/touch interactions, small screens, reduced motion, and the complete session flow before publishing.
 
+Set `hidden: true` on a catalog entry to hide it from the home menu without removing the game or disabling its direct URL. **Vestir a Princesa** is currently hidden.
+
 To add clothing or a scenario to **Vestir a Princesa**, add an SVG item with the shared `viewBox` to `assets/images/`, then add its category, image path, and context tags in `games/dress-princess/data.js`. Add the scenario's required tag and an option matching every category. See [docs/GAME_VESTIR_PRINCESA.md](docs/GAME_VESTIR_PRINCESA.md) for the matching rule.
 
 **Jogo dos Pares** starts with a theme chooser: Princesas, Casa, Animais, Transportes, Comidas, Jardim, and Palavras que rimam. Every theme has five different rounds of six pairs; the rhyme theme shows rhyming words with pictures. The session ends after the configured 3, 4, or 5 rounds. Run the game logic tests with `npm test` or `node --test`.
 
-**O que está acontecendo?** presents illustrated everyday situations and three phrases to choose from. After three incorrect attempts, a gentle clue helps the player look again. See [docs/GAME_IMAGE_INTERPRETATION.md](docs/GAME_IMAGE_INTERPRETATION.md).
+**O que está acontecendo?** starts with a theme chooser. Each theme has five illustrated situations and three phrases to choose from; the next exercise appears only after the previous one is completed, and the last one ends with a congratulations screen. After three incorrect attempts, a gentle clue helps the player look again. See [docs/GAME_IMAGE_INTERPRETATION.md](docs/GAME_IMAGE_INTERPRETATION.md).
 
 ## Publish on GitHub Pages
 

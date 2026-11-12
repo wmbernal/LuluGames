@@ -16,4 +16,8 @@ The parent can confirm whether six pairs, these themes, and the proposed relatio
 ## O que está acontecendo?
 
 - **Objectives:** Practice interpreting everyday scenes, associating pictures and written phrases, reading, and vocabulary.
-- **Mechanics:** Choose one of three phrases per illustrated situation. Mistakes can be retried without losing progress; a gentle clue appears after three incorrect attempts.
+- **Mechanics:** Choose a theme, then complete its five illustrated situations in sequence. Choose one of three phrases per situation. Mistakes can be retried without losing progress; a gentle clue appears after three incorrect attempts. After the fifth exercise the session ends with a completion sound and a congratulations screen that returns to the theme chooser.
+- **Difficulty:** One fixed level: five exercises per theme, one theme per session. The 3/4/5 round setting does not apply to this game.
+- **Themes:** Animais, Casa, Escola, Comidas, Parque, and Transportes.
+
+The parent can confirm whether five exercises per theme and the theme list feel comfortable for the child, and whether the vocabulary (for example "alimentando", "estábulo", "galinheiro") is familiar.

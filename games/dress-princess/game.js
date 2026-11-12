@@ -2,7 +2,7 @@ import { playInstructionAudio, playPositiveSound } from "../../shared/js/audio.j
 import { getSettings, updateSettings } from "../../shared/js/settings.js?v=2";
 import { readStorage, writeStorage } from "../../shared/js/storage.js";
 import { CATEGORIES, ITEMS, REWARD_ITEM_ID, SCENARIOS } from "./data.js";
-import { createGameUI } from "./ui.js";
+import { createGameUI } from "./ui.js?v=2";
 
 const REWARD_STORAGE_KEY = ITEMS.find((item) => item.id === REWARD_ITEM_ID).unlockKey;
 const initialSettings = getSettings();

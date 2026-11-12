@@ -54,16 +54,64 @@
   border: var(--border-width-thin) solid var(--color-highlight-border);
   border-radius: var(--radius-control);
 }
-.game-footer { display: flex; justify-content: center; margin-top: var(--space-6); }
-.game-settings { max-width: var(--layout-settings-max-width); margin: var(--space-6) auto 0; }
-.game-settings summary {
-  min-height: var(--target-size);
-  padding: var(--space-2);
-  color: var(--color-primary);
-  font-weight: 700;
-  cursor: pointer;
+.intro-theme {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
 }
-.game-settings[open] summary { margin-bottom: var(--space-3); }
+.theme-picker-instructions {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+}
+.theme-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.theme-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  min-height: 200px;
+  padding: var(--space-4);
+  color: var(--color-text);
+  text-align: center;
+  text-decoration: none;
+  background: var(--color-surface);
+  border: var(--border-width-medium) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.theme-choice:hover,
+.theme-choice:focus-visible {
+  background: var(--color-focus-soft);
+  border-color: var(--color-focus);
+}
+.theme-choice:focus-visible {
+  outline: var(--border-width-medium) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+.theme-choice__icon {
+  min-height: 56px;
+  font-size: 48px;
+  line-height: 1.15;
+}
+.theme-choice__title {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+}
+.theme-choice__description {
+  flex: 1;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+.theme-choice__count {
+  font-weight: 700;
+}
+.game-footer { display: flex; justify-content: center; margin-top: var(--space-6); }
 .leave-dialog {
   width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
   padding: var(--space-8);
@@ -75,3 +123,15 @@
 }
 .leave-dialog::backdrop { background: var(--color-backdrop); }
 .dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }
+
+@media (max-width: 640px) {
+  .theme-picker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .theme-picker {
+    grid-template-columns: 1fr;
+  }
+}

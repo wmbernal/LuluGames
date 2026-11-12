@@ -1,0 +1,1405 @@
+{
+  "house-brushing-teeth": {
+    "query": "criança escovando os dentes banheiro",
+    "queryEn": "child brushing teeth bathroom",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-garotinha-menina-12645015/",
+        "src": "https://images.pexels.com/photos/12645015/pexels-photo-12645015.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5001456452082726,
+        "dl": "pexels-boom-12645015.jpg",
+        "alt": "grátis Criança escovando os dentes na pia, destacando hábitos de higiene pessoal. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/fofo-bonitinho-crianca-filho-7491458/",
+        "src": "https://images.pexels.com/photos/7491458/pexels-photo-7491458.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667234913058302,
+        "dl": "pexels-mart-production-7491458.jpg",
+        "alt": "grátis Bebê adorável escovando os dentes na pia do banheiro, mostrando hábitos de higiene bucal desde cedo. Foto profiss"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-garoto-menino-7086231/",
+        "src": "https://images.pexels.com/photos/7086231/pexels-photo-7086231.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4998780785174348,
+        "dl": "pexels-cottonbro-7086231.jpg",
+        "alt": "grátis Menino jovem escovando os dentes em ambiente interno com luz natural suave, promovendo rotinas de cuidados dentár"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-com-sueter-amarelo-segurando-um-smartphone-branco-5999352/",
+        "src": "https://images.pexels.com/photos/5999352/pexels-photo-5999352.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-cottonbro-5999352.jpg",
+        "alt": "grátis Menina jovem escovando os dentes na pia do banheiro com uma expressão pensativa. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-de-pe-19080458/",
+        "src": "https://images.pexels.com/photos/19080458/pexels-photo-19080458/free-photo-of-menina-garota-moca-de-pe.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-jonathanborba-19080458.jpg",
+        "alt": "grátis Uma jovem criança com cabelo castanho escova os dentes usando uma escova de dentes ao lado da pia, mostrando hábi"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-filho-garotinha-menina-12645015/",
+      "src": "https://images.pexels.com/photos/12645015/pexels-photo-12645015.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5001456452082726,
+      "dl": "pexels-boom-12645015.jpg",
+      "alt": "grátis Criança escovando os dentes na pia, destacando hábitos de higiene pessoal. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "BOOM 💥 Photography"
+    }
+  },
+  "house-cooking": {
+    "query": "mulher cozinhando panela no fogão",
+    "queryEn": "woman cooking pot stove",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-panela-vaso-cozinha-5491325/",
+        "src": "https://images.pexels.com/photos/5491325/pexels-photo-5491325.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-cottonbro-5491325.jpg",
+        "alt": "grátis Uma mulher cozinhando com frutas laranja em uma cozinha, adicionando ingredientes a uma panela no fogão. Foto pro"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna-28703305/",
+        "src": "https://images.pexels.com/photos/28703305/pexels-photo-28703305/free-photo-of-chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.499267935578331,
+        "dl": "pexels-jonathanborba-28703305.jpg",
+        "alt": "grátis Chef profissional mexendo ingredientes em um fogão a gás em um ambiente de cozinha moderna, demonstrando habilida"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/uma-mulher-cozinhando-leite-10821210/",
+        "src": "https://images.pexels.com/photos/10821210/pexels-photo-10821210.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-furkanfdemir-10821210.jpg",
+        "alt": "grátis Uma pessoa mexe leite em uma panela vermelha no fogão da cozinha. Atmosfera quente e aconchegante. Foto profissio"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/moendo-queijo-na-panela-10821214/",
+        "src": "https://images.pexels.com/photos/10821214/pexels-photo-10821214.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-furkanfdemir-10821214.jpg",
+        "alt": "grátis Uma pessoa rala queijo sobre uma panela vermelha fumegante no fogão, mostrando a preparação culinária. Foto profi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-mulher-6874240/",
+        "src": "https://images.pexels.com/photos/6874240/pexels-photo-6874240.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-teona-swift-6874240.jpg",
+        "alt": "grátis Uma mulher idosa reflexiva preparando uma refeição caseira em sua cozinha aconchegante. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna-28703305/",
+      "src": "https://images.pexels.com/photos/28703305/pexels-photo-28703305/free-photo-of-chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.499267935578331,
+      "dl": "pexels-jonathanborba-28703305.jpg",
+      "alt": "grátis Chef profissional mexendo ingredientes em um fogão a gás em um ambiente de cozinha moderna, demonstrando habilida",
+      "width": 1600,
+      "height": 1067,
+      "author": "Jonathan Borba"
+    }
+  },
+  "house-watering-plants": {
+    "query": "criança regando planta no vaso",
+    "queryEn": "child watering potted plant",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-pulverizacao-pulverizando-7342639/",
+        "src": "https://images.pexels.com/photos/7342639/pexels-photo-7342639.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-shkrabaanthony-7342639.jpg",
+        "alt": "grátis Uma criança vestindo roupa amarela rega plantas de interior, envolvida em atividades de jardinagem. Foto profissi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mao-agua-jardim-plantar-14306703/",
+        "src": "https://images.pexels.com/photos/14306703/pexels-photo-14306703.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-gabriel-frank-104295448-14306703.jpg",
+        "alt": "grátis Close-up de uma pessoa regando plantas em um jardim com um balde, destacando práticas de jardinagem sustentável. "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/maos-jardinagem-rega-solo-7342652/",
+        "src": "https://images.pexels.com/photos/7342652/pexels-photo-7342652.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667257264351524,
+        "dl": "pexels-shkrabaanthony-7342652.jpg",
+        "alt": "grátis Close-up de mãos regando uma planta em vaso dentro de casa, simbolizando crescimento e cuidado. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mao-regador-vasos-de-plantas-superficie-branca-6640489/",
+        "src": "https://images.pexels.com/photos/6640489/pexels-photo-6640489.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-karola-g-6640489.jpg",
+        "alt": "grátis Mão segurando um regador, regando plantas em vasos dentro de casa em uma superfície branca, brilhante e minimalis"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/casas-residencias-flores-menina-19915411/",
+        "src": "https://images.pexels.com/photos/19915411/pexels-photo-19915411/free-photo-of-casas-residencias-flores-menina.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-polesietoys-19915411.jpg",
+        "alt": "grátis Uma criança sorridente em um vestido verde e botas amarelas rega flores pink em um deck de madeira, exalando uma "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/elegante-cycas-revoluta-no-patio-iluminado-pelo-sol-38990183/",
+        "src": "https://images.pexels.com/photos/38990183/pexels-photo-38990183/free-photo-of-elegante-cycas-revoluta-no-patio-iluminado-pelo-sol.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.7501442585112522,
+        "dl": "pexels-who0ne-38990183.jpg",
+        "alt": "grátis A planta Cycas revoluta projeta sombras em um pátio ensolarado e moderno. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/linda-garota-etnica-pulverizando-planta-em-casa-5691898/",
+        "src": "https://images.pexels.com/photos/5691898/pexels-photo-5691898.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.7225957322420344,
+        "dl": "pexels-alex-green-5691898.jpg",
+        "alt": "grátis Uma jovem garota alegrando-se ao regar uma planta de interior, expressando seu amor pela jardinagem. Foto profiss"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-plantar-8501696/",
+        "src": "https://images.pexels.com/photos/8501696/pexels-photo-8501696.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-liliana-drew-8501696.jpg",
+        "alt": "grátis Menina jovem em um traje aconchegante regando uma planta cobra em vaso dentro de casa, promovendo o cuidado com p"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-fofo-11286035/",
+        "src": "https://images.pexels.com/photos/11286035/pexels-photo-11286035.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-shvetsa-11286035.jpg",
+        "alt": "grátis Criança de suéter rosa regando uma planta, promovendo hábitos ecológicos. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-modelo-20184180/",
+        "src": "https://images.pexels.com/photos/20184180/pexels-photo-20184180/free-photo-of-menina-garota-moca-modelo.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6648936170212766,
+        "dl": "pexels-yasmin-caroliny-lima-do-nascimento-963717913-20184180.jpg",
+        "alt": "grátis Retrato encantador de uma jovem garota em um vestido roxo e tiara contra um cenário campestre sereno. Foto profis"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-fofo-11286035/",
+      "src": "https://images.pexels.com/photos/11286035/pexels-photo-11286035.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-shvetsa-11286035.jpg",
+      "alt": "grátis Criança de suéter rosa regando uma planta, promovendo hábitos ecológicos. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "Anna Shvets"
+    }
+  },
+  "house-washing-dishes": {
+    "query": "pessoa lavando louça na pia",
+    "queryEn": "person washing dishes sink",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-agua-casa-lar-6195894/",
+        "src": "https://images.pexels.com/photos/6195894/pexels-photo-6195894.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667317073170732,
+        "dl": "pexels-tima-miroshnichenko-6195894.jpg",
+        "alt": "grátis Pessoa lavando pratos com água em uma pia de cozinha moderna. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-maos-dentro-de-casa-interior-7641231/",
+        "src": "https://images.pexels.com/photos/7641231/pexels-photo-7641231.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-mart-production-7641231.jpg",
+        "alt": "grátis Uma visão de perto de uma pessoa lavando um prato em uma pia moderna, com água corrente da torneira. Foto profiss"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-segurando-um-recipiente-de-plastico-amarelo-5591636/",
+        "src": "https://images.pexels.com/photos/5591636/pexels-photo-5591636.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-rdne-5591636.jpg",
+        "alt": "grátis Close-up de mãos lavando louças na pia da cozinha com água corrente. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-maos-copo-taca-7492926/",
+        "src": "https://images.pexels.com/photos/7492926/pexels-photo-7492926.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.49800796812749,
+        "dl": "pexels-kampus-7492926.jpg",
+        "alt": "grátis Close-up de mãos lavando uma caneca com espuma de sabão na pia da cozinha, representando tarefas diárias em casa."
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/limpeza-da-placa-ceramica-branca-5904038/",
+        "src": "https://images.pexels.com/photos/5904038/pexels-photo-5904038.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-cottonbro-5904038.jpg",
+        "alt": "grátis Close-up de mão lavando pratos na pia da cozinha com água fluindo da torneira. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pessoa-maos-dentro-de-casa-interior-7641231/",
+      "src": "https://images.pexels.com/photos/7641231/pexels-photo-7641231.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-mart-production-7641231.jpg",
+      "alt": "grátis Uma visão de perto de uma pessoa lavando um prato em uma pia moderna, com água corrente da torneira. Foto profiss",
+      "width": 1600,
+      "height": 1067,
+      "author": "MART  PRODUCTION"
+    }
+  },
+  "house-sweeping": {
+    "query": "pessoa varrendo o chão com vassoura",
+    "queryEn": "person sweeping floor broom",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-com-calcas-pretas-segurando-uma-vassoura-branca-e-azul-5591855/",
+        "src": "https://images.pexels.com/photos/5591855/pexels-photo-5591855.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4998346013893484,
+        "dl": "pexels-rdne-5591855.jpg",
+        "alt": "grátis Pessoa varrendo o chão de madeira da cozinha com uma vassoura, mostrando a rotina diária de limpeza. Foto profiss"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mae-limpeza-filha-vassoura-10557495/",
+        "src": "https://images.pexels.com/photos/10557495/pexels-photo-10557495.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-ron-lach-10557495.jpg",
+        "alt": "grátis Close-up de pessoas limpando o piso de madeira com vassoura e pá de lixo dentro de casa. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-de-camisa-polo-azul-e-jeans-azul-segurando-um-esfregao-vermelho-e-branco-5591860/",
+        "src": "https://images.pexels.com/photos/5591860/pexels-photo-5591860.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667370644139388,
+        "dl": "pexels-rdne-5591860.jpg",
+        "alt": "grátis Um homem varrendo o chão da cozinha com uma vassoura e pá, realizando uma tarefa doméstica. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-de-camisa-social-cinza-segurando-uma-vassoura-vermelha-e-azul-5591591/",
+        "src": "https://images.pexels.com/photos/5591591/pexels-photo-5591591.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6665974673033008,
+        "dl": "pexels-rdne-5591591.jpg",
+        "alt": "grátis Homem limpando o chão da cozinha com vassoura e pá, demonstrando a limpeza e manutenção da casa. Foto profissiona"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pernas-trechos-chao-piso-10557497/",
+        "src": "https://images.pexels.com/photos/10557497/pexels-photo-10557497.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-ron-lach-10557497.jpg",
+        "alt": "grátis Uma mãe e uma criança limpando o chão com uma vassoura e uma pá de lixo dentro de casa. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pessoa-com-calcas-pretas-segurando-uma-vassoura-branca-e-azul-5591855/",
+      "src": "https://images.pexels.com/photos/5591855/pexels-photo-5591855.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.4998346013893484,
+      "dl": "pexels-rdne-5591855.jpg",
+      "alt": "grátis Pessoa varrendo o chão de madeira da cozinha com uma vassoura, mostrando a rotina diária de limpeza. Foto profiss",
+      "width": 1600,
+      "height": 1067,
+      "author": "RDNE Stock project"
+    }
+  },
+  "school-writing": {
+    "query": "criança escrevendo no caderno com lápis",
+    "queryEn": "child writing notebook pencil",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/criancas-escrevendo-em-cadernos-a-mesa-5905847/",
+        "src": "https://images.pexels.com/photos/5905847/pexels-photo-5905847.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-katerina-holmes-5905847.jpg",
+        "alt": "grátis Duas crianças focadas em fazer dever de casa, colaborando em uma mesa de madeira dentro de casa. Foto profissiona"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mesa-balcao-caderno-notebook-5905959/",
+        "src": "https://images.pexels.com/photos/5905959/pexels-photo-5905959.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-katerina-holmes-5905959.jpg",
+        "alt": "grátis Crianças escrevendo diligentemente em um ambiente de sala de aula com cadernos e lápis. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/recortar-crianca-de-escola-etnica-escrevendo-no-bloco-de-notas-5905888/",
+        "src": "https://images.pexels.com/photos/5905888/pexels-photo-5905888.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-katerina-holmes-5905888.jpg",
+        "alt": "grátis Uma criança senta no chão de madeira escrevendo em um caderno espiral, focada e pensativa. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/colheita-de-escola-negra-fazendo-licao-de-casa-5200790/",
+        "src": "https://images.pexels.com/photos/5200790/pexels-photo-5200790.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-gabby-k-5200790.jpg",
+        "alt": "grátis Garota jovem com cabelo crespo concentrada em escrever em um caderno dentro de casa, demonstrando determinação e "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-negra-escrevendo-dever-de-casa-no-papel-5896609/",
+        "src": "https://images.pexels.com/photos/5896609/pexels-photo-5896609.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-mary-taylor-5896609.jpg",
+        "alt": "grátis Uma menina jovem escrevendo com um lápis enquanto está sentada ao ar livre em roupas casuais. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/criancas-escrevendo-em-cadernos-a-mesa-5905847/",
+      "src": "https://images.pexels.com/photos/5905847/pexels-photo-5905847.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-katerina-holmes-5905847.jpg",
+      "alt": "grátis Duas crianças focadas em fazer dever de casa, colaborando em uma mesa de madeira dentro de casa. Foto profissiona",
+      "width": 1600,
+      "height": 1067,
+      "author": "Katerina Holmes"
+    }
+  },
+  "school-raising-hand": {
+    "query": "criança levantando a mão na sala de aula",
+    "queryEn": "child raising hand classroom",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-crianca-8363045/",
+        "src": "https://images.pexels.com/photos/8363045/pexels-photo-8363045.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667289370446479,
+        "dl": "pexels-rdne-8363045.jpg",
+        "alt": "grátis Uma menina jovem participa ativamente de uma sala de aula, levantando a mão para responder a uma pergunta. Foto p"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/escola-crianca-filho-aluno-5428145/",
+        "src": "https://images.pexels.com/photos/5428145/pexels-photo-5428145.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-tima-miroshnichenko-5428145.jpg",
+        "alt": "grátis Crianças participando de um ambiente de sala de aula, ansiosas para participar das aulas. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/sentado-escola-sala-quarto-8500274/",
+        "src": "https://images.pexels.com/photos/8500274/pexels-photo-8500274.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-rdne-8500274.jpg",
+        "alt": "grátis Um menino jovem participa ansiosamente de uma sala de aula de escola primária. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/aprendizagem-em-sala-de-aula-com-alunos-engajados-estudando-32094079/",
+        "src": "https://images.pexels.com/photos/32094079/pexels-photo-32094079/free-photo-of-aprendizagem-em-sala-de-aula-com-alunos-engajados-estudando.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.502824858757062,
+        "dl": "pexels-nasirun-khan-102497153-32094079.jpg",
+        "alt": "grátis Alunos participando ativamente de um ambiente de sala de aula, demonstrando uma experiência de aprendizagem envol"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-fofo-18497739/",
+        "src": "https://images.pexels.com/photos/18497739/pexels-photo-18497739/free-photo-of-menina-garota-moca-fofo.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6665659008464329,
+        "dl": "pexels-si-tong-694019521-18497739.jpg",
+        "alt": "grátis Uma menina jovem levanta a mão atentamente em um ambiente de sala de aula animado, demonstrando curiosidade e env"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/aprendizagem-em-sala-de-aula-com-alunos-engajados-estudando-32094079/",
+      "src": "https://images.pexels.com/photos/32094079/pexels-photo-32094079/free-photo-of-aprendizagem-em-sala-de-aula-com-alunos-engajados-estudando.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.502824858757062,
+      "dl": "pexels-nasirun-khan-102497153-32094079.jpg",
+      "alt": "grátis Alunos participando ativamente de um ambiente de sala de aula, demonstrando uma experiência de aprendizagem envol",
+      "width": 1600,
+      "height": 1065,
+      "author": "Nasirun Khan"
+    }
+  },
+  "school-eating-apple": {
+    "query": "menino comendo maçã no pátio",
+    "queryEn": "boy eating apple schoolyard",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/rua-via-maca-menina-8072234/",
+        "src": "https://images.pexels.com/photos/8072234/pexels-photo-8072234.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.499842321034374,
+        "dl": "pexels-onuryumlu-8072234.jpg",
+        "alt": "grátis Menino jovem comendo maçã enquanto brinca de esconde-esconde ao ar livre. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-apreciando-uma-maca-no-jardim-de-outono-34453928/",
+        "src": "https://images.pexels.com/photos/34453928/pexels-photo-34453928/free-photo-of-crianca-apreciando-uma-maca-no-jardim-de-outono.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5002277904328019,
+        "dl": "pexels-ian-taylor-2156586581-34453928.jpg",
+        "alt": "grátis Criança loira mordendo uma maçã fresca ao ar livre em um vibrante jardim de outono. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-comendo-7822694/",
+        "src": "https://images.pexels.com/photos/7822694/pexels-photo-7822694.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-qaarif-7822694.jpg",
+        "alt": "grátis Um jovem menino desfruta de um lanche ao ar livre em um ambiente rural ao lado de uma casa rústica. Foto profissi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/maca-menina-garota-moca-4671431/",
+        "src": "https://images.pexels.com/photos/4671431/pexels-photo-4671431.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6616464145130926,
+        "dl": "pexels-bulat-4671431.jpg",
+        "alt": "grátis Uma menina relaxando em uma toalha de piquenique no parque, saboreando uma maçã verde. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-no-jardim-2-26728894/",
+        "src": "https://images.pexels.com/photos/26728894/pexels-photo-26728894/free-photo-of-crianca-no-jardim-2.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6858207491665033,
+        "dl": "pexels-raymond-petrik-1448389535-26728894.jpg",
+        "alt": "grátis Menina jovem em traje tradicional saboreia uma maçã enquanto está sentada em uma cesta de vime na Eslováquia. Fot"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/rua-via-maca-menina-8072234/",
+      "src": "https://images.pexels.com/photos/8072234/pexels-photo-8072234.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.499842321034374,
+      "dl": "pexels-onuryumlu-8072234.jpg",
+      "alt": "grátis Menino jovem comendo maçã enquanto brinca de esconde-esconde ao ar livre. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "Onur Yumlu "
+    }
+  },
+  "school-painting": {
+    "query": "criança pintando com pincel e tinta",
+    "queryEn": "child painting paintbrush",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-pintura-pintando-escola-8466792/",
+        "src": "https://images.pexels.com/photos/8466792/pexels-photo-8466792.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.49800796812749,
+        "dl": "pexels-anastasia-shuraeva-8466792.jpg",
+        "alt": "grátis Criança pequena usando tintas aquarela e pincel para pintar em papel dentro de uma escola. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-pinta-arte-criativa-em-tela-branca-40103784/",
+        "src": "https://images.pexels.com/photos/40103784/pexels-photo-40103784/free-photo-of-crianca-pinta-arte-criativa-em-tela-branca.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4986225895316805,
+        "dl": "pexels-caleboquendo-40103784.jpg",
+        "alt": "grátis Uma criança artista expressando sua criatividade com cores vibrantes em uma grande tela, usando tinta para dedos."
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pintura-pintando-criatividade-tinta-6978767/",
+        "src": "https://images.pexels.com/photos/6978767/pexels-photo-6978767.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667173946126921,
+        "dl": "pexels-anastasia-shuraeva-6978767.jpg",
+        "alt": "grátis Criança artista pintando com pincel azul em papel branco dentro de casa. Expressão criativa em um ambiente aconch"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/arte-criativo-engenhoso-inventivo-14016273/",
+        "src": "https://images.pexels.com/photos/14016273/pexels-photo-14016273.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5098039215686274,
+        "dl": "pexels-dijanynni-kiratza-235375981-14016273.jpg",
+        "alt": "grátis Uma criança usa um pincel para criar uma obra de arte em tela, demonstrando criatividade e expressão. Foto profis"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/maos-pintura-pintando-criatividade-6964722/",
+        "src": "https://images.pexels.com/photos/6964722/pexels-photo-6964722.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-anastasia-shuraeva-6964722.jpg",
+        "alt": "grátis Uma criança pintando em uma tela em branco com um pincel e uma paleta de tintas em uma mesa. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pessoa-pintura-pintando-escola-8466792/",
+      "src": "https://images.pexels.com/photos/8466792/pexels-photo-8466792.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.49800796812749,
+      "dl": "pexels-anastasia-shuraeva-8466792.jpg",
+      "alt": "grátis Criança pequena usando tintas aquarela e pincel para pintar em papel dentro de uma escola. Foto profissional",
+      "width": 1600,
+      "height": 1068,
+      "author": " Anastasia  Shuraeva"
+    }
+  },
+  "school-erasing-board": {
+    "query": "professora apagando o quadro com apagador",
+    "queryEn": "teacher erasing chalkboard",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mao-apagador-borracha-circulo-7013965/",
+        "src": "https://images.pexels.com/photos/7013965/pexels-photo-7013965.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-cottonbro-7013965.jpg",
+        "alt": "grátis Close-up de uma mão apagando um círculo vermelho em um quadro branco com gráfico de formas geométricas. Foto prof"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mao-apagador-borracha-limpeza-7013967/",
+        "src": "https://images.pexels.com/photos/7013967/pexels-photo-7013967.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667224640107131,
+        "dl": "pexels-cottonbro-7013967.jpg",
+        "alt": "grátis Uma pessoa apaga um quadro branco exibindo diagramas geométricos coloridos, focando em formas e aprendizado. Foto"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-em-camisa-preta-de-manga-comprida-3825299/",
+        "src": "https://images.pexels.com/photos/3825299/pexels-photo-3825299.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-cottonbro-3825299.jpg",
+        "alt": "grátis Uma pessoa apagando o texto de uma lousa com um pano dentro de casa, criando espaço para texto. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-em-camisa-preta-de-manga-comprida-segurando-tecido-preto-3825298/",
+        "src": "https://images.pexels.com/photos/3825298/pexels-photo-3825298.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-cottonbro-3825298.jpg",
+        "alt": "grátis Uma mulher usando um pano para apagar um quadro negro em um ambiente interno. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-em-camisa-preta-de-manga-comprida-3825274/",
+        "src": "https://images.pexels.com/photos/3825274/pexels-photo-3825274.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6818594516070455,
+        "dl": "pexels-cottonbro-3825274.jpg",
+        "alt": "grátis Uma mão usando um pano para apagar marcas de giz em um quadro negro em um ambiente interno. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pessoa-em-camisa-preta-de-manga-comprida-segurando-tecido-preto-3825298/",
+      "src": "https://images.pexels.com/photos/3825298/pexels-photo-3825298.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-cottonbro-3825298.jpg",
+      "alt": "grátis Uma mulher usando um pano para apagar um quadro negro em um ambiente interno. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "cottonbro studio"
+    }
+  },
+  "food-cake-cutting": {
+    "query": "mulher cortando bolo com faca",
+    "queryEn": "woman cutting cake knife",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-mulher-7525175/",
+        "src": "https://images.pexels.com/photos/7525175/pexels-photo-7525175.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5030425963488845,
+        "dl": "pexels-shvets-production-7525175.jpg",
+        "alt": "grátis Uma mulher decora um bolo coberto de chocolate com morangos frescos em uma cozinha. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-leve-8176277/",
+        "src": "https://images.pexels.com/photos/8176277/pexels-photo-8176277.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-danikprihodko-8176277.jpg",
+        "alt": "grátis Close-up de uma mão cortando uma torta de morango fresca em uma tábua de madeira. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-mulher-17917264/",
+        "src": "https://images.pexels.com/photos/17917264/pexels-photo-17917264/free-photo-of-comida-alimento-refeicao-mulher.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.497175141242938,
+        "dl": "pexels-freestockpro-17917264.jpg",
+        "alt": "grátis Mãos cortando um bolo de aniversário colorido em uma festa infantil ao ar livre. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-maos-4686828/",
+        "src": "https://images.pexels.com/photos/4686828/pexels-photo-4686828.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4998718277364778,
+        "dl": "pexels-cottonbro-4686828.jpg",
+        "alt": "grátis Mãos fatiando morangos para um delicioso bolo caseiro. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/bolo-ingles-recem-assado-sendo-fatiado-36590626/",
+        "src": "https://images.pexels.com/photos/36590626/pexels-photo-36590626/free-photo-of-bolo-ingles-recem-assado-sendo-fatiado.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.2754914809960682,
+        "dl": "pexels-gu-ko-2150570603-36590626.jpg",
+        "alt": "grátis Close-up de uma mão fatiando um bolo inglês caseiro, capturando a crosta dourada e a textura macia. Foto profissi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/flores-celebracao-comemoracao-festa-8791089/",
+        "src": "https://images.pexels.com/photos/8791089/pexels-photo-8791089.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-kampus-8791089.jpg",
+        "alt": "grátis Close-up de um casal cortando um bolo de casamento adornado com flores, simbolizando celebração. Foto profissiona"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-mulher-17917264/",
+      "src": "https://images.pexels.com/photos/17917264/pexels-photo-17917264/free-photo-of-comida-alimento-refeicao-mulher.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.497175141242938,
+      "dl": "pexels-freestockpro-17917264.jpg",
+      "alt": "grátis Mãos cortando um bolo de aniversário colorido em uma festa infantil ao ar livre. Foto profissional",
+      "width": 1600,
+      "height": 1069,
+      "author": "Atlantic Ambience"
+    },
+    "fixed": true
+  },
+  "food-soup-stirring": {
+    "query": "menino mexendo sopa na panela",
+    "queryEn": "boy stirring soup pot",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/panela-vaso-mexendo-chefe-de-cozinha-8511869/",
+        "src": "https://images.pexels.com/photos/8511869/pexels-photo-8511869.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4978879188960856,
+        "dl": "pexels-kampus-8511869.jpg",
+        "alt": "grátis Um jovem chef aspirante de avental cozinha com foco em um ambiente de cozinha moderno e elegante. Foto profission"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/panela-vaso-mexendo-chefe-de-cozinha-8511867/",
+        "src": "https://images.pexels.com/photos/8511867/pexels-photo-8511867.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.498200941046222,
+        "dl": "pexels-kampus-8511867.jpg",
+        "alt": "grátis Um menino jovem vestindo um avental cozinha em casa em uma cozinha moderna, mexendo uma panela com uma colher de "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menino-vestindo-avental-enquanto-cozinha-na-cozinha-8511875/",
+        "src": "https://images.pexels.com/photos/8511875/pexels-photo-8511875.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4980069093808133,
+        "dl": "pexels-kampus-8511875.jpg",
+        "alt": "grátis Um menino jovem em uma cozinha mexendo em uma panela, mostrando habilidades culinárias. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/uma-pessoa-cozinhando-sopa-com-uma-panela-9958629/",
+        "src": "https://images.pexels.com/photos/9958629/pexels-photo-9958629.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-amar-9958629.jpg",
+        "alt": "grátis Visão de cima de uma pessoa cozinhando sopa no fogão com especiarias e ingredientes perto. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna-28703305/",
+        "src": "https://images.pexels.com/photos/28703305/pexels-photo-28703305/free-photo-of-chef-mexendo-ingredientes-em-um-fogao-em-uma-cozinha-moderna.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.499267935578331,
+        "dl": "pexels-jonathanborba-28703305.jpg",
+        "alt": "grátis Chef profissional mexendo ingredientes em um fogão a gás em um ambiente de cozinha moderna, demonstrando habilida"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/panela-vaso-mexendo-chefe-de-cozinha-8511869/",
+      "src": "https://images.pexels.com/photos/8511869/pexels-photo-8511869.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.4978879188960856,
+      "dl": "pexels-kampus-8511869.jpg",
+      "alt": "grátis Um jovem chef aspirante de avental cozinha com foco em um ambiente de cozinha moderno e elegante. Foto profission",
+      "width": 1600,
+      "height": 1068,
+      "author": "Kampus Production"
+    }
+  },
+  "food-orange-juice": {
+    "query": "espremendo laranja no espremedor de suco",
+    "queryEn": "squeezing orange juicer",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-bebida-12896835/",
+        "src": "https://images.pexels.com/photos/12896835/pexels-photo-12896835.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.7498124531132783,
+        "dl": "pexels-umutdagli-12896835.jpg",
+        "alt": "grátis Copo de suco de laranja fresco com fatias de cítricos, capturado com um fundo de espremedor. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/liquido-preto-em-copo-de-bebida-transparente-5740972/",
+        "src": "https://images.pexels.com/photos/5740972/pexels-photo-5740972.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-eva-bronzini-5740972.jpg",
+        "alt": "grátis Close-up de laranjas espremidas e espremedor cítrico em uma superfície escura, destacando a frescura. Foto profis"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/frutas-fatiadas-de-laranja-em-bandeja-de-aco-inoxidavel-5740974/",
+        "src": "https://images.pexels.com/photos/5740974/pexels-photo-5740974.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-eva-bronzini-5740974.jpg",
+        "alt": "grátis Close-up de laranjas e um espremedor manual de aço inoxidável sobre uma superfície cinza, perfeito para entusiast"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mao-laranja-segurando-holding-8679404/",
+        "src": "https://images.pexels.com/photos/8679404/pexels-photo-8679404.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-timur-weber-8679404.jpg",
+        "alt": "grátis Close-up de mãos espremendo uma laranja suculenta com um espremedor manual, capturando suco de cítricos fresco. F"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/barraca-de-lemonada-fresca-em-mercado-ao-ar-livre-38528001/",
+        "src": "https://images.pexels.com/photos/38528001/pexels-photo-38528001/free-photo-of-barraca-de-lemonada-fresca-em-mercado-ao-ar-livre.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-vladvictoria-38528001.jpg",
+        "alt": "grátis Limonada refrescante preparada em um mercado ao ar livre em Victoria, BC. Cena de rua envolvente com um espremedo"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/liquido-preto-em-copo-de-bebida-transparente-5740972/",
+      "src": "https://images.pexels.com/photos/5740972/pexels-photo-5740972.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-eva-bronzini-5740972.jpg",
+      "alt": "grátis Close-up de laranjas espremidas e espremedor cítrico em uma superfície escura, destacando a frescura. Foto profis",
+      "width": 1600,
+      "height": 1067,
+      "author": "Eva Bronzini"
+    }
+  },
+  "food-bread-butter": {
+    "query": "passando manteiga no pão com faca",
+    "queryEn": "spreading butter on bread knife",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-cafe-25048967/",
+        "src": "https://images.pexels.com/photos/25048967/pexels-photo-25048967/free-photo-of-comida-alimento-refeicao-cafe.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666064329598843,
+        "dl": "pexels-nano-erdozain-120534369-25048967.jpg",
+        "alt": "grátis Cenário de café da manhã aconchegante com café, torrada e geleia sendo espalhada, criando um começo quente para o"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/manteiga-placa-de-madeira-faca-de-pao-tiro-vertical-7966386/",
+        "src": "https://images.pexels.com/photos/7966386/pexels-photo-7966386.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-felicity-tai-7966386.jpg",
+        "alt": "grátis Dois blocos de manteiga com uma faca em um prato de madeira, perfeito para conteúdo culinário. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-preparando-10011796/",
+        "src": "https://images.pexels.com/photos/10011796/pexels-photo-10011796.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-skyler-ewing-266953-10011796.jpg",
+        "alt": "grátis Close-up das mãos espalhando manteiga em fatias de pão artesanal rústico, destacando a textura e a frescura. Foto"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pao-rustico-em-cesta-sobre-tabua-de-corte-28703275/",
+        "src": "https://images.pexels.com/photos/28703275/pexels-photo-28703275/free-photo-of-pao-rustico-em-cesta-sobre-tabua-de-corte.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-jonathanborba-28703275.jpg",
+        "alt": "grátis Pão rústico servido em uma cesta sobre uma tábua de corte de madeira em um ambiente de cozinha. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/fatia-de-pao-com-manteiga-em-prato-elegante-36498140/",
+        "src": "https://images.pexels.com/photos/36498140/pexels-photo-36498140/free-photo-of-fatia-de-pao-com-manteiga-em-prato-elegante.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.75,
+        "dl": "pexels-anya-dunes-2153945617-36498140.jpg",
+        "alt": "grátis Uma fatia de pão integral com manteiga em um prato branco ornamentado, pronta para ser apreciada. Foto profission"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-preparando-10011796/",
+      "src": "https://images.pexels.com/photos/10011796/pexels-photo-10011796.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-skyler-ewing-266953-10011796.jpg",
+      "alt": "grátis Close-up das mãos espalhando manteiga em fatias de pão artesanal rústico, destacando a textura e a frescura. Foto",
+      "width": 1600,
+      "height": 1067,
+      "author": "Skyler Ewing"
+    }
+  },
+  "food-pizza-oven": {
+    "query": "cozinheiro colocando pizza no forno",
+    "queryEn": "chef putting pizza in oven",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pizza-pessoa-cozinha-cozinhando-9685257/",
+        "src": "https://images.pexels.com/photos/9685257/pexels-photo-9685257.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-matreding-9685257.jpg",
+        "alt": "grátis Chef profissional colocando uma pizza recém-preparada em um forno industrial de alta temperatura. Foto profission"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pizza-cozinha-cozinhando-cozimento-9685272/",
+        "src": "https://images.pexels.com/photos/9685272/pexels-photo-9685272.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-matreding-9685272.jpg",
+        "alt": "grátis Pizza recém-assada em um forno comercial, perfeita para temas culinários. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pizza-trabalhando-camisa-bone-19964784/",
+        "src": "https://images.pexels.com/photos/19964784/pexels-photo-19964784/free-photo-of-pizza-trabalhando-camisa-bone.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667363142498955,
+        "dl": "pexels-radu-daniel-mrd-1938968-19964784.jpg",
+        "alt": "grátis Um pizzaiolo habilidoso colocando uma pizza em um forno tradicional em um ambiente acolhedor. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-pizza-7447295/",
+        "src": "https://images.pexels.com/photos/7447295/pexels-photo-7447295.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-gustavo-fring-7447295.jpg",
+        "alt": "grátis Um chef habilidoso usando uma pá de pizza para colocar uma deliciosa pizza em um forno tradicional. Foto profissi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-pizza-6223190/",
+        "src": "https://images.pexels.com/photos/6223190/pexels-photo-6223190.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-antonius-ferret-6223190.jpg",
+        "alt": "grátis Chef feminina preparando pizza de tomate em um ambiente rústico de cozinha italiana. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pizza-pessoa-cozinha-cozinhando-9685257/",
+      "src": "https://images.pexels.com/photos/9685257/pexels-photo-9685257.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-matreding-9685257.jpg",
+      "alt": "grátis Chef profissional colocando uma pizza recém-preparada em um forno industrial de alta temperatura. Foto profission",
+      "width": 1600,
+      "height": 1067,
+      "author": "Mathias Reding"
+    }
+  },
+  "park-kite-flying": {
+    "query": "menino soltando pipa no parque",
+    "queryEn": "boy flying kite park",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/caminhando-andando-arvores-jogando-11873016/",
+        "src": "https://images.pexels.com/photos/11873016/pexels-photo-11873016.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-213167965-11873016.jpg",
+        "alt": "grátis Um menino jovem corre alegremente enquanto empina um pipa colorido em um campo externo exuberante. Foto profissio"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-campo-area-arvores-8944248/",
+        "src": "https://images.pexels.com/photos/8944248/pexels-photo-8944248.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-anastasia-shuraeva-8944248.jpg",
+        "alt": "grátis Uma família alegre correndo enquanto empina uma pipa em um parque cênico, desfrutando de momentos de qualidade ju"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/natureza-verao-brilho-do-sol-luz-do-sol-417806/",
+        "src": "https://images.pexels.com/photos/417806/pexels-photo-417806.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-kelvinocta16-417806.jpg",
+        "alt": "grátis Menino jovem desfrutando de empinar pipa em um parque tropical exuberante com palmeiras. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-empinando-pipa-colorida-ao-ar-livre-40797286/",
+        "src": "https://images.pexels.com/photos/40797286/pexels-photo-40797286/free-photo-of-menina-empinando-pipa-colorida-ao-ar-livre.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-vikram-aditya-213772137-40797286.jpg",
+        "alt": "grátis Uma menina de camisa rosa empina uma pipa colorida em um campo aberto. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/um-menino-feliz-brincando-com-uma-pipa-em-um-parque-7104331/",
+        "src": "https://images.pexels.com/photos/7104331/pexels-photo-7104331.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6665820213306247,
+        "dl": "pexels-rdne-7104331.jpg",
+        "alt": "grátis Uma criança alegre empinando um pipa vibrante ao ar livre com um adulto ao fundo. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/caminhando-andando-arvores-jogando-11873016/",
+      "src": "https://images.pexels.com/photos/11873016/pexels-photo-11873016.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-213167965-11873016.jpg",
+      "alt": "grátis Um menino jovem corre alegremente enquanto empina um pipa colorido em um campo externo exuberante. Foto profissio",
+      "width": 1600,
+      "height": 1067,
+      "author": "卓浩 虞"
+    }
+  },
+  "park-swing-pushing": {
+    "query": "pai empurrando filho no balanço",
+    "queryEn": "father pushing child on swing",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-empurrando-carrinho-de-compras-com-um-bebe-sentado-dentro-1621140/",
+        "src": "https://images.pexels.com/photos/1621140/pexels-photo-1621140.png?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.499000999000999,
+        "dl": "pexels-vika-glitter-392079-1621140.jpg",
+        "alt": "grátis Um homem com uma criança em um carrinho de compras usando uma escada rolante interna em um shopping. Foto profiss"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-mulher-campo-interior-5792903/",
+        "src": "https://images.pexels.com/photos/5792903/pexels-photo-5792903.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-yankrukov-5792903.jpg",
+        "alt": "grátis Uma família feliz desfruta de um momento de união ao ar livre com uma criança aprendendo a andar de bicicleta em "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/madeira-floresta-selva-mata-6616088/",
+        "src": "https://images.pexels.com/photos/6616088/pexels-photo-6616088.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-yankrukov-6616088.jpg",
+        "alt": "grátis Um pai empurra seu filho em um trenó através de uma paisagem florestal nevada. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pai-ajudando-filha-no-balanco-no-parque-34453930/",
+        "src": "https://images.pexels.com/photos/34453930/pexels-photo-34453930/free-photo-of-pai-ajudando-filha-no-balanco-no-parque.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-ian-taylor-2156586581-34453930.jpg",
+        "alt": "grátis Um pai ajuda sua filha pequena no balanço em um parque verdejante. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/silhueta-de-uma-familia-brincando-ao-por-do-sol-36842546/",
+        "src": "https://images.pexels.com/photos/36842546/pexels-photo-36842546/free-photo-of-silhueta-de-uma-familia-brincando-ao-por-do-sol.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4873887240356083,
+        "dl": "pexels-gulin-yigiter-2160510905-36842546.jpg",
+        "alt": "grátis Silhueta de uma família apreciando o pôr do sol, com um vibrante céu alaranjado ao fundo. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-fofo-bonitinho-sentado-5789113/",
+        "src": "https://images.pexels.com/photos/5789113/pexels-photo-5789113.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-yankrukov-5789113.jpg",
+        "alt": "grátis Um pai interage alegremente com seu filho pequeno em um balanço durante um ensolarado dia de outono ao ar livre. "
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pai-ajudando-filha-no-balanco-no-parque-34453930/",
+      "src": "https://images.pexels.com/photos/34453930/pexels-photo-34453930/free-photo-of-pai-ajudando-filha-no-balanco-no-parque.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-ian-taylor-2156586581-34453930.jpg",
+      "alt": "grátis Um pai ajuda sua filha pequena no balanço em um parque verdejante. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "Ian Taylor"
+    },
+    "fixed": true
+  },
+  "park-flower-watering": {
+    "query": "menina regando flores com regador",
+    "queryEn": "girl watering flowers watering can",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/flores-menina-garota-moca-9394830/",
+        "src": "https://images.pexels.com/photos/9394830/pexels-photo-9394830.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6656891495601173,
+        "dl": "pexels-anastasia-golubeva-81430943-9394830.jpg",
+        "alt": "grátis Uma jovem com cabelo trançado rega plantas com um regador amarelo ao ar livre. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/flores-menina-garota-moca-5622453/",
+        "src": "https://images.pexels.com/photos/5622453/pexels-photo-5622453.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-gustavo-fring-5622453.jpg",
+        "alt": "grátis Mãe e filha desfrutando da jardinagem com regadores entre flores coloridas em uma estufa. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/flores-plantar-planta-ao-ar-livre-9394831/",
+        "src": "https://images.pexels.com/photos/9394831/pexels-photo-9394831.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6656891495601173,
+        "dl": "pexels-anastasia-golubeva-81430943-9394831.jpg",
+        "alt": "grátis Uma criança rega flores roxas vibrantes em um jardim com um regador amarelo. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-jovem-4971729/",
+        "src": "https://images.pexels.com/photos/4971729/pexels-photo-4971729.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-gustavo-fring-4971729.jpg",
+        "alt": "grátis Uma menina jovem vestindo um vestido vermelho rega plantas em um exuberante jardim de verão com um grande regador"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-jardim-4971742/",
+        "src": "https://images.pexels.com/photos/4971742/pexels-photo-4971742.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-gustavo-fring-4971742.jpg",
+        "alt": "grátis Criança fofa vestindo um vestido vermelho regando plantas com um regador em um jardim verdejante. Foto profission"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/flores-menina-garota-moca-5622453/",
+      "src": "https://images.pexels.com/photos/5622453/pexels-photo-5622453.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-gustavo-fring-5622453.jpg",
+      "alt": "grátis Mãe e filha desfrutando da jardinagem com regadores entre flores coloridas em uma estufa. Foto profissional",
+      "width": 1600,
+      "height": 1067,
+      "author": "Gustavo Fring"
+    }
+  },
+  "park-bench-reading": {
+    "query": "mulher lendo livro no banco do parque",
+    "queryEn": "woman reading book park bench",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-tomando-cafe-e-lendo-um-livro-no-parque-de-outono-28867639/",
+        "src": "https://images.pexels.com/photos/28867639/pexels-photo-28867639/free-photo-of-mulher-tomando-cafe-e-lendo-um-livro-no-parque-de-outono.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-instasky-28867639.jpg",
+        "alt": "grátis Uma mulher de casaco desfruta de café e de um livro em um banco de parque durante o outono. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/banco-assento-tribunal-relaxamento-5149164/",
+        "src": "https://images.pexels.com/photos/5149164/pexels-photo-5149164.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4998125234345707,
+        "dl": "pexels-shkrabaanthony-5149164.jpg",
+        "alt": "grátis Uma mulher com cabelo black power desfruta de ler um livro em um banco de parque em um dia ensolarado. Foto profi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/banco-assento-tribunal-mulher-20135652/",
+        "src": "https://images.pexels.com/photos/20135652/pexels-photo-20135652/free-photo-of-banco-assento-tribunal-mulher.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.8,
+        "dl": "pexels-shahin-esmael-957573083-20135652.jpg",
+        "alt": "grátis Uma mulher senta em um banco de parque lendo um livro em um dia fresco de outono, cercada por folhas caídas. Foto"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/banco-assento-tribunal-preto-e-branco-17835271/",
+        "src": "https://images.pexels.com/photos/17835271/pexels-photo-17835271/free-photo-of-banco-assento-tribunal-preto-e-branco.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.7767653758542141,
+        "dl": "pexels-ramonkaphotography-17835271.jpg",
+        "alt": "grátis Imagem em preto e branco de uma mulher asiática sentada sozinha ao ar livre, refletindo com um livro. Foto profis"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-sentada-em-banco-no-parque-de-outono-lendo-30632047/",
+        "src": "https://images.pexels.com/photos/30632047/pexels-photo-30632047/free-photo-of-mulher-sentada-em-banco-no-parque-de-outono-lendo.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6664076664076664,
+        "dl": "pexels-nisframe-1292053722-30632047.jpg",
+        "alt": "grátis Uma mulher de casaco branco lê em um banco cercado por folhas coloridas de outono. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/banco-assento-tribunal-relaxamento-5149164/",
+      "src": "https://images.pexels.com/photos/5149164/pexels-photo-5149164.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.4998125234345707,
+      "dl": "pexels-shkrabaanthony-5149164.jpg",
+      "alt": "grátis Uma mulher com cabelo black power desfruta de ler um livro em um banco de parque em um dia ensolarado. Foto profi",
+      "width": 1600,
+      "height": 1067,
+      "author": "Antoni Shkraba"
+    }
+  },
+  "park-sand-castle": {
+    "query": "criança enchendo balde de areia com pá",
+    "queryEn": "child bucket sand shovel",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/jogando-jovem-novo-crianca-8435763/",
+        "src": "https://images.pexels.com/photos/8435763/pexels-photo-8435763.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-yankrukov-8435763.jpg",
+        "alt": "grátis Criança jovem com cabelo cacheado se divertindo em um ambiente interno de caixa de areia. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/praia-litoral-areia-verao-8926027/",
+        "src": "https://images.pexels.com/photos/8926027/pexels-photo-8926027.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.49800796812749,
+        "dl": "pexels-kampus-8926027.jpg",
+        "alt": "grátis Duas meninas jovens brincando com baldinhos coloridos em uma praia ensolarada em Portugal. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/areia-menina-garota-moca-8435758/",
+        "src": "https://images.pexels.com/photos/8435758/pexels-photo-8435758.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-yankrukov-8435758.jpg",
+        "alt": "grátis Duas crianças brincando com brinquedos em uma caixa de areia, desfrutando de um momento divertido e criativo. Fot"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mar-praia-litoral-areia-8926049/",
+        "src": "https://images.pexels.com/photos/8926049/pexels-photo-8926049.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4977145759268664,
+        "dl": "pexels-kampus-8926049.jpg",
+        "alt": "grátis Uma menina jovem se diverte brincando com areia e um balde verde em um ensolarado dia de praia em Portugal. Foto "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/areia-colorida-cheio-de-cor-crianca-8435759/",
+        "src": "https://images.pexels.com/photos/8435759/pexels-photo-8435759.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1,
+        "dl": "pexels-yankrukov-8435759.jpg",
+        "alt": "grátis Visão de cima de crianças brincando com brinquedos coloridos na areia, aproveitando a diversão ao ar livre. Foto "
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/praia-litoral-areia-verao-8926027/",
+      "src": "https://images.pexels.com/photos/8926027/pexels-photo-8926027.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.49800796812749,
+      "dl": "pexels-kampus-8926027.jpg",
+      "alt": "grátis Duas meninas jovens brincando com baldinhos coloridos em uma praia ensolarada em Portugal. Foto profissional",
+      "width": 1600,
+      "height": 1068,
+      "author": "Kampus Production"
+    }
+  },
+  "transport-bike-riding": {
+    "query": "menino andando de bicicleta",
+    "queryEn": "boy riding bicycle",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/cena-de-mercado-de-rua-com-bicicleta-e-gaiolas-de-passaros-37635726/",
+        "src": "https://images.pexels.com/photos/37635726/pexels-photo-37635726/free-photo-of-cena-de-mercado-de-rua-com-bicicleta-e-gaiolas-de-passaros.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-tuti-isnawati-2160809826-37635726.jpg",
+        "alt": "grátis Cena de um mercado urbano ao ar livre com uma mulher, um menino com uma bicicleta e várias gaiolas de pássaros. F"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/estrada-via-verao-campo-6136107/",
+        "src": "https://images.pexels.com/photos/6136107/pexels-photo-6136107.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.499185478240633,
+        "dl": "pexels-quang-nguyen-vinh-222549-6136107.jpg",
+        "alt": "grátis Dois meninos andando de bicicleta em uma estrada rural arborizada, aproveitando um dia ensolarado ao ar livre. Fo"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menino-andando-de-bicicleta-blue-trek-durante-o-dia-1118413/",
+        "src": "https://images.pexels.com/photos/1118413/pexels-photo-1118413.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.502824858757062,
+        "dl": "pexels-thepaintedsquare-1118413.jpg",
+        "alt": "grátis Um jovem garoto aproveitando um passeio de bicicleta em um dia ensolarado ao longo de um caminho de cascalho cerc"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/aventura-tranquila-de-bicicleta-ao-ar-livre-para-criancas-36358536/",
+        "src": "https://images.pexels.com/photos/36358536/pexels-photo-36358536/free-photo-of-aventura-tranquila-de-bicicleta-ao-ar-livre-para-criancas.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-borishamer-36358536.jpg",
+        "alt": "grátis Criança andando de bicicleta em um parque ensolarado, demonstrando lazer e atividade ao ar livre. Foto profission"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-andando-de-bicicleta-em-estrada-rural-com-capacete-ao-ar-livre-30218073/",
+        "src": "https://images.pexels.com/photos/30218073/pexels-photo-30218073/free-photo-of-crianca-andando-de-bicicleta-em-estrada-rural-com-capacete-ao-ar-livre.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-helen1-30218073.jpg",
+        "alt": "grátis Criança pequena pedalando uma bicicleta com segurança e usando capacete em um ambiente rural. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/um-menino-andando-de-bicicleta-em-um-campo-gramado-9041054/",
+        "src": "https://images.pexels.com/photos/9041054/pexels-photo-9041054.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.3333333333333333,
+        "dl": "pexels-hacback17-9041054.jpg",
+        "alt": "grátis Um menino jovem pedala por um caminho rural gramado sob um céu azul claro com nuvens fofas. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/cachorro-cao-animal-animal-de-estimacao-10264284/",
+        "src": "https://images.pexels.com/photos/10264284/pexels-photo-10264284.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4998786113134255,
+        "dl": "pexels-egorov-10264284.jpg",
+        "alt": "grátis Um menino anda de bicicleta em uma estrada de terra com seu cachorro brincalhão correndo ao lado em um ambiente e"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/ciclista-e-pedestre-em-rua-suburbana-39873473/",
+        "src": "https://images.pexels.com/photos/39873473/pexels-photo-39873473/free-photo-of-ciclista-e-pedestre-em-rua-suburbana.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.6211340206185567,
+        "dl": "pexels-caleboquendo-39873473.jpg",
+        "alt": "grátis Jovem ciclista e pedestre com carrinho de bebê em rua tranquila de bairro residencial. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/estrada-via-verao-campo-6136107/",
+      "src": "https://images.pexels.com/photos/6136107/pexels-photo-6136107.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.499185478240633,
+      "dl": "pexels-quang-nguyen-vinh-222549-6136107.jpg",
+      "alt": "grátis Dois meninos andando de bicicleta em uma estrada rural arborizada, aproveitando um dia ensolarado ao ar livre. Fo",
+      "width": 1600,
+      "height": 1067,
+      "author": "Quang Nguyen Vinh"
+    },
+    "fixed": true
+  },
+  "transport-boat-rowing": {
+    "query": "homem remando barco no rio",
+    "queryEn": "man rowing boat river",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-esporte-rio-natacao-16332227/",
+        "src": "https://images.pexels.com/photos/16332227/pexels-photo-16332227/free-photo-of-homem-esporte-rio-natacao.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-kashif-hussain-kashigraphy-521340624-16332227.jpg",
+        "alt": "grátis Um homem rema um caiaque em um rio em Karachi, capturando um momento de solidão e aventura. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/barco-de-madeira-com-homem-remando-em-aguas-calmas-33547494/",
+        "src": "https://images.pexels.com/photos/33547494/pexels-photo-33547494/free-photo-of-barco-de-madeira-com-homem-remando-em-aguas-calmas.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.3346080305927341,
+        "dl": "pexels-riyad-hossain-hridoy-2154687501-33547494.jpg",
+        "alt": "grátis Vista aérea de um homem remando um barco de madeira em águas calmas e verdes. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-barco-bote-rio-18816547/",
+        "src": "https://images.pexels.com/photos/18816547/pexels-photo-18816547/free-photo-of-homem-barco-bote-rio.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-sincegameon-18816547.jpg",
+        "alt": "grátis Um homem remando pacificamente em um barco de madeira capturado de cima, oferecendo vibrações tranquilas. Foto pr"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-pessoa-barco-bote-6861168/",
+        "src": "https://images.pexels.com/photos/6861168/pexels-photo-6861168.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6667249519146704,
+        "dl": "pexels-taryn-elliott-6861168.jpg",
+        "alt": "grátis Uma pessoa desfruta de caiaque em um rio calmo cercado por vegetação exuberante na natureza serena. Foto profissi"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/barco-bote-lago-lagoa-12791474/",
+        "src": "https://images.pexels.com/photos/12791474/pexels-photo-12791474.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-hexyle-xtudios-30987508-12791474.jpg",
+        "alt": "grátis Um homem rema em uma canoa de madeira em um rio sereno rodeado por uma vegetação exuberante em Acra, Gana. Foto p"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/barco-de-madeira-com-homem-remando-em-aguas-calmas-33547494/",
+      "src": "https://images.pexels.com/photos/33547494/pexels-photo-33547494/free-photo-of-barco-de-madeira-com-homem-remando-em-aguas-calmas.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.3346080305927341,
+      "dl": "pexels-riyad-hossain-hridoy-2154687501-33547494.jpg",
+      "alt": "grátis Vista aérea de um homem remando um barco de madeira em águas calmas e verdes. Foto profissional",
+      "width": 1600,
+      "height": 1199,
+      "author": "Riyad Hossain Hridoy"
+    }
+  },
+  "transport-car-fueling": {
+    "query": "homem abastecendo o carro no posto",
+    "queryEn": "man refueling car gas station",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-mao-veiculo-carro-9216596/",
+        "src": "https://images.pexels.com/photos/9216596/pexels-photo-9216596.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-introspectivedsgn-9216596.jpg",
+        "alt": "grátis Homem em posto de gasolina abastecendo veículo em um dia ensolarado, mostrando o processo de abastecimento. Foto "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-carro-veiculo-automovel-23471332/",
+        "src": "https://images.pexels.com/photos/23471332/pexels-photo-23471332/free-photo-of-homem-carro-veiculo-automovel.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.6666666666666666,
+        "dl": "pexels-louis_ftn_-627779579-23471332.jpg",
+        "alt": "grátis Homem abastece um carro esportivo preto elegante em um posto de gasolina, mostrando o estilo de vida urbano e a e"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/cidade-meio-urbano-homem-criativo-4940930/",
+        "src": "https://images.pexels.com/photos/4940930/pexels-photo-4940930.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-introspectivedsgn-4940930.jpg",
+        "alt": "grátis Homem abastece carro esportivo elegante ao entardecer em um posto de gasolina urbano, mostrando um estilo de vida"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-trabalhando-de-pe-segurando-19224101/",
+        "src": "https://images.pexels.com/photos/19224101/pexels-photo-19224101/free-photo-of-mulher-trabalhando-de-pe-segurando.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-gowtham-agm-609630353-19224101.jpg",
+        "alt": "grátis Uma mulher abastece um riquixá em um posto de gasolina, mostrando a vida cotidiana na Índia. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/veiculos-carros-posto-de-gasolina-bomba-de-gasolina-14008633/",
+        "src": "https://images.pexels.com/photos/14008633/pexels-photo-14008633.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 0.8,
+        "dl": "pexels-roman-ska-3453281-14008633.jpg",
+        "alt": "grátis Posto de gasolina com veículos ao crepúsculo, iluminação vibrante e marca reconhecível. Foto profissional"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/cidade-meio-urbano-homem-criativo-4940930/",
+      "src": "https://images.pexels.com/photos/4940930/pexels-photo-4940930.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-introspectivedsgn-4940930.jpg",
+      "alt": "grátis Homem abastece carro esportivo elegante ao entardecer em um posto de gasolina urbano, mostrando um estilo de vida",
+      "width": 1600,
+      "height": 1067,
+      "author": "Erik Mclean"
+    }
+  },
+  "transport-truck-unloading": {
+    "query": "motorista descarregando caixas do caminhão",
+    "queryEn": "driver unloading boxes truck",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-pacote-embalagem-caixas-6169178/",
+        "src": "https://images.pexels.com/photos/6169178/pexels-photo-6169178.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.4915384615384615,
+        "dl": "pexels-tima-miroshnichenko-6169178.jpg",
+        "alt": "grátis Mensageiro descarregando pacotes de uma van de entrega na entrada do armazém. Distribuição eficiente. Foto profis"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/trabalhando-bebida-drink-motorista-12625350/",
+        "src": "https://images.pexels.com/photos/12625350/pexels-photo-12625350.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5002828054298643,
+        "dl": "pexels-matreding-12625350.jpg",
+        "alt": "grátis Trabalhador de entrega descarregando caixas de Coca Cola de caminhão na rua da cidade, mostrando a logística de a"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/operarios-de-armazem-ocupados-carregando-um-caminhao-na-indonesia-40513904/",
+        "src": "https://images.pexels.com/photos/40513904/pexels-photo-40513904/free-photo-of-operarios-de-armazem-ocupados-carregando-um-caminhao-na-indonesia.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-kevin-yung-2152346613-40513904.jpg",
+        "alt": "grátis Trabalhadores carregando um caminhão com caixas de forma eficiente em Java Ocidental, Indonésia. Foto em preto e "
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/trabalhando-homens-crepusculo-cair-da-noite-16276469/",
+        "src": "https://images.pexels.com/photos/16276469/pexels-photo-16276469/free-photo-of-trabalhando-homens-crepusculo-cair-da-noite.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-ian-462526402-16276469.jpg",
+        "alt": "grátis Trabalhadores descarregando caixas de um caminhão de entrega em um mercado urbano ao entardecer. Foto profissiona"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-pessoa-trabalhando-furgao-6407431/",
+        "src": "https://images.pexels.com/photos/6407431/pexels-photo-6407431.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.49800796812749,
+        "dl": "pexels-pavel-danilyuk-6407431.jpg",
+        "alt": "grátis Entregador organizando caixas em uma van, usando máscara e luvas para segurança. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/imagem-em-preto-e-branco-de-pessoas-em-um-mercado-ao-ar-livre-37893265/",
+        "src": "https://images.pexels.com/photos/37893265/pexels-photo-37893265/free-photo-of-imagem-em-preto-e-branco-de-pessoas-em-um-mercado-ao-ar-livre.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.52,
+        "dl": "pexels-wal_-172619-2156618639-37893265.jpg",
+        "alt": "grátis Uma fotografia antiga em preto e branco mostrando pessoas reunidas em um mercado ao ar livre, com mercadorias sen"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/preto-e-branco-p-b-homem-veiculo-6169051/",
+        "src": "https://images.pexels.com/photos/6169051/pexels-photo-6169051.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-tima-miroshnichenko-6169051.jpg",
+        "alt": "grátis Motorista de entrega descarrega pacotes de uma van, organizando as remessas ao ar livre. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-rua-via-veiculo-18772899/",
+        "src": "https://images.pexels.com/photos/18772899/pexels-photo-18772899/free-photo-of-homem-rua-via-veiculo.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5014335775724754,
+        "dl": "pexels-gene-samit-546626702-18772899.jpg",
+        "alt": "grátis Homem descarrega caixas de papelão do caminhão enquanto fala ao telefone em San José, Costa Rica. Foto profission"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/trabalhando-homens-crepusculo-cair-da-noite-16276469/",
+      "src": "https://images.pexels.com/photos/16276469/pexels-photo-16276469/free-photo-of-trabalhando-homens-crepusculo-cair-da-noite.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.5,
+      "dl": "pexels-ian-462526402-16276469.jpg",
+      "alt": "grátis Trabalhadores descarregando caixas de um caminhão de entrega em um mercado urbano ao entardecer. Foto profissiona",
+      "width": 1600,
+      "height": 1067,
+      "author": "IAN"
+    },
+    "fixed": true
+  },
+  "transport-bus-boarding": {
+    "query": "mulher entrando no ônibus",
+    "queryEn": "woman boarding bus",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/estrada-via-veiculos-carros-10212981/",
+        "src": "https://images.pexels.com/photos/10212981/pexels-photo-10212981.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.635374149659864,
+        "dl": "pexels-faruktokluoglu-10212981.jpg",
+        "alt": "grátis Silhueta de uma pessoa entrando em um ônibus à noite no sistema de transporte público de Istambul. Foto profissio"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-oculos-escuros-oculos-de-sol-mulher-9527454/",
+        "src": "https://images.pexels.com/photos/9527454/pexels-photo-9527454.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-anastas-9527454.jpg",
+        "alt": "grátis Uma mulher fashion de óculos de sol posa com confiança dentro de um ônibus mal iluminado à noite. Foto profission"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-mulher-de-pe-segurando-7252759/",
+        "src": "https://images.pexels.com/photos/7252759/pexels-photo-7252759.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.333421540089971,
+        "dl": "pexels-mart-production-7252759.jpg",
+        "alt": "grátis Uma mulher com um casaco e óculos em pé dentro de um bonde público, segurando-se no corrimão. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/frio-com-frio-pessoas-transporte-publico-10875031/",
+        "src": "https://images.pexels.com/photos/10875031/pexels-photo-10875031.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.7775816416593115,
+        "dl": "pexels-matreding-10875031.jpg",
+        "alt": "grátis Passageiros dentro de um ônibus público vestindo roupas de inverno em um dia frio. Foto profissional"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/retrato-de-uma-mulher-em-frente-a-um-onibus-urbano-39213451/",
+        "src": "https://images.pexels.com/photos/39213451/pexels-photo-39213451/free-photo-of-retrato-de-uma-mulher-em-frente-a-um-onibus-urbano.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.5,
+        "dl": "pexels-lau-arraigada-2154392495-39213451.jpg",
+        "alt": "grátis Perfil de uma mulher com cabelo penteado em pé diante de um ônibus urbano. Captura a atmosfera da viagem na cidad"
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mulher-modelo-veiculo-carro-4799703/",
+        "src": "https://images.pexels.com/photos/4799703/pexels-photo-4799703.jpeg?cs=tinysrgb&dpr=1&w=500",
+        "ratio": 1.3999451754385965,
+        "dl": "pexels-cleytonewerton-4799703.jpg",
+        "alt": "grátis Jovem mulher com um traje moderno posando confiantemente dentro de um ônibus público moderno com detalhes amarelo"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/estrada-via-veiculos-carros-10212981/",
+      "src": "https://images.pexels.com/photos/10212981/pexels-photo-10212981.jpeg?cs=tinysrgb&dpr=1&w=500",
+      "ratio": 1.635374149659864,
+      "dl": "pexels-faruktokluoglu-10212981.jpg",
+      "alt": "grátis Silhueta de uma pessoa entrando em um ônibus à noite no sistema de transporte público de Istambul. Foto profissio",
+      "width": 1600,
+      "height": 978,
+      "author": "Faruk Tokluoğlu"
+    },
+    "fixed": true
+  }
+}
