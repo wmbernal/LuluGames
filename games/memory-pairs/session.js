@@ -2,10 +2,12 @@ import { getSettings } from "../../shared/js/settings.js?v=2";
 import {
   playMatchBellSound,
   playMatchCompletionBellSound,
-} from "../../shared/js/audio.js?v=3";
-import { createMatchBoard, isGameFinished, matchCards } from "./game.js";
-import { getTheme } from "./data.js";
-import { createGameUI } from "./ui.js";
+  playMismatchSound,
+  speakCardName,
+} from "../../shared/js/audio.js?v=5";
+import { createMatchBoard, isGameFinished, matchCards } from "./game.js?v=5";
+import { getTheme } from "./data.js?v=4";
+import { createGameUI } from "./ui.js?v=6";
 
 const COMPLETION_DELAY_MS = 350;
 const selectedTheme = getTheme(new URLSearchParams(window.location.search).get("theme"));
@@ -21,6 +23,7 @@ let timeoutId = null;
 
 const ui = createGameUI({
   onMatch: handleMatch,
+  onCardSelected: (label) => speakCardName(label, getSettings()),
   onNext: advanceSession,
   shouldConfirmLeave: () => state.sessionActive,
   theme: selectedTheme,
@@ -55,7 +58,7 @@ function finishRound() {
 
 function handleMatch(firstCardId, secondCardId) {
   if (state.phase !== "playing") {
-    return false;
+    return "ignored";
   }
   const previousMatchedPairs = state.game.matchedPairs;
   state.game = matchCards(state.game, firstCardId, secondCardId);
@@ -69,9 +72,12 @@ function handleMatch(firstCardId, secondCardId) {
         finishRound();
       }, COMPLETION_DELAY_MS);
     }
-    return true;
+    return "matched";
   }
-  return false;
+  if (state.game.feedbackType === "incorrect") {
+    void playMismatchSound(getSettings());
+  }
+  return state.game.feedbackType;
 }
 
 function advanceSession() {

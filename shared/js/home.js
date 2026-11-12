@@ -1,4 +1,4 @@
-import { gameCatalog } from "./catalog.js";
+import { gameCatalog } from "./catalog.js?v=3";
 import { getSettings, updateSettings } from "./settings.js?v=2";
 
 const catalogElement = document.querySelector("#game-catalog");
@@ -15,7 +15,10 @@ function renderCatalog() {
     const icon = document.createElement("span");
     icon.className = "game-card__icon";
     icon.setAttribute("aria-hidden", "true");
-    icon.textContent = game.icon;
+    const iconImage = document.createElement("img");
+    iconImage.src = game.icon;
+    iconImage.alt = "";
+    icon.append(iconImage);
 
     const title = document.createElement("h3");
     title.textContent = game.title;

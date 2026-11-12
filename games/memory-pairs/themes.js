@@ -1,4 +1,4 @@
-import { THEMES } from "./data.js";
+import { THEMES } from "./data.js?v=4";
 
 const themeList = document.querySelector("#theme-list");
 

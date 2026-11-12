@@ -20,8 +20,9 @@ export function createMatchBoard(theme, roundIndex = 0, random = Math.random) {
   }
   const pairs = theme.rounds[roundIndex];
   if (pairs.length !== 6) {
-    throw new TypeError("Each theme round must contain exactly six picture pairs.");
+    throw new TypeError("Each theme round must contain exactly six pairs.");
   }
+  const isWordTheme = theme.cardType === "words";
 
   const leftCards = [];
   const rightCards = [];
@@ -33,16 +34,18 @@ export function createMatchBoard(theme, roundIndex = 0, random = Math.random) {
       || pair.cards.length !== 2
       || pair.cards.some((card) => !card.icon || !card.label)
     ) {
-      throw new TypeError(`Pair "${pair.pairId ?? "unknown"}" must define two labeled pictures.`);
+      throw new TypeError(`Pair "${pair.pairId ?? "unknown"}" must define two labeled cards.`);
     }
     leftCards.push({
       ...pair.cards[0],
+      cardType: isWordTheme ? "words" : "pictures",
       pairId: pair.pairId,
       matched: false,
       id: `${pair.pairId}-left`,
     });
     rightCards.push({
       ...pair.cards[1],
+      cardType: isWordTheme ? "words" : "pictures",
       pairId: pair.pairId,
       matched: false,
       id: `${pair.pairId}-right`,
@@ -53,6 +56,7 @@ export function createMatchBoard(theme, roundIndex = 0, random = Math.random) {
     phase: "playing",
     themeId: theme.id,
     themeLabel: theme.label,
+    cardType: isWordTheme ? "words" : "pictures",
     leftCards: shuffleCards(leftCards, random),
     rightCards: shuffleCards(rightCards, random),
     matchedPairs: 0,
@@ -82,7 +86,7 @@ export function matchCards(state, firstCardId, secondCardId) {
     return {
       ...state,
       feedback: "Essa combinação não corresponde. Tente outra.",
-      feedbackType: "neutral",
+      feedbackType: "incorrect",
     };
   }
 
@@ -99,7 +103,9 @@ export function matchCards(state, firstCardId, secondCardId) {
     leftCards: updateMatches(state.leftCards),
     rightCards: updateMatches(state.rightCards),
     matchedPairs,
-    feedback: `${leftCard.label} combina com ${rightCard.label}.`,
+    feedback: state.cardType === "words"
+      ? `${leftCard.label} rima com ${rightCard.label}!`
+      : `${leftCard.label} combina com ${rightCard.label}.`,
     feedbackType: "positive",
   };
 }

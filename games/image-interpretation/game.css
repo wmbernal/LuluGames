@@ -1,0 +1,77 @@
+.game-nav { margin-left: auto; }
+.game-page {
+  width: min(calc(100% - var(--space-8)), var(--layout-game-max-width));
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-6);
+}
+.game-heading { margin-bottom: var(--space-6); text-align: center; }
+.game-heading h1 { margin-bottom: 0; }
+.game-panel { text-align: center; }
+#intro-panel, #playing-panel, #complete-panel {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto;
+}
+.intro-art { margin-bottom: var(--space-4); font-size: var(--font-size-h1); }
+.round-count { margin-bottom: var(--space-3); font-weight: 700; }
+.scene-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: contain;
+  background: var(--color-stage);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.question { margin: var(--space-4) 0; font-size: var(--font-size-h3); }
+.answer-list { display: grid; gap: var(--space-2); }
+.answer {
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--color-text);
+  text-align: left;
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+.answer:hover:not(:disabled) { background: var(--color-surface-soft); }
+.answer--correct, .answer--correct:disabled {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border-color: var(--color-success);
+  opacity: 1;
+}
+.answer--incorrect {
+  color: #842d38;
+  background: #fff1f1;
+  border-color: #b94a54;
+}
+.answer--incorrect:hover:not(:disabled) { background: #fff1f1; }
+.answer__mark { min-width: var(--space-6); }
+.feedback { min-height: var(--size-feedback-min-height); margin: var(--space-3) 0 0; }
+.hint {
+  padding: var(--space-3);
+  background: var(--color-highlight-soft);
+  border: var(--border-width-thin) solid var(--color-highlight-border);
+  border-radius: var(--radius-control);
+}
+.game-footer { display: flex; justify-content: center; margin-top: var(--space-6); }
+.game-settings { max-width: var(--layout-settings-max-width); margin: var(--space-6) auto 0; }
+.game-settings summary {
+  min-height: var(--target-size);
+  padding: var(--space-2);
+  color: var(--color-primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+.game-settings[open] summary { margin-bottom: var(--space-3); }
+.leave-dialog {
+  width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
+  padding: var(--space-8);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.leave-dialog::backdrop { background: var(--color-backdrop); }
+.dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>O que está acontecendo? — Lulu Games</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=4">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=4">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=2">
+    <link rel="stylesheet" href="./game.css?v=3">
+    <script type="module" src="./session.js?v=3"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" data-home-link aria-label="Lulu Games, início">
+        <img class="brand__icon" src="../../assets/images/ui/brand.svg" alt=""><span>Lulu Games</span>
+      </a>
+      <nav class="game-nav" aria-label="Navegação do jogo">
+        <button class="button button--secondary" id="back-button" type="button">← Voltar</button>
+      </nav>
+    </header>
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="game-title">
+        <p class="eyebrow">Jogo de imagens e palavras</p>
+        <h1 id="game-title">O que está acontecendo?</h1>
+      </section>
+      <section class="card game-panel">
+        <div id="intro-panel">
+          <div class="intro-art" aria-hidden="true">🖼️ 👑</div>
+          <h2>Vamos olhar e descobrir?</h2>
+          <p>Olhe a imagem e escolha a frase que combina com ela. São <strong id="intro-round-count"></strong> imagens, sem pressa.</p>
+          <button class="button button--primary" id="start-button" type="button">Começar jogo</button>
+        </div>
+        <div id="playing-panel" hidden>
+          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+          <img class="scene-image" id="scene-image" width="640" height="400" alt="">
+          <h2 class="question"><span aria-hidden="true">🔎</span> Qual frase combina com a imagem?</h2>
+          <div class="answer-list" id="answer-list" role="group" aria-label="Opções de resposta"></div>
+          <p class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p class="hint" id="hint" role="status" aria-live="polite" hidden></p>
+          <button class="button button--primary" id="next-button" type="button" hidden>Próxima</button>
+        </div>
+        <div id="complete-panel" hidden>
+          <div class="intro-art" aria-hidden="true">👑 ✨ 🖼️</div>
+          <h2 tabindex="-1" id="complete-title">Terminamos por hoje!</h2>
+          <p>Você observou as imagens e encontrou as frases. Muito bem!</p>
+          <button class="button button--primary" id="replay-button" type="button">Jogar de novo</button>
+          <a class="button button--secondary" href="../../index.html">Início</a>
+        </div>
+      </section>
+      <footer class="game-footer" id="game-footer">
+        <a class="button button--secondary" href="../../index.html" data-home-link>⌂ Início</a>
+      </footer>
+      <details class="card game-settings">
+        <summary>Opções de som</summary>
+        <form class="settings-form" id="settings-form">
+          <label class="setting-row" for="sound-enabled">
+            <span>Som suave</span>
+            <input id="sound-enabled" name="soundEnabled" type="checkbox">
+          </label>
+          <label class="setting-row setting-row--range" for="sound-volume">
+            <span>Volume do som</span>
+            <input id="sound-volume" name="soundVolume" type="range" min="0" max="0.25" step="0.05">
+          </label>
+          <p class="settings-form__status" id="settings-status" role="status" aria-live="polite"></p>
+        </form>
+      </details>
+    </main>
+    <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
+      <form method="dialog">
+        <h2 id="leave-title">Quer voltar ao início?</h2>
+        <p>Esta partida vai terminar. Você poderá jogar de novo quando quiser.</p>
+        <div class="dialog-actions">
+          <button class="button button--secondary" value="cancel">Continuar jogando</button>
+          <button class="button button--primary" value="leave">Voltar ao início</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

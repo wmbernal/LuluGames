@@ -17,7 +17,7 @@ Items are buttons, so Tab, Enter, and Space work without dragging. Tapping an it
 
 1. The player reads a short, concrete context.
 2. The player chooses one item from every category. They may change or remove choices freely.
-3. **Pronto** checks the outfit. An incomplete or mismatched outfit receives a gentle hint and highlights the first category to revisit. It never removes chosen items or plays an error sound.
+3. **Pronto** checks the outfit. An incomplete or mismatched outfit receives a gentle hint and highlights the first category to revisit without removing chosen items. The current implementation does not yet play an error sound.
 4. A suitable outfit receives soft positive feedback. **Próximo** advances to the next context.
 5. Session length is configurable to 3, 4, or 5 rounds (3 by default). The four contexts are shown in order; a fifth round repeats the first context.
 6. After the last round, show **Terminamos por hoje!**, unlock a flower crown in the collection, and offer replay or **Início**.

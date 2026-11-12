@@ -14,6 +14,24 @@ function createRounds(rounds) {
   })))));
 }
 
+function createWordRounds(rounds) {
+  return Object.freeze(rounds.map((pairs) => Object.freeze(pairs.map(([
+    pairId,
+    leftIcon,
+    leftLabel,
+    rightIcon,
+    rightLabel,
+    rhymeGroup,
+  ]) => Object.freeze({
+    pairId,
+    rhymeGroup,
+    cards: Object.freeze([
+      Object.freeze({ icon: leftIcon, label: leftLabel }),
+      Object.freeze({ icon: rightIcon, label: rightLabel }),
+    ]),
+  })))));
+}
+
 export const THEMES = Object.freeze([
   Object.freeze({
     id: "princess",
@@ -300,6 +318,55 @@ export const THEMES = Object.freeze([
         ["flower-seed", "🌻", "Flor", "🌰", "Semente"],
         ["tree-bird", "🌳", "Árvore", "🐦", "Pássaro"],
         ["rain-rainbow", "🌧️", "Chuva", "🌈", "Arco-íris"],
+      ],
+    ]),
+  }),
+  Object.freeze({
+    id: "rhymes",
+    label: "Palavras que rimam",
+    icon: "🔤",
+    description: "Encontre palavras com sons finais parecidos.",
+    cardType: "words",
+    rounds: createWordRounds([
+      [
+        ["gato-pato", "🐱", "Gato", "🦆", "Pato", "ato"],
+        ["mao-pao", "✋", "Mão", "🍞", "Pão", "ao"],
+        ["bola-escola", "⚽", "Bola", "🏫", "Escola", "ola"],
+        ["panela-janela", "🍲", "Panela", "🪟", "Janela", "ela"],
+        ["baleia-areia", "🐋", "Baleia", "🏖️", "Areia", "eia"],
+        ["cachorro-socorro", "🐶", "Cachorro", "🛟", "Socorro", "orro"],
+      ],
+      [
+        ["rato-prato", "🐭", "Rato", "🍽️", "Prato", "ato"],
+        ["mel-pastel", "🍯", "Mel", "🥟", "Pastel", "el"],
+        ["navio-rio", "🚢", "Navio", "🏞️", "Rio", "io"],
+        ["flor-amor", "🌸", "Flor", "💖", "Amor", "or"],
+        ["caneta-borboleta", "🖊️", "Caneta", "🦋", "Borboleta", "eta"],
+        ["limao-violao", "🍋", "Limão", "🎸", "Violão", "ao"],
+      ],
+      [
+        ["coelho-joelho", "🐰", "Coelho", "🦵", "Joelho", "elho"],
+        ["abelha-ovelha", "🐝", "Abelha", "🐑", "Ovelha", "elha"],
+        ["foguete-chiclete", "🚀", "Foguete", "🫧", "Chiclete", "ete"],
+        ["menina-bailarina", "👧", "Menina", "🩰", "Bailarina", "ina"],
+        ["anel-pincel", "💍", "Anel", "🖌️", "Pincel", "el"],
+        ["cama-pijama", "🛏️", "Cama", "👘", "Pijama", "ama"],
+      ],
+      [
+        ["mar-colar", "🌊", "Mar", "📿", "Colar", "ar"],
+        ["estrada-fada", "🛣️", "Estrada", "🧚", "Fada", "ada"],
+        ["botao-cancao", "🔘", "Botão", "🎶", "Canção", "ao"],
+        ["cabelo-chinelo", "💇", "Cabelo", "🩴", "Chinelo", "elo"],
+        ["sorvete-confete", "🍦", "Sorvete", "🎊", "Confete", "ete"],
+        ["farol-girassol", "🚦", "Farol", "🌻", "Girassol", "ol"],
+      ],
+      [
+        ["lua-rua", "🌙", "Lua", "🛣️", "Rua", "ua"],
+        ["dente-presente", "🦷", "Dente", "🎁", "Presente", "ente"],
+        ["caneca-boneca", "☕", "Caneca", "🪆", "Boneca", "eca"],
+        ["balao-tubarao", "🎈", "Balão", "🦈", "Tubarão", "ao"],
+        ["queijo-beijo", "🧀", "Queijo", "😘", "Beijo", "eijo"],
+        ["cafe-chule", "🫘", "Café", "🧦", "Chulé", "e"],
       ],
     ]),
   }),

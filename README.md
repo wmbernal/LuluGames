@@ -65,7 +65,9 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for module responsibilities and
 
 To add clothing or a scenario to **Vestir a Princesa**, add an SVG item with the shared `viewBox` to `assets/images/`, then add its category, image path, and context tags in `games/dress-princess/data.js`. Add the scenario's required tag and an option matching every category. See [docs/GAME_VESTIR_PRINCESA.md](docs/GAME_VESTIR_PRINCESA.md) for the matching rule.
 
-**Jogo dos Pares** starts with a theme chooser: Princesas, Casa, Animais, Transportes, Comidas, and Jardim. Every theme has five different rounds of six related picture pairs. The session ends after the configured 3, 4, or 5 rounds. Run the game logic tests with `npm test` or `node --test`.
+**Jogo dos Pares** starts with a theme chooser: Princesas, Casa, Animais, Transportes, Comidas, Jardim, and Palavras que rimam. Every theme has five different rounds of six pairs; the rhyme theme shows rhyming words with pictures. The session ends after the configured 3, 4, or 5 rounds. Run the game logic tests with `npm test` or `node --test`.
+
+**O que está acontecendo?** presents illustrated everyday situations and three phrases to choose from. After three incorrect attempts, a gentle clue helps the player look again. See [docs/GAME_IMAGE_INTERPRETATION.md](docs/GAME_IMAGE_INTERPRETATION.md).
 
 ## Publish on GitHub Pages
 

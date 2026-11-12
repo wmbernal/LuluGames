@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#FFF8F3"/>
+  <rect x="45" y="46" width="147" height="170" rx="68" fill="#E5F0ED" stroke="#B9D2C0" stroke-width="8"/>
+  <path d="M119 50v162M49 132h140" stroke="#FFFFFF" stroke-width="7"/>
+  <path d="M0 315h640v85H0z" fill="#EBDDD2"/>
+  <path d="M476 311V124q0-20 20-20h76v207" fill="#E9DCE8" stroke="#A88DA5" stroke-width="6"/>
+  <path d="M480 172h88m-88 65h88" stroke="#A88DA5" stroke-width="6"/>
+  <path d="M495 139v29m18-35v35m18-23v23m-36 31v34m19-29v29m20-37v37" stroke="#8D718A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M163 337h310" stroke="#C9B6AA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M200 301V224q0-37 34-37h147q35 0 35 37v77" fill="#D3BBCD" stroke="#735879" stroke-width="6"/>
+  <path d="M190 276q0-20 20-20h192q20 0 20 20v33H190z" fill="#E9DCE8" stroke="#735879" stroke-width="6"/>
+  <path d="M215 309v24m182-24v24" stroke="#735879" stroke-width="8" stroke-linecap="round"/>
+  <path d="M269 145q-18-51 8-69 27-19 56 1 17 15 5 70l-12 33h-48z" fill="#79546E"/>
+  <path d="M269 230q5-56 24-69h33q25 12 35 69l32 50H234z" fill="#DFA9C2" stroke="#81566D" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M291 164q16 13 34 0l8 24-25 13-25-13z" fill="#F6DCE7"/>
+  <circle cx="308" cy="119" r="31" fill="#F2C6AE" stroke="#735879" stroke-width="4"/>
+  <path d="M278 110q2-36 30-36 29 0 31 36-25-2-36-17-7 13-25 17z" fill="#79546E"/>
+  <path d="m282 80-5-25 18 10 13-19 13 19 18-10-5 25z" fill="#F2D58A" stroke="#9D7441" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M296 121h4m18 0h4" stroke="#493C4A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M302 136q6 5 13 0" fill="none" stroke="#A85F6C" stroke-width="3" stroke-linecap="round"/>
+  <path d="m277 189-15 39 24 12m53-51 15 39-22 12" fill="none" stroke="#F2C6AE" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M307 226q-22-16-47-10v42q24-6 47 10 23-16 47-10v-42q-25-6-47 10z" fill="#FFFDF8" stroke="#735879" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M307 226v42" stroke="#735879" stroke-width="4"/>
+  <path d="M268 227q15-1 28 5m-28 7q15-1 28 5m22-12q13-6 28-5m-28 17q13-6 28-5" fill="none" stroke="#C8B3C5" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="275" cy="244" r="7" fill="#F2C6AE"/><circle cx="340" cy="244" r="7" fill="#F2C6AE"/>
+</svg>

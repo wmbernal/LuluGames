@@ -20,7 +20,7 @@ test("shuffling preserves every card exactly once", () => {
 });
 
 test("every theme has five rounds of six distinct and complete pairings", () => {
-  assert.equal(THEMES.length, 6);
+  assert.equal(THEMES.length, 7);
   for (const entry of THEMES) {
     assert.equal(entry.rounds.length, 5, entry.label);
     const roundCombinations = new Set();
@@ -38,12 +38,12 @@ test("every theme has five rounds of six distinct and complete pairings", () => 
       assert.equal(
         new Set(round.map((pair) => pair.cards[0].label)).size,
         6,
-        `${entry.label}: duplicate left-side picture`,
+        `${entry.label}: duplicate left-side card`,
       );
       assert.equal(
         new Set(round.map((pair) => pair.cards[1].label)).size,
         6,
-        `${entry.label}: duplicate right-side picture`,
+        `${entry.label}: duplicate right-side card`,
       );
       assert.equal(
         new Set(round.map((pair) => pair.cards[0].icon)).size,
@@ -59,6 +59,29 @@ test("every theme has five rounds of six distinct and complete pairings", () => 
     }
     assert.equal(roundCombinations.size, 5, `${entry.label}: rounds must vary`);
   }
+});
+
+test("the rhymes theme has five boards of six illustrated word pairs", () => {
+  const rhymes = THEMES.find((entry) => entry.id === "rhymes");
+
+  assert.equal(rhymes.cardType, "words");
+  assert.equal(rhymes.rounds.length, 5);
+  assert.equal(rhymes.rounds.flat().length, 30);
+  assert.equal(
+    rhymes.rounds.every((round) => new Set(round.map((pair) => pair.rhymeGroup)).size === 6),
+    true,
+    "each board must use distinct rhyme families to avoid ambiguous matches",
+  );
+  assert.equal(
+    rhymes.rounds.flat().every((pair) => pair.rhymeGroup
+      && pair.cards.every((card) => card.icon)),
+    true,
+  );
+  assert.equal(
+    rhymes.rounds.flat().every((pair) => pair.cards[0].icon !== pair.cards[1].icon),
+    true,
+  );
+  assert.equal(rhymes.rounds[0].some((pair) => pair.pairId === "gato-pato"), true);
 });
 
 test("animal homes and food recipes use the requested related-object pairs", () => {
@@ -102,6 +125,15 @@ test("a correct match marks both cards and finishes after the last pair", () => 
   assert.equal(isGameFinished(state), true);
 });
 
+test("word matches announce the rhyme", () => {
+  const state = createMatchBoard(THEMES.find((entry) => entry.id === "rhymes"), 0, predictableRandom);
+  const leftCard = state.leftCards.find((card) => card.pairId === "gato-pato");
+  const rightCard = state.rightCards.find((card) => card.pairId === "gato-pato");
+  const nextState = matchCards(state, leftCard.id, rightCard.id);
+
+  assert.equal(nextState.feedback, "Gato rima com Pato!");
+});
+
 test("incorrect matches do not mark cards as found", () => {
   const state = createMatchBoard(theme, 0, predictableRandom);
   const firstCard = state.leftCards[0];
@@ -112,6 +144,7 @@ test("incorrect matches do not mark cards as found", () => {
   assert.equal(nextState.leftCards.every((card) => !card.matched), true);
   assert.equal(nextState.rightCards.every((card) => !card.matched), true);
   assert.match(nextState.feedback, /combinação não corresponde/i);
+  assert.equal(nextState.feedbackType, "incorrect");
 });
 
 test("cards on the same side cannot be matched", () => {

@@ -29,6 +29,7 @@ function createCard(card, side, callbacks, newlyMatchedCardIds) {
   button.className = "match-card";
   button.type = "button";
   button.draggable = !card.matched;
+  button.classList.toggle("match-card--word", card.cardType === "words");
   button.dataset.cardId = card.id;
   button.dataset.side = side;
   button.disabled = card.matched;
@@ -38,10 +39,6 @@ function createCard(card, side, callbacks, newlyMatchedCardIds) {
   button.classList.toggle("match-card--just-matched", newlyMatchedCardIds.has(card.id));
   button.classList.toggle("match-card--selected", selectedCardId === card.id);
 
-  const icon = document.createElement("span");
-  icon.className = "match-card__icon";
-  icon.setAttribute("aria-hidden", "true");
-  icon.textContent = card.icon;
   const label = document.createElement("span");
   label.className = "match-card__label";
   label.textContent = card.label;
@@ -49,12 +46,20 @@ function createCard(card, side, callbacks, newlyMatchedCardIds) {
   mark.className = "match-card__mark";
   mark.setAttribute("aria-hidden", "true");
   mark.textContent = "✓";
-  button.append(icon, label, mark);
+  if (card.icon) {
+    const icon = document.createElement("span");
+    icon.className = "match-card__icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = card.icon;
+    button.append(icon);
+  }
+  button.append(label, mark);
 
   button.addEventListener("click", () => {
     if (card.matched) {
       return;
     }
+    callbacks.onCardSelected(card.label);
     if (!selectedCardId) {
       selectedCardId = card.id;
       callbacks.onSelectionChange();
@@ -66,8 +71,8 @@ function createCard(card, side, callbacks, newlyMatchedCardIds) {
       return;
     }
     const previousCardId = selectedCardId;
-    const wasMatched = callbacks.onMatch(previousCardId, card.id);
-    selectedCardId = wasMatched ? null : card.id;
+    const outcome = callbacks.onMatch(previousCardId, card.id);
+    selectedCardId = outcome === "neutral" ? card.id : null;
     callbacks.onSelectionChange();
   });
   button.addEventListener("dragstart", (event) => {
@@ -90,7 +95,7 @@ function createCard(card, side, callbacks, newlyMatchedCardIds) {
     if (!draggedCardId || draggedCardId === card.id || card.matched) {
       return;
     }
-    if (callbacks.onMatch(draggedCardId, card.id)) {
+    if (callbacks.onMatch(draggedCardId, card.id) !== "neutral") {
       selectedCardId = null;
     }
     callbacks.onSelectionChange();
@@ -136,8 +141,12 @@ export function createGameUI(callbacks) {
   document.querySelector("#game-title").textContent = `Jogo dos Pares: ${callbacks.theme.label}`;
   document.querySelector("#theme-icon").textContent = callbacks.theme.icon;
   document.querySelector("#theme-name").textContent = callbacks.theme.label;
+  document.querySelector("#round-instructions").textContent = callbacks.theme.cardType === "words"
+    ? "Encontre as palavras que rimam. Arraste ou selecione uma carta de cada lado."
+    : "Combine as figuras relacionadas. Arraste ou selecione uma carta de cada lado.";
   const cardCallbacks = {
     onMatch: callbacks.onMatch,
+    onCardSelected: callbacks.onCardSelected,
     onSelectionChange: updateSelectedCardUI,
   };
   function confirmNavigation(destination) {

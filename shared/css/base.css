@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../../assets/fonts/nunito/Nunito-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,7 +15,6 @@
 }
 
 html {
-  min-width: 320px;
   background: var(--color-page);
   scroll-behavior: smooth;
 }
@@ -87,11 +94,13 @@ h3 {
 
 .site-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: var(--space-2);
   min-height: 72px;
   padding: var(--space-3) max(var(--space-4), calc((100vw - 1080px) / 2));
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-page);
+  border-bottom: 1px solid rgb(38 61 39 / 14%);
 }
 
 .brand {
@@ -102,10 +111,13 @@ h3 {
   color: var(--color-primary);
   font-weight: 750;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand__icon {
-  font-size: 26px;
+  display: block;
+  width: 42px;
+  height: 42px;
 }
 
 .page-shell {
@@ -118,6 +130,10 @@ h3 {
   max-width: 720px;
   margin: 0 auto var(--space-12);
   text-align: center;
+}
+
+.welcome-section h1 {
+  color: var(--color-text);
 }
 
 .welcome-section h1 {
@@ -135,7 +151,7 @@ h3 {
   color: var(--color-primary);
   font-size: var(--font-size-small);
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .section-title {

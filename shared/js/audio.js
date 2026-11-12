@@ -61,7 +61,7 @@ export function playCompletionSound(settings) {
   return playToneSequence(settings, [523, 659, 784], 0.12);
 }
 
-async function playBellSequence(settings, frequencies, noteInterval, decaySeconds) {
+async function playBellSequence(settings, frequencies, noteInterval, decaySeconds, volumeMultiplier = 1) {
   if (!settings.soundEnabled || settings.soundVolume <= 0) {
     return;
   }
@@ -91,7 +91,7 @@ async function playBellSequence(settings, frequencies, noteInterval, decaySecond
       for (const [ratio, volume] of partials) {
         const oscillator = audioContext.createOscillator();
         const gain = audioContext.createGain();
-        const peakGain = settings.soundVolume * volume;
+        const peakGain = settings.soundVolume * volume * volumeMultiplier;
         oscillator.type = "sine";
         oscillator.frequency.setValueAtTime(frequency * ratio, startTime);
         gain.gain.setValueAtTime(peakGain, startTime);
@@ -113,4 +113,29 @@ export function playMatchBellSound(settings) {
 
 export function playMatchCompletionBellSound(settings) {
   return playBellSequence(settings, [659, 784, 988, 1175], 0.13, 0.42);
+}
+
+export function playMismatchSound(settings) {
+  return playBellSequence(settings, [587, 392], 0.2, 0.38, 1.5);
+}
+
+export function speakCardName(label, settings) {
+  if (!label || !settings.soundEnabled || settings.soundVolume <= 0) {
+    return false;
+  }
+  if (!window.speechSynthesis || typeof window.SpeechSynthesisUtterance !== "function") {
+    console.warn("This browser does not support spoken card names.");
+    return false;
+  }
+
+  try {
+    const utterance = new window.SpeechSynthesisUtterance(label);
+    utterance.lang = "pt-BR";
+    utterance.volume = Math.min(settings.soundVolume * 4, 1);
+    window.speechSynthesis.speak(utterance);
+    return true;
+  } catch (error) {
+    console.warn("Optional card-name speech could not be played.", error);
+    return false;
+  }
 }

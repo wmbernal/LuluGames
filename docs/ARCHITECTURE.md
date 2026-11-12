@@ -17,9 +17,10 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/memory-pairs/game.js`: pure two-column board generation and match-state logic, independent of the DOM.
 - `games/memory-pairs/session.js`: session-round orchestration and optional audio integration for the matching game.
 - `games/memory-pairs/ui.js`: DOM rendering, drag-and-drop, and accessible selection-based matching.
-- `games/memory-pairs/data.js`: five rounds of six related picture pairs for each of six game themes.
+- `games/memory-pairs/data.js`: five rounds of six pairs for each game theme, including related-picture and rhyming-word pairs.
 - `games/memory-pairs/game.css`: matching-board styling built from shared design tokens.
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
+- `games/image-interpretation/`: image-to-text game; `data.js` defines scenes, `game.js` provides pure rules, `session.js` orchestrates settings and audio, and `ui.js` renders choices.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset and global typography/layout defaults.
 - `shared/css/components.css`: reusable buttons, cards, and form controls.
@@ -38,7 +39,7 @@ Use kebab-case for file and folder names, camelCase for JavaScript variables/fun
 
 ## Data organization
 
-Keep game content as plain JavaScript data exports in each game's `data.js`. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each of six themes defines five rounds of six related picture pairs. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. Keep data separate from presentation markup.
+Keep game content as plain JavaScript data exports in each game's `data.js`. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each theme defines five rounds of six pairs, which may be related pictures or rhyming words. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. Keep data separate from presentation markup.
 
 ## Add a catalog game
 
