@@ -107,7 +107,7 @@
 .theme-choice__count {
   font-weight: 700;
 }
-.game-footer { display: flex; justify-content: center; margin-top: var(--space-6); }
+.game-footer { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-3); margin-top: var(--space-6); }
 .leave-dialog {
   width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
   padding: var(--space-8);

@@ -9,7 +9,7 @@ Practice connecting everyday contexts to clothing choices, following a short seq
 - **Top:** scenario icon and short description; show **Ouvir** only when the scenario has a local audio file.
 - **Center:** princess artwork built from the aligned body, dress, shoes, accessory, and crown SVG layers.
 - **Side/below:** a category tray in a consistent order: clothes, shoes, accessories, and crowns.
-- **Footer:** the primary action (**Pronto**, then **Próximo**) and **Início**. **Voltar** remains visible in the header.
+- **Footer:** the primary action (**Pronto**, then **Próximo**), **Voltar** and **Início**. There is no top header on game screens; all navigation lives in the footer.
 
 Items are buttons, so Tab, Enter, and Space work without dragging. Tapping an item equips it; tapping it again removes it, while selecting another item from the same category replaces it. Pointer Events support dragging an item onto the princess with mouse, pen, or touch.
 
@@ -36,4 +36,4 @@ Each scenario exports one or more `requiredTags`, and each item exports a `categ
 
 Scenario instructions may specify a relative local audio file in `data.js`. If the path is absent, the listen button is hidden. Playback is optional, respects the sound setting and volume, and only starts after the player presses **Ouvir**. Positive feedback sound is also opt-in.
 
-Keep **Voltar** and **Início** visible. **Voltar** returns to the game introduction without losing the current outfit; leaving through **Início** asks for confirmation during an unfinished session. Animation can be disabled, and `prefers-reduced-motion` is respected.
+Keep **Voltar** and **Início** visible in the footer. **Voltar** returns to the game introduction without losing the current outfit; leaving through **Início** asks for confirmation during an unfinished session. Animation can be disabled, and `prefers-reduced-motion` is respected.
