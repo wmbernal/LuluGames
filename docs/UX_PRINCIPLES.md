@@ -10,6 +10,7 @@ These principles guide every screen, interaction, and game mechanic.
 - **Thematic rewards:** Rewards may unlock themed clothing or accessories. Do not use abstract scores, rankings, or competition.
 - **Clear navigation:** Keep visible **Voltar** and **Início** navigation on game screens. Confirm before abandoning an unfinished session when progress would otherwise be lost.
 - **Choice and calm:** Offer a small, manageable set of options at once. Do not add timers, flashing effects, or startling audio.
+- **Efficient use of the screen:** Center the main content on phones and use the whole viewport in portrait and landscape. Compact the layout on short screens instead of pushing controls off-screen or leaving large empty areas.
 
 ## Applying these principles
 

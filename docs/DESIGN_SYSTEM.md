@@ -43,9 +43,19 @@ Spacing uses a 4px base scale: 4, 8, 12, 16, 24, 32, and 48px. Cards use a 24px 
 
 ## Photo backdrop and glass panels
 
-The home page and every game/theme page share one full-screen photograph: Pexels photo 8709295 by Polina, stored as `assets/images/ui/home-bg.jpg`. The home keeps it sharper and pairs it with a floating cream menu card anchored at the lower left, so the paper-letter word stays legible above the card; inner pages use the same photo with a soft blur and a cream veil so cards stay readable. The backdrop is decorative and never carries information.
+The home page and every game/theme page share one full-screen photograph: Pexels photo 8709295 by Polina, stored as `assets/images/ui/home-bg.jpg`. The home keeps it sharper and pairs it with a floating cream menu card: centered on phones (portrait and landscape, compact on short screens) and anchored at the lower left on wide desktop windows, where the backdrop is scaled from the left so the paper-letter word stays legible above the card. Inner pages use the same photo with a soft blur and a cream veil so cards stay readable. The backdrop is decorative and never carries information.
 
 Cards and the sticky header use a translucent warm surface with `backdrop-filter: blur()`, a light border and a soft grounded shadow. Large cards repeat the dashed inner border from the home menu to tie the screens together. Theme choices and game cards lift 2–4px on hover with a gold border; selected, correct and matched states keep their stronger focus/success colors. All effects are decorative and disabled when motion is reduced.
+
+## Layout and screen space
+
+The main content of every screen must use the available viewport, on any orientation:
+
+- Center the primary panel both vertically and horizontally on phones; do not pin menus to the bottom or leave a large empty band on one side. On wide desktop windows an anchored composition may be used, but phones always get a centered layout.
+- Fill leftover space with the decorative backdrop, not with dead layout space. The backdrop may be cropped, scaled, or repositioned per breakpoint, but it never carries information.
+- Test both orientations. Landscape phones and short windows trigger a compact variant: shrink padding, icon, and text sizes, and drop secondary lines (such as the home subtitle) before dropping controls. Never require scrolling to reach the primary actions on a phone.
+- Never cause horizontal scrolling; check that `scrollWidth` matches the viewport at every breakpoint.
+- Keep interactive targets at least 44×44px even in compact variants, and keep the same order and grouping across orientations so the layout stays predictable.
 
 ## Targets and components
 
