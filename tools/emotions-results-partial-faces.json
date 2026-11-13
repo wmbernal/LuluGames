@@ -1,0 +1,141 @@
+{
+  "face-feliz-1": {
+    "query": "criança feliz sorrindo",
+    "queryEn": "happy smiling child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/natureza-ensolarado-camera-maquina-27788414/",
+        "src": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg",
+        "ratio": 1.5015,
+        "dl": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg?cs=srgb&dl=pexels-hannah-barata-776560167-27788414.jpg&fm=jpg",
+        "alt": "Close-up de um bebê feliz estendendo a mão com uma expressão alegre ao ar livre."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/natureza-ensolarado-camera-maquina-27788414/",
+      "src": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg",
+      "ratio": 1.5015,
+      "dl": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg?cs=srgb&dl=pexels-hannah-barata-776560167-27788414.jpg&fm=jpg",
+      "alt": "Close-up de um bebê feliz estendendo a mão com uma expressão alegre ao ar livre.",
+      "author": "Hannah Barata"
+    }
+  },
+  "face-feliz-2": {
+    "query": "menino sorrindo",
+    "queryEn": "smiling boy",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/gravata-borboleta-fofo-bonitinho-jovem-8617889/",
+        "src": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg",
+        "ratio": 1.25,
+        "dl": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg?cs=srgb&dl=pexels-yankrukov-8617889.jpg&fm=jpg",
+        "alt": "Um alegre menino jovem usando óculos, uma gravata borboleta e um colete com alças azuis dentro de casa."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/gravata-borboleta-fofo-bonitinho-jovem-8617889/",
+      "src": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg",
+      "ratio": 1.25,
+      "dl": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg?cs=srgb&dl=pexels-yankrukov-8617889.jpg&fm=jpg",
+      "alt": "Um alegre menino jovem usando óculos, uma gravata borboleta e um colete com alças azuis dentro de casa.",
+      "author": "Yan Krukau"
+    }
+  },
+  "face-triste-1": {
+    "query": "criança triste",
+    "queryEn": "sad child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/close-de-menina-adolescente-256657/",
+        "src": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg",
+        "ratio": 1.5015,
+        "dl": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg?cs=srgb&dl=pexels-pixabay-256657.jpg&fm=jpg",
+        "alt": "Um menino jovem em uma camisa azul descansa a cabeça nos braços ao ar livre, parecendo triste e contemplativo."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/close-de-menina-adolescente-256657/",
+      "src": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg",
+      "ratio": 1.5015,
+      "dl": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg?cs=srgb&dl=pexels-pixabay-256657.jpg&fm=jpg",
+      "alt": "Um menino jovem em uma camisa azul descansa a cabeça nos braços ao ar livre, parecendo triste e contemplativo.",
+      "author": "Pixabay"
+    }
+  },
+  "face-triste-2": {
+    "query": "menina triste",
+    "queryEn": "sad girl",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/uma-mulher-triste-em-bolinhas-preto-e-branco-3783808/",
+        "src": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg",
+        "ratio": 1.5015,
+        "dl": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg?cs=srgb&dl=pexels-olly-3783808.jpg&fm=jpg",
+        "alt": "Uma mulher sentada em uma cadeira vintage dentro de casa, demonstrando emoções e segurando lenços."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/uma-mulher-triste-em-bolinhas-preto-e-branco-3783808/",
+      "src": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg",
+      "ratio": 1.5015,
+      "dl": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg?cs=srgb&dl=pexels-olly-3783808.jpg&fm=jpg",
+      "alt": "Uma mulher sentada em uma cadeira vintage dentro de casa, demonstrando emoções e segurando lenços.",
+      "author": "Andrea Piacquadio"
+    }
+  },
+  "face-raiva-1": {
+    "query": "criança com raiva",
+    "queryEn": "angry child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-com-camisola-vermelha-adidas-783941/",
+        "src": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg",
+        "ratio": 1.4706,
+        "dl": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg?cs=srgb&dl=pexels-moh-adbelghaffar-783941.jpg&fm=jpg",
+        "alt": "Uma criança jovem expressando emoções intensas durante uma sessão de retrato em estúdio."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-com-camisola-vermelha-adidas-783941/",
+      "src": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg",
+      "ratio": 1.4706,
+      "dl": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg?cs=srgb&dl=pexels-moh-adbelghaffar-783941.jpg&fm=jpg",
+      "alt": "Uma criança jovem expressando emoções intensas durante uma sessão de retrato em estúdio.",
+      "author": "mohamed abdelghaffar"
+    }
+  },
+  "face-raiva-2": {
+    "query": "menino bravo",
+    "queryEn": "angry boy",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-com-camisola-vermelha-adidas-783941/",
+        "src": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg",
+        "ratio": 1.4706,
+        "dl": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg?cs=srgb&dl=pexels-moh-adbelghaffar-783941.jpg&fm=jpg",
+        "alt": "Uma criança jovem expressando emoções intensas durante uma sessão de retrato em estúdio."
+      },
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-infeliz-triste-4482115/",
+        "src": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg",
+        "ratio": 1.5015,
+        "dl": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg?cs=srgb&dl=pexels-shemaa-4482115.jpg&fm=jpg",
+        "alt": "Retrato em preto e branco de um menino africano expressivo gritando ao ar livre."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-filho-infeliz-triste-4482115/",
+      "src": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg",
+      "ratio": 1.5015,
+      "dl": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg?cs=srgb&dl=pexels-shemaa-4482115.jpg&fm=jpg",
+      "alt": "Retrato em preto e branco de um menino africano expressivo gritando ao ar livre.",
+      "author": "Nowa Shema"
+    }
+  }
+}

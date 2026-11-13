@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-// Baixa as fotos escolhidas em tools/pexels-results.json, recorta em 4:3 e
+// Baixa as fotos escolhidas em tools/<jogo>-results.json, recorta em 4:3 e
 // grava os créditos. A escolha (primeira foto horizontal com 1000 px ou mais)
 // é feita na etapa de raspagem, no navegador, e fica gravada em "chosen".
 //
 // Uso:
-//   node tools/build-images.mjs                  # baixa as 25 cenas que faltam
+//   node tools/build-images.mjs                  # "O que está acontecendo?"
+//   node tools/build-images.mjs --game emotions  # "Jogo das Emoções"
 //   node tools/build-images.mjs --only park-     # só um tema
 //   node tools/build-images.mjs --scene park-kite-flying
 //   node tools/build-images.mjs --force          # baixa de novo
@@ -18,21 +19,49 @@ import process from "node:process";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const resultsPath = path.join(root, "tools", "pexels-results.json");
-const queriesPath = path.join(root, "tools", "pexels-queries.json");
-const imageDir = path.join(root, "assets", "images", "image-interpretation");
-const creditsJsonPath = path.join(root, "tools", "image-credits.json");
-const creditsDocPath = path.join(root, "docs", "IMAGE_CREDITS.md");
+const GAMES = {
+  "image-interpretation": {
+    label: '"O que está acontecendo?"',
+    queries: "pexels-queries.json",
+    results: "pexels-results.json",
+    imageDir: ["assets", "images", "image-interpretation"],
+    creditsJson: "image-credits.json",
+    creditsDoc: "IMAGE_CREDITS.md",
+  },
+  emotions: {
+    label: '"Jogo das Emoções"',
+    queries: "emotions-queries.json",
+    results: "emotions-results.json",
+    imageDir: ["assets", "images", "emotions"],
+    creditsJson: "emotions-credits.json",
+    creditsDoc: "EMOTION_CREDITS.md",
+  },
+};
+const DEFAULT_GAME = "image-interpretation";
 const cropScriptPath = path.join(root, "tools", "crop-4x3.ps1");
 const WIDTH = 1200;
 const HEIGHT = 900;
 
+function gamePaths(game) {
+  const config = GAMES[game];
+  if (!config) throw new Error(`Jogo desconhecido: ${game}. Use: ${Object.keys(GAMES).join(", ")}`);
+  return {
+    ...config,
+    queriesPath: path.join(root, "tools", config.queries),
+    resultsPath: path.join(root, "tools", config.results),
+    imageDir: path.join(root, ...config.imageDir),
+    creditsJsonPath: path.join(root, "tools", config.creditsJson),
+    creditsDocPath: path.join(root, "docs", config.creditsDoc),
+  };
+}
+
 function parseArgs(argv) {
-  const args = { force: false };
+  const args = { force: false, game: DEFAULT_GAME };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--force") args.force = true;
     else if (arg === "--check") args.check = true;
+    else if (arg === "--game") args.game = argv[++i];
     else if (arg === "--only") args.only = argv[++i];
     else if (arg === "--scene") args.scene = argv[++i];
     else if (arg === "--help" || arg === "-h") args.help = true;
@@ -42,15 +71,16 @@ function parseArgs(argv) {
 }
 
 function usage() {
-  console.log(`Baixa e recorta as fotos de "O que está acontecendo?".
+  console.log(`Baixa e recorta as fotos de um jogo.
 
   node tools/build-images.mjs [opções]
 
 Opções:
+  --game <id>        jogo das fotos: ${Object.keys(GAMES).join(" | ")} (padrão: ${DEFAULT_GAME})
   --only <prefixo>   processa só cenas cujo id começa com o prefixo (ex.: park-)
   --scene <id>       processa uma cena específica
   --force            baixa de novo mesmo se o JPG já existir
-  --check            valida tools/pexels-results.json e sai
+  --check            valida o JSON de resultados e sai
   --help             mostra esta ajuda
 `);
 }
@@ -120,8 +150,14 @@ function validate(scenes, results) {
       problems.push(`${entry.scene}: nenhuma foto escolhida`);
       continue;
     }
-    if (!(chosen.width >= 1000)) problems.push(`${entry.scene}: largura ${chosen.width} < 1000`);
-    if (!(chosen.width > chosen.height)) problems.push(`${entry.scene}: não é horizontal`);
+    // A entrega é sempre um recorte 4:3 de 1200x900 (verificado no download).
+    // Quando a origem informa tamanho, ele também precisa ser horizontal e grande.
+    if (chosen.width !== undefined) {
+      if (!(chosen.width >= 1000)) problems.push(`${entry.scene}: largura ${chosen.width} < 1000`);
+      if (!(chosen.width > chosen.height)) problems.push(`${entry.scene}: não é horizontal`);
+    } else if (chosen.ratio !== undefined && !(chosen.ratio >= 1.2)) {
+      problems.push(`${entry.scene}: proporção ${chosen.ratio} não é horizontal`);
+    }
     if (!chosen.page?.includes("/foto/")) problems.push(`${entry.scene}: página inválida`);
     if (!chosen.src?.includes("images.pexels.com")) problems.push(`${entry.scene}: imagem inválida`);
     if (!chosen.author) problems.push(`${entry.scene}: sem autor`);
@@ -151,7 +187,7 @@ async function download(url, destination, attempts = 3) {
   throw new Error(`falha ao baixar ${url}: ${lastError.message}`);
 }
 
-async function writeCredits(scenes, results) {
+async function writeCredits(scenes, results, paths) {
   const credits = {};
   const rows = [];
   let currentTheme = null;
@@ -159,7 +195,7 @@ async function writeCredits(scenes, results) {
     const chosen = results[entry.scene]?.chosen;
     if (!chosen) continue;
     try {
-      await readFile(path.join(imageDir, `${entry.scene}.jpg`));
+      await readFile(path.join(paths.imageDir, `${entry.scene}.jpg`));
     } catch (error) {
       if (error.code === "ENOENT") continue;
       throw error;
@@ -182,19 +218,20 @@ async function writeCredits(scenes, results) {
     rows.push(`| \`${entry.scene}.jpg\` | ${author} | [Pexels](${chosen.page}) |`);
   }
 
-  await writeFile(creditsJsonPath, `${JSON.stringify(credits, null, 2)}\n`);
-  const doc = `# Créditos das fotos
+  await writeFile(paths.creditsJsonPath, `${JSON.stringify(credits, null, 2)}\n`);
+  const relativeImageDir = paths.imageDir.split(path.sep).slice(-2).join("/");
+  const doc = `# Créditos das fotos — ${paths.label}
 
 Fotos obtidas do Pexels e armazenadas localmente. O Pexels permite uso gratuito,
 inclusive educacional, sem atribuição obrigatória; os créditos ficam aqui por cortesia
 e para rastrear a origem de cada arquivo.
 
 Todas as imagens foram recortadas em 4:3 (${WIDTH}x${HEIGHT}, JPEG) e estão em
-\`assets/images/image-interpretation/\`.
+\`${relativeImageDir}/\`.
 
 ${rows.join("\n")}
 `;
-  await writeFile(creditsDocPath, doc);
+  await writeFile(paths.creditsDocPath, doc);
 }
 
 async function main() {
@@ -204,8 +241,9 @@ async function main() {
     return;
   }
 
-  const { scenes } = await loadJson(queriesPath, "tools/pexels-queries.json");
-  const results = await loadJson(resultsPath, "tools/pexels-results.json");
+  const paths = gamePaths(args.game);
+  const { scenes } = await loadJson(paths.queriesPath, `tools/${paths.queries}`);
+  const results = await loadJson(paths.resultsPath, `tools/${paths.results}`);
   const selected = selectScenes(scenes, results, args);
   const problems = validate(args.check ? scenes : selected, results);
 
@@ -215,17 +253,17 @@ async function main() {
     return;
   }
   if (args.check) {
-    console.log(`OK: ${scenes.length} cenas com foto horizontal, autor e link.`);
+    console.log(`OK: ${scenes.length} cenas de ${paths.label} com foto horizontal, autor e link.`);
     return;
   }
 
-  await mkdir(imageDir, { recursive: true });
+  await mkdir(paths.imageDir, { recursive: true });
   let downloaded = 0;
   let skipped = 0;
 
   for (const entry of selected) {
     const chosen = results[entry.scene].chosen;
-    const target = path.join(imageDir, `${entry.scene}.jpg`);
+    const target = path.join(paths.imageDir, `${entry.scene}.jpg`);
     if (!args.force) {
       let existing;
       try {
@@ -243,12 +281,12 @@ async function main() {
       }
     }
     const temporaryScene = `${entry.scene}.${randomUUID()}.tmp`;
-    const temporary = path.join(imageDir, `${temporaryScene}.jpg`);
+    const temporary = path.join(paths.imageDir, `${temporaryScene}.jpg`);
     try {
       const size = await download(cropUrl(chosen.src), temporary);
       execFileSync("powershell", [
         "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", cropScriptPath,
-        "-Scene", temporaryScene,
+        "-Scene", temporaryScene, "-Game", args.game,
       ], { encoding: "utf8" });
       await rename(temporary, target);
       downloaded += 1;
@@ -266,9 +304,9 @@ async function main() {
   }
 
   if (process.exitCode) return;
-  await writeCredits(scenes, results);
+  await writeCredits(scenes, results, paths);
   console.log(`\n${downloaded} baixada(s), ${skipped} já existente(s).`);
-  console.log(`Créditos: docs/IMAGE_CREDITS.md`);
+  console.log(`Créditos: docs/${paths.creditsDoc}`);
 }
 
 main().catch((error) => {

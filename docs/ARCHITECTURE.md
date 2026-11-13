@@ -21,6 +21,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/memory-pairs/game.css`: matching-board styling built from shared design tokens.
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
 - `games/image-interpretation/`: image-to-text game; `themes.html` and `themes.js` render the theme chooser, `data.js` defines themes and their scenes, `game.js` provides pure rules, `session.js` resolves the selected theme and orchestrates settings and audio, and `ui.js` renders choices and completion.
+- `games/emotions/`: emotion-recognition game; `levels.html` and `levels.js` render level choices, `content.json` stores level questions and answer options, `game.js` provides pure rules and content validation, `session.js` orchestrates the selected level and shared audio, and `ui.js` renders questions and completion.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset, local Nunito/Fredoka faces, and global typography/layout defaults.
 - `shared/css/components.css`: reusable buttons, cards, and form controls.
@@ -43,7 +44,7 @@ Use kebab-case for file and folder names, camelCase for JavaScript variables/fun
 
 ## Data organization
 
-Keep game content as plain JavaScript data exports in each game's `data.js`. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each theme defines five rounds of six pairs, which may be related pictures or rhyming words. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. Keep data separate from presentation markup.
+Keep game content separate from presentation markup. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each theme defines five rounds of six pairs, which may be related pictures or rhyming words. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. In Jogo das Emoções, `content.json` is the source of truth for levels and questions. Questions reference local Pexels images, define their answer among the options, include an explanation and difficulty tag, and are validated before play; the pure game logic samples five questions without repeats for each round.
 
 ## Add a catalog game
 

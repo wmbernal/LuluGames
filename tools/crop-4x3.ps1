@@ -4,10 +4,12 @@
 
   Uso:
     powershell -ExecutionPolicy Bypass -File tools/crop-4x3.ps1 -Scene house-sweeping
+    powershell -ExecutionPolicy Bypass -File tools/crop-4x3.ps1 -Scene face-feliz-1 -Game emotions
     powershell -ExecutionPolicy Bypass -File tools/crop-4x3.ps1 -All
 #>
 param(
   [string]$Scene,
+  [string]$Game = "image-interpretation",
   [switch]$All,
   [int]$Width = 1200,
   [int]$Quality = 85
@@ -16,7 +18,14 @@ param(
 Add-Type -AssemblyName System.Drawing
 
 $root = Split-Path -Parent $PSScriptRoot
-$imageDir = Join-Path $root "assets\images\image-interpretation"
+$gameDirs = @{
+  "image-interpretation" = "assets\images\image-interpretation"
+  "emotions" = "assets\images\emotions"
+}
+if (-not $gameDirs.ContainsKey($Game)) {
+  throw "Jogo desconhecido: $Game. Use: $($gameDirs.Keys -join ', ')"
+}
+$imageDir = Join-Path $root $gameDirs[$Game]
 $ratio = 4.0 / 3.0
 
 function Crop-To4x3 {

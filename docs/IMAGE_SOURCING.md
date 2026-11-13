@@ -39,6 +39,24 @@ não faz buscas por conta própria.
 A busca não garante que a cena corresponda às frases do jogo; o texto deve
 descrever o que aparece na imagem e não pode exigir uma ação ou detalhe ausente.
 
+## Jogo das Emoções
+
+As buscas fixas e os resultados escolhidos para as 22 imagens estão em
+`tools/emotions-queries.json` e `tools/emotions-results.json`. As fotos usadas
+pelas perguntas ficam em `assets/images/emotions/`, com origem e autoria em
+[EMOTION_CREDITS.md](EMOTION_CREDITS.md). O mesmo construtor do Pexels valida
+os registros e baixa os recortes locais:
+
+```powershell
+npm run images:emotions -- --check
+npm run images:emotions
+npm run images:emotions -- --scene face-feliz-1
+```
+
+O conteúdo dos níveis aponta apenas para os arquivos locais; não procure fotos
+durante o jogo. Confira cada foto contra o texto alternativo e a emoção antes de
+adicionar novas perguntas a `games/emotions/content.json`.
+
 ## Caminho alternativo: API oficial
 
 `tools/fetch-pexels.mjs` continua no repositório para quando uma chave estiver

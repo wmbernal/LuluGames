@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>Jogo das Emoções — escolha um nível</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
+    <link rel="stylesheet" href="./game.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./levels.js?v=2"></script>
+  </head>
+  <body class="app-page emotions-levels-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="Lulu Games, início">
+        <img class="brand__icon" src="../../assets/images/ui/brand.svg" alt="">
+        <span>Lulu Games</span>
+      </a>
+    </header>
+
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="levels-title">
+        <p class="eyebrow">Jogo das Emoções</p>
+        <h1 id="levels-title">Escolha um nível</h1>
+        <p class="theme-picker-instructions">Cada rodada tem 5 perguntas. Você pode trocar de nível quando quiser.</p>
+      </section>
+
+      <section class="card game-panel">
+        <p class="load-error" id="load-error" role="alert" hidden>
+          Não consegui abrir os níveis agora. Tente recarregar a página.
+        </p>
+        <div class="theme-picker" id="level-list"></div>
+      </section>
+
+      <footer class="game-footer">
+        <a class="button button--secondary" href="../../index.html">⌂ Início</a>
+      </footer>
+    </main>
+  </body>
+</html>

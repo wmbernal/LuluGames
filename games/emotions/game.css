@@ -1,0 +1,228 @@
+.game-page {
+  width: min(calc(100% - var(--space-8)), var(--layout-game-max-width));
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-6);
+}
+.game-heading { margin-bottom: var(--space-6); text-align: center; }
+.game-heading h1 { margin-bottom: 0; }
+.game-panel { text-align: center; }
+#playing-panel, #complete-panel {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto;
+}
+.intro-art { margin-bottom: var(--space-4); font-size: var(--font-size-h1); }
+.round-count { margin-bottom: var(--space-3); font-weight: 700; }
+.scene-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-stage);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.question { margin: var(--space-4) 0; font-size: var(--font-size-h3); }
+
+.answer-list { display: grid; gap: var(--space-2); }
+.answer {
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--color-text);
+  text-align: left;
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+.answer:hover:not(:disabled) { background: var(--color-surface-soft); }
+.answer--correct, .answer--correct:disabled {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border-color: var(--color-success);
+  opacity: 1;
+}
+.answer--incorrect {
+  color: var(--color-error);
+  background: var(--color-error-soft);
+  border-color: var(--color-error-border);
+}
+.answer--incorrect:hover:not(:disabled) { background: var(--color-error-soft); }
+.answer__mark { min-width: var(--space-6); font-weight: 700; }
+.answer__emoji { font-size: 1.6rem; line-height: 1; }
+.answer__text { font-size: 1.1rem; font-weight: 700; }
+
+/* Nível 1: as opções são fotos de rostos, lado a lado para comparar. */
+.answer-list--images {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+.answer--image {
+  position: relative;
+  display: block;
+  padding: var(--space-2);
+  background: var(--color-surface);
+  border: var(--border-width-medium) solid var(--color-border);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+}
+.answer--image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: calc(var(--radius-card) - var(--space-2));
+}
+.answer--image .answer__mark {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: grid;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 var(--space-2);
+  place-items: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 0 rgb(68 111 42 / 16%);
+}
+.answer--image.answer--correct { box-shadow: 0 0 0 3px var(--color-success); }
+.answer--image.answer--incorrect { box-shadow: 0 0 0 3px var(--color-error-border); }
+
+.feedback { min-height: var(--size-feedback-min-height); margin: var(--space-3) 0 0; }
+.hint {
+  padding: var(--space-3);
+  background: var(--color-highlight-soft);
+  border: var(--border-width-thin) solid var(--color-highlight-border);
+  border-radius: var(--radius-control);
+}
+
+.explanation {
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  text-align: left;
+  background: var(--color-highlight-soft);
+  border: var(--border-width-thin) solid var(--color-highlight-border);
+  border-radius: var(--radius-control);
+}
+.explanation__title {
+  margin-bottom: var(--space-2);
+  font-size: 1.15rem;
+}
+.explanation__text {
+  margin-bottom: var(--space-3);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+.explanation .button { width: 100%; }
+
+#next-button { margin-top: var(--space-4); }
+.complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.load-error {
+  padding: var(--space-4);
+  color: var(--color-error);
+  background: var(--color-error-soft);
+  border: var(--border-width-thin) solid var(--color-error-border);
+  border-radius: var(--radius-control);
+}
+
+/* Escolha de nível: mesmas cartas grandes usadas na escolha de tema. */
+.theme-picker-instructions {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+}
+.theme-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.theme-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  min-height: 200px;
+  padding: var(--space-4);
+  color: var(--color-text);
+  text-align: center;
+  text-decoration: none;
+  background: var(--color-surface);
+  border: var(--border-width-medium) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.theme-choice:hover,
+.theme-choice:focus-visible {
+  background: var(--color-focus-soft);
+  border-color: var(--color-focus);
+}
+.theme-choice:focus-visible {
+  outline: var(--border-width-medium) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+.theme-choice__icon {
+  min-height: 56px;
+  font-size: 48px;
+  line-height: 1.15;
+}
+.theme-choice__title {
+  font-size: var(--font-size-h3);
+  font-weight: 700;
+}
+.theme-choice__description {
+  flex: 1;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+.theme-choice__count { font-weight: 700; }
+
+.game-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.leave-dialog {
+  width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
+  padding: var(--space-8);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.leave-dialog::backdrop { background: var(--color-backdrop); }
+.dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }
+
+@media (max-width: 640px) {
+  .theme-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 400px) {
+  .theme-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.app-page.emotions-levels-page .game-page { padding: var(--space-4) 0; }
+  body.app-page.emotions-levels-page .game-heading { margin-bottom: var(--space-4); }
+  body.app-page.emotions-levels-page .card { padding: var(--space-4); }
+  body.app-page.emotions-levels-page .theme-choice {
+    min-height: 0;
+    gap: var(--space-1);
+    padding: var(--space-3);
+  }
+  body.app-page.emotions-levels-page .theme-choice__icon {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    font-size: 28px;
+  }
+  body.app-page.emotions-levels-page .theme-choice__title { font-size: var(--font-size-body); }
+}

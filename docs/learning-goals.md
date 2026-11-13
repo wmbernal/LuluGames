@@ -21,3 +21,11 @@ The parent can confirm whether six pairs, these themes, and the proposed relatio
 - **Themes:** Animais, Casa, Escola, Comidas, Parque, and Transportes.
 
 The parent can confirm whether five exercises per theme and the theme list feel comfortable for the child, and whether the vocabulary (for example "alimentando", "estábulo", "galinheiro") is familiar.
+
+## Jogo das Emoções
+
+- **Objectives:** Practice noticing facial-expression cues and connecting familiar situations with possible feelings.
+- **Mechanics:** Choose one of three levels: compare two faces for a matching emotion, name an emotion from a face, or connect a situation with a feeling. Each five-question round uses a random, non-repeating selection from that level. A short spoken explanation follows each correct answer; mistakes remain retryable and receive a gentle clue after three attempts.
+- **Difficulty:** The face levels begin with feliz, triste, com raiva, and com medo. Situations use familiar, concrete events. Each level can grow by adding questions to `content.json`, without changing game code.
+
+These are practice opportunities, not a measure or diagnosis of the child's emotional understanding. The parent can confirm whether the expressions, situations, and words feel familiar and comfortable.

@@ -7,6 +7,7 @@
     "images:check": "node tools/fetch-pexels.mjs --check",
     "images:fetch": "node tools/fetch-pexels.mjs",
     "images:crop": "powershell -ExecutionPolicy Bypass -File tools/crop-4x3.ps1",
-    "images:build": "node tools/build-images.mjs"
+    "images:build": "node tools/build-images.mjs",
+    "images:emotions": "node tools/build-images.mjs --game emotions"
   }
 }

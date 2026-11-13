@@ -24,4 +24,12 @@ export const gameCatalog = [
     href: "./games/image-interpretation/themes.html",
     available: true,
   },
+  {
+    id: "emotions",
+    title: "Jogo das Emoções",
+    description: "Observe rostos e situações para reconhecer emoções.",
+    icon: "./assets/images/ui/emotions.svg",
+    href: "./games/emotions/levels.html",
+    available: true,
+  },
 ];

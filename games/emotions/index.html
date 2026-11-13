@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>Jogo das Emoções — Lulu Games</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
+    <link rel="stylesheet" href="./game.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./session.js?v=2"></script>
+  </head>
+  <body class="app-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="game-title">
+        <p class="eyebrow" id="game-eyebrow">Jogo das Emoções</p>
+        <h1 id="game-title">Como essa pessoa se sente?</h1>
+      </section>
+      <section class="card game-panel">
+        <p class="load-error" id="load-error" role="alert" hidden>
+          Não consegui abrir as perguntas agora. Tente recarregar a página.
+        </p>
+        <div id="playing-panel" hidden>
+          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+          <img class="scene-image" id="scene-image" width="640" height="480" alt="">
+          <h2 class="question" id="question-text"></h2>
+          <div class="answer-list" id="answer-list" role="group" aria-label="Opções de resposta"></div>
+          <p class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p class="hint" id="hint" role="status" aria-live="polite" hidden></p>
+          <div class="explanation" id="explanation" role="status" aria-live="polite" hidden>
+            <h3 class="explanation__title">Por que é essa?</h3>
+            <p class="explanation__text" id="explanation-text"></p>
+            <button class="button button--secondary" id="listen-button" type="button">
+              <span aria-hidden="true">🔊</span> Ouvir de novo
+            </button>
+          </div>
+          <button class="button button--primary" id="next-button" type="button" hidden>Próxima</button>
+        </div>
+        <div id="complete-panel" hidden>
+          <div class="intro-art" aria-hidden="true">😊 ✨ 💛</div>
+          <h2 tabindex="-1" id="complete-title">Parabéns!</h2>
+          <p id="complete-message">Você completou as perguntas deste nível. Muito bem!</p>
+          <div class="complete-actions">
+            <button class="button button--primary" id="again-button" type="button">Jogar de novo</button>
+            <a class="button button--secondary" href="../../index.html">Voltar ao menu</a>
+          </div>
+        </div>
+      </section>
+      <footer class="game-footer" id="game-footer">
+        <button class="button button--secondary" id="back-button" type="button">← Níveis</button>
+        <a class="button button--secondary" href="../../index.html" data-home-link>⌂ Início</a>
+      </footer>
+    </main>
+    <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
+      <form method="dialog">
+        <h2 id="leave-title">Quer sair do jogo?</h2>
+        <p>Esta rodada vai terminar. Você poderá jogar de novo quando quiser.</p>
+        <div class="dialog-actions">
+          <button class="button button--secondary" value="cancel">Continuar jogando</button>
+          <button class="button button--primary" value="leave">Sair</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

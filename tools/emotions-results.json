@@ -1,0 +1,464 @@
+{
+  "face-feliz-1": {
+    "query": "criança feliz sorrindo",
+    "queryEn": "happy smiling child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/natureza-ensolarado-camera-maquina-27788414/",
+        "src": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg",
+        "ratio": 1.5015,
+        "alt": "Close-up de um bebê feliz estendendo a mão com uma expressão alegre ao ar livre.",
+        "author": "Hannah Barata"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/natureza-ensolarado-camera-maquina-27788414/",
+      "src": "https://images.pexels.com/photos/27788414/pexels-photo-27788414.jpeg",
+      "ratio": 1.5015,
+      "alt": "Close-up de um bebê feliz estendendo a mão com uma expressão alegre ao ar livre.",
+      "author": "Hannah Barata"
+    }
+  },
+  "face-feliz-2": {
+    "query": "menino sorrindo",
+    "queryEn": "smiling boy",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/gravata-borboleta-fofo-bonitinho-jovem-8617889/",
+        "src": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg",
+        "ratio": 1.25,
+        "alt": "Um menino sorridente usando óculos, gravata borboleta e colete com alças azuis.",
+        "author": "Yan Krukau"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/gravata-borboleta-fofo-bonitinho-jovem-8617889/",
+      "src": "https://images.pexels.com/photos/8617889/pexels-photo-8617889.jpeg",
+      "ratio": 1.25,
+      "alt": "Um menino sorridente usando óculos, gravata borboleta e colete com alças azuis.",
+      "author": "Yan Krukau"
+    }
+  },
+  "face-feliz-3": {
+    "query": "menina feliz sorrindo",
+    "queryEn": "happy smiling girl portrait",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pessoa-menina-garota-moca-14599518/",
+        "src": "https://images.pexels.com/photos/14599518/pexels-photo-14599518.jpeg",
+        "ratio": 1.5,
+        "alt": "Retrato em close de uma menina alegre sorrindo com alegria em um ambiente interno.",
+        "author": "Hikmet Toprak"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pessoa-menina-garota-moca-14599518/",
+      "src": "https://images.pexels.com/photos/14599518/pexels-photo-14599518.jpeg",
+      "ratio": 1.5,
+      "alt": "Retrato em close de uma menina alegre sorrindo com alegria em um ambiente interno.",
+      "author": "Hikmet Toprak"
+    }
+  },
+  "face-triste-1": {
+    "query": "criança triste",
+    "queryEn": "sad child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/close-de-menina-adolescente-256657/",
+        "src": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg",
+        "ratio": 1.5015,
+        "alt": "Um menino jovem em uma camisa azul descansa a cabeça nos braços ao ar livre, parecendo triste.",
+        "author": "Pixabay"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/close-de-menina-adolescente-256657/",
+      "src": "https://images.pexels.com/photos/256657/pexels-photo-256657.jpeg",
+      "ratio": 1.5015,
+      "alt": "Um menino jovem em uma camisa azul descansa a cabeça nos braços ao ar livre, parecendo triste.",
+      "author": "Pixabay"
+    }
+  },
+  "face-triste-2": {
+    "query": "menina triste",
+    "queryEn": "sad girl",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/uma-mulher-triste-em-bolinhas-preto-e-branco-3783808/",
+        "src": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg",
+        "ratio": 1.5015,
+        "alt": "Uma mulher sentada em uma cadeira vintage, com expressão triste e lenços nas mãos.",
+        "author": "Andrea Piacquadio"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/uma-mulher-triste-em-bolinhas-preto-e-branco-3783808/",
+      "src": "https://images.pexels.com/photos/3783808/pexels-photo-3783808.jpeg",
+      "ratio": 1.5015,
+      "alt": "Uma mulher sentada em uma cadeira vintage, com expressão triste e lenços nas mãos.",
+      "author": "Andrea Piacquadio"
+    }
+  },
+  "face-triste-3": {
+    "query": "criança triste cabeça apoiada",
+    "queryEn": "sad child resting head in hand",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/preto-e-branco-p-b-pessoa-face-7202038/",
+        "src": "https://images.pexels.com/photos/7202038/pexels-photo-7202038.jpeg",
+        "ratio": 1.5,
+        "alt": "Retrato em preto e branco de uma criança pensativa descansando a cabeça na mão.",
+        "author": "Vika Glitter"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/preto-e-branco-p-b-pessoa-face-7202038/",
+      "src": "https://images.pexels.com/photos/7202038/pexels-photo-7202038.jpeg",
+      "ratio": 1.5,
+      "alt": "Retrato em preto e branco de uma criança pensativa descansando a cabeça na mão.",
+      "author": "Vika Glitter"
+    }
+  },
+  "face-raiva-1": {
+    "query": "criança com raiva",
+    "queryEn": "angry child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-com-camisola-vermelha-adidas-783941/",
+        "src": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg",
+        "ratio": 1.4706,
+        "alt": "Uma criança jovem expressando uma emoção intensa durante uma sessão de retrato.",
+        "author": "mohamed abdelghaffar"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-com-camisola-vermelha-adidas-783941/",
+      "src": "https://images.pexels.com/photos/783941/pexels-photo-783941.jpeg",
+      "ratio": 1.4706,
+      "alt": "Uma criança jovem expressando uma emoção intensa durante uma sessão de retrato.",
+      "author": "mohamed abdelghaffar"
+    }
+  },
+  "face-raiva-2": {
+    "query": "menino bravo",
+    "queryEn": "angry boy",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-infeliz-triste-4482115/",
+        "src": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg",
+        "ratio": 1.5015,
+        "alt": "Retrato em preto e branco de um menino africano expressivo gritando ao ar livre.",
+        "author": "Nowa Shema"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-filho-infeliz-triste-4482115/",
+      "src": "https://images.pexels.com/photos/4482115/pexels-photo-4482115.jpeg",
+      "ratio": 1.5015,
+      "alt": "Retrato em preto e branco de um menino africano expressivo gritando ao ar livre.",
+      "author": "Nowa Shema"
+    }
+  },
+  "face-raiva-3": {
+    "query": "menino irritado braços cruzados",
+    "queryEn": "angry boy crossed arms portrait",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-mal-humorada-expressando-desagrado-em-ambiente-escuro-4006947/",
+        "src": "https://images.pexels.com/photos/4006947/pexels-photo-4006947.jpeg",
+        "ratio": 1.5,
+        "alt": "Menino de braços cruzados e rosto emburrado contra um fundo escuro, demonstrando desagrado.",
+        "author": "Vidal Balielo Jr."
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-mal-humorada-expressando-desagrado-em-ambiente-escuro-4006947/",
+      "src": "https://images.pexels.com/photos/4006947/pexels-photo-4006947.jpeg",
+      "ratio": 1.5,
+      "alt": "Menino de braços cruzados e rosto emburrado contra um fundo escuro, demonstrando desagrado.",
+      "author": "Vidal Balielo Jr."
+    }
+  },
+  "face-medo-1": {
+    "query": "criança com medo",
+    "queryEn": "scared child",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/sentado-jovem-novo-sozinho-7929426/",
+        "src": "https://images.pexels.com/photos/7929426/pexels-photo-7929426.jpeg",
+        "ratio": 1.5,
+        "alt": "Um menino jovem sentado no chão de uma sala de aula, expressando medo e vulnerabilidade.",
+        "author": "Mikhail Nilov"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/sentado-jovem-novo-sozinho-7929426/",
+      "src": "https://images.pexels.com/photos/7929426/pexels-photo-7929426.jpeg",
+      "ratio": 1.5,
+      "alt": "Um menino jovem sentado no chão de uma sala de aula, expressando medo e vulnerabilidade.",
+      "author": "Mikhail Nilov"
+    }
+  },
+  "face-medo-2": {
+    "query": "menino preocupado sentado na biblioteca",
+    "queryEn": "worried boy sitting in library",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/livros-aluno-estudante-aprendiz-7929276/",
+        "src": "https://images.pexels.com/photos/7929276/pexels-photo-7929276.jpeg",
+        "ratio": 1.5,
+        "alt": "Um menino jovem sentado no chão de uma biblioteca, parecendo angustiado.",
+        "author": "Mikhail Nilov"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/livros-aluno-estudante-aprendiz-7929276/",
+      "src": "https://images.pexels.com/photos/7929276/pexels-photo-7929276.jpeg",
+      "ratio": 1.5,
+      "alt": "Um menino jovem sentado no chão de uma biblioteca, parecendo angustiado.",
+      "author": "Mikhail Nilov"
+    }
+  },
+  "face-medo-3": {
+    "query": "menina assustada atrás de cortina",
+    "queryEn": "scared girl behind curtain",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-preto-9740481/",
+        "src": "https://images.pexels.com/photos/9740481/pexels-photo-9740481.jpeg",
+        "ratio": 1.5,
+        "alt": "Menina jovem espiando de trás de uma cortina, banhada em luz vermelha, com expressão assustada.",
+        "author": "Mike Jones"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-preto-9740481/",
+      "src": "https://images.pexels.com/photos/9740481/pexels-photo-9740481.jpeg",
+      "ratio": 1.5,
+      "alt": "Menina jovem espiando de trás de uma cortina, banhada em luz vermelha, com expressão assustada.",
+      "author": "Mike Jones"
+    }
+  },
+  "sit-aniversario": {
+    "query": "criança aniversário bolo",
+    "queryEn": "child birthday cake",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/familia-celebrando-o-segundo-aniversario-da-crianca-ao-ar-livre-38428152/",
+        "src": "https://images.pexels.com/photos/38428152/pexels-photo-38428152.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma família celebra o aniversário de uma criança com um bolo ao ar livre.",
+        "author": "Breno Cardoso"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/familia-celebrando-o-segundo-aniversario-da-crianca-ao-ar-livre-38428152/",
+      "src": "https://images.pexels.com/photos/38428152/pexels-photo-38428152.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma família celebra o aniversário de uma criança com um bolo ao ar livre.",
+      "author": "Breno Cardoso"
+    }
+  },
+  "sit-sorvete": {
+    "query": "criança com sorvete",
+    "queryEn": "child eating ice cream",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-frio-5094387/",
+        "src": "https://images.pexels.com/photos/5094387/pexels-photo-5094387.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma criança saboreia um sorvete ao ar livre em um dia ensolarado.",
+        "author": "Kamaji Ogino"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/comida-alimento-refeicao-frio-5094387/",
+      "src": "https://images.pexels.com/photos/5094387/pexels-photo-5094387.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma criança saboreia um sorvete ao ar livre em um dia ensolarado.",
+      "author": "Kamaji Ogino"
+    }
+  },
+  "sit-cachorro": {
+    "query": "criança abraçando cachorro",
+    "queryEn": "child hugging dog",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-animal-11248623/",
+        "src": "https://images.pexels.com/photos/11248623/pexels-photo-11248623.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma menina abraça seu cachorro marrom ao ar livre, mostrando carinho.",
+        "author": "Dobromir Dobrev"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-animal-11248623/",
+      "src": "https://images.pexels.com/photos/11248623/pexels-photo-11248623.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma menina abraça seu cachorro marrom ao ar livre, mostrando carinho.",
+      "author": "Dobromir Dobrev"
+    }
+  },
+  "sit-brinquedo": {
+    "query": "criança brincando com dinossauro de brinquedo",
+    "queryEn": "child playing with toy dinosaur",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/jogando-crianca-filho-pijamas-6974751/",
+        "src": "https://images.pexels.com/photos/6974751/pexels-photo-6974751.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma criança brinca com um dinossauro de brinquedo em um tapete colorido dentro de casa.",
+        "author": "cottonbro studio"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/jogando-crianca-filho-pijamas-6974751/",
+      "src": "https://images.pexels.com/photos/6974751/pexels-photo-6974751.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma criança brinca com um dinossauro de brinquedo em um tapete colorido dentro de casa.",
+      "author": "cottonbro studio"
+    }
+  },
+  "sit-trovao": {
+    "query": "crianças brincando em poças de chuva",
+    "queryEn": "children splashing in rain puddles",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/pes-chuva-outono-declinio-12932484/",
+        "src": "https://images.pexels.com/photos/12932484/pexels-photo-12932484.jpeg",
+        "ratio": 1.5,
+        "alt": "Duas crianças de botas coloridas brincam e pulam em poças depois da chuva.",
+        "author": "Atlantic Ambience"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/pes-chuva-outono-declinio-12932484/",
+      "src": "https://images.pexels.com/photos/12932484/pexels-photo-12932484.jpeg",
+      "ratio": 1.5,
+      "alt": "Duas crianças de botas coloridas brincam e pulam em poças depois da chuva.",
+      "author": "Atlantic Ambience"
+    }
+  },
+  "sit-joelho": {
+    "query": "criança machucada joelho",
+    "queryEn": "child scraped knee",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/grama-garoto-menino-rapaz-8798949/",
+        "src": "https://images.pexels.com/photos/8798949/pexels-photo-8798949.jpeg",
+        "ratio": 1.5,
+        "alt": "Pais confortam o filho que se machucou enquanto brincava no quintal.",
+        "author": "RDNE Stock project"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/grama-garoto-menino-rapaz-8798949/",
+      "src": "https://images.pexels.com/photos/8798949/pexels-photo-8798949.jpeg",
+      "ratio": 1.5,
+      "alt": "Pais confortam o filho que se machucou enquanto brincava no quintal.",
+      "author": "RDNE Stock project"
+    }
+  },
+  "sit-presente": {
+    "query": "criança abrindo presente",
+    "queryEn": "child opening gift",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-feliz-abrindo-presente-em-reuniao-familiar-de-natal-27178188/",
+        "src": "https://images.pexels.com/photos/27178188/pexels-photo-27178188.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma criança animada abre um presente durante uma comemoração em família.",
+        "author": "Helena Lopes"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-feliz-abrindo-presente-em-reuniao-familiar-de-natal-27178188/",
+      "src": "https://images.pexels.com/photos/27178188/pexels-photo-27178188.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma criança animada abre um presente durante uma comemoração em família.",
+      "author": "Helena Lopes"
+    }
+  },
+  "sit-compartilhar": {
+    "query": "crianças compartilhando brinquedo juntas",
+    "queryEn": "children sharing a toy together",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-jogando-7979760/",
+        "src": "https://images.pexels.com/photos/7979760/pexels-photo-7979760.jpeg",
+        "ratio": 1.5,
+        "alt": "Duas crianças brincam juntas e compartilham um brinquedo com expressões alegres.",
+        "author": "Kindel Media"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-jogando-7979760/",
+      "src": "https://images.pexels.com/photos/7979760/pexels-photo-7979760.jpeg",
+      "ratio": 1.5,
+      "alt": "Duas crianças brincam juntas e compartilham um brinquedo com expressões alegres.",
+      "author": "Kindel Media"
+    }
+  },
+  "sit-escuro": {
+    "query": "criança no escuro",
+    "queryEn": "child in the dark",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/leve-luz-light-mao-6684184/",
+        "src": "https://images.pexels.com/photos/6684184/pexels-photo-6684184.jpeg",
+        "ratio": 1.5,
+        "alt": "Um menino interage com uma fonte de luz em um quarto pouco iluminado.",
+        "author": "cottonbro studio"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/leve-luz-light-mao-6684184/",
+      "src": "https://images.pexels.com/photos/6684184/pexels-photo-6684184.jpeg",
+      "ratio": 1.5,
+      "alt": "Um menino interage com uma fonte de luz em um quarto pouco iluminado.",
+      "author": "cottonbro studio"
+    }
+  },
+  "sit-cansaco-escola": {
+    "query": "criança cansada estudando",
+    "queryEn": "tired child studying",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/mesa-balcao-escola-aluno-8423860/",
+        "src": "https://images.pexels.com/photos/8423860/pexels-photo-8423860.jpeg",
+        "ratio": 1.5,
+        "alt": "Um estudante boceja sentado à mesa na escola.",
+        "author": "Pavel Danilyuk"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/mesa-balcao-escola-aluno-8423860/",
+      "src": "https://images.pexels.com/photos/8423860/pexels-photo-8423860.jpeg",
+      "ratio": 1.5,
+      "alt": "Um estudante boceja sentado à mesa na escola.",
+      "author": "Pavel Danilyuk"
+    }
+  }
+}

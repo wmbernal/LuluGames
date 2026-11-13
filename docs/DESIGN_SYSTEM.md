@@ -24,6 +24,9 @@ The interface uses the CSS custom properties in `shared/css/tokens.css`; compone
 | `--color-success` | `#25533A` | Positive feedback text |
 | `--color-success-soft` | `#E9F4DC` | Positive feedback background |
 | `--color-success-border` | `#8CB779` | Positive feedback border |
+| `--color-error` | `#842D38` | Gentle retry feedback text |
+| `--color-error-soft` | `#FFF1F1` | Gentle retry feedback background |
+| `--color-error-border` | `#B94A54` | Gentle retry feedback border |
 | `--color-stage` | `#EDF5DD` | Princess stage background |
 | `--color-feedback-soft` | `#F5F7E9` | Neutral feedback background |
 | `--color-focus-soft` | `#E0F3EA` | Selected item background |

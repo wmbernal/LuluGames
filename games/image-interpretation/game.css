@@ -41,11 +41,11 @@
   opacity: 1;
 }
 .answer--incorrect {
-  color: #842d38;
-  background: #fff1f1;
-  border-color: #b94a54;
+  color: var(--color-error);
+  background: var(--color-error-soft);
+  border-color: var(--color-error-border);
 }
-.answer--incorrect:hover:not(:disabled) { background: #fff1f1; }
+.answer--incorrect:hover:not(:disabled) { background: var(--color-error-soft); }
 .answer__mark { min-width: var(--space-6); }
 .feedback { min-height: var(--size-feedback-min-height); margin: var(--space-3) 0 0; }
 .hint {

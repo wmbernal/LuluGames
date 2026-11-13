@@ -1,0 +1,699 @@
+{
+  "title": "Jogo das Emoções",
+  "levels": [
+    {
+      "id": "match",
+      "label": "Combinar o rosto",
+      "heading": "Qual rosto mostra a mesma emoção?",
+      "icon": "🙂",
+      "description": "Compare as expressões.",
+      "question": "Qual rosto mostra a mesma emoção?",
+      "optionKind": "image",
+      "optionCount": 2,
+      "questionsPerRound": 5,
+      "hint": "Observe as sobrancelhas, os olhos e a boca dos dois rostos.",
+      "questions": [
+        {
+          "id": "match-feliz-1",
+          "level": "match",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-1.jpg",
+          "alt": "Close de um bebê com expressão alegre ao ar livre.",
+          "answer": "same",
+          "difficulty": "easy",
+          "explanation": "Nos dois rostos, a boca está sorrindo e os olhos parecem alegres. Esses sinais podem mostrar felicidade.",
+          "hint": "Repare no formato da boca e dos olhos.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-2.jpg",
+              "alt": "Rosto de um menino usando óculos e sorrindo."
+            },
+            {
+              "id": "different",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-1.jpg",
+              "alt": "Rosto de um menino apoiado nos braços, com expressão triste."
+            }
+          ]
+        },
+        {
+          "id": "match-feliz-2",
+          "level": "match",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-2.jpg",
+          "alt": "Rosto de um menino usando óculos e sorrindo.",
+          "answer": "same",
+          "difficulty": "easy",
+          "explanation": "As sobrancelhas estão relaxadas, os olhos acompanham o sorriso e a boca está virada para cima. Os dois rostos mostram alegria.",
+          "hint": "Veja se a boca está sorrindo ou virada para baixo.",
+          "options": [
+            {
+              "id": "different",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-1.jpg",
+              "alt": "Rosto de uma criança com uma expressão intensa."
+            },
+            {
+              "id": "same",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-3.jpg",
+              "alt": "Rosto de uma menina sorrindo em um ambiente interno."
+            }
+          ]
+        },
+        {
+          "id": "match-feliz-3",
+          "level": "match",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-3.jpg",
+          "alt": "Rosto de uma menina sorrindo em um ambiente interno.",
+          "answer": "same",
+          "difficulty": "easy",
+          "explanation": "A boca está sorrindo, os olhos parecem vivos e as sobrancelhas estão tranquilas. O outro rosto mostra sinais parecidos.",
+          "hint": "Compare os olhos e o sorriso.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-1.jpg",
+              "alt": "Close de um bebê com expressão alegre ao ar livre."
+            },
+            {
+              "id": "different",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-1.jpg",
+              "alt": "Rosto de um menino sentado no chão, parecendo assustado."
+            }
+          ]
+        },
+        {
+          "id": "match-triste-1",
+          "level": "match",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-1.jpg",
+          "alt": "Rosto de um menino apoiado nos braços, com expressão triste.",
+          "answer": "same",
+          "difficulty": "easy",
+          "explanation": "A boca está virada para baixo e os olhos parecem tristes. No outro rosto, esses sinais também aparecem.",
+          "hint": "Observe se os cantos da boca estão para cima ou para baixo.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-2.jpg",
+              "alt": "Rosto de uma mulher com expressão triste."
+            },
+            {
+              "id": "different",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-1.jpg",
+              "alt": "Close de um bebê com expressão alegre ao ar livre."
+            }
+          ]
+        },
+        {
+          "id": "match-triste-2",
+          "level": "match",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-2.jpg",
+          "alt": "Rosto de uma mulher com expressão triste.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão um pouco inclinadas, os olhos parecem tristes e a boca está para baixo. O outro rosto também mostra sinais de tristeza.",
+          "hint": "Olhe para as sobrancelhas e para os cantos da boca.",
+          "options": [
+            {
+              "id": "different",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-2.jpg",
+              "alt": "Rosto de um menino gritando em uma foto em preto e branco."
+            },
+            {
+              "id": "same",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-3.jpg",
+              "alt": "Rosto de uma criança pensativa com a cabeça apoiada na mão."
+            }
+          ]
+        },
+        {
+          "id": "match-triste-3",
+          "level": "match",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-3.jpg",
+          "alt": "Rosto de uma criança pensativa com a cabeça apoiada na mão.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "A expressão está quieta, os olhos parecem pensativos e a boca não está sorrindo. O outro rosto também parece triste.",
+          "hint": "Compare a expressão dos olhos e da boca.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-1.jpg",
+              "alt": "Rosto de um menino apoiado nos braços, com expressão triste."
+            },
+            {
+              "id": "different",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-2.jpg",
+              "alt": "Rosto de um menino preocupado em uma biblioteca."
+            }
+          ]
+        },
+        {
+          "id": "match-raiva-1",
+          "level": "match",
+          "emotion": "raiva",
+          "image": "../../assets/images/emotions/face-raiva-1.jpg",
+          "alt": "Rosto de uma criança expressando uma emoção intensa.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão juntas, o olhar está firme e a boca está tensa. O outro rosto mostra sinais parecidos de raiva.",
+          "hint": "Repare se as sobrancelhas estão juntas e a boca está tensa.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-2.jpg",
+              "alt": "Rosto de um menino gritando em uma foto em preto e branco."
+            },
+            {
+              "id": "different",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-2.jpg",
+              "alt": "Rosto de um menino usando óculos e sorrindo."
+            }
+          ]
+        },
+        {
+          "id": "match-raiva-2",
+          "level": "match",
+          "emotion": "raiva",
+          "image": "../../assets/images/emotions/face-raiva-2.jpg",
+          "alt": "Rosto de um menino gritando em uma foto em preto e branco.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "Os olhos estão bem atentos e a boca está aberta e tensa. O outro rosto também mostra uma expressão de raiva.",
+          "hint": "Compare a tensão da boca e das sobrancelhas.",
+          "options": [
+            {
+              "id": "different",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-2.jpg",
+              "alt": "Rosto de uma mulher com expressão triste."
+            },
+            {
+              "id": "same",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-3.jpg",
+              "alt": "Rosto de um menino emburrado, com os braços cruzados."
+            }
+          ]
+        },
+        {
+          "id": "match-raiva-3",
+          "level": "match",
+          "emotion": "raiva",
+          "image": "../../assets/images/emotions/face-raiva-3.jpg",
+          "alt": "Rosto de um menino emburrado, com os braços cruzados.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão juntas, o olhar é firme e a boca está fechada com tensão. O outro rosto também parece com raiva.",
+          "hint": "Observe a expressão das sobrancelhas e da boca.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-1.jpg",
+              "alt": "Rosto de uma criança expressando uma emoção intensa."
+            },
+            {
+              "id": "different",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-3.jpg",
+              "alt": "Rosto de uma menina espiando por trás de uma cortina escura."
+            }
+          ]
+        },
+        {
+          "id": "match-medo-1",
+          "level": "match",
+          "emotion": "medo",
+          "image": "../../assets/images/emotions/face-medo-1.jpg",
+          "alt": "Rosto de um menino sentado no chão, parecendo assustado.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão erguidas e os olhos bem abertos, como se a pessoa estivesse em alerta. O outro rosto mostra sinais parecidos de medo.",
+          "hint": "Veja se os olhos estão bem abertos e as sobrancelhas erguidas.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-2.jpg",
+              "alt": "Rosto de um menino preocupado em uma biblioteca."
+            },
+            {
+              "id": "different",
+              "emotion": "feliz",
+              "image": "../../assets/images/emotions/face-feliz-3.jpg",
+              "alt": "Rosto de uma menina sorrindo em um ambiente interno."
+            }
+          ]
+        },
+        {
+          "id": "match-medo-2",
+          "level": "match",
+          "emotion": "medo",
+          "image": "../../assets/images/emotions/face-medo-2.jpg",
+          "alt": "Rosto de um menino preocupado em uma biblioteca.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "Os olhos estão atentos e a boca está fechada com tensão. O outro rosto também mostra uma expressão de preocupação e medo.",
+          "hint": "Observe os olhos e a tensão da boca.",
+          "options": [
+            {
+              "id": "different",
+              "emotion": "raiva",
+              "image": "../../assets/images/emotions/face-raiva-3.jpg",
+              "alt": "Rosto de um menino emburrado, com os braços cruzados."
+            },
+            {
+              "id": "same",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-3.jpg",
+              "alt": "Rosto de uma menina espiando por trás de uma cortina escura."
+            }
+          ]
+        },
+        {
+          "id": "match-medo-3",
+          "level": "match",
+          "emotion": "medo",
+          "image": "../../assets/images/emotions/face-medo-3.jpg",
+          "alt": "Rosto de uma menina espiando por trás de uma cortina escura.",
+          "answer": "same",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão erguidas e os olhos atentos. A boca está um pouco tensa; o outro rosto também mostra sinais de medo.",
+          "hint": "Compare as sobrancelhas erguidas e os olhos atentos.",
+          "options": [
+            {
+              "id": "same",
+              "emotion": "medo",
+              "image": "../../assets/images/emotions/face-medo-1.jpg",
+              "alt": "Rosto de um menino sentado no chão, parecendo assustado."
+            },
+            {
+              "id": "different",
+              "emotion": "triste",
+              "image": "../../assets/images/emotions/face-triste-3.jpg",
+              "alt": "Rosto de uma criança pensativa com a cabeça apoiada na mão."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "name",
+      "label": "Qual é a emoção?",
+      "heading": "Qual é a emoção?",
+      "icon": "🔎",
+      "description": "Dê nome à expressão.",
+      "question": "Como essa pessoa pode estar se sentindo?",
+      "optionKind": "text",
+      "optionCount": 3,
+      "questionsPerRound": 5,
+      "hint": "Observe as sobrancelhas, os olhos e a boca.",
+      "questions": [
+        {
+          "id": "name-feliz-1",
+          "level": "name",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-1.jpg",
+          "alt": "Close de um bebê com expressão alegre ao ar livre.",
+          "answer": "feliz",
+          "difficulty": "easy",
+          "explanation": "As sobrancelhas estão relaxadas, os olhos parecem alegres e os cantos da boca estão virados para cima. A expressão mostra felicidade.",
+          "hint": "A boca está sorrindo e os olhos parecem alegres.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "name-feliz-2",
+          "level": "name",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-2.jpg",
+          "alt": "Rosto de um menino usando óculos e sorrindo.",
+          "answer": "feliz",
+          "difficulty": "easy",
+          "explanation": "Os olhos parecem acompanhados pelo sorriso, as sobrancelhas estão tranquilas e a boca está para cima. Esses sinais podem mostrar felicidade.",
+          "hint": "Procure o sorriso e os olhos alegres.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "name-feliz-3",
+          "level": "name",
+          "emotion": "feliz",
+          "image": "../../assets/images/emotions/face-feliz-3.jpg",
+          "alt": "Rosto de uma menina sorrindo em um ambiente interno.",
+          "answer": "feliz",
+          "difficulty": "easy",
+          "explanation": "As sobrancelhas estão relaxadas, os olhos parecem vivos e a boca está sorrindo. O conjunto sugere felicidade.",
+          "hint": "Veja se a boca está virada para cima ou para baixo.",
+          "options": [
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        },
+        {
+          "id": "name-triste-1",
+          "level": "name",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-1.jpg",
+          "alt": "Rosto de um menino apoiado nos braços, com expressão triste.",
+          "answer": "triste",
+          "difficulty": "easy",
+          "explanation": "Os olhos parecem tristes, as sobrancelhas estão um pouco inclinadas e a boca está virada para baixo. Esses sinais podem mostrar tristeza.",
+          "hint": "Observe os cantos da boca e as sobrancelhas.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        },
+        {
+          "id": "name-triste-2",
+          "level": "name",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-2.jpg",
+          "alt": "Rosto de uma mulher com expressão triste.",
+          "answer": "triste",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão um pouco inclinadas, os olhos parecem tristes e a boca está para baixo. A expressão sugere tristeza.",
+          "hint": "Repare na direção das sobrancelhas e dos cantos da boca.",
+          "options": [
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" }
+          ]
+        },
+        {
+          "id": "name-triste-3",
+          "level": "name",
+          "emotion": "triste",
+          "image": "../../assets/images/emotions/face-triste-3.jpg",
+          "alt": "Rosto de uma criança pensativa com a cabeça apoiada na mão.",
+          "answer": "triste",
+          "difficulty": "medium",
+          "explanation": "Os olhos parecem pensativos, as sobrancelhas estão inclinadas e a boca não está sorrindo. Esses detalhes podem indicar tristeza.",
+          "hint": "Olhe para os olhos e para a boca.",
+          "options": [
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "name-raiva-1",
+          "level": "name",
+          "emotion": "com raiva",
+          "image": "../../assets/images/emotions/face-raiva-1.jpg",
+          "alt": "Rosto de uma criança expressando uma emoção intensa.",
+          "answer": "raiva",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão juntas, os olhos estão firmes e a boca parece tensa. Esses sinais podem indicar raiva.",
+          "hint": "Observe se as sobrancelhas estão juntas e se a boca está tensa.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "name-raiva-2",
+          "level": "name",
+          "emotion": "com raiva",
+          "image": "../../assets/images/emotions/face-raiva-2.jpg",
+          "alt": "Rosto de um menino gritando em uma foto em preto e branco.",
+          "answer": "raiva",
+          "difficulty": "medium",
+          "explanation": "Os olhos estão bem atentos, as sobrancelhas parecem juntas e a boca está aberta e tensa. A expressão sugere raiva ou frustração.",
+          "hint": "Veja se a boca e as sobrancelhas parecem tensas.",
+          "options": [
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" }
+          ]
+        },
+        {
+          "id": "name-raiva-3",
+          "level": "name",
+          "emotion": "com raiva",
+          "image": "../../assets/images/emotions/face-raiva-3.jpg",
+          "alt": "Rosto de um menino emburrado, com os braços cruzados.",
+          "answer": "raiva",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão juntas, o olhar está firme e a boca está fechada com tensão. Esses detalhes podem mostrar raiva.",
+          "hint": "Repare no olhar firme e na boca fechada com força.",
+          "options": [
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        },
+        {
+          "id": "name-medo-1",
+          "level": "name",
+          "emotion": "com medo",
+          "image": "../../assets/images/emotions/face-medo-1.jpg",
+          "alt": "Rosto de um menino sentado no chão, parecendo assustado.",
+          "answer": "medo",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão erguidas, os olhos bem abertos e a boca parece tensa. Esses sinais podem aparecer quando alguém sente medo.",
+          "hint": "Observe os olhos bem abertos e as sobrancelhas erguidas.",
+          "options": [
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "name-medo-2",
+          "level": "name",
+          "emotion": "com medo",
+          "image": "../../assets/images/emotions/face-medo-2.jpg",
+          "alt": "Rosto de um menino preocupado em uma biblioteca.",
+          "answer": "medo",
+          "difficulty": "medium",
+          "explanation": "Os olhos estão atentos e a boca parece tensa. As sobrancelhas também estão um pouco erguidas. O conjunto pode indicar medo ou preocupação.",
+          "hint": "Veja se a pessoa parece tranquila ou em alerta.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "name-medo-3",
+          "level": "name",
+          "emotion": "com medo",
+          "image": "../../assets/images/emotions/face-medo-3.jpg",
+          "alt": "Rosto de uma menina espiando por trás de uma cortina escura.",
+          "answer": "medo",
+          "difficulty": "medium",
+          "explanation": "As sobrancelhas estão erguidas, os olhos atentos e a boca parece tensa. Esses sinais podem aparecer quando alguém está com medo.",
+          "hint": "Observe a expressão dos olhos e da boca.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "situation",
+      "label": "Situação e emoção",
+      "heading": "Como a pessoa pode se sentir?",
+      "icon": "💭",
+      "description": "Ligue a situação à emoção.",
+      "question": "Que sentimento combina com essa situação?",
+      "optionKind": "text",
+      "optionCount": 3,
+      "questionsPerRound": 5,
+      "hint": "Pense no que aconteceu e em como isso poderia fazer a pessoa se sentir.",
+      "questions": [
+        {
+          "id": "situation-aniversario",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-aniversario.jpg",
+          "alt": "Uma família celebra o aniversário de uma criança com um bolo.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "A família está comemorando o aniversário da criança. Receber carinho e celebrar junto pode deixá-la feliz.",
+          "hint": "A família está reunida para uma comemoração.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        },
+        {
+          "id": "situation-sorvete",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-sorvete.jpg",
+          "alt": "Uma criança saboreia um sorvete ao ar livre.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "A criança está aproveitando um sorvete em um dia ensolarado. Esse momento gostoso pode trazer alegria.",
+          "hint": "Pense em como você poderia se sentir ao aproveitar um lanche de que gosta.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "situation-cachorro",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-cachorro.jpg",
+          "alt": "Uma menina abraça seu cachorro ao ar livre.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "A menina está abraçando um cachorro de quem gosta. Esse momento de carinho pode fazê-la se sentir feliz.",
+          "hint": "Observe o que a menina está fazendo com o cachorro.",
+          "options": [
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "situation-brinquedo",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-brinquedo.jpg",
+          "alt": "Uma criança brinca com um dinossauro de brinquedo em casa.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "A criança está brincando com um brinquedo. Brincar com algo de que gosta pode deixá-la feliz.",
+          "hint": "Pense em como pode ser divertido brincar com um brinquedo favorito.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "situation-chuva",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-trovao.jpg",
+          "alt": "Duas crianças brincam em poças de chuva usando botas.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "As crianças estão brincando e pulando em poças depois da chuva. Uma brincadeira divertida pode deixá-las felizes.",
+          "hint": "Veja se elas estão brincando ou descansando.",
+          "options": [
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "situation-machucado",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-joelho.jpg",
+          "alt": "Pais confortam uma criança que se machucou enquanto brincava.",
+          "answer": "triste",
+          "emotion": "triste",
+          "difficulty": "medium",
+          "explanation": "A criança se machucou e está recebendo conforto dos pais. Sentir dor ou precisar de ajuda pode deixá-la triste ou preocupada.",
+          "hint": "Pense em como alguém pode se sentir depois de se machucar.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" }
+          ]
+        },
+        {
+          "id": "situation-presente",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-presente.jpg",
+          "alt": "Uma criança animada abre um presente durante uma comemoração.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "easy",
+          "explanation": "A criança está abrindo um presente em uma comemoração. Ela parece animada e pode estar feliz.",
+          "hint": "Observe o que a criança está abrindo.",
+          "options": [
+            { "id": "raiva", "text": "Com raiva", "emoji": "😠" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" }
+          ]
+        },
+        {
+          "id": "situation-compartilhar",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-compartilhar.jpg",
+          "alt": "Duas crianças compartilham um brinquedo e brincam juntas.",
+          "answer": "feliz",
+          "emotion": "feliz",
+          "difficulty": "medium",
+          "explanation": "As crianças estão compartilhando um brinquedo e brincando juntas. Fazer algo divertido com outra pessoa pode trazer alegria.",
+          "hint": "Pense em como pode ser brincar junto com alguém.",
+          "options": [
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" },
+            { "id": "triste", "text": "Triste", "emoji": "😢" }
+          ]
+        },
+        {
+          "id": "situation-escuro",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-escuro.jpg",
+          "alt": "Um menino explora uma luz em um quarto pouco iluminado.",
+          "answer": "curioso",
+          "emotion": "curioso",
+          "difficulty": "medium",
+          "explanation": "O menino está olhando para uma luz e parece querer descobrir como ela funciona. Ele pode estar curioso; curiosidade aparece quando queremos conhecer algo novo.",
+          "hint": "O menino está explorando uma luz. Como podemos chamar a vontade de descobrir algo novo?",
+          "options": [
+            { "id": "curioso", "text": "Curioso", "emoji": "🤔" },
+            { "id": "cansado", "text": "Cansado", "emoji": "😴" },
+            { "id": "medo", "text": "Com medo", "emoji": "😨" }
+          ]
+        },
+        {
+          "id": "situation-cansado",
+          "level": "situation",
+          "image": "../../assets/images/emotions/sit-cansaco-escola.jpg",
+          "alt": "Um estudante boceja sentado à mesa na escola.",
+          "answer": "cansado",
+          "emotion": "cansado",
+          "difficulty": "easy",
+          "explanation": "O estudante está bocejando durante a atividade. Bocejar pode ser um sinal de que alguém está cansado ou precisa descansar.",
+          "hint": "Observe o que a pessoa está fazendo com a boca.",
+          "options": [
+            { "id": "triste", "text": "Triste", "emoji": "😢" },
+            { "id": "cansado", "text": "Cansado", "emoji": "😴" },
+            { "id": "feliz", "text": "Feliz", "emoji": "😊" }
+          ]
+        }
+      ]
+    }
+  ]
+}
