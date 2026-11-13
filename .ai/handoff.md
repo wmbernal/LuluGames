@@ -18,7 +18,7 @@ Lulu Games is a static, dependency-free educational game collection for a 10-yea
 
 ## Decisions
 
-- Home keeps Pexels photo 8709295 by Polina sharp behind a translucent menu card: centered on phones (compact variant below 560px height, extra-compact below 430px so landscape phones never scroll) and anchored at the lower left on wide desktop, where the backdrop is scaled from the left so the paper-letter word stays legible. Inner pages reuse the same photo with `blur(4px)` and a cream veil; `scene.css` owns the glass sticky header, translucent cards, dashed inner border, hover lift and 4:3 stage.
+- Home keeps Pexels photo 8709295 by Polina behind a translucent menu card that is horizontally centered at every width (bottom-anchored on desktop, centered on both axes on phones with compact variants below 820px/560px/430px height so nothing scrolls). The home backdrop is a top crop, `assets/images/ui/home-bg-top.jpg`, so the paper-letter word stays fully above the card; the brand sits in a translucent cream pill. Inner pages reuse `home-bg.jpg` with `blur(4px)` and a cream veil; `scene.css` owns the glass sticky header, translucent cards, dashed inner border, hover lift and 4:3 stage.
 - Fredoka is the display font for headings, buttons and brand; Nunito remains body text. Both fonts are local.
 - Theme selection is free, five exercises per theme, next only after a correct answer. Clicking a theme now opens the first exercise directly; the "Vamos olhar e descobrir?" intro screen was removed.
 - Completion plays the melody plus spoken "Parabéns!", names the theme, and offers "Escolher outro tema" and "Início". Sound settings exist only in the home settings dialog.

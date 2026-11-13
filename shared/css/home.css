@@ -13,10 +13,8 @@ body.home::before {
   position: fixed;
   z-index: -2;
   inset: 0;
-  background: url("../../assets/images/ui/home-bg.jpg") center / cover no-repeat;
+  background: url("../../assets/images/ui/home-bg-top.jpg") center / cover no-repeat;
   filter: saturate(0.96);
-  transform: scale(1.12);
-  transform-origin: left center;
 }
 
 body.home::after {
@@ -45,8 +43,12 @@ body.is-locked {
   display: inline-flex;
   align-items: center;
   gap: clamp(8px, 1.4vw, 14px);
+  padding: 6px 18px 6px 8px;
   color: var(--color-primary);
   text-decoration: none;
+  background: rgb(255 253 243 / 78%);
+  border-radius: 999px;
+  backdrop-filter: blur(8px) saturate(1.05);
 }
 
 .home-brand__icon {
@@ -80,6 +82,7 @@ body.is-locked {
   display: flex;
   flex: 1;
   align-items: flex-end;
+  justify-content: center;
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
@@ -327,7 +330,7 @@ body.is-locked {
 
 @media (max-width: 720px) {
   body.home::before {
-    background-position: 40% center;
+    background-position: 30% center;
   }
 
   body.home::after {
@@ -346,6 +349,24 @@ body.is-locked {
   .home-footer {
     justify-content: center;
     text-align: center;
+  }
+}
+
+/* Short desktop windows: the full card would cover the paper-letter word,
+   so compact it mid-tier while keeping the word fully above the card. */
+@media (min-width: 721px) and (max-height: 820px) {
+  .home-menu {
+    padding: 24px;
+    border-radius: 28px;
+  }
+
+  .home-menu__title {
+    font-size: 2.2rem;
+  }
+
+  .menu-settings {
+    min-height: 44px;
+    padding: 8px 16px;
   }
 }
 
