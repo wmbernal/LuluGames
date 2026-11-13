@@ -18,7 +18,7 @@ Lulu Games is a static, dependency-free educational game collection for a 10-yea
 
 ## Decisions
 
-- Home keeps Pexels photo 8709295 by Polina sharp behind a floating translucent menu card. Inner pages reuse the same photo with `blur(4px)` and a cream veil; `scene.css` owns the glass sticky header, translucent cards, dashed inner border, hover lift and 4:3 stage.
+- Home keeps Pexels photo 8709295 by Polina sharp behind a translucent menu card anchored at the lower left; the backdrop is scaled from the left (and repositioned at 40% on phones) so the paper-letter word stays legible above the card. Inner pages reuse the same photo with `blur(4px)` and a cream veil; `scene.css` owns the glass sticky header, translucent cards, dashed inner border, hover lift and 4:3 stage.
 - Fredoka is the display font for headings, buttons and brand; Nunito remains body text. Both fonts are local.
 - Theme selection is free, five exercises per theme, next only after a correct answer. Clicking a theme now opens the first exercise directly; the "Vamos olhar e descobrir?" intro screen was removed.
 - Completion plays the melody plus spoken "Parabéns!", names the theme, and offers "Escolher outro tema" and "Início". Sound settings exist only in the home settings dialog.
@@ -34,14 +34,14 @@ Lulu Games is a static, dependency-free educational game collection for a 10-yea
 - Browser: Escola, Comidas, Parque and Transportes first scenes load with 1200×900 images and three options; Animais first scene loads.
 - Browser: both theme choosers render; memory board renders 12 cards; dress-princess page loads. No console errors.
 - Browser: "Temas" opens the leave confirmation now that the game starts active.
-- Not verified: phone widths, audio actually heard, hover appearance (desktop window was not visible for screenshots).
+- Browser: home, theme chooser and Casa game checked at 1381×886 and 430×900; no horizontal overflow at 430, footer pills wrap, card fits, 2-column theme grid, 4:3 image with readable answers.
+- Not verified: audio actually heard; hover appearance was only seen once through the live pointer.
 
 ## Next step
 
-Open `http://127.0.0.1:8000/` and review the new backdrop, cards and direct-start flow at desktop and phone widths; then commit.
+Commit the visual system and the direct-start flow. A later unit of work can replace the temporary SVG clothing art in Vestir a Princesa.
 
 ## Open questions
 
 - [ ] Keep the same Pexels backdrop on all inner pages, or give each game its own photo? — user.
-- [ ] The home backdrop shows part of the "AUTISM" lettering beside the menu card; keep, blur more, or reposition? — user.
 - [ ] Mirror the Copilot agents as native OpenCode agents? — user.
