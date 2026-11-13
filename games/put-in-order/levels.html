@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>Coloque em Ordem — escolha um nível</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
+    <link rel="stylesheet" href="./game.css?v=1">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./levels.js?v=1"></script>
+  </head>
+  <body class="app-page put-in-order-levels-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="Lulu Games, início">
+        <img class="brand__icon" src="../../assets/images/ui/brand.svg" alt="">
+        <span>Lulu Games</span>
+      </a>
+    </header>
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="levels-title">
+        <p class="eyebrow">Coloque em Ordem</p>
+        <h1 id="levels-title">Escolha um nível</h1>
+        <p class="theme-picker-instructions">
+          Cada rodada tem 5 frases. Escolha quantas palavras terá cada frase.
+        </p>
+      </section>
+      <section class="card game-panel">
+        <p class="load-error" id="load-error" role="alert" hidden>
+          Não consegui abrir os níveis agora. Tente recarregar a página.
+        </p>
+        <div class="level-picker" id="level-list"></div>
+      </section>
+      <footer class="game-footer">
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html">
+            <span>Início</span>
+          </a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

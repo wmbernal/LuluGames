@@ -7,7 +7,7 @@
     <title>O que está acontecendo? — Lulu Games</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
     <link rel="stylesheet" href="./game.css?v=10">
     <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
     <script type="module" src="./session.js?v=10"></script>
@@ -38,8 +38,14 @@
         </div>
       </section>
       <footer class="game-footer" id="game-footer">
-        <button class="button button--secondary" id="back-button" type="button">← Temas</button>
-        <a class="button button--secondary" href="../../index.html" data-home-link>⌂ Início</a>
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <button class="button game-nav-button game-nav-button--back" id="back-button" type="button">
+            <span>Temas</span>
+          </button>
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html" data-home-link>
+            <span>Início</span>
+          </a>
+        </nav>
       </footer>
     </main>
     <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">

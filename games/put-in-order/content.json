@@ -1,0 +1,375 @@
+{
+  "title": "Coloque em Ordem",
+  "levels": [
+    {
+      "id": "level-1",
+      "label": "Nível 1: 3 palavras",
+      "icon": "🌱",
+      "description": "Organize frases com três palavras.",
+      "wordCount": 3,
+      "questionsPerRound": 5,
+      "questions": [
+        {
+          "id": "level-1-teeth",
+          "level": "level-1",
+          "imageId": "house-brushing-teeth",
+          "image": "../../assets/images/image-interpretation/house-brushing-teeth.jpg",
+          "imageQuery": "criança escovando os dentes banheiro",
+          "alt": "Uma criança escova os dentes diante de uma pia no banheiro.",
+          "sentence": "A pasta espuma.",
+          "words": ["A", "pasta", "espuma."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-paint",
+          "level": "level-1",
+          "imageId": "school-painting",
+          "image": "../../assets/images/image-interpretation/school-painting.jpg",
+          "imageQuery": "criança pintando com pincel e tinta",
+          "alt": "Duas pessoas pintam uma folha com pincéis e tintas sobre a mesa.",
+          "sentence": "As pessoas pintam.",
+          "words": ["As", "pessoas", "pintam."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-read",
+          "level": "level-1",
+          "imageId": "park-bench-reading",
+          "image": "../../assets/images/image-interpretation/park-bench-reading.jpg",
+          "imageQuery": "mulher lendo livro no banco do parque",
+          "alt": "Uma pessoa sentada em um banco lê um livro aberto.",
+          "sentence": "Ela lê sentada.",
+          "words": ["Ela", "lê", "sentada."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-juice",
+          "level": "level-1",
+          "imageId": "food-orange-juice",
+          "image": "../../assets/images/image-interpretation/food-orange-juice.jpg",
+          "imageQuery": "espremendo laranja no espremedor de suco",
+          "alt": "Metades de laranja estão junto a um espremedor manual com suco.",
+          "sentence": "O suco escorre.",
+          "words": ["O", "suco", "escorre."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-bread",
+          "level": "level-1",
+          "imageId": "food-bread-butter",
+          "image": "../../assets/images/image-interpretation/food-bread-butter.jpg",
+          "imageQuery": "passando manteiga no pão com faca",
+          "alt": "Mãos espalham manteiga em uma fatia de pão com uma faca.",
+          "sentence": "Alguém espalha manteiga.",
+          "words": ["Alguém", "espalha", "manteiga."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-sandcastle",
+          "level": "level-1",
+          "imageId": "park-sand-castle",
+          "image": "../../assets/images/image-interpretation/park-sand-castle.jpg",
+          "imageQuery": "criança enchendo balde de areia com pá",
+          "alt": "Uma criança enche um balde com areia usando uma pá.",
+          "sentence": "O balde enche.",
+          "words": ["O", "balde", "enche."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-bus",
+          "level": "level-1",
+          "imageId": "transport-bus-boarding",
+          "image": "../../assets/images/image-interpretation/transport-bus-boarding.jpg",
+          "imageQuery": "mulher entrando no ônibus",
+          "alt": "Uma pessoa entra em um ônibus à noite.",
+          "sentence": "O passageiro embarca.",
+          "words": ["O", "passageiro", "embarca."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-bike",
+          "level": "level-1",
+          "imageId": "transport-bike-riding",
+          "image": "../../assets/images/image-interpretation/transport-bike-riding.jpg",
+          "imageQuery": "menino andando de bicicleta",
+          "alt": "Um menino pedala uma bicicleta em um caminho.",
+          "sentence": "O menino pedala.",
+          "words": ["O", "menino", "pedala."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-ice-cream",
+          "level": "level-1",
+          "imageId": "sit-sorvete",
+          "image": "../../assets/images/emotions/sit-sorvete.jpg",
+          "imageQuery": "criança com sorvete",
+          "alt": "Uma criança saboreia um sorvete ao ar livre.",
+          "sentence": "Alguém toma sorvete.",
+          "words": ["Alguém", "toma", "sorvete."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-toy-dinosaur",
+          "level": "level-1",
+          "imageId": "sit-brinquedo",
+          "image": "../../assets/images/emotions/sit-brinquedo.jpg",
+          "imageQuery": "criança brincando com dinossauro de brinquedo",
+          "alt": "Uma criança brinca com um dinossauro de brinquedo em casa.",
+          "sentence": "A criança brinca.",
+          "words": ["A", "criança", "brinca."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-kite",
+          "level": "level-1",
+          "imageId": "park-kite-flying",
+          "image": "../../assets/images/image-interpretation/park-kite-flying.jpg",
+          "imageQuery": "menino soltando pipa no parque",
+          "alt": "Um menino segura a linha de uma pipa no parque.",
+          "sentence": "A pipa voa.",
+          "words": ["A", "pipa", "voa."],          "difficulty": "fácil"
+        },
+        {
+          "id": "level-1-gift",
+          "level": "level-1",
+          "imageId": "sit-presente",
+          "image": "../../assets/images/emotions/sit-presente.jpg",
+          "imageQuery": "criança abrindo presente",
+          "alt": "Uma criança abre um presente durante uma comemoração.",
+          "sentence": "Abriu o presente.",
+          "words": ["Abriu", "o", "presente."],          "difficulty": "fácil"
+        }
+      ]
+    },
+    {
+      "id": "level-2",
+      "label": "Nível 2: 4 palavras",
+      "icon": "🪴",
+      "description": "Organize frases com quatro palavras.",
+      "wordCount": 4,
+      "questionsPerRound": 5,
+      "questions": [
+        {
+          "id": "level-2-teeth",
+          "level": "level-2",
+          "imageId": "house-brushing-teeth",
+          "image": "../../assets/images/image-interpretation/house-brushing-teeth.jpg",
+          "imageQuery": "criança escovando os dentes banheiro",
+          "alt": "Uma criança escova os dentes diante de uma pia no banheiro.",
+          "sentence": "Alguém escova os dentes.",
+          "words": ["Alguém", "escova", "os", "dentes."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-plant",
+          "level": "level-2",
+          "imageId": "house-watering-plants",
+          "image": "../../assets/images/image-interpretation/house-watering-plants.jpg",
+          "imageQuery": "criança regando planta no vaso",
+          "alt": "Uma criança segura um borrifador diante de uma planta dentro de casa.",
+          "sentence": "A criança borrifa folhas.",
+          "words": ["A", "criança", "borrifa", "folhas."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-dishes",
+          "level": "level-2",
+          "imageId": "house-washing-dishes",
+          "image": "../../assets/images/image-interpretation/house-washing-dishes.jpg",
+          "imageQuery": "pessoa lavando louça na pia",
+          "alt": "Mãos seguram um prato sob a torneira aberta, sobre a pia.",
+          "sentence": "A pessoa lava louça.",
+          "words": ["A", "pessoa", "lava", "louça."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-sweep",
+          "level": "level-2",
+          "imageId": "house-sweeping",
+          "image": "../../assets/images/image-interpretation/house-sweeping.jpg",
+          "imageQuery": "pessoa varrendo o chão com vassoura",
+          "alt": "Uma pessoa varre pequenos pedaços do chão com uma vassoura.",
+          "sentence": "Alguém junta a sujeira.",
+          "words": ["Alguém", "junta", "a", "sujeira."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-soup",
+          "level": "level-2",
+          "imageId": "food-soup-stirring",
+          "image": "../../assets/images/image-interpretation/food-soup-stirring.jpg",
+          "imageQuery": "menino mexendo sopa na panela",
+          "alt": "Uma criança mexe uma panela no fogão com uma colher.",
+          "sentence": "A panela tem sopa.",
+          "words": ["A", "panela", "tem", "sopa."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-cake",
+          "level": "level-2",
+          "imageId": "food-cake-cutting",
+          "image": "../../assets/images/image-interpretation/food-cake-cutting.jpg",
+          "imageQuery": "mulher cortando bolo com faca",
+          "alt": "Mãos cortam um bolo decorado com uma faca.",
+          "sentence": "O bolo é cortado.",
+          "words": ["O", "bolo", "é", "cortado."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-writing",
+          "level": "level-2",
+          "imageId": "school-writing",
+          "image": "../../assets/images/image-interpretation/school-writing.jpg",
+          "imageQuery": "criança escrevendo no caderno com lápis",
+          "alt": "Uma criança escreve com um lápis em um caderno aberto sobre a mesa.",
+          "sentence": "Alguém escreve a lápis.",
+          "words": ["Alguém", "escreve", "a", "lápis."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-class",
+          "level": "level-2",
+          "imageId": "school-raising-hand",
+          "image": "../../assets/images/image-interpretation/school-raising-hand.jpg",
+          "imageQuery": "criança levantando a mão na sala de aula",
+          "alt": "Uma criança ergue o braço na sala enquanto outras estão sentadas.",
+          "sentence": "Alguém ergue o braço.",
+          "words": ["Alguém", "ergue", "o", "braço."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-apple",
+          "level": "level-2",
+          "imageId": "school-eating-apple",
+          "image": "../../assets/images/image-interpretation/school-eating-apple.jpg",
+          "imageQuery": "menino comendo maçã no pátio",
+          "alt": "Uma criança segura uma maçã mordida perto da boca.",
+          "sentence": "A maçã está mordida.",
+          "words": ["A", "maçã", "está", "mordida."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-flower",
+          "level": "level-2",
+          "imageId": "park-flower-watering",
+          "image": "../../assets/images/image-interpretation/park-flower-watering.jpg",
+          "imageQuery": "menina regando flores com regador",
+          "alt": "Uma menina rega flores com um regador.",
+          "sentence": "Ela rega as flores.",
+          "words": ["Ela", "rega", "as", "flores."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-pizza",
+          "level": "level-2",
+          "imageId": "food-pizza-oven",
+          "image": "../../assets/images/image-interpretation/food-pizza-oven.jpg",
+          "imageQuery": "cozinheiro colocando pizza no forno",
+          "alt": "Uma pessoa usa uma pá longa para colocar uma pizza no forno aberto.",
+          "sentence": "A pizza é assada.",
+          "words": ["A", "pizza", "é", "assada."],          "difficulty": "médio"
+        },
+        {
+          "id": "level-2-swing",
+          "level": "level-2",
+          "imageId": "park-swing-pushing",
+          "image": "../../assets/images/image-interpretation/park-swing-pushing.jpg",
+          "imageQuery": "pai empurrando filho no balanço",
+          "alt": "Um adulto empurra uma criança sentada em um balanço.",
+          "sentence": "A criança está sentada.",
+          "words": ["A", "criança", "está", "sentada."],          "difficulty": "médio"
+        }
+      ]
+    },
+    {
+      "id": "level-3",
+      "label": "Nível 3: 5 palavras",
+      "icon": "🧭",
+      "description": "Organize frases com cinco palavras.",
+      "wordCount": 5,
+      "questionsPerRound": 5,
+      "questions": [
+        {
+          "id": "level-3-teeth",
+          "level": "level-3",
+          "imageId": "house-brushing-teeth",
+          "image": "../../assets/images/image-interpretation/house-brushing-teeth.jpg",
+          "imageQuery": "criança escovando os dentes banheiro",
+          "alt": "Uma criança escova os dentes diante de uma pia no banheiro.",
+          "sentence": "A criança escova os dentes.",
+          "words": ["A", "criança", "escova", "os", "dentes."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-dishes",
+          "level": "level-3",
+          "imageId": "house-washing-dishes",
+          "image": "../../assets/images/image-interpretation/house-washing-dishes.jpg",
+          "imageQuery": "pessoa lavando louça na pia",
+          "alt": "Mãos seguram um prato sob a torneira aberta, sobre a pia.",
+          "sentence": "A pessoa enxágua o prato.",
+          "words": ["A", "pessoa", "enxágua", "o", "prato."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-soup",
+          "level": "level-3",
+          "imageId": "food-soup-stirring",
+          "image": "../../assets/images/image-interpretation/food-soup-stirring.jpg",
+          "imageQuery": "menino mexendo sopa na panela",
+          "alt": "Uma criança mexe uma panela no fogão com uma colher.",
+          "sentence": "A criança mexe sua sopa.",
+          "words": ["A", "criança", "mexe", "sua", "sopa."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-juice",
+          "level": "level-3",
+          "imageId": "food-orange-juice",
+          "image": "../../assets/images/image-interpretation/food-orange-juice.jpg",
+          "imageQuery": "espremendo laranja no espremedor de suco",
+          "alt": "Metades de laranja estão junto a um espremedor manual com suco.",
+          "sentence": "O espremedor recebe a laranja.",
+          "words": ["O", "espremedor", "recebe", "a", "laranja."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-pizza",
+          "level": "level-3",
+          "imageId": "food-pizza-oven",
+          "image": "../../assets/images/image-interpretation/food-pizza-oven.jpg",
+          "imageQuery": "cozinheiro colocando pizza no forno",
+          "alt": "Uma pessoa usa uma pá longa para colocar uma pizza no forno aberto.",
+          "sentence": "A pizza entra no forno.",
+          "words": ["A", "pizza", "entra", "no", "forno."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-bus",
+          "level": "level-3",
+          "imageId": "transport-bus-boarding",
+          "image": "../../assets/images/image-interpretation/transport-bus-boarding.jpg",
+          "imageQuery": "mulher entrando no ônibus",
+          "alt": "Uma pessoa entra em um ônibus à noite.",
+          "sentence": "O passageiro entra no ônibus.",
+          "words": ["O", "passageiro", "entra", "no", "ônibus."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-bike",
+          "level": "level-3",
+          "imageId": "transport-bike-riding",
+          "image": "../../assets/images/image-interpretation/transport-bike-riding.jpg",
+          "imageQuery": "menino andando de bicicleta",
+          "alt": "Um menino pedala uma bicicleta em um caminho.",
+          "sentence": "O menino pedala a bicicleta.",
+          "words": ["O", "menino", "pedala", "a", "bicicleta."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-paint",
+          "level": "level-3",
+          "imageId": "school-painting",
+          "image": "../../assets/images/image-interpretation/school-painting.jpg",
+          "imageQuery": "criança pintando com pincel e tinta",
+          "alt": "Duas pessoas pintam uma folha com pincéis e tintas sobre a mesa.",
+          "sentence": "As pessoas pintam o papel.",
+          "words": ["As", "pessoas", "pintam", "o", "papel."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-sandcastle",
+          "level": "level-3",
+          "imageId": "park-sand-castle",
+          "image": "../../assets/images/image-interpretation/park-sand-castle.jpg",
+          "imageQuery": "criança enchendo balde de areia com pá",
+          "alt": "Uma criança enche um balde com areia usando uma pá.",
+          "sentence": "A criança enche o balde.",
+          "words": ["A", "criança", "enche", "o", "balde."],          "difficulty": "desafiador"
+        },
+        {
+          "id": "level-3-plant",
+          "level": "level-3",
+          "imageId": "park-flower-watering",
+          "image": "../../assets/images/image-interpretation/park-flower-watering.jpg",
+          "imageQuery": "menina regando flores com regador",
+          "alt": "Uma menina rega flores com um regador.",
+          "sentence": "A menina rega as flores.",
+          "words": ["A", "menina", "rega", "as", "flores."],          "difficulty": "desafiador"
+        }
+      ]
+    }
+  ]
+}

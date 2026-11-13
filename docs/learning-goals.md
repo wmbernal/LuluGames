@@ -29,3 +29,11 @@ The parent can confirm whether five exercises per theme and the theme list feel 
 - **Difficulty:** The face levels begin with feliz, triste, com raiva, and com medo. Situations use familiar, concrete events. Each level can grow by adding questions to `content.json`, without changing game code.
 
 These are practice opportunities, not a measure or diagnosis of the child's emotional understanding. The parent can confirm whether the expressions, situations, and words feel familiar and comfortable.
+
+## Coloque em Ordem
+
+- **Objectives:** Practice reading and building grammatical Brazilian Portuguese sentences, noticing word order, and connecting written phrases to a familiar image.
+- **Mechanics:** Choose a level with three, four, or five words. Each five-question round samples without repeats from `content.json`. Drag a word to a numbered space or tap it to fill the next empty space. A misplaced word returns to the bank with gentle feedback; correctly placed words stay locked. Completing the sentence reveals and optionally reads the full sentence and a short explanation.
+- **Difficulty:** Sentences grow from three to five word tokens. They use familiar subjects and actions with concise, concrete vocabulary. Content validation checks sentence length, token order, duplicate tokens, local image references, and explanations.
+
+These are practice opportunities, not a measure of the child's ability. The parent can confirm whether the vocabulary, reading level, and sentence length feel familiar and comfortable.

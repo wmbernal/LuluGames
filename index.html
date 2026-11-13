@@ -7,9 +7,9 @@
     <title>Lulu Games — jogos para aprender brincando</title>
     <link rel="stylesheet" href="shared/css/tokens.css?v=5">
     <link rel="stylesheet" href="shared/css/base.css?v=5">
-    <link rel="stylesheet" href="shared/css/components.css?v=3">
-    <link rel="stylesheet" href="shared/css/home.css?v=11">
-    <script type="module" src="shared/js/home.js?v=8"></script>
+    <link rel="stylesheet" href="shared/css/components.css?v=6">
+    <link rel="stylesheet" href="shared/css/home.css?v=13">
+    <script type="module" src="shared/js/home.js?v=10"></script>
   </head>
   <body class="home">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
@@ -29,16 +29,6 @@
 
         <div class="menu-list" id="game-catalog" aria-live="polite"></div>
 
-        <button
-          class="menu-settings"
-          id="settings-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="settings-panel"
-        >
-          <img class="button__icon" src="assets/images/ui/settings.svg" alt="">
-          Configurações
-        </button>
       </section>
     </main>
 
@@ -47,45 +37,5 @@
       <p class="home-footer__credit">Foto de Polina no Pexels</p>
     </footer>
 
-    <div class="settings-backdrop" id="settings-backdrop" hidden>
-      <section
-        class="card home-settings"
-        id="settings-panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="settings-title"
-      >
-        <button class="home-settings__close" id="settings-close" type="button" aria-label="Fechar configurações">×</button>
-        <div class="settings-card__intro">
-          <div>
-            <h2 id="settings-title">Do seu jeito</h2>
-            <p>Você pode mudar essas opções quando quiser.</p>
-          </div>
-        </div>
-        <form class="settings-form" id="settings-form">
-          <label class="setting-row" for="sound-enabled">
-            <span>Som suave</span>
-            <input id="sound-enabled" name="soundEnabled" type="checkbox">
-          </label>
-          <label class="setting-row setting-row--range" for="sound-volume">
-            <span>Volume do som</span>
-            <input id="sound-volume" name="soundVolume" type="range" min="0" max="0.25" step="0.05">
-          </label>
-          <label class="setting-row" for="animations-enabled">
-            <span>Animações suaves</span>
-            <input id="animations-enabled" name="animationsEnabled" type="checkbox">
-          </label>
-          <label class="setting-row" for="rounds-per-session">
-            <span>Rodadas por jogo</span>
-            <select id="rounds-per-session" name="roundsPerSession">
-              <option value="3">3 rodadas</option>
-              <option value="4">4 rodadas</option>
-              <option value="5">5 rodadas</option>
-            </select>
-          </label>
-          <p class="settings-form__status" id="settings-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-    </div>
   </body>
 </html>

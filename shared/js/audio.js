@@ -128,7 +128,7 @@ export function playMismatchSound(settings) {
   return playBellSequence(settings, [587, 392], 0.2, 0.38, 1.5);
 }
 
-export function speakCardName(label, settings) {
+export function speakCardName(label, settings, onSpeechEnd) {
   if (!label || !settings.soundEnabled || settings.soundVolume <= 0) {
     return false;
   }
@@ -141,6 +141,16 @@ export function speakCardName(label, settings) {
     const utterance = new window.SpeechSynthesisUtterance(label);
     utterance.lang = "pt-BR";
     utterance.volume = Math.min(settings.soundVolume * 4, 1);
+    if (typeof onSpeechEnd === "function") {
+      let finished = false;
+      const finish = () => {
+        if (finished) return;
+        finished = true;
+        onSpeechEnd();
+      };
+      utterance.addEventListener("end", finish, { once: true });
+      utterance.addEventListener("error", finish, { once: true });
+    }
     window.speechSynthesis.speak(utterance);
     return true;
   } catch (error) {

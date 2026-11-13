@@ -32,4 +32,12 @@ export const gameCatalog = [
     href: "./games/emotions/levels.html",
     available: true,
   },
+  {
+    id: "put-in-order",
+    title: "Coloque em Ordem",
+    description: "Organize palavras para montar frases.",
+    icon: "./assets/images/ui/put-in-order.svg",
+    href: "./games/put-in-order/levels.html",
+    available: true,
+  },
 ];

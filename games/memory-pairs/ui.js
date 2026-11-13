@@ -139,11 +139,6 @@ function renderCompletion(state) {
 
 export function createGameUI(callbacks) {
   document.querySelector("#game-title").textContent = `Jogo dos Pares: ${callbacks.theme.label}`;
-  document.querySelector("#theme-icon").textContent = callbacks.theme.icon;
-  document.querySelector("#theme-name").textContent = callbacks.theme.label;
-  document.querySelector("#round-instructions").textContent = callbacks.theme.cardType === "words"
-    ? "Encontre as palavras que rimam. Arraste ou selecione uma carta de cada lado."
-    : "Combine as figuras relacionadas. Arraste ou selecione uma carta de cada lado.";
   const cardCallbacks = {
     onMatch: callbacks.onMatch,
     onCardSelected: callbacks.onCardSelected,
@@ -169,7 +164,7 @@ export function createGameUI(callbacks) {
   }
 
   nextButton.addEventListener("click", callbacks.onNext);
-  backButton.textContent = "← Temas";
+  backButton.textContent = "Temas";
   backButton.addEventListener("click", () => confirmNavigation("themes"));
 
   for (const link of homeLinks) {

@@ -7,7 +7,7 @@ import {
 } from "../../shared/js/audio.js?v=5";
 import { createMatchBoard, isGameFinished, matchCards } from "./game.js?v=5";
 import { getTheme } from "./data.js?v=4";
-import { createGameUI } from "./ui.js?v=6";
+import { createGameUI } from "./ui.js?v=7";
 
 const COMPLETION_DELAY_MS = 350;
 const selectedTheme = getTheme(new URLSearchParams(window.location.search).get("theme"));

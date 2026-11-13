@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>Coloque em Ordem — Lulu Games</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
+    <link rel="stylesheet" href="./game.css?v=3">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./session.js?v=4"></script>
+  </head>
+  <body class="app-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="game-title">
+        <p class="eyebrow" id="game-eyebrow">Coloque em Ordem</p>
+        <h1 id="game-title">Escolha um nível</h1>
+      </section>
+      <section class="card game-panel">
+        <p class="load-error" id="load-error" role="alert" hidden>
+          Não consegui abrir as perguntas agora. Tente recarregar a página.
+        </p>
+        <div id="playing-panel" hidden>
+          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+          <img class="scene-image" id="scene-image" width="640" height="480" alt="">
+          <h2 class="question">Monte a frase na ordem certa.</h2>
+          <p class="interaction-instructions">
+            Arraste com o mouse ou clique/toque numa palavra para preencher o próximo espaço. No teclado, use Tab, Enter ou Espaço.
+          </p>
+          <h3 class="section-title">Sua frase</h3>
+          <div class="sequence-slots" id="sequence-slots" role="group" aria-label="Palavras na frase"></div>
+          <h3 class="section-title">Palavras embaralhadas</h3>
+          <div class="word-bank" id="word-bank" role="group" aria-label="Palavras disponíveis"></div>
+          <p class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div class="sentence-complete" id="sentence-complete" role="status" aria-live="polite" hidden>
+            <h3 class="sentence-complete__title">Frase completa!</h3>
+            <p class="sentence-result" id="sentence-result"></p>
+            <button class="button button--secondary" id="listen-button" type="button">
+              <span aria-hidden="true">🔊</span> Ouvir frase completa
+            </button>
+          </div>
+          <button class="button button--primary" id="next-button" type="button" hidden>Próxima</button>
+        </div>
+        <div id="complete-panel" hidden>
+          <div class="intro-art" aria-hidden="true">🔢 🌿 ✨</div>
+          <h2 tabindex="-1" id="complete-title">Parabéns!</h2>
+          <p id="complete-message">Você completou as sequências deste nível. Muito bem!</p>
+          <div class="complete-actions">
+            <button class="button button--primary" id="again-button" type="button">Jogar de novo</button>
+            <a class="button button--secondary" href="../../index.html">Voltar ao menu</a>
+          </div>
+        </div>
+      </section>
+      <footer class="game-footer" id="game-footer">
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <button class="button game-nav-button game-nav-button--back" id="back-button" type="button">
+            <span>Níveis</span>
+          </button>
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html" data-home-link>
+            <span>Início</span>
+          </a>
+        </nav>
+      </footer>
+    </main>
+    <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
+      <form method="dialog">
+        <h2 id="leave-title">Quer sair do jogo?</h2>
+        <p>Esta rodada vai terminar. Você poderá jogar de novo quando quiser.</p>
+        <div class="dialog-actions">
+          <button class="button button--secondary" value="cancel">Continuar jogando</button>
+          <button class="button button--primary" value="leave">Sair</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

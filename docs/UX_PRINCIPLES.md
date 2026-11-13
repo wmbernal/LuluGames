@@ -14,4 +14,6 @@ These principles guide every screen, interaction, and game mechanic.
 
 ## Applying these principles
 
+The home settings panel was intentionally removed. Saved global sound, volume, and animation preferences are still honored, but general controls are not currently available from the home page; do not describe them as user-adjustable until an alternative entry point is added.
+
 Read [GAME_VESTIR_PRINCESA.md](GAME_VESTIR_PRINCESA.md) for the current game's flow, and [ACCESSIBILITY.md](ACCESSIBILITY.md) before considering a screen complete.

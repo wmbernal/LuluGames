@@ -8,6 +8,8 @@ Matched cards stay visible and receive a check mark. Card positions are shuffled
 
 Each selected card is spoken in Brazilian Portuguese. Correct pairs receive specific text feedback, a brief, non-flashing visual cue, and a gentle two-note bell chime. Incorrect pairs clear the selection and receive neutral text feedback and a distinct descending two-note bell. Completing a round adds a distinct four-note bell flourish and highlights the completion illustration. Sound and speech follow the sound setting in the home-page settings. Visual cues follow the animation setting and are disabled when the device requests reduced motion.
 
+The playing header keeps only a live status pill with the theme, current round, and matched-pair count. The separate theme icon/name and introductory drag/select instruction are omitted to save space at the user's request; the cards remain keyboard-operable.
+
 ## Match rules
 
 Every theme in `THEMES` in `games/memory-pairs/data.js` defines five rounds with six pairs per round. Picture pairs have different pictures and labels, such as **Cachorro → Casinha de cachorro** or **Cenoura → Bolo de cenoura**. The word theme has illustrated labels such as **Gato → Pato**; each round uses six distinct rhyme families so every match has one clear answer. A match is correct only when the two cards share a `pairId` and are on opposite sides. Cards on each side are shuffled independently. Incorrect matches remain available for another try with calm, neutral feedback.

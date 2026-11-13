@@ -25,7 +25,7 @@ The content validator reports questions with missing explanations or answers tha
 
 ## Feedback, audio, and accessibility
 
-Wrong answers use the same retry pattern as **O que está acontecendo?**: a gentle message, a retry mark and restrained outline, no lost progress, and a text clue after three mistakes. The existing `playMismatchSound`, `speakCardName`, and `celebrateCompletion` helpers honor the global sound preference. Explanations remain visible if speech is disabled or unavailable; sound and volume are changed from **Configurações** on the home page.
+Wrong answers use the same retry pattern as **O que está acontecendo?**: a gentle message, a retry mark and restrained outline, no lost progress, and a text clue after three mistakes. The existing `playMismatchSound`, `speakCardName`, and `celebrateCompletion` helpers honor the saved global sound preference. Explanations remain visible if speech is disabled or unavailable. The home settings panel was intentionally removed, so global sound and volume preferences remain active but are not currently configurable there.
 
 The layout uses the shared design tokens, large keyboard-operable buttons, meaningful photo alternatives, polite status regions, visible focus, and the same unfinished-session confirmation dialog as the neighboring game. Do not rely on color or sound alone. Keep screens calm: no timer, flashing, or surprise movement.
 

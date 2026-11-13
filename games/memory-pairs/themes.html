@@ -7,7 +7,7 @@
     <title>Jogo dos Pares — escolha um tema</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
     <link rel="stylesheet" href="./game.css?v=7">
     <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
     <script type="module" src="./themes.js?v=3"></script>
@@ -31,7 +31,11 @@
       <section class="theme-picker" id="theme-list" aria-label="Temas disponíveis"></section>
 
       <footer class="game-footer">
-        <a class="button button--secondary" href="../../index.html">⌂ Início</a>
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html">
+            <span>Início</span>
+          </a>
+        </nav>
       </footer>
     </main>
   </body>

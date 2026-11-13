@@ -7,7 +7,7 @@ Practice visual interpretation, image-to-text association, reading, and everyday
 1. The theme chooser (`themes.html`) lists the available themes as large cards. Choosing one opens `index.html?theme=<id>` directly on the first exercise; there is no separate game introduction screen.
 2. Each exercise shows one illustrated situation, the fixed question, and three text choices in a fixed order.
 3. **Próxima** only appears after a correct answer, so the next exercise always follows a completed one.
-4. After the fifth exercise the completion screen plays the celebration feedback — the completion melody followed by a spoken "Parabéns!" — and shows **Parabéns!**, a message naming the theme, and the options **Escolher outro tema** and **Início**. No sound controls appear on this screen or anywhere inside the game; sound and volume are changed only in the home settings menu.
+4. After the fifth exercise the completion screen plays the celebration feedback — the completion melody followed by a spoken "Parabéns!" — and shows **Parabéns!**, a message naming the theme, and the options **Escolher outro tema** and **Início**. No sound controls appear on this screen or anywhere inside the game. Audio follows saved global preferences, but general sound and volume controls are not currently exposed from the home page.
 
 Themes are chosen freely; there is no locked order and no accumulated score. Leaving an unfinished theme asks for confirmation.
 
@@ -23,7 +23,7 @@ A correct answer is marked with a check and a soft success color, read aloud whe
 
 ## Accessibility
 
-The scene image has alternative text, the answer controls are keyboard-operable buttons, and feedback and hints use polite live regions. Error and success use icons and text as well as color. Sound is optional and follows global settings; the game itself has no sound controls — sound and volume are changed in the home settings menu only.
+The scene image has alternative text, the answer controls are keyboard-operable buttons, and feedback and hints use polite live regions. Error and success use icons and text as well as color. Sound is optional and follows saved global preferences; the game itself has no sound controls, and general sound and volume controls are not currently exposed from the home page.
 
 ## Current state
 

@@ -7,10 +7,10 @@
     <title>Jogo dos Pares — Lulu Games</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
-    <link rel="stylesheet" href="./game.css?v=7">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
+    <link rel="stylesheet" href="./game.css?v=8">
     <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./session.js?v=6"></script>
+    <script type="module" src="./session.js?v=7"></script>
   </head>
   <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
@@ -23,13 +23,7 @@
 
       <section class="card memory-panel" aria-label="Jogo de combinar">
         <div id="playing-panel">
-          <div class="round-header">
-            <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
-            <p class="round-instructions" id="round-instructions">
-              Combine as figuras ou palavras relacionadas. Arraste ou selecione uma carta de cada lado.
-            </p>
-          </div>
-          <p class="theme-label"><span id="theme-icon" aria-hidden="true"></span> <span id="theme-name"></span></p>
+          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
           <div class="match-board" id="memory-board" role="group" aria-label="Cartas para combinar"></div>
           <p class="memory-feedback" id="memory-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
         </div>
@@ -48,8 +42,14 @@
       </section>
 
       <footer class="game-footer" aria-label="Ações do jogo">
-        <button class="button button--secondary" id="back-button" type="button">← Temas</button>
-        <a class="button button--secondary" href="../../index.html" data-home-link>⌂ Início</a>
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <button class="button game-nav-button game-nav-button--back" id="back-button" type="button">
+            <span>Temas</span>
+          </button>
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html" data-home-link>
+            <span>Início</span>
+          </a>
+        </nav>
       </footer>
     </main>
 

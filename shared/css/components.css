@@ -42,6 +42,41 @@
   background: var(--color-surface-soft);
 }
 
+.game-nav-button {
+  min-width: calc(var(--target-size) * 3);
+  min-height: calc(var(--target-size) + var(--space-2));
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+}
+
+.game-nav-button--back {
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border-color: var(--color-primary-hover);
+}
+
+.game-nav-button--back:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.game-nav-button--home {
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+  border-color: var(--color-accent-hover);
+}
+
+.game-nav-button--home:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.game-footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
 .button__icon {
   width: 24px;
   height: 24px;

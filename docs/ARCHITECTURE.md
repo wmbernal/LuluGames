@@ -22,12 +22,13 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
 - `games/image-interpretation/`: image-to-text game; `themes.html` and `themes.js` render the theme chooser, `data.js` defines themes and their scenes, `game.js` provides pure rules, `session.js` resolves the selected theme and orchestrates settings and audio, and `ui.js` renders choices and completion.
 - `games/emotions/`: emotion-recognition game; `levels.html` and `levels.js` render level choices, `content.json` stores level questions and answer options, `game.js` provides pure rules and content validation, `session.js` orchestrates the selected level and shared audio, and `ui.js` renders questions and completion.
+- `games/put-in-order/`: sentence-order game; `levels.html` and `levels.js` render level choices, `content.json` stores sentence levels and ordered word tokens, `game.js` provides pure sentence rules and content validation, `session.js` orchestrates rounds and shared audio, and `ui.js` renders the image, numbered slots, shuffled word bank, and completion.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset, local Nunito/Fredoka faces, and global typography/layout defaults.
 - `shared/css/components.css`: reusable buttons, cards, and form controls.
-- `shared/css/home.css`: full-screen home backdrop, floating menu card, and settings dialog.
+- `shared/css/home.css`: full-screen home backdrop and floating menu card.
 - `shared/css/scene.css`: shared photo backdrop, glass header/cards, and hover treatment for theme and game pages.
-- `shared/js/settings.js`: validated settings API and defaults.
+- `shared/js/settings.js`: validated shared settings API and defaults; games consume saved audio and round preferences. The home page has no general settings panel, so saved global preferences remain active but are not currently configurable there; Vestir a Princesa exposes its own settings form.
 - `shared/js/storage.js`: guarded `localStorage` read/write wrapper.
 - `shared/js/audio.js`: optional short audio feedback, initialized only after user interaction.
 - `shared/js/catalog.js`: data for games shown on the home page.
@@ -45,6 +46,8 @@ Use kebab-case for file and folder names, camelCase for JavaScript variables/fun
 ## Data organization
 
 Keep game content separate from presentation markup. In Vestir a Princesa, every scenario defines `requiredTags`, each clothing item defines its category and `tags`, and an outfit is suitable only when it has one selected item in every category and every selected item shares at least one required scenario tag. Multiple items may share a tag, so more than one outfit can be accepted. In Jogo dos Pares, each theme defines five rounds of six pairs, which may be related pictures or rhyming words. The pure game logic chooses the set for the current round and checks that matching cards come from opposite columns. In Jogo das Emoções, `content.json` is the source of truth for levels and questions. Questions reference local Pexels images, define their answer among the options, include an explanation and difficulty tag, and are validated before play; the pure game logic samples five questions without repeats for each round.
+
+In Coloque em Ordem, `content.json` is the source of truth for levels and sentence-order questions. Each question defines its exact word count, complete sentence, local Pexels image reference and query, ordered word tokens, and difficulty; an optional `alternativeOrders` list can describe other fully valid sentence orders. The pure game logic samples five questions without repeats, shuffles the word bank, and validates every placement against the remaining accepted orders.
 
 ## Add a catalog game
 

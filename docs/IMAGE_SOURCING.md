@@ -11,7 +11,9 @@ A emissão de chaves da API do Pexels estava pausada, então a busca foi feita e
 um navegador real: o Cloudflare bloqueia `curl`, `fetch` do Node e navegadores
 headless, mas uma aba normal consegue carregar a busca e as páginas das fotos.
 
-Para cada cena, a busca abre
+Para cada cena, a busca usa a consulta fixa em português brasileiro e a
+localidade `pt-BR`; não se faz busca em inglês como alternativa quando não há
+resultados. A busca abre
 `https://www.pexels.com/pt-br/procurar/<consulta>/`, usando
 `?orientation=landscape` quando necessário. A escolha é o primeiro resultado
 horizontal com pelo menos 1000 px de largura, sem triagem visual. Quando a
@@ -56,6 +58,20 @@ npm run images:emotions -- --scene face-feliz-1
 O conteúdo dos níveis aponta apenas para os arquivos locais; não procure fotos
 durante o jogo. Confira cada foto contra o texto alternativo e a emoção antes de
 adicionar novas perguntas a `games/emotions/content.json`.
+
+## Coloque em Ordem
+
+As perguntas atuais reutilizam fotos locais já selecionadas pelo fluxo do
+Pexels para **O que está acontecendo?** e **Jogo das Emoções**. Cada pergunta
+registra `imageId` e `imageQuery` em `games/put-in-order/content.json`; a tabela
+de revisão e os créditos de origem estão em `docs/GAME_PUT_IN_ORDER.md`,
+`docs/IMAGE_CREDITS.md` e `docs/EMOTION_CREDITS.md`.
+
+Para uma foto nova, acrescente uma consulta fixa e seu resultado escolhido aos
+manifestos e resultados Pexels existentes, baixe e valide pelo
+`tools/build-images.mjs` e aponte a pergunta para o arquivo local. Não faça
+buscas nem carregue imagens remotas durante o jogo, e não adicione outra fonte
+de imagens.
 
 ## Caminho alternativo: API oficial
 

@@ -68,7 +68,7 @@ async function loadQueries() {
   }
   const seen = new Set();
   for (const entry of scenes) {
-    for (const field of ["scene", "theme", "query", "queryEn"]) {
+    for (const field of ["scene", "theme", "query"]) {
       if (!entry[field]) throw new Error(`Cena sem '${field}': ${JSON.stringify(entry)}`);
     }
     if (seen.has(entry.scene)) throw new Error(`Cena repetida: ${entry.scene}`);
@@ -114,17 +114,8 @@ async function searchPhotos(entry, key, page) {
     return response.json();
   };
 
-  let data = await attempt(entry.query, "pt-BR");
-  let locale = "pt-BR";
-  if (data.photos.length === 0) {
-    data = await attempt(entry.queryEn, "en-US");
-    locale = "en-US";
-  }
-  if (data.photos.length === 0) {
-    data = await attempt(entry.queryEn, "en-US");
-    locale = "en-US";
-  }
-  return { photos: data.photos, locale, total: data.total_results };
+  const data = await attempt(entry.query, "pt-BR");
+  return { photos: data.photos, locale: "pt-BR", total: data.total_results };
 }
 
 function usable(photo) {
@@ -317,7 +308,7 @@ async function main() {
 
       manifest.scenes[entry.scene] = {
         theme: entry.theme,
-        query: locale === "pt-BR" ? entry.query : entry.queryEn,
+        query: entry.query,
         locale,
         mustShow: entry.mustShow,
         mustNot: entry.mustNot,

@@ -1,11 +1,10 @@
 {
-  "$comment": "Buscas do Pexels para as fotos de 'Jogo das Emoções'. A escolha é o primeiro resultado horizontal com 1000 px ou mais, sem triagem visual. query = português (locale pt-BR), queryEn = fallback em inglês.",
+  "$comment": "Buscas do Pexels para as fotos de 'Jogo das Emoções'. Use sempre a consulta em português brasileiro com locale pt-BR, sem busca em outro idioma como fallback. A escolha é o primeiro resultado horizontal com 1000 px ou mais, sem triagem visual.",
   "scenes": [
     {
       "scene": "face-feliz-1",
       "theme": "Emoções",
       "query": "criança feliz sorrindo",
-      "queryEn": "happy smiling child",
       "mustShow": "Rosto de uma criança sorrindo de verdade",
       "mustNot": "Grupo de pessoas, rosto escondido"
     },
@@ -13,7 +12,6 @@
       "scene": "face-feliz-2",
       "theme": "Emoções",
       "query": "menino sorrindo",
-      "queryEn": "smiling boy",
       "mustShow": "Rosto de um menino sorrindo",
       "mustNot": "Grupo de pessoas, rosto escondido"
     },
@@ -21,7 +19,6 @@
       "scene": "face-triste-1",
       "theme": "Emoções",
       "query": "criança triste",
-      "queryEn": "sad child",
       "mustShow": "Rosto de uma criança triste",
       "mustNot": "Rosto escondido, silhueta"
     },
@@ -29,7 +26,6 @@
       "scene": "face-triste-2",
       "theme": "Emoções",
       "query": "menina triste",
-      "queryEn": "sad girl",
       "mustShow": "Rosto de uma menina triste",
       "mustNot": "Rosto escondido, silhueta"
     },
@@ -37,7 +33,6 @@
       "scene": "face-raiva-1",
       "theme": "Emoções",
       "query": "criança com raiva",
-      "queryEn": "angry child",
       "mustShow": "Rosto de uma criança com raiva",
       "mustNot": "Boneco, desenho, rosto escondido"
     },
@@ -45,7 +40,6 @@
       "scene": "face-raiva-2",
       "theme": "Emoções",
       "query": "menino bravo",
-      "queryEn": "angry boy",
       "mustShow": "Rosto de um menino com raiva",
       "mustNot": "Boneco, desenho, rosto escondido"
     },
@@ -53,7 +47,6 @@
       "scene": "face-medo-1",
       "theme": "Emoções",
       "query": "criança com medo",
-      "queryEn": "scared child",
       "mustShow": "Rosto de uma criança assustada",
       "mustNot": "Boneco, desenho, rosto escondido"
     },
@@ -61,7 +54,6 @@
       "scene": "face-medo-2",
       "theme": "Emoções",
       "query": "menino preocupado sentado na biblioteca",
-      "queryEn": "worried boy sitting in library",
       "mustShow": "Rosto de um menino preocupado",
       "mustNot": "Boneco, desenho, rosto escondido"
     },
@@ -69,7 +61,6 @@
       "scene": "face-feliz-3",
       "theme": "Emoções",
       "query": "menina feliz sorrindo",
-      "queryEn": "happy smiling girl portrait",
       "mustShow": "Rosto de uma menina sorrindo",
       "mustNot": "Grupo de pessoas, rosto escondido"
     },
@@ -77,7 +68,6 @@
       "scene": "face-triste-3",
       "theme": "Emoções",
       "query": "criança triste cabeça apoiada",
-      "queryEn": "sad child resting head in hand",
       "mustShow": "Rosto de uma criança com expressão triste",
       "mustNot": "Rosto escondido, silhueta"
     },
@@ -85,7 +75,6 @@
       "scene": "face-raiva-3",
       "theme": "Emoções",
       "query": "menino irritado braços cruzados",
-      "queryEn": "angry boy crossed arms portrait",
       "mustShow": "Rosto de um menino emburrado",
       "mustNot": "Rosto escondido, pessoa adulta"
     },
@@ -93,7 +82,6 @@
       "scene": "face-medo-3",
       "theme": "Emoções",
       "query": "menina assustada atrás de cortina",
-      "queryEn": "scared girl behind curtain",
       "mustShow": "Rosto de uma menina assustada",
       "mustNot": "Grupo de pessoas, rosto escondido"
     },
@@ -101,7 +89,6 @@
       "scene": "sit-aniversario",
       "theme": "Emoções",
       "query": "criança aniversário bolo",
-      "queryEn": "child birthday cake",
       "mustShow": "Criança perto de um bolo de aniversário",
       "mustNot": "Bolo sem criança, festa de adultos"
     },
@@ -109,7 +96,6 @@
       "scene": "sit-sorvete",
       "theme": "Emoções",
       "query": "criança com sorvete",
-      "queryEn": "child eating ice cream",
       "mustShow": "Criança com um sorvete",
       "mustNot": "Sorvete sozinho, sem criança"
     },
@@ -117,7 +103,6 @@
       "scene": "sit-cachorro",
       "theme": "Emoções",
       "query": "criança abraçando cachorro",
-      "queryEn": "child hugging dog",
       "mustShow": "Criança abraçando ou brincando com um cachorro",
       "mustNot": "Cachorro sozinho, sem criança"
     },
@@ -125,7 +110,6 @@
       "scene": "sit-brinquedo",
       "theme": "Emoções",
       "query": "criança brincando com dinossauro de brinquedo",
-      "queryEn": "child playing with toy dinosaur",
       "mustShow": "Criança brincando com um brinquedo",
       "mustNot": "Brinquedo sozinho, sem criança"
     },
@@ -133,7 +117,6 @@
       "scene": "sit-trovao",
       "theme": "Emoções",
       "query": "crianças brincando em poças de chuva",
-      "queryEn": "children splashing in rain puddles",
       "mustShow": "Crianças brincando em poças depois da chuva",
       "mustNot": "Paisagem sem pessoa"
     },
@@ -141,7 +124,6 @@
       "scene": "sit-joelho",
       "theme": "Emoções",
       "query": "criança machucada joelho",
-      "queryEn": "child scraped knee",
       "mustShow": "Criança com um machucado ou curativo",
       "mustNot": "Hospital sem criança, ferimento sem pessoa"
     },
@@ -149,7 +131,6 @@
       "scene": "sit-presente",
       "theme": "Emoções",
       "query": "criança abrindo presente",
-      "queryEn": "child opening gift",
       "mustShow": "Criança com um presente ou caixa de presente",
       "mustNot": "Presente sozinho, sem criança"
     },
@@ -157,7 +138,6 @@
       "scene": "sit-compartilhar",
       "theme": "Emoções",
       "query": "crianças compartilhando brinquedo juntas",
-      "queryEn": "children sharing a toy together",
       "mustShow": "Duas crianças compartilhando um brinquedo",
       "mustNot": "Criança sozinha"
     },
@@ -165,7 +145,6 @@
       "scene": "sit-escuro",
       "theme": "Emoções",
       "query": "criança no escuro",
-      "queryEn": "child in the dark",
       "mustShow": "Criança em um lugar escuro ou com pouca luz",
       "mustNot": "Objeto no escuro sem pessoa"
     },
@@ -173,7 +152,6 @@
       "scene": "sit-cansaco-escola",
       "theme": "Emoções",
       "query": "criança cansada estudando",
-      "queryEn": "tired child studying",
       "mustShow": "Criança cansada com material escolar",
       "mustNot": "Sala de aula vazia"
     }

@@ -78,7 +78,12 @@ test("incorrect click and drag matches clear selection; same-side selection stil
       return game.feedbackType === "positive" ? "matched" : game.feedbackType;
     },
   });
+  assert.equal(elements.get("#back-button").textContent, "Temas");
   render();
+  assert.equal(
+    elements.get("#round-count").textContent,
+    `Tema ${THEMES[0].label} · Partida 1 de 3 · 0 de 6 pares`,
+  );
   const board = elements.get("#memory-board");
   const card = (id) => board.querySelectorAll(".match-card").find((button) => button.dataset.cardId === id);
   const selected = () => board.querySelectorAll(".match-card").filter(
