@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#B7E88B">
     <title>O que está acontecendo? — Lulu Games</title>
-    <link rel="stylesheet" href="../../shared/css/tokens.css?v=4">
-    <link rel="stylesheet" href="../../shared/css/base.css?v=4">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=2">
-    <link rel="stylesheet" href="./game.css?v=7">
-    <script type="module" src="./session.js?v=9"></script>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=3">
+    <link rel="stylesheet" href="./game.css?v=8">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./session.js?v=10"></script>
   </head>
-  <body>
+  <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header class="site-header">
       <a class="brand" href="../../index.html" data-home-link aria-label="Lulu Games, início">
@@ -27,16 +28,9 @@
         <h1 id="game-title">O que está acontecendo?</h1>
       </section>
       <section class="card game-panel">
-        <div id="intro-panel">
-          <div class="intro-art" aria-hidden="true">🖼️ 👑</div>
-          <h2>Vamos olhar e descobrir?</h2>
-          <p class="intro-theme">Tema: <strong id="intro-theme"></strong></p>
-          <p>Olhe a imagem e escolha a frase que combina com ela. São <strong id="intro-round-count"></strong> imagens, sem pressa.</p>
-          <button class="button button--primary" id="start-button" type="button">Começar jogo</button>
-        </div>
         <div id="playing-panel" hidden>
           <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
-          <img class="scene-image" id="scene-image" width="640" height="400" alt="">
+          <img class="scene-image" id="scene-image" width="640" height="480" alt="">
           <h2 class="question"><span aria-hidden="true">🔎</span> Qual frase combina com a imagem?</h2>
           <div class="answer-list" id="answer-list" role="group" aria-label="Opções de resposta"></div>
           <p class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>

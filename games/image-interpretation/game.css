@@ -7,7 +7,7 @@
 .game-heading { margin-bottom: var(--space-6); text-align: center; }
 .game-heading h1 { margin-bottom: 0; }
 .game-panel { text-align: center; }
-#intro-panel, #playing-panel, #complete-panel {
+#playing-panel, #complete-panel {
   max-width: var(--layout-game-copy-width);
   margin: 0 auto;
 }
@@ -53,10 +53,6 @@
   background: var(--color-highlight-soft);
   border: var(--border-width-thin) solid var(--color-highlight-border);
   border-radius: var(--radius-control);
-}
-.intro-theme {
-  margin-bottom: var(--space-2);
-  color: var(--color-text-muted);
 }
 .theme-picker-instructions {
   margin: var(--space-3) 0 0;

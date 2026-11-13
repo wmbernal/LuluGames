@@ -22,13 +22,17 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/memory-pairs/game.test.js`: native Node tests for the pure game logic.
 - `games/image-interpretation/`: image-to-text game; `themes.html` and `themes.js` render the theme chooser, `data.js` defines themes and their scenes, `game.js` provides pure rules, `session.js` resolves the selected theme and orchestrates settings and audio, and `ui.js` renders choices and completion.
 - `shared/css/tokens.css`: canonical design tokens.
-- `shared/css/base.css`: document reset and global typography/layout defaults.
+- `shared/css/base.css`: document reset, local Nunito/Fredoka faces, and global typography/layout defaults.
 - `shared/css/components.css`: reusable buttons, cards, and form controls.
+- `shared/css/home.css`: full-screen home backdrop, floating menu card, and settings dialog.
+- `shared/css/scene.css`: shared photo backdrop, glass header/cards, and hover treatment for theme and game pages.
 - `shared/js/settings.js`: validated settings API and defaults.
 - `shared/js/storage.js`: guarded `localStorage` read/write wrapper.
 - `shared/js/audio.js`: optional short audio feedback, initialized only after user interaction.
 - `shared/js/catalog.js`: data for games shown on the home page.
 - `assets/images/`: temporary SVG clothing layers with a shared `viewBox` of `0 0 240 320`; replace the art by swapping files and updating item paths in `data.js`.
+- `assets/images/ui/home-bg.jpg`: shared Pexels photo used by the home and inner-page backdrops.
+- `assets/fonts/`: local Nunito and Fredoka variable fonts with their licenses.
 - `assets/audio/`: optional local scenario instructions. The listen control stays hidden when a scenario has no audio file.
 - `assets/images/memory/`: retained SVG memory artwork; Jogo dos Pares currently uses labeled Unicode picture symbols.
 - `docs/`: product, design, accessibility, and contribution specifications.

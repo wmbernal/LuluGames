@@ -5,48 +5,43 @@ Updated: 2026-11-12
 
 ## Goal
 
-Lulu Games is a static, dependency-free educational game collection for a 10-year-old autistic child. "O que está acontecendo?" has a theme chooser; the **Animais** theme is complete with final photographs.
+Lulu Games is a static, dependency-free educational game collection for a 10-year-old autistic child. All six "O que está acontecendo?" themes are complete with local photographs, and the home plus every game/theme page share a friendly photo-and-glass visual system.
 
 ## Scope
 
-- `games/image-interpretation/`: `data.js`, `themes.html`, `themes.js`, `index.html`, `session.js`, `ui.js`, `game.css`, `game.test.js`
-- `assets/images/image-interpretation/`: `dog-ball.jpg`, `animals-cat-drinking.jpg`, `animals-bird-nest.jpg`, `animals-rabbit-carrot.jpg`, `animals-duck-pond.jpg`
-- `docs/GAME_IMAGE_INTERPRETATION.md`, `docs/IMAGE_LIST.md`, `docs/IMAGE_SOURCING.md`, `docs/learning-goals.md`, `docs/ARCHITECTURE.md`, `README.md`
-- `tools/fetch-pexels.mjs`, `tools/pexels-queries.json`, `tools/crop-4x3.ps1`
-- `shared/js/catalog.js`, `shared/js/home.js`, `index.html`
+- `games/image-interpretation/`: `data.js`, `themes.html`, `index.html`, `session.js`, `ui.js`, `game.js`, `game.css`, `game.test.js`
+- `games/memory-pairs/`, `games/dress-princess/`: HTML entry points and game CSS
+- `shared/css/home.css`, `scene.css`, `base.css`, `components.css`, `tokens.css`
+- `shared/js/home.js`, `catalog.js`, `settings.js`, `audio.js`
+- `index.html`, `assets/images/ui/home-bg.jpg`, `assets/fonts/fredoka/`
+- `tools/build-images.mjs`, `pexels-results.json`, `docs/IMAGE_*.md`, `docs/DESIGN_SYSTEM.md`, `docs/ARCHITECTURE.md`
 
 ## Decisions
 
-- Theme selection is free: no locked order, no score. Five exercises per theme; the next appears only after the previous is correct.
-- Completion plays the celebration feedback: the three-note melody from `playCompletionSound`, then `speechSynthesis` speaks "Parabéns!" (pt-BR) via `celebrateCompletion`. It shows "Parabéns!" with the theme name and offers "Escolher outro tema" plus "Início".
-- No game screen exposes sound settings. `shared/js/audio.js` still honours the global `soundEnabled`/`soundVolume`; only the home settings menu changes them.
-- The 3/4/5 round setting no longer applies to this game; rounds equal the theme's scene count.
-- Only Animais is in `THEMES`. The other five themes stay out of the chooser until their photographs arrive, because the tests assert every scene image exists.
-- The 25 exercises for Casa, Escola, Comidas, Parque and Transportes are designed and TEA-reviewed; their final wording and photo briefs live in `docs/IMAGE_LIST.md`. Do not add them to `data.js` before the images exist.
-- TEA fixes applied to the drafts: hints now point at the separating detail (toothbrush inside the mouth, water stream, feet on pedals), same-subject distractors were reworded where a photo could satisfy both (soup: "provando" instead of "servindo"; bread: spreading vs eating staged with the bread on a plate), and scene briefs forbid background actors, tools or props that would make a distractor true.
-- Casa "regando a planta no vaso" and Parque "regando as flores no canteiro" repeat the verb across themes. Kept on purpose: same verb in two contexts supports generalization.
-- Scene images are photographs supplied by the user in `OneDrive\Desktop\Images\O que esta acontecendo`, cropped to 4:3 and re-encoded as JPEG quality 85. The 8:5 frame keeps `object-fit: contain`, so 4:3 images show thin side bars in the stage color.
-- Photo sourcing uses the official Pexels API, not HTML scraping: `tools/fetch-pexels.mjs` reads `tools/pexels-queries.json` (25 pt-BR queries plus English fallbacks), downloads 3 candidates per scene into the gitignored `assets/images/image-interpretation/candidates/`, and writes a contact sheet there. `--pick` copies the chosen candidate and records the credit; `tools/crop-4x3.ps1` crops it to 4:3 / 1200 px / JPEG q85 in place. Needs a free `PEXELS_API_KEY`.
-- Pexels credits are written to `docs/IMAGE_CREDITS.md` by `--pick`, per the API guidelines.
-- Bird scene: the adult has spread wings, so the "flying" distractor was replaced by "Um pássaro bebendo água." to remove the ambiguity.
-- Cache busting: bump the `?v=` query whenever a shared module or CSS changes; `http.server` serves stale modules when a version number is reused.
+- Home keeps Pexels photo 8709295 by Polina sharp behind a floating translucent menu card. Inner pages reuse the same photo with `blur(4px)` and a cream veil; `scene.css` owns the glass sticky header, translucent cards, dashed inner border, hover lift and 4:3 stage.
+- Fredoka is the display font for headings, buttons and brand; Nunito remains body text. Both fonts are local.
+- Theme selection is free, five exercises per theme, next only after a correct answer. Clicking a theme now opens the first exercise directly; the "Vamos olhar e descobrir?" intro screen was removed.
+- Completion plays the melody plus spoken "Parabéns!", names the theme, and offers "Escolher outro tema" and "Início". Sound settings exist only in the home settings dialog.
+- Photos were selected in a real browser because Pexels API key issuance was paused: first landscape result ≥1000 px, no visual triage. `tools/build-images.mjs` requests a 1200×900 CDN crop, validates results and writes credits.
+- All 25 scene images exist and are referenced by six themes; `game.test.js` asserts unique IDs and existing files.
 
 ## Verified
 
 - `npm test`: 19 tests, 19 pass, 0 fail.
-- Browser: all five images load (500x375, 500x333), five exercises complete in order, completion screen and buttons correct, no console errors.
-- Browser: neither the game screen nor the completion screen has sound controls; the completion screen shows only "Escolher outro tema" and "Início". The home settings menu still has sound toggle and volume.
-- Browser: dress-princess settings form keeps only animations and rounds, saves without errors.
-- Tools: `npm run images:check` validates 25 unique scenes; `fetch-pexels` without a key fails with instructions; `crop-4x3.ps1` turned a 500x333 test copy into 444x333 and left a 4:3 file untouched.
-- Not tested: a real Pexels search and download (no API key available in this environment).
-- Not verified: mobile widths, audio actually heard, keyboard-only traversal of the theme chooser.
+- Browser: home loads without console errors; settings modal opens, saves, closes on Escape and restores focus; both game links work.
+- Browser: opening `index.html?theme=house` lands on exercise 1 directly, with no intro/start button, first answer focused, image 1200×900 and three options.
+- Browser: Casa completed all five exercises; completion title "Parabéns!", message names Casa, actions "Escolher outro tema"/"Início", footer hidden, no console errors.
+- Browser: Escola, Comidas, Parque and Transportes first scenes load with 1200×900 images and three options; Animais first scene loads.
+- Browser: both theme choosers render; memory board renders 12 cards; dress-princess page loads. No console errors.
+- Browser: "Temas" opens the leave confirmation now that the game starts active.
+- Not verified: phone widths, audio actually heard, hover appearance (desktop window was not visible for screenshots).
 
 ## Next step
 
-Get the 25 photographs — either the user's own photos or `npm run images:fetch` with a free `PEXELS_API_KEY` (see `docs/IMAGE_SOURCING.md`), then pick, crop and add the themes. When they arrive: crop to 4:3, re-encode JPEG q85 into `assets/images/image-interpretation/`, add the five themes to `data.js`, bump `?v=` on `data.js`/`session.js`/`index.html`, and run `npm test`.
+Open `http://127.0.0.1:8000/` and review the new backdrop, cards and direct-start flow at desktop and phone widths; then commit.
 
 ## Open questions
 
-- [ ] Reuse the orphaned SVGs (`bicycle`, `reading`, `watering`, `rain`)? They are now superseded by the photo strategy; delete or keep as archive — user.
-- [ ] Mirror the Copilot agents as native OpenCode agents under `.opencode/agent/`? — user.
-- [ ] "Espremedor de mesa" vs "espremedor de laranja" in the food-orange-juice scene: confirm the child's familiar word — user.
+- [ ] Keep the same Pexels backdrop on all inner pages, or give each game its own photo? — user.
+- [ ] The home backdrop shows part of the "AUTISM" lettering beside the menu card; keep, blur more, or reposition? — user.
+- [ ] Mirror the Copilot agents as native OpenCode agents? — user.

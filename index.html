@@ -3,45 +3,59 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#B7E88B">
+    <meta name="theme-color" content="#285C33">
     <title>Lulu Games — jogos para aprender brincando</title>
-    <link rel="stylesheet" href="shared/css/tokens.css?v=4">
-    <link rel="stylesheet" href="shared/css/base.css?v=4">
-    <link rel="stylesheet" href="shared/css/components.css?v=2">
-    <script type="module" src="shared/js/home.js?v=6"></script>
+    <link rel="stylesheet" href="shared/css/tokens.css?v=5">
+    <link rel="stylesheet" href="shared/css/base.css?v=5">
+    <link rel="stylesheet" href="shared/css/components.css?v=3">
+    <link rel="stylesheet" href="shared/css/home.css?v=7">
+    <script type="module" src="shared/js/home.js?v=7"></script>
   </head>
-  <body>
+  <body class="home">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header class="site-header">
-      <a class="brand" href="./index.html" aria-label="Lulu Games, início">
-        <img class="brand__icon" src="assets/images/ui/brand.svg" alt="">
-        <span>Lulu Games</span>
+
+    <header class="home-header">
+      <a class="home-brand" href="./index.html" aria-label="Lulu Games, início">
+        <img class="home-brand__icon" src="assets/images/ui/brand.svg" alt="">
+        <span class="home-brand__text">Lulu<em>Games</em></span>
       </a>
-      <button
-        class="button button--secondary settings-toggle"
-        id="settings-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="settings-panel"
-      >
-        <img class="button__icon" src="assets/images/ui/settings.svg" alt="">
-        Configurações
-      </button>
     </header>
 
-    <main class="page-shell" id="main-content">
-      <section class="welcome-section" aria-labelledby="welcome-title">
-        <p class="eyebrow">Um lugar para aprender brincando</p>
-        <h1 id="welcome-title">Que bom ter você aqui!</h1>
-        <p class="welcome-section__text">Escolha uma brincadeira para começar. Você pode ir no seu ritmo.</p>
-      </section>
+    <main class="home-main" id="main-content">
+      <section class="home-menu" aria-labelledby="games-title">
+        <p class="home-menu__eyebrow">Um lugar para aprender brincando</p>
+        <h1 class="home-menu__title" id="games-title">Escolha um jogo</h1>
+        <p class="home-menu__text">Você pode ir no seu ritmo.</p>
 
-      <section aria-labelledby="games-title">
-        <h2 class="section-title" id="games-title">Escolha um jogo</h2>
-        <div class="game-catalog" id="game-catalog" aria-live="polite"></div>
-      </section>
+        <div class="menu-list" id="game-catalog" aria-live="polite"></div>
 
-      <section class="card settings-card" id="settings-panel" aria-labelledby="settings-title" hidden>
+        <button
+          class="menu-settings"
+          id="settings-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="settings-panel"
+        >
+          <img class="button__icon" src="assets/images/ui/settings.svg" alt="">
+          Configurações
+        </button>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <p>Lulu Games é uma experiência da Atypicaland.</p>
+      <p class="home-footer__credit">Foto de Polina no Pexels</p>
+    </footer>
+
+    <div class="settings-backdrop" id="settings-backdrop" hidden>
+      <section
+        class="card home-settings"
+        id="settings-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="settings-title"
+      >
+        <button class="home-settings__close" id="settings-close" type="button" aria-label="Fechar configurações">×</button>
         <div class="settings-card__intro">
           <div>
             <h2 id="settings-title">Do seu jeito</h2>
@@ -72,9 +86,6 @@
           <p class="settings-form__status" id="settings-status" role="status" aria-live="polite"></p>
         </form>
       </section>
-    </main>
-    <footer class="site-footer">
-      <p>Lulu Games é uma experiência da Atypicaland.</p>
-    </footer>
+    </div>
   </body>
 </html>

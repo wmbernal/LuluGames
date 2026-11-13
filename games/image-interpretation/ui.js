@@ -1,4 +1,3 @@
-const intro = document.querySelector("#intro-panel");
 const playing = document.querySelector("#playing-panel");
 const complete = document.querySelector("#complete-panel");
 const roundCount = document.querySelector("#round-count");
@@ -13,11 +12,8 @@ let renderedSceneId = null;
 let pendingHref = null;
 
 export function createGameUI(callbacks) {
-  document.querySelector("#intro-round-count").textContent = String(callbacks.rounds);
-  document.querySelector("#intro-theme").textContent = callbacks.theme.label;
   document.querySelector("#complete-message").textContent =
     `Você completou o tema ${callbacks.theme.label}. Muito bem!`;
-  document.querySelector("#start-button").addEventListener("click", callbacks.onStart);
   nextButton.addEventListener("click", callbacks.onNext);
   document.querySelector("#back-button").addEventListener("click", () => {
     if (callbacks.isActive()) {
@@ -45,11 +41,9 @@ export function createGameUI(callbacks) {
 
   return {
     render(state) {
-      intro.hidden = state.phase !== "intro";
       playing.hidden = !["playing", "correct"].includes(state.phase);
       complete.hidden = state.phase !== "complete";
       document.querySelector("#game-footer").hidden = state.phase === "complete";
-      if (state.phase === "intro") return;
       if (state.phase === "complete") {
         document.querySelector("#complete-title").focus();
         return;
@@ -92,6 +86,5 @@ export function createGameUI(callbacks) {
     },
     focusNext() { nextButton.focus(); },
     focusFirstAnswer() { answers.querySelector("button")?.focus(); },
-    reset() { renderedSceneId = null; },
   };
 }

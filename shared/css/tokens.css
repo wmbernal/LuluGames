@@ -37,6 +37,7 @@
   --shadow-card: 0 4px 0 rgb(68 111 42 / 16%);
   --shadow-selected: 0 0 0 2px var(--color-focus);
   --font-family: "Nunito", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-display: "Fredoka", "Nunito", "Trebuchet MS", "Segoe UI", sans-serif;
   --font-size-small: 14px;
   --font-size-ui: 16px;
   --font-size-body: 18px;
