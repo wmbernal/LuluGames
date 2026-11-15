@@ -1,5 +1,13 @@
 # Fotos de O que está acontecendo?
 
+## Regra principal
+
+Não busque, baixe nem troque fotos por conta própria. Isso só acontece quando o
+usuário pede ou autoriza explicitamente. Sem essa autorização, use apenas as
+imagens locais de `assets/images/` e as escolhas já registradas em
+`tools/*-results.json`. Os comandos `npm run images:*` também só rodam sob
+pedido, nunca durante um jogo, uma revisão, um teste ou uma verificação.
+
 As buscas das 25 cenas estão em `tools/pexels-queries.json` e os resultados
 escolhidos em `tools/pexels-results.json`. Cada resultado registra a página da
 foto, o endereço da imagem, a proporção, o autor e o texto alternativo. Os
@@ -43,7 +51,7 @@ descrever o que aparece na imagem e não pode exigir uma ação ou detalhe ausen
 
 ## Jogo das Emoções
 
-As buscas fixas e os resultados escolhidos para as 22 imagens estão em
+As buscas fixas e os resultados escolhidos para as 26 imagens estão em
 `tools/emotions-queries.json` e `tools/emotions-results.json`. As fotos usadas
 pelas perguntas ficam em `assets/images/emotions/`, com origem e autoria em
 [EMOTION_CREDITS.md](EMOTION_CREDITS.md). O mesmo construtor do Pexels valida
@@ -55,9 +63,16 @@ npm run images:emotions
 npm run images:emotions -- --scene face-feliz-1
 ```
 
+As 4 fotos de gestos do nível **Detetive de Gestos** seguem o mesmo fluxo. A
+pergunta "vem cá" ainda não tem foto adequada e usa o SVG local
+`assets/images/emotions/gesture-vem-ca.svg`, marcado como `placeholder: true`
+no conteúdo; ele não entra nos manifestos do Pexels e não aparece nos créditos.
+Troque-o por uma foto quando o usuário autorizar uma nova busca.
+
 O conteúdo dos níveis aponta apenas para os arquivos locais; não procure fotos
 durante o jogo. Confira cada foto contra o texto alternativo e a emoção antes de
-adicionar novas perguntas a `games/emotions/content.json`.
+adicionar novas perguntas a `games/emotions/content.json`. Em gestos, prefira
+uma pessoa, o gesto visível, fundo simples e nenhum texto ou logotipo.
 
 ## Coloque em Ordem
 

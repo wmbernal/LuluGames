@@ -1,7 +1,7 @@
 import { getSettings } from "../../shared/js/settings.js?v=2";
 import { celebrateCompletion, playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=6";
-import { chooseAnswer, createSession, nextRound, validateContent } from "./game.js?v=2";
-import { createGameUI } from "./ui.js?v=2";
+import { chooseAnswer, createSession, nextRound, validateContent } from "./game.js?v=3";
+import { createGameUI } from "./ui.js?v=3";
 
 const requestedLevel = new URLSearchParams(window.location.search).get("level");
 const loadError = document.querySelector("#load-error");

@@ -60,7 +60,6 @@ function createAnswer(level, option, onAnswer) {
 
 export function createGameUI(callbacks) {
   const { level } = callbacks;
-  questionText.textContent = level.question;
   completeMessage.textContent =
     `Você completou as ${callbacks.rounds} perguntas de ${level.label}. Muito bem!`;
   answers.classList.toggle("answer-list--images", level.optionKind === "image");
@@ -104,6 +103,7 @@ export function createGameUI(callbacks) {
 
       const question = state.questions[state.roundIndex];
       roundCount.textContent = `${level.label} · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
+      questionText.textContent = question.question ?? level.question;
 
       if (renderedQuestionId !== question.id) {
         renderedQuestionId = question.id;

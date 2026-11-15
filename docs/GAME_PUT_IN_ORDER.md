@@ -39,7 +39,8 @@ atualize o JSON; não é necessário alterar a lógica do jogo.
 As fotos atuais são imagens locais do Pexels já obtidas pelo projeto e usadas
 em outros jogos. `imageId` e `imageQuery` guardam a referência para revisão.
 Toda busca nova deve usar uma consulta fixa em português brasileiro e a
-localidade `pt-BR`, sem fallback de idioma.
+localidade `pt-BR`, sem fallback de idioma, e só acontece quando o usuário pede
+ou autoriza novas fotos — nunca durante o jogo, os testes ou uma revisão.
 Os arquivos e créditos estão em `assets/images/image-interpretation/`,
 `assets/images/emotions/`, `docs/IMAGE_CREDITS.md` e
 `docs/EMOTION_CREDITS.md`. Para incluir uma foto nova, use o fluxo registrado

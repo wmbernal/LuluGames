@@ -3,8 +3,23 @@
 
 export const OPTION_KINDS = Object.freeze(["image", "text"]);
 
+// Palavras comuns em inglês usadas para avisar quando a busca da imagem
+// provavelmente foi escrita no idioma errado. A busca deve ser sempre em pt-BR.
+const ENGLISH_QUERY_WORDS = new Set([
+  "person", "people", "child", "children", "man", "woman", "boy", "girl",
+  "hand", "hands", "finger", "fingers", "lips", "mouth", "silence", "quiet",
+  "thumbs", "thumb", "shrug", "shrugging", "crossed", "arms", "smiling",
+  "smile", "gesture", "calling", "here", "pointing", "angry", "sad", "happy",
+  "body", "posture", "sign", "showing", "making", "doing", "standing", "sitting",
+]);
+
 function isFilled(value) {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+function looksEnglish(text) {
+  const words = text.toLowerCase().match(/[a-z]+/g) ?? [];
+  return words.some((word) => ENGLISH_QUERY_WORDS.has(word));
 }
 
 function listProblems(level, levelId, questionIds) {
@@ -18,6 +33,12 @@ function listProblems(level, levelId, questionIds) {
   }
   if (!Number.isInteger(level?.optionCount) || level.optionCount < 2) {
     problems.push(`${where}: optionCount precisa ser 2 ou mais`);
+  }
+  if (level?.shuffleOptions !== undefined && typeof level.shuffleOptions !== "boolean") {
+    problems.push(`${where}: shuffleOptions precisa ser true ou false`);
+  }
+  if (level?.imageQueryRequired !== undefined && typeof level.imageQueryRequired !== "boolean") {
+    problems.push(`${where}: imageQueryRequired precisa ser true ou false`);
   }
 
   const questions = Array.isArray(level?.questions) ? level.questions : [];
@@ -40,6 +61,19 @@ function listProblems(level, levelId, questionIds) {
     if (!isFilled(question?.explanation)) problems.push(`${id}: sem explicação`);
     if (!isFilled(question?.difficulty)) problems.push(`${id}: sem dificuldade`);
     if (!isFilled(question?.answer)) problems.push(`${id}: sem resposta correta`);
+    if (question?.ambiguous !== undefined && typeof question.ambiguous !== "boolean") {
+      problems.push(`${id}: ambiguous precisa ser true ou false`);
+    }
+    if (level?.imageQueryRequired === true && !isFilled(question?.imageQuery)) {
+      problems.push(`${id}: sem imageQuery em português`);
+    }
+    if (question?.imageQuery !== undefined) {
+      if (!isFilled(question.imageQuery)) {
+        problems.push(`${id}: imageQuery vazio`);
+      } else if (looksEnglish(question.imageQuery)) {
+        problems.push(`${id}: a busca da imagem parece estar em inglês`);
+      }
+    }
 
     const options = Array.isArray(question?.options) ? question.options : [];
     if (options.length !== level?.optionCount) {
@@ -94,16 +128,24 @@ export function validateContent(content) {
   return problems;
 }
 
-export function pickQuestions(questions, count, random = Math.random) {
-  if (!Array.isArray(questions) || !Number.isInteger(count) || count < 1 || count > questions.length) {
-    throw new RangeError("A rodada precisa de perguntas suficientes para o número pedido.");
-  }
-  const shuffled = questions.slice();
+function shuffleArray(items, random) {
+  const shuffled = items.slice();
   for (let index = shuffled.length - 1; index > 0; index -= 1) {
     const swapWith = Math.floor(random() * (index + 1));
     [shuffled[index], shuffled[swapWith]] = [shuffled[swapWith], shuffled[index]];
   }
-  return shuffled.slice(0, count);
+  return shuffled;
+}
+
+export function pickQuestions(questions, count, random = Math.random) {
+  if (!Array.isArray(questions) || !Number.isInteger(count) || count < 1 || count > questions.length) {
+    throw new RangeError("A rodada precisa de perguntas suficientes para o número pedido.");
+  }
+  return shuffleArray(questions, random).slice(0, count);
+}
+
+export function shuffleQuestionOptions(question, random = Math.random) {
+  return { ...question, options: shuffleArray(question.options, random) };
 }
 
 export function createSession(level, random = Math.random) {
@@ -111,7 +153,10 @@ export function createSession(level, random = Math.random) {
   if (problems.length > 0) {
     throw new TypeError(`Nível inválido: ${problems[0]}`);
   }
-  const questions = pickQuestions(level.questions, level.questionsPerRound, random);
+  const picked = pickQuestions(level.questions, level.questionsPerRound, random);
+  const questions = level.shuffleOptions
+    ? picked.map((question) => shuffleQuestionOptions(question, random))
+    : picked;
   return {
     levelId: level.id,
     phase: "playing",

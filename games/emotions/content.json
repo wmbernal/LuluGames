@@ -694,6 +694,169 @@
           ]
         }
       ]
+    },
+    {
+      "id": "gesture",
+      "label": "Detetive de Gestos",
+      "heading": "O que esse gesto quer dizer?",
+      "icon": "🕵️",
+      "description": "Descubra o que o corpo está dizendo.",
+      "question": "O que essa pessoa quer dizer?",
+      "optionKind": "text",
+      "optionCount": 3,
+      "questionsPerRound": 5,
+      "shuffleOptions": true,
+      "imageQueryRequired": true,
+      "hint": "Observe as mãos, o rosto, o corpo e o lugar.",
+      "questions": [
+        {
+          "id": "gesture-silencio",
+          "level": "gesture",
+          "image": "../../assets/images/emotions/gesture-silencio.jpg",
+          "alt": "Um homem com o dedo indicador na frente da boca, pedindo silêncio.",
+          "imageQuery": "pessoa com dedo nos lábios pedindo silêncio",
+          "question": "O que essa pessoa quer dizer?",
+          "answer": "silencio",
+          "difficulty": "easy",
+          "explanation": "Quando alguém coloca o dedo na frente da boca, geralmente está pedindo silêncio. Isso acontece, por exemplo, na biblioteca ou quando alguém está dormindo.",
+          "hint": "Olhe o dedo na frente da boca e o rosto calmo.",
+          "options": [
+            {
+              "id": "silencio",
+              "text": "Faça silêncio",
+              "emoji": "🤫"
+            },
+            {
+              "id": "fome",
+              "text": "Estou com fome",
+              "emoji": "🍽️"
+            },
+            {
+              "id": "venha",
+              "text": "Venha aqui",
+              "emoji": "👋"
+            }
+          ]
+        },
+        {
+          "id": "gesture-joinha",
+          "level": "gesture",
+          "image": "../../assets/images/emotions/gesture-joinha.jpg",
+          "alt": "Um homem de camisa preta e boné fazendo sinal de joinha com o polegar para cima.",
+          "imageQuery": "homem mostrando polegar para cima",
+          "question": "O que esse gesto significa?",
+          "answer": "joinha",
+          "difficulty": "easy",
+          "explanation": "O polegar para cima quer dizer \"está bom\", \"legal\" ou \"tudo certo\". Repare no polegar levantado e na mão fechada. O rosto também ajuda a entender o contexto.",
+          "hint": "Olhe o polegar levantado e a mão fechada.",
+          "options": [
+            {
+              "id": "joinha",
+              "text": "Está tudo bem / Gostei",
+              "emoji": "👍"
+            },
+            {
+              "id": "nao-gostei",
+              "text": "Não gostei",
+              "emoji": "👎"
+            },
+            {
+              "id": "dor",
+              "text": "Estou com dor",
+              "emoji": "🤕"
+            }
+          ]
+        },
+        {
+          "id": "gesture-vem-ca",
+          "level": "gesture",
+          "image": "../../assets/images/emotions/gesture-vem-ca.svg",
+          "alt": "Imagem em breve: a foto deste gesto será adicionada depois.",
+          "imageQuery": "pessoa chamando com a mão venha cá",
+          "question": "O que essa pessoa está pedindo?",
+          "answer": "perto",
+          "difficulty": "medium",
+          "placeholder": true,
+          "explanation": "Quando alguém mexe os dedos ou a mão na sua direção, está chamando você para chegar perto.",
+          "hint": "Olhe a mão se movendo na direção de quem olha.",
+          "options": [
+            {
+              "id": "embora",
+              "text": "Para eu ir embora",
+              "emoji": "🏃"
+            },
+            {
+              "id": "perto",
+              "text": "Para eu chegar perto",
+              "emoji": "🙋"
+            },
+            {
+              "id": "parada",
+              "text": "Para eu ficar parada",
+              "emoji": "🧍"
+            }
+          ]
+        },
+        {
+          "id": "gesture-ombros",
+          "level": "gesture",
+          "image": "../../assets/images/emotions/gesture-ombros.jpg",
+          "alt": "Um homem com os ombros levantados e as mãos abertas para os lados.",
+          "imageQuery": "pessoa dando de ombros",
+          "question": "O que essa pessoa quer dizer?",
+          "answer": "nao-sei",
+          "difficulty": "medium",
+          "explanation": "Quando uma pessoa levanta os ombros e abre as mãos, geralmente quer dizer \"não sei\" ou \"tanto faz\".",
+          "hint": "Olhe os ombros levantados e as mãos abertas.",
+          "options": [
+            {
+              "id": "sei",
+              "text": "Eu sei a resposta",
+              "emoji": "💡"
+            },
+            {
+              "id": "feliz",
+              "text": "Estou muito feliz",
+              "emoji": "😄"
+            },
+            {
+              "id": "nao-sei",
+              "text": "Eu não sei",
+              "emoji": "🤷"
+            }
+          ]
+        },
+        {
+          "id": "gesture-bracos-cruzados",
+          "level": "gesture",
+          "image": "../../assets/images/emotions/gesture-bracos-cruzados.jpg",
+          "alt": "Um homem sério com os braços cruzados na frente do corpo.",
+          "imageQuery": "homem de braços cruzados fundo branco",
+          "question": "Como essa pessoa pode estar se sentindo?",
+          "answer": "chateada",
+          "difficulty": "hard",
+          "ambiguous": true,
+          "explanation": "Braços cruzados com o rosto sério podem mostrar que a pessoa está chateada ou não quer algo. Mas atenção: às vezes é só frio ou cansaço. Por isso olhamos também a cara, o tom de voz e o que está acontecendo.",
+          "hint": "Olhe os braços cruzados e o rosto sério. Mas lembre: isso pode ter mais de um significado.",
+          "options": [
+            {
+              "id": "chateada",
+              "text": "Chateada ou incomodada",
+              "emoji": "😒"
+            },
+            {
+              "id": "brincar",
+              "text": "Com vontade de brincar",
+              "emoji": "😃"
+            },
+            {
+              "id": "animada",
+              "text": "Muito animada",
+              "emoji": "🤩"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

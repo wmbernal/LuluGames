@@ -34,3 +34,12 @@ Todas as imagens foram recortadas em 4:3 (1200x900, JPEG) e estão em
 | `sit-compartilhar.jpg` | Kindel Media | [Pexels](https://www.pexels.com/pt-br/foto/menina-garota-moca-jogando-7979760/) |
 | `sit-escuro.jpg` | cottonbro studio | [Pexels](https://www.pexels.com/pt-br/foto/leve-luz-light-mao-6684184/) |
 | `sit-cansaco-escola.jpg` | Pavel Danilyuk | [Pexels](https://www.pexels.com/pt-br/foto/mesa-balcao-escola-aluno-8423860/) |
+
+### Gestos
+
+| Arquivo | Fotógrafo | Origem |
+|---|---|---|
+| `gesture-silencio.jpg` | Andrea Piacquadio | [Pexels](https://www.pexels.com/pt-br/foto/homem-de-camisa-azul-com-gola-redonda-3768723/) |
+| `gesture-joinha.jpg` | Vinícius Caricatte | [Pexels](https://www.pexels.com/pt-br/foto/homem-barba-aprovar-confirmar-13024522/) |
+| `gesture-ombros.jpg` | Will Oliveira | [Pexels](https://www.pexels.com/pt-br/foto/homem-encolhendo-os-ombros-com-camiseta-branca-em-fundo-neutro-33715990/) |
+| `gesture-bracos-cruzados.jpg` | Ivan S | [Pexels](https://www.pexels.com/pt-br/foto/homem-bracos-cruzados-serio-grave-8499124/) |

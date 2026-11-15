@@ -154,6 +154,34 @@
       "query": "criança cansada estudando",
       "mustShow": "Criança cansada com material escolar",
       "mustNot": "Sala de aula vazia"
+    },
+    {
+      "scene": "gesture-silencio",
+      "theme": "Gestos",
+      "query": "pessoa com dedo nos lábios pedindo silêncio",
+      "mustShow": "Uma pessoa com o dedo na frente da boca, pedindo silêncio",
+      "mustNot": "Grupo de pessoas, texto ou logotipo na roupa ou no fundo"
+    },
+    {
+      "scene": "gesture-joinha",
+      "theme": "Gestos",
+      "query": "homem mostrando polegar para cima",
+      "mustShow": "Uma pessoa sorrindo com o polegar para cima",
+      "mustNot": "Grupo de pessoas, texto ou logotipo"
+    },
+    {
+      "scene": "gesture-ombros",
+      "theme": "Gestos",
+      "query": "pessoa dando de ombros",
+      "mustShow": "Uma pessoa com os ombros levantados e as mãos abertas",
+      "mustNot": "Grupo de pessoas, texto ou logotipo"
+    },
+    {
+      "scene": "gesture-bracos-cruzados",
+      "theme": "Gestos",
+      "query": "homem de braços cruzados fundo branco",
+      "mustShow": "Uma pessoa séria com os braços cruzados",
+      "mustNot": "Grupo de pessoas, texto ou logotipo no fundo"
     }
   ]
 }

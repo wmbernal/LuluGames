@@ -14,12 +14,13 @@ const content = JSON.parse(
 );
 const levelById = (id) => content.levels.find((level) => level.id === id);
 
-test("content.json passes validation and has the three planned levels", () => {
+test("content.json passes validation and has the four planned levels", () => {
   assert.deepEqual(validateContent(content), []);
-  assert.deepEqual(content.levels.map((level) => level.id), ["match", "name", "situation"]);
+  assert.deepEqual(content.levels.map((level) => level.id), ["match", "name", "situation", "gesture"]);
   assert.ok(levelById("match").questions.length >= 12);
   assert.ok(levelById("name").questions.length >= 12);
   assert.ok(levelById("situation").questions.length >= 10);
+  assert.equal(levelById("gesture").questions.length, 5);
   for (const level of content.levels) {
     assert.equal(level.questionsPerRound, 5);
     assert.ok(level.label && level.icon && level.description && level.question);
@@ -69,6 +70,50 @@ test("level 2 and level 3 offer three written options with an emoji", () => {
     for (const question of level.questions) {
       for (const option of question.options) assert.ok(option.emoji);
     }
+  }
+});
+
+test("level 4 asks what a gesture means with three written options", () => {
+  const level = levelById("gesture");
+  assert.equal(level.optionKind, "text");
+  assert.equal(level.optionCount, 3);
+  assert.equal(level.questionsPerRound, 5);
+  assert.equal(level.shuffleOptions, true);
+  assert.equal(level.imageQueryRequired, true);
+  const ambiguous = level.questions.filter((question) => question.ambiguous === true);
+  assert.equal(ambiguous.length, 1);
+  assert.equal(ambiguous[0].id, "gesture-bracos-cruzados");
+  for (const question of level.questions) {
+    assert.equal(question.level, "gesture");
+    assert.ok(question.imageQuery.length > 0);
+    assert.ok(question.question.length > 0);
+    assert.equal(question.options.length, 3);
+    assert.equal(question.options.filter((option) => option.id === question.answer).length, 1);
+    for (const option of question.options) assert.ok(option.text && option.emoji);
+  }
+});
+
+test("levels with shuffleOptions present the same options in a different order", () => {
+  const level = levelById("gesture");
+  const session = createSession(level, () => 0.1);
+  assert.equal(session.questions.length, 5);
+  for (const question of session.questions) {
+    const source = level.questions.find((item) => item.id === question.id);
+    assert.deepEqual(
+      question.options.map((option) => option.id).sort(),
+      source.options.map((option) => option.id).sort(),
+    );
+  }
+  const changed = session.questions.some((question) => {
+    const source = level.questions.find((item) => item.id === question.id);
+    return question.options.map((option) => option.id).join()
+      !== source.options.map((option) => option.id).join();
+  });
+  assert.ok(changed, "pelo menos uma pergunta deve ter opções embaralhadas");
+  const fixed = createSession(levelById("name"), () => 0.1);
+  for (const question of fixed.questions) {
+    const source = levelById("name").questions.find((item) => item.id === question.id);
+    assert.deepEqual(question.options, source.options);
   }
 });
 
@@ -140,6 +185,17 @@ test("validation warns about a missing answer and a missing explanation", () => 
   const problems = validateContent({ levels: [level] });
   assert.ok(problems.some((problem) => problem.includes("sem explicação")));
   assert.ok(problems.some((problem) => problem.includes("não está entre as opções")));
+});
+
+test("validation warns about an English image query, a missing query and a wrong option count", () => {
+  const level = structuredClone(levelById("gesture"));
+  level.questions[0].imageQuery = "finger on lips";
+  level.questions[1].options.pop();
+  delete level.questions[2].imageQuery;
+  const problems = validateContent({ levels: [level] });
+  assert.ok(problems.some((problem) => problem.includes("inglês")));
+  assert.ok(problems.some((problem) => problem.includes("sem imageQuery")));
+  assert.ok(problems.some((problem) => problem.includes("precisa de 3 opções")));
 });
 
 test("invalid sessions and unknown options are rejected", () => {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">Imagem em breve</title>
+  <desc id="desc">Espaço reservado para a foto do gesto. Esta imagem será adicionada depois.</desc>
+  <rect width="1200" height="900" fill="#EAF5DC"/>
+  <rect x="60" y="60" width="1080" height="780" rx="48" fill="#FFFDF3" stroke="#B7E88B" stroke-width="8" stroke-dasharray="28 20"/>
+  <g fill="none" stroke="#285C33" stroke-width="16" stroke-linecap="round">
+    <circle cx="590" cy="360" r="72"/>
+    <line x1="642" y1="412" x2="716" y2="486"/>
+  </g>
+  <text x="600" y="580" text-anchor="middle" font-family="Nunito, 'Trebuchet MS', 'Segoe UI', sans-serif" font-size="58" font-weight="700" fill="#285C33">Imagem em breve</text>
+  <text x="600" y="648" text-anchor="middle" font-family="Nunito, 'Trebuchet MS', 'Segoe UI', sans-serif" font-size="34" fill="#446F2A">Esta foto será adicionada depois.</text>
+</svg>

@@ -460,5 +460,85 @@
       "alt": "Um estudante boceja sentado à mesa na escola.",
       "author": "Pavel Danilyuk"
     }
+  },
+  "gesture-silencio": {
+    "query": "pessoa com dedo nos lábios pedindo silêncio",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-de-camisa-azul-com-gola-redonda-3768723/",
+        "src": "https://images.pexels.com/photos/3768723/pexels-photo-3768723.jpeg",
+        "ratio": 1.5015,
+        "alt": "Homem adulto com cabelo cacheado em camiseta azul fazendo gesto de silêncio em fundo branco.",
+        "author": "Andrea Piacquadio"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/homem-de-camisa-azul-com-gola-redonda-3768723/",
+      "src": "https://images.pexels.com/photos/3768723/pexels-photo-3768723.jpeg",
+      "ratio": 1.5015,
+      "alt": "Homem adulto com cabelo cacheado em camiseta azul fazendo gesto de silêncio em fundo branco.",
+      "author": "Andrea Piacquadio"
+    }
+  },
+  "gesture-joinha": {
+    "query": "homem mostrando polegar para cima",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-barba-aprovar-confirmar-13024522/",
+        "src": "https://images.pexels.com/photos/13024522/pexels-photo-13024522.jpeg",
+        "ratio": 1.5015,
+        "alt": "Um homem barbudão com uma camisa preta e boné faz um gesto de joinha sorrindo contra um fundo branco.",
+        "author": "Vinícius Caricatte"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/homem-barba-aprovar-confirmar-13024522/",
+      "src": "https://images.pexels.com/photos/13024522/pexels-photo-13024522.jpeg",
+      "ratio": 1.5015,
+      "alt": "Um homem barbudão com uma camisa preta e boné faz um gesto de joinha sorrindo contra um fundo branco.",
+      "author": "Vinícius Caricatte"
+    }
+  },
+  "gesture-ombros": {
+    "query": "pessoa dando de ombros",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-encolhendo-os-ombros-com-camiseta-branca-em-fundo-neutro-33715990/",
+        "src": "https://images.pexels.com/photos/33715990/pexels-photo-33715990.jpeg",
+        "ratio": 1.5015,
+        "alt": "Um homem adulto vestindo uma camiseta branca encolhe os ombros contra um fundo neutro, transmitindo confusão ou indiferença.",
+        "author": "Will Oliveira"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/homem-encolhendo-os-ombros-com-camiseta-branca-em-fundo-neutro-33715990/",
+      "src": "https://images.pexels.com/photos/33715990/pexels-photo-33715990.jpeg",
+      "ratio": 1.5015,
+      "alt": "Um homem adulto vestindo uma camiseta branca encolhe os ombros contra um fundo neutro, transmitindo confusão ou indiferença.",
+      "author": "Will Oliveira"
+    }
+  },
+  "gesture-bracos-cruzados": {
+    "query": "homem de braços cruzados fundo branco",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/homem-bracos-cruzados-serio-grave-8499124/",
+        "src": "https://images.pexels.com/photos/8499124/pexels-photo-8499124.jpeg",
+        "ratio": 1.5015,
+        "alt": "Retrato de um homem sério em uma camisa branca com os braços cruzados, posando contra um fundo cinza texturizado.",
+        "author": "Ivan S"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/homem-bracos-cruzados-serio-grave-8499124/",
+      "src": "https://images.pexels.com/photos/8499124/pexels-photo-8499124.jpeg",
+      "ratio": 1.5015,
+      "alt": "Retrato de um homem sério em uma camisa branca com os braços cruzados, posando contra um fundo cinza texturizado.",
+      "author": "Ivan S"
+    }
   }
 }

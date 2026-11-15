@@ -10,12 +10,18 @@ Lulu Games is a static HTML, CSS, and JavaScript application. Follow the project
 - For new or revised scenes, situations, answer phrases, alt text, or clues in **O que está acontecendo?**, use **Image Interpretation Theme Designer** (`.github/agents/image-interpretation-theme-designer.agent.md`). It owns the scene concept and wording, and delegates the illustration brief to SVG Illustrator; it does not draw the artwork itself.
 - For learning difficulty, theme relevance, vocabulary level, or teaching methodology, especially for autistic and other atypical learners, use **Atypical Education Specialist** (`.github/agents/atypical-education-specialist.agent.md`). It advises on content and learning design but does not diagnose or change game mechanics.
 - For creating or expanding exercises, curating Pexels images, or coordinating work specific to **Coloque em Ordem**, use **Coloque em Ordem Game Specialist** (`.github/agents/put-in-order-game-specialist.agent.md`).
-- For all Pexels photo searches, use the existing workflow with a Brazilian Portuguese query and `pt-BR` locale only; do not fall back to another language.
+- For all Pexels photo searches, write the query in Brazilian Portuguese and use the `pt-BR` locale only; never fall back to English or another language. For example, search "dedo nos lábios", never "finger on lips".
 - Changes affecting both interaction and presentation should be reviewed by both specialists, with separate scopes and no concurrent edits to the same files. UX owns behavior and feedback requirements; visual design owns presentation. The main agent integrates their results and verifies the complete flow.
 - For artwork that changes a game screen, coordinate the SVG Illustrator and Game Visual Designer; involve Game UX Reviewer when the image conveys gameplay or learning meaning. Keep scopes separate and avoid concurrent edits to the same files.
 - Apply this routing after relevant changes and when adding a game or screen; for review-only requests, specialists should report findings rather than change files unless fixes are requested.
 - Specialist invocation depends on the active environment and available tools. If delegation is unavailable, perform the relevant review directly and report the limitation; do not claim a specialist was invoked.
 - Honor explicit user requests while identifying any conflicts with project guidance. In particular, keep error feedback gentle, optional where appropriate, and never punitive.
+
+## Images
+
+- **Never search, fetch or download new photos unless the user explicitly asks for it or authorizes it.** Use only the images already in `assets/images/` and the choices already registered in `tools/*-results.json`.
+- The Pexels commands (`npm run images:*`, `node tools/build-images.mjs`) also only run under an explicit request; they are never part of a game, review, test or verification pass.
+- When new images are authorized, follow `docs/IMAGE_SOURCING.md` and reuse the existing Pexels workflow.
 
 ## Context and token hygiene
 
