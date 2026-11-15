@@ -1,0 +1,97 @@
+{
+  "$comment": "Conteúdo de 'O que eu digo?'. Cada pergunta tem uma imagem local, três opções, uma resposta correta e uma frase opcional para treinar. A busca de cada foto fica em imageQuery, sempre em português brasileiro. Novas perguntas entram aqui, sem mudar o código.",
+  "title": "O que eu digo?",
+  "eyebrow": "Jogo de conversa e escolhas",
+  "heading": "O que eu digo?",
+  "questionsPerRound": 5,
+  "optionCount": 3,
+  "shuffleOptions": true,
+  "imageQueryRequired": true,
+  "questions": [
+    {
+      "id": "pedir-ajuda-pacote",
+      "category": "pedir ajuda",
+      "difficulty": "fácil",
+      "image": "../../assets/images/what-do-i-say/pedir-ajuda-pacote.jpg",
+      "imageQuery": "criança tentando abrir embalagem de biscoito",
+      "alt": "Uma menina sentada na cozinha, segurando e puxando um pacote de cereais com as duas mãos.",
+      "question": "Você quer abrir o pacote, mas não consegue. O que você diz?",
+      "answer": "pedir-ajuda",
+      "options": [
+        { "id": "pedir-ajuda", "text": "\"Você pode me ajudar a abrir, por favor?\"" },
+        { "id": "jogar-no-chao", "text": "Joga o pacote no chão" },
+        { "id": "ficar-quieta", "text": "Fica parada sem falar nada" }
+      ],
+      "practicePhrase": "Você pode me ajudar a abrir, por favor?",
+      "hint": "Qual opção pede ajuda com educação?"
+    },
+    {
+      "id": "pedir-ajuda-mercado",
+      "category": "pedir ajuda",
+      "difficulty": "médio",
+      "image": "../../assets/images/what-do-i-say/pedir-ajuda-mercado.jpg",
+      "imageQuery": "criança sozinha no corredor do supermercado",
+      "alt": "Um menino agachado no chão de um shopping, com adultos ao fundo.",
+      "question": "Você não vê seu responsável no shopping. O que diz a um funcionário?",
+      "answer": "procurar-funcionario",
+      "options": [
+        { "id": "andar-sozinha", "text": "\"Vou sair do shopping para procurar meu responsável.\"" },
+        { "id": "procurar-funcionario", "text": "\"Não estou vendo meu responsável. Pode me ajudar?\"" },
+        { "id": "sair-sozinha", "text": "\"Não quero falar com ninguém agora.\"" }
+      ],
+      "practicePhrase": "Não estou vendo meu responsável. Pode me ajudar?",
+      "hint": "Qual frase pede ajuda ao funcionário?"
+    },
+    {
+      "id": "conflito-brinquedo",
+      "category": "lidar com conflito",
+      "difficulty": "médio",
+      "image": "../../assets/images/what-do-i-say/conflito-brinquedo.jpg",
+      "imageQuery": "duas crianças disputando um brinquedo",
+      "alt": "Duas crianças sentadas no chão, segurando e puxando um ursinho de pelúcia.",
+      "question": "Outra criança pegou o seu brinquedo. O que você diz?",
+      "answer": "pedir-de-volta",
+      "options": [
+        { "id": "pedir-de-volta", "text": "\"Você pode me devolver, por favor?\"" },
+        { "id": "responder-bravo", "text": "\"Esse brinquedo é meu. Me devolve agora!\"" },
+        { "id": "ir-embora", "text": "Vai brincar em outro lugar sem conversar" }
+      ],
+      "practicePhrase": "Você pode me devolver, por favor?",
+      "hint": "Qual opção fala com calma e pede o brinquedo de volta?"
+    },
+    {
+      "id": "recusar-comida",
+      "category": "recusar com educação",
+      "difficulty": "fácil",
+      "image": "../../assets/images/what-do-i-say/recusar-comida.jpg",
+      "imageQuery": "criança recusando comida balançando a cabeça",
+      "alt": "Uma menina à mesa olhando para um adulto que está de pé ao lado dela, com comida na mesa.",
+      "question": "Alguém oferece uma comida que você não quer. O que você diz?",
+      "answer": "recusar-educado",
+      "options": [
+        { "id": "que-nojo", "text": "Que nojo!" },
+        { "id": "recusar-educado", "text": "\"Não, obrigada, não quero.\"" },
+        { "id": "esconder", "text": "Pega a comida e esconde" }
+      ],
+      "practicePhrase": "Não, obrigada, não quero.",
+      "hint": "Qual opção diz não de um jeito educado?"
+    },
+    {
+      "id": "pedir-pausa-barulho",
+      "category": "pedir pausa",
+      "difficulty": "médio",
+      "image": "../../assets/images/what-do-i-say/pedir-pausa-barulho.jpg",
+      "imageQuery": "criança tapando os ouvidos em lugar barulhento",
+      "alt": "Uma criança com as mãos cobrindo as orelhas, em um fundo simples.",
+      "question": "Está muito barulho e você está cansada. O que você faz?",
+      "answer": "pedir-pausa",
+      "options": [
+        { "id": "gritar", "text": "Grita para todo mundo ficar quieto" },
+        { "id": "aguentar", "text": "Aguenta calada até passar mal" },
+        { "id": "pedir-pausa", "text": "\"Preciso de uma pausa. Posso ir para um lugar mais calmo?\"" }
+      ],
+      "practicePhrase": "Preciso de uma pausa. Posso ir para um lugar mais calmo?",
+      "hint": "Qual opção pede uma pausa com calma?"
+    }
+  ]
+}

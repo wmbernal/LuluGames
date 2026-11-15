@@ -1,0 +1,40 @@
+{
+  "$comment": "Buscas do Pexels para as fotos de 'O que eu digo?'. Use sempre a consulta em português brasileiro com locale pt-BR, sem busca em outro idioma como fallback. A escolha é o primeiro resultado horizontal com 1000 px ou mais, sem triagem visual.",
+  "scenes": [
+    {
+      "scene": "pedir-ajuda-pacote",
+      "theme": "O que eu digo?",
+      "query": "criança tentando abrir embalagem de biscoito",
+      "mustShow": "Criança com um pacote ou embalagem de alimento nas mãos, tentando abrir",
+      "mustNot": "Grupo de pessoas, embalagem sem criança"
+    },
+    {
+      "scene": "pedir-ajuda-mercado",
+      "theme": "O que eu digo?",
+      "query": "criança sozinha no corredor do supermercado",
+      "mustShow": "Criança em um corredor de mercado, longe dos adultos",
+      "mustNot": "Adulto segurando a criança pela mão, corredor vazio sem criança"
+    },
+    {
+      "scene": "conflito-brinquedo",
+      "theme": "O que eu digo?",
+      "query": "duas crianças disputando um brinquedo",
+      "mustShow": "Duas crianças segurando ou puxando o mesmo brinquedo",
+      "mustNot": "Criança sozinha, brinquedo no chão sem disputa"
+    },
+    {
+      "scene": "recusar-comida",
+      "theme": "O que eu digo?",
+      "query": "criança recusando comida balançando a cabeça",
+      "mustShow": "Criança diante de um prato de comida, com expressão de quem não quer",
+      "mustNot": "Prato vazio, criança comendo com entusiasmo"
+    },
+    {
+      "scene": "pedir-pausa-barulho",
+      "theme": "O que eu digo?",
+      "query": "criança tapando os ouvidos em lugar barulhento",
+      "mustShow": "Criança com as mãos cobrindo as orelhas",
+      "mustNot": "Festa com muitas pessoas, expressão de medo intenso"
+    }
+  ]
+}

@@ -33,6 +33,14 @@ export const gameCatalog = [
     available: true,
   },
   {
+    id: "what-do-i-say",
+    title: "O que eu digo?",
+    description: "Escolha o que dizer em situações do dia a dia.",
+    icon: "./assets/images/ui/what-do-i-say.svg",
+    href: "./games/what-do-i-say/index.html",
+    available: true,
+  },
+  {
     id: "put-in-order",
     title: "Coloque em Ordem",
     description: "Organize palavras para montar frases.",

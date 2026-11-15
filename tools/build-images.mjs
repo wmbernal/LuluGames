@@ -36,6 +36,14 @@ const GAMES = {
     creditsJson: "emotions-credits.json",
     creditsDoc: "EMOTION_CREDITS.md",
   },
+  "what-do-i-say": {
+    label: '"O que eu digo?"',
+    queries: "what-do-i-say-queries.json",
+    results: "what-do-i-say-results.json",
+    imageDir: ["assets", "images", "what-do-i-say"],
+    creditsJson: "what-do-i-say-credits.json",
+    creditsDoc: "WHAT_DO_I_SAY_CREDITS.md",
+  },
 };
 const DEFAULT_GAME = "image-interpretation";
 const cropScriptPath = path.join(root, "tools", "crop-4x3.ps1");
@@ -219,7 +227,7 @@ async function writeCredits(scenes, results, paths) {
   }
 
   await writeFile(paths.creditsJsonPath, `${JSON.stringify(credits, null, 2)}\n`);
-  const relativeImageDir = paths.imageDir.split(path.sep).slice(-2).join("/");
+  const relativeImageDir = paths.imageDir.split(path.sep).slice(-3).join("/");
   const doc = `# Créditos das fotos — ${paths.label}
 
 Fotos obtidas do Pexels e armazenadas localmente. O Pexels permite uso gratuito,

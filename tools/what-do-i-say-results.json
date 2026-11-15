@@ -1,0 +1,102 @@
+{
+  "pedir-ajuda-pacote": {
+    "query": "criança tentando abrir embalagem de biscoito",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-com-camisa-de-manga-comprida-azul-sentada-na-cadeira-de-madeira-branca-5893080/",
+        "src": "https://images.pexels.com/photos/5893080/pexels-photo-5893080.jpeg",
+        "ratio": 1.5,
+        "alt": "Menina jovem sentada na cozinha segurando uma sacola de cereais, pronta para o café da manhã.",
+        "author": "cottonbro studio"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-com-camisa-de-manga-comprida-azul-sentada-na-cadeira-de-madeira-branca-5893080/",
+      "src": "https://images.pexels.com/photos/5893080/pexels-photo-5893080.jpeg",
+      "ratio": 1.5,
+      "alt": "Menina jovem sentada na cozinha segurando uma sacola de cereais, pronta para o café da manhã.",
+      "author": "cottonbro studio"
+    }
+  },
+  "pedir-ajuda-mercado": {
+    "query": "criança sozinha no corredor do supermercado",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menino-se-agachando-em-um-ladrilho-branco-891289/",
+        "src": "https://images.pexels.com/photos/891289/pexels-photo-891289.jpeg",
+        "ratio": 1.5,
+        "alt": "Um menino jovem vestido de azul senta-se no chão em um ambiente vibrante e colorido de shopping.",
+        "author": "Sunbae Legacy"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menino-se-agachando-em-um-ladrilho-branco-891289/",
+      "src": "https://images.pexels.com/photos/891289/pexels-photo-891289.jpeg",
+      "ratio": 1.5,
+      "alt": "Um menino jovem vestido de azul senta-se no chão em um ambiente vibrante e colorido de shopping.",
+      "author": "Sunbae Legacy"
+    }
+  },
+  "conflito-brinquedo": {
+    "query": "duas crianças disputando um brinquedo",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/relacao-relacionamento-apartamento-chao-4140308/",
+        "src": "https://images.pexels.com/photos/4140308/pexels-photo-4140308.jpeg",
+        "ratio": 1.5,
+        "alt": "Dois irmãos jovens discutindo sobre um ursinho de pelúcia enquanto sentados no chão de madeira em casa.",
+        "author": "Vika Glitter"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/relacao-relacionamento-apartamento-chao-4140308/",
+      "src": "https://images.pexels.com/photos/4140308/pexels-photo-4140308.jpeg",
+      "ratio": 1.5,
+      "alt": "Dois irmãos jovens discutindo sobre um ursinho de pelúcia enquanto sentados no chão de madeira em casa.",
+      "author": "Vika Glitter"
+    }
+  },
+  "recusar-comida": {
+    "query": "criança recusando comida balançando a cabeça",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-sentado-7492939/",
+        "src": "https://images.pexels.com/photos/7492939/pexels-photo-7492939.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma menina em uma camisa xadrez sentada dentro de casa à mesa, aparentando estar pensativa.",
+        "author": "Kampus Production"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/menina-garota-moca-sentado-7492939/",
+      "src": "https://images.pexels.com/photos/7492939/pexels-photo-7492939.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma menina em uma camisa xadrez sentada dentro de casa à mesa, aparentando estar pensativa.",
+      "author": "Kampus Production"
+    }
+  },
+  "pedir-pausa-barulho": {
+    "query": "criança tapando os ouvidos em lugar barulhento",
+    "status": 200,
+    "results": [
+      {
+        "page": "https://www.pexels.com/pt-br/foto/crianca-filho-garoto-menino-12449967/",
+        "src": "https://images.pexels.com/photos/12449967/pexels-photo-12449967.jpeg",
+        "ratio": 1.5,
+        "alt": "Uma criança é retratada cobrindo a orelha, sugerindo desconforto ou preocupação.",
+        "author": "Towfiqu barbhuiya"
+      }
+    ],
+    "chosen": {
+      "page": "https://www.pexels.com/pt-br/foto/crianca-filho-garoto-menino-12449967/",
+      "src": "https://images.pexels.com/photos/12449967/pexels-photo-12449967.jpeg",
+      "ratio": 1.5,
+      "alt": "Uma criança é retratada cobrindo a orelha, sugerindo desconforto ou preocupação.",
+      "author": "Towfiqu barbhuiya"
+    }
+  }
+}

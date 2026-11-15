@@ -21,6 +21,7 @@ $root = Split-Path -Parent $PSScriptRoot
 $gameDirs = @{
   "image-interpretation" = "assets\images\image-interpretation"
   "emotions" = "assets\images\emotions"
+  "what-do-i-say" = "assets\images\what-do-i-say"
 }
 if (-not $gameDirs.ContainsKey($Game)) {
   throw "Jogo desconhecido: $Game. Use: $($gameDirs.Keys -join ', ')"

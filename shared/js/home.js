@@ -1,4 +1,4 @@
-import { gameCatalog } from "./catalog.js?v=7";
+import { gameCatalog } from "./catalog.js?v=8";
 import "./settings.js?v=2";
 
 const catalogElement = document.querySelector("#game-catalog");

@@ -1,0 +1,230 @@
+.game-page {
+  width: min(calc(100% - var(--space-8)), var(--layout-game-max-width));
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-6);
+}
+.game-heading { margin-bottom: var(--space-6); text-align: center; }
+.game-heading h1 { margin-bottom: 0; }
+.game-panel { text-align: center; }
+#playing-panel, #complete-panel {
+  max-width: var(--layout-game-copy-width);
+  margin: 0 auto;
+}
+.intro-art { margin-bottom: var(--space-4); font-size: var(--font-size-h1); }
+.round-count { margin-bottom: var(--space-3); font-weight: 700; }
+.scene-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-stage);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+.question { margin: var(--space-4) 0; font-size: var(--font-size-h3); }
+.listen-question-button { margin-bottom: var(--space-3); }
+.listen-status {
+  margin: calc(-1 * var(--space-2)) 0 var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+.answer-list { display: grid; gap: var(--space-2); }
+.answer {
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--color-text);
+  text-align: left;
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+.answer:hover:not(:disabled) { background: var(--color-surface-soft); }
+.answer--correct, .answer--correct:disabled {
+  color: var(--color-success);
+  background: var(--color-success-soft);
+  border-color: var(--color-success);
+  opacity: 1;
+}
+.answer--incorrect {
+  color: var(--color-error);
+  background: var(--color-error-soft);
+  border-color: var(--color-error-border);
+}
+.answer--incorrect:hover:not(:disabled) { background: var(--color-error-soft); }
+.answer__mark { min-width: var(--space-6); font-weight: 700; }
+.answer__text { font-size: 1.05rem; line-height: 1.4; }
+
+.feedback { min-height: var(--size-feedback-min-height); margin: var(--space-3) 0 0; }
+.hint {
+  padding: var(--space-3);
+  background: var(--color-highlight-soft);
+  border: var(--border-width-thin) solid var(--color-highlight-border);
+  border-radius: var(--radius-control);
+}
+
+.practice-button { margin-top: var(--space-3); }
+#next-button { margin-top: var(--space-4); }
+.complete-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.load-error {
+  padding: var(--space-4);
+  color: var(--color-error);
+  background: var(--color-error-soft);
+  border: var(--border-width-thin) solid var(--color-error-border);
+  border-radius: var(--radius-control);
+}
+
+.game-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.leave-dialog {
+  width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
+  padding: var(--space-8);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.leave-dialog::backdrop { background: var(--color-backdrop); }
+.dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }
+
+@media (max-width: 480px) {
+  body.app-page.what-do-i-say-page .game-page {
+    width: calc(100% - var(--space-4));
+    padding: var(--space-2) 0;
+  }
+  body.app-page.what-do-i-say-page .game-heading {
+    width: 100%;
+    margin-bottom: var(--space-2);
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  body.app-page.what-do-i-say-page .game-heading .eyebrow { display: none; }
+  body.app-page.what-do-i-say-page .game-panel { padding: var(--space-3); }
+  body.app-page.what-do-i-say-page .round-count { margin-bottom: var(--space-2); }
+  body.app-page.what-do-i-say-page .scene-image {
+    height: clamp(128px, 19vh, 160px);
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+  body.app-page.what-do-i-say-page .question {
+    margin: var(--space-2) 0;
+    font-size: clamp(20px, 6vw, var(--font-size-h3));
+  }
+  body.app-page.what-do-i-say-page .listen-question-button {
+    margin-bottom: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+  }
+  body.app-page.what-do-i-say-page .answer-list { gap: var(--space-2); }
+  body.app-page.what-do-i-say-page .answer { padding: var(--space-2) var(--space-3); }
+  body.app-page.what-do-i-say-page .answer__text { font-size: 1rem; line-height: 1.25; }
+  body.app-page.what-do-i-say-page .feedback { min-height: 32px; margin-top: var(--space-2); }
+  body.app-page.what-do-i-say-page .game-footer { margin-top: var(--space-2); }
+}
+
+@media (orientation: landscape) and (max-height: 480px) and (min-width: 600px) {
+  body.app-page.what-do-i-say-page .game-page {
+    display: grid;
+    grid-template-columns: minmax(112px, 0.2fr) minmax(0, 1fr);
+    grid-template-areas:
+      "heading panel"
+      "footer footer";
+    align-content: center;
+    align-items: start;
+    gap: var(--space-1);
+    width: calc(100% - var(--space-4));
+    padding: 0;
+  }
+  body.app-page.what-do-i-say-page .game-heading {
+    grid-area: heading;
+    width: 100%;
+    margin: 0;
+    padding: var(--space-1);
+  }
+  body.app-page.what-do-i-say-page .game-heading .eyebrow { display: none; }
+  body.app-page.what-do-i-say-page .game-heading h1 { font-size: 20px; }
+  body.app-page.what-do-i-say-page .game-panel {
+    grid-area: panel;
+    padding: var(--space-1);
+  }
+  body.app-page.what-do-i-say-page #playing-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    column-gap: var(--space-3);
+    max-width: none;
+  }
+  body.app-page.what-do-i-say-page .round-count {
+    grid-column: 1 / -1;
+    margin-bottom: var(--space-1);
+    padding: 2px var(--space-2);
+    font-size: var(--font-size-small);
+  }
+  body.app-page.what-do-i-say-page .scene-image {
+    grid-column: 1;
+    grid-row: 2;
+    height: 108px;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+  body.app-page.what-do-i-say-page .question {
+    grid-column: 1;
+    grid-row: 3;
+    margin: var(--space-1) 0;
+    font-size: var(--font-size-ui);
+  }
+  body.app-page.what-do-i-say-page .listen-question-button {
+    grid-column: 1;
+    grid-row: 4;
+    margin-bottom: 0;
+    padding: var(--space-1) var(--space-2);
+  }
+  body.app-page.what-do-i-say-page .listen-status { grid-column: 1; grid-row: 5; margin: 0; }
+  body.app-page.what-do-i-say-page .answer-list { grid-column: 2; grid-row: 2 / span 2; gap: var(--space-1); }
+  body.app-page.what-do-i-say-page .answer { padding: var(--space-1) var(--space-2); }
+  body.app-page.what-do-i-say-page .answer__text { font-size: var(--font-size-small); line-height: 1.15; }
+  body.app-page.what-do-i-say-page .feedback {
+    grid-column: 2;
+    grid-row: 4;
+    min-height: 18px;
+    margin: 0;
+    font-size: var(--font-size-small);
+    line-height: 1.25;
+  }
+  body.app-page.what-do-i-say-page .hint { grid-column: 2; grid-row: 5; padding: var(--space-1); }
+  body.app-page.what-do-i-say-page .practice-button {
+    grid-column: 2;
+    grid-row: 6;
+    margin-top: var(--space-1);
+    padding: var(--space-1) var(--space-2);
+  }
+  body.app-page.what-do-i-say-page #next-button {
+    grid-column: 2;
+    grid-row: 7;
+    margin-top: var(--space-1);
+    padding: var(--space-1) var(--space-2);
+  }
+  body.app-page.what-do-i-say-page .game-footer {
+    grid-area: footer;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  body.app-page.what-do-i-say-page .game-nav-button {
+    min-height: var(--target-size);
+    padding: var(--space-1) var(--space-3);
+  }
+}

@@ -30,6 +30,14 @@ The parent can confirm whether five exercises per theme and the theme list feel 
 
 These are practice opportunities, not a measure or diagnosis of the child's emotional understanding. The parent can confirm whether the expressions, situations, and words feel familiar and comfortable.
 
+## O que eu digo?
+
+- **Objectives:** Practice functional communication in everyday situations: asking for help, refusing politely, asking for a break, and handling a small conflict.
+- **Mechanics:** Each round shows five situation photos in random order. The child can hear the question on request and chooses one of three shuffled options. A wrong answer can be retried with a gentle message and a clue after three attempts. Correct answers receive brief positive feedback without a post-answer explanation. When the correct option is a spoken phrase, **Treine a frase** plays it only when requested.
+- **Difficulty:** One fixed round of five questions, drawn from `content.json`. Categories (`pedir ajuda`, `recusar com educação`, `pedir pausa`, `lidar com conflito`) organize the content but are not shown to the child. New questions require only JSON changes.
+
+These are practice opportunities, not a measure of the child's communication ability. The parent can confirm whether the situations, phrases, and vocabulary feel familiar and comfortable.
+
 ## Coloque em Ordem
 
 - **Objectives:** Practice reading and building grammatical Brazilian Portuguese sentences, noticing word order, and connecting written phrases to a familiar image.

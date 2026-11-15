@@ -74,6 +74,26 @@ durante o jogo. Confira cada foto contra o texto alternativo e a emoção antes 
 adicionar novas perguntas a `games/emotions/content.json`. Em gestos, prefira
 uma pessoa, o gesto visível, fundo simples e nenhum texto ou logotipo.
 
+## O que eu digo?
+
+As buscas fixas e os resultados escolhidos para as 5 fotos estão em
+`tools/what-do-i-say-queries.json` e `tools/what-do-i-say-results.json`. As fotos
+ficam em `assets/images/what-do-i-say/`, com origem e autoria em
+[WHAT_DO_I_SAY_CREDITS.md](WHAT_DO_I_SAY_CREDITS.md). O mesmo construtor do Pexels
+valida os registros e baixa os recortes locais:
+
+```powershell
+npm run images:what-do-i-say -- --check
+npm run images:what-do-i-say
+npm run images:what-do-i-say -- --scene pedir-ajuda-pacote
+```
+
+A consulta da cena "pedir-ajuda-mercado" é mantida exatamente como pedida
+("criança sozinha no corredor do supermercado"). A foto escolhida mostra uma
+criança sozinha em um shopping claro, que representa a situação de se perder em
+um lugar grande sem contradizer a pergunta. Não faça buscas nem carregue imagens
+remotas durante o jogo.
+
 ## Coloque em Ordem
 
 As perguntas atuais reutilizam fotos locais já selecionadas pelo fluxo do

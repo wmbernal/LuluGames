@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B7E88B">
+    <title>O que eu digo? — Lulu Games</title>
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/base.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
+    <link rel="stylesheet" href="./game.css?v=7">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
+    <script type="module" src="./session.js?v=4"></script>
+  </head>
+  <body class="app-page what-do-i-say-page">
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+    <main class="game-page" id="main-content">
+      <section class="game-heading" aria-labelledby="game-title">
+        <p class="eyebrow" id="game-eyebrow">Jogo de conversa e escolhas</p>
+        <h1 id="game-title">O que eu digo?</h1>
+      </section>
+      <section class="card game-panel">
+        <p class="load-error" id="load-error" role="alert" hidden>
+          Não consegui abrir as perguntas agora. Tente recarregar a página.
+        </p>
+        <div id="playing-panel" hidden>
+          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+          <img class="scene-image" id="scene-image" width="640" height="480" alt="">
+          <h2 class="question" id="question-text" aria-live="polite" aria-atomic="true"></h2>
+          <button class="button button--secondary listen-question-button" id="listen-question-button" type="button">
+            <span aria-hidden="true">🔊</span> Ouvir a pergunta
+          </button>
+          <p class="listen-status" id="listen-status" role="status" aria-live="polite" hidden>
+            Não foi possível ler a pergunta em voz alta agora. Ela continua visível para você ler.
+          </p>
+          <div class="answer-list" id="answer-list" role="group" aria-label="Opções de resposta"></div>
+          <p class="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p class="hint" id="hint" role="status" aria-live="polite" hidden></p>
+          <button class="button button--secondary practice-button" id="practice-button" type="button" hidden>
+            <span aria-hidden="true">🗣️</span> Treine a frase
+          </button>
+          <button class="button button--primary" id="next-button" type="button" hidden>Próxima</button>
+        </div>
+        <div id="complete-panel" hidden>
+          <div class="intro-art" aria-hidden="true">💬 ✨ 💛</div>
+          <h2 tabindex="-1" id="complete-title">Parabéns!</h2>
+          <p id="complete-message">Você completou as perguntas. Muito bem!</p>
+          <div class="complete-actions">
+            <button class="button button--primary" id="again-button" type="button">Jogar de novo</button>
+            <a class="button button--secondary" href="../../index.html">Voltar ao menu</a>
+          </div>
+        </div>
+      </section>
+      <footer class="game-footer" id="game-footer">
+        <nav class="game-footer__navigation" aria-label="Navegação do jogo">
+          <a class="button game-nav-button game-nav-button--back" href="../../index.html" data-back-link>
+            <span>Voltar</span>
+          </a>
+          <a class="button game-nav-button game-nav-button--home" href="../../index.html" data-home-link>
+            <span>Início</span>
+          </a>
+        </nav>
+      </footer>
+    </main>
+    <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
+      <form method="dialog">
+        <h2 id="leave-title">Quer sair do jogo?</h2>
+        <p>Esta rodada vai terminar. Você poderá jogar de novo quando quiser.</p>
+        <div class="dialog-actions">
+          <button class="button button--secondary" value="cancel">Continuar jogando</button>
+          <button class="button button--primary" value="leave">Sair</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
