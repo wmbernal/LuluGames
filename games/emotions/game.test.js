@@ -80,6 +80,7 @@ test("level 4 asks what a gesture means with three written options", () => {
   assert.equal(level.questionsPerRound, 5);
   assert.equal(level.shuffleOptions, true);
   assert.equal(level.imageQueryRequired, true);
+  assert.equal(level.speakExplanation, false);
   const ambiguous = level.questions.filter((question) => question.ambiguous === true);
   assert.equal(ambiguous.length, 1);
   assert.equal(ambiguous[0].id, "gesture-bracos-cruzados");
@@ -192,10 +193,12 @@ test("validation warns about an English image query, a missing query and a wrong
   level.questions[0].imageQuery = "finger on lips";
   level.questions[1].options.pop();
   delete level.questions[2].imageQuery;
+  level.speakExplanation = "não";
   const problems = validateContent({ levels: [level] });
   assert.ok(problems.some((problem) => problem.includes("inglês")));
   assert.ok(problems.some((problem) => problem.includes("sem imageQuery")));
   assert.ok(problems.some((problem) => problem.includes("precisa de 3 opções")));
+  assert.ok(problems.some((problem) => problem.includes("speakExplanation")));
 });
 
 test("invalid sessions and unknown options are rejected", () => {

@@ -7,7 +7,7 @@ Practice noticing facial cues, gestures, and body posture, and connecting famili
 1. The level chooser (`levels.html`) offers four independent activities.
 2. Each level randomly selects five different questions from `content.json`.
 3. The player chooses an answer. Mistakes can be retried without losing progress; a gentle clue appears after three incorrect attempts.
-4. A correct answer shows a short explanation, speaks it using the shared optional Brazilian Portuguese voice, and offers **Ouvir de novo** and **Próxima**.
+4. A correct answer shows a short explanation and offers **Ouvir de novo** and **Próxima**. The explanation is spoken automatically unless the level sets `speakExplanation: false`.
 5. After question five, the shared completion sound and spoken congratulations play, with **Jogar de novo** and **Voltar ao menu**.
 6. Leaving an unfinished round asks for confirmation.
 
@@ -22,7 +22,7 @@ Practice noticing facial cues, gestures, and body posture, and connecting famili
 
 Each question has a unique `id`, its `level`, a local image path and alt text, an `answer` that matches exactly one option, an explanation, a difficulty tag, and optional question-specific hint. A question may also set its own `question` text; otherwise the level question is used. Add questions by editing JSON only. Keep the Pexels search and selected-photo records in `tools/emotions-queries.json` and `tools/emotions-results.json`; run `npm run images:emotions` to download and crop the selected local assets, and `npm run images:emotions -- --check` to validate the records. Only run those image commands when the user asks for or authorizes new photos; never during play, tests, or reviews.
 
-**Detetive de Gestos** sets `imageQueryRequired: true`, so every question must keep an `imageQuery` describing the photo it expects. Write that query in Brazilian Portuguese, the same rule used for the Pexels search: "dedo nos lábios", never "finger on lips". The validator warns when a query looks English, when it is missing, and when a question has the wrong number of options. The tests additionally check image files, option counts, level counts, and that each level supports five distinct questions per round. When the round has exactly five questions, all five are used, still in random order.
+**Detetive de Gestos** sets `imageQueryRequired: true`, so every question must keep an `imageQuery` describing the photo it expects. It also sets `speakExplanation: false`: the explanation appears on screen without being spoken automatically, and **Ouvir de novo** stays available for anyone who wants to hear it. Write that query in Brazilian Portuguese, the same rule used for the Pexels search: "dedo nos lábios", never "finger on lips". The validator warns when a query looks English, when it is missing, and when a question has the wrong number of options. The tests additionally check image files, option counts, level counts, and that each level supports five distinct questions per round. When the round has exactly five questions, all five are used, still in random order.
 
 Gestures are taught as clues, not certainties:
 

@@ -1,6 +1,6 @@
 import { getSettings } from "../../shared/js/settings.js?v=2";
 import { celebrateCompletion, playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=6";
-import { chooseAnswer, createSession, nextRound, validateContent } from "./game.js?v=3";
+import { chooseAnswer, createSession, nextRound, validateContent } from "./game.js?v=4";
 import { createGameUI } from "./ui.js?v=3";
 
 const requestedLevel = new URLSearchParams(window.location.search).get("level");
@@ -33,7 +33,9 @@ function start(content) {
       state = chooseAnswer(state, optionId);
       ui.render(state);
       if (state.phase === "correct") {
-        speakCardName(state.questions[state.roundIndex].explanation, getSettings());
+        if (level.speakExplanation !== false) {
+          speakCardName(state.questions[state.roundIndex].explanation, getSettings());
+        }
         ui.focusNext();
       } else {
         void playMismatchSound(getSettings());

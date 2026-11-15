@@ -40,6 +40,9 @@ function listProblems(level, levelId, questionIds) {
   if (level?.imageQueryRequired !== undefined && typeof level.imageQueryRequired !== "boolean") {
     problems.push(`${where}: imageQueryRequired precisa ser true ou false`);
   }
+  if (level?.speakExplanation !== undefined && typeof level.speakExplanation !== "boolean") {
+    problems.push(`${where}: speakExplanation precisa ser true ou false`);
+  }
 
   const questions = Array.isArray(level?.questions) ? level.questions : [];
   if (questions.length === 0) problems.push(`${where}: nível sem perguntas`);

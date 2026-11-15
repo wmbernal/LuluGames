@@ -707,6 +707,7 @@
       "questionsPerRound": 5,
       "shuffleOptions": true,
       "imageQueryRequired": true,
+      "speakExplanation": false,
       "hint": "Observe as mãos, o rosto, o corpo e o lugar.",
       "questions": [
         {
