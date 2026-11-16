@@ -1,3 +1,5 @@
+import additionalThemeData from "./additional-themes.json" with { type: "json" };
+
 function createRounds(rounds) {
   return Object.freeze(rounds.map((pairs) => Object.freeze(pairs.map(([
     pairId,
@@ -32,7 +34,7 @@ function createWordRounds(rounds) {
   })))));
 }
 
-export const THEMES = Object.freeze([
+const CORE_THEMES = [
   Object.freeze({
     id: "princess",
     label: "Princesas",
@@ -370,7 +372,28 @@ export const THEMES = Object.freeze([
       ],
     ]),
   }),
-]);
+];
+
+const ADDITIONAL_THEMES = additionalThemeData.themes.map((theme) => {
+  const rounds = theme.rounds.map(({ pairs }) => pairs.map((pair) => [
+    pair.pairId,
+    pair.left.emoji,
+    pair.left.label,
+    pair.right.emoji,
+    pair.right.label,
+    pair.rhymeGroup,
+  ]));
+  return Object.freeze({
+    id: theme.id,
+    label: theme.name,
+    icon: theme.icon,
+    description: theme.description,
+    cardType: theme.cardType,
+    rounds: theme.cardType === "words" ? createWordRounds(rounds) : createRounds(rounds),
+  });
+});
+
+export const THEMES = Object.freeze([...CORE_THEMES, ...ADDITIONAL_THEMES]);
 
 export function getTheme(themeId) {
   return THEMES.find((theme) => theme.id === themeId) ?? THEMES[0];

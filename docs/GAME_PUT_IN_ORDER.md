@@ -6,7 +6,7 @@ Praticar a leitura e a ordem das palavras em frases simples de português
 brasileiro, relacionando cada frase a uma imagem. O jogo não tem pontuação,
 cronômetro ou penalidade.
 
-1. A tela `levels.html` oferece três níveis independentes: 3, 4 ou 5 palavras.
+1. A tela `levels.html` oferece três níveis independentes: 3, 4 ou 5 palavras, em cartões no padrão da Home (ícone grande, rótulo curto e cor pastel própria). O logotipo Lulu Games e o título **Escolha um nível** ficam numa linha compacta dentro do painel, acima dos cartões.
 2. Cada rodada escolhe cinco perguntas diferentes do nível selecionado.
 3. Uma foto de contexto fica visível enquanto a criança monta uma frase com as
    palavras embaralhadas. Ela pode arrastar uma palavra para qualquer espaço

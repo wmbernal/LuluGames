@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#B7E88B">
     <title>Jogo dos Pares — escolha um tema</title>
-    <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=7">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=7">
-    <link rel="stylesheet" href="./game.css?v=14">
-    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./themes.js?v=8"></script>
+    <link rel="stylesheet" href="../../shared/css/components.css?v=11">
+    <link rel="stylesheet" href="../../shared/css/brand.css?v=3">
+    <link rel="stylesheet" href="./game.css?v=17">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=6">
+    <script type="module" src="./themes.js?v=10"></script>
   </head>
-  <body class="app-page">
+  <body class="app-page memory-themes-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header class="site-header site-header--theme-picker">
-      <a class="brand" href="../../index.html" aria-label="Lulu Games, início">
-        <img class="brand__icon" src="../../assets/images/ui/brand.svg" alt="">
-        <span>Lulu Games</span>
-      </a>
-    </header>
 
     <main class="game-page" id="main-content">
-      <section class="game-heading game-heading--hidden" aria-labelledby="page-title">
-        <h1 id="page-title">Jogo dos Pares</h1>
+      <section class="selection-panel" aria-label="Temas disponíveis">
+        <header class="selection-header">
+          <a class="brand-logo selection-header__logo" href="../../index.html" aria-label="Lulu Games, início">
+            <img class="brand-logo__icon" src="../../assets/images/ui/brand.svg" alt="">
+            <span class="brand-logo__text">Lulu<em>Games</em></span>
+          </a>
+          <h1 id="page-title">Escolha um tema</h1>
+        </header>
+        <div class="selection-grid" id="theme-list"></div>
       </section>
-
-      <p class="theme-picker-instructions">Escolha um tema. Cada rodada tem seis pares.</p>
-      <section class="theme-picker" id="theme-list" aria-label="Temas disponíveis"></section>
 
       <footer class="game-footer">
         <nav class="game-footer__navigation" aria-label="Navegação do jogo">

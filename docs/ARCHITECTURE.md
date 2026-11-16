@@ -11,7 +11,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/dress-princess/ui.js`: DOM rendering, item tray, layered outfit, pointer/keyboard interactions, and settings.
 - `games/dress-princess/data.js`: categories, scenario requirements, tagged clothing items, and optional audio paths.
 - `games/dress-princess/game.css`: game-specific layout, using shared tokens.
-- `games/memory-pairs/themes.html`: theme selector that links to a game board with the selected theme.
+- `games/memory-pairs/themes.html`: theme selector with the shared selection header and Home-style tiles; links to a game board with the selected theme.
 - `games/memory-pairs/themes.js`: renders theme choices from game data.
 - `games/memory-pairs/index.html`: matching game page, board, and completion regions.
 - `games/memory-pairs/game.js`: pure two-column board generation and match-state logic, independent of the DOM.
@@ -26,16 +26,18 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `games/what-do-i-say/`: communication game; `index.html` is the single entry point, `content.json` stores situation questions, spoken options, and practice phrases, `game.js` provides pure round rules and content validation, `session.js` orchestrates shared audio, and `ui.js` renders the photo, question playback, options, practice phrase, and completion.
 - `shared/css/tokens.css`: canonical design tokens.
 - `shared/css/base.css`: document reset, local Nunito/Fredoka faces, and global typography/layout defaults.
-- `shared/css/components.css`: reusable buttons, cards, and form controls.
+- `shared/css/components.css`: reusable buttons (including the translucent footer navigation pills), cards, form controls and the shared selection pattern (`.selection-panel`, `.selection-header`, `.selection-grid`, `.selection-tile`) also used by the home menu.
+- `shared/css/brand.css`: shared Lulu Games logo pill (`.brand-logo`) with a compact landscape variant (`.brand-logo--compact`) used by the home page, selection pages and game panels.
 - `shared/css/home.css`: full-screen home backdrop and floating menu card.
-- `shared/css/scene.css`: shared photo backdrop, glass header/cards, and hover treatment for theme and game pages.
+- `shared/css/scene.css`: clear shared photo backdrop, cream panels, per-tile hover treatment and the compact landscape logo placement.
 - `shared/js/settings.js`: validated shared settings API and defaults; games consume saved audio and round preferences. The home page has no general settings panel, so saved global preferences remain active but are not currently configurable there; Vestir a Princesa exposes its own settings form.
 - `shared/js/storage.js`: guarded `localStorage` read/write wrapper.
 - `shared/js/audio.js`: optional short audio feedback, initialized only after user interaction.
 - `shared/js/orientation.js`: optional portrait-entry suggestion and one-navigation signal for game selection links.
+- `shared/js/selection.js`: fills a theme or level link with the shared Home tile pattern (tone, icon, short label and full accessible name).
 - `shared/js/catalog.js`: data for games shown on the home page.
 - `assets/images/`: temporary SVG clothing layers with a shared `viewBox` of `0 0 240 320`; replace the art by swapping files and updating item paths in `data.js`.
-- `assets/images/ui/home-bg.jpg`: shared Pexels photo used by the home and inner-page backdrops.
+- `assets/images/ui/home-bg-top.jpg`: shared Pexels photo used at full clarity by the home and inner-page backdrops; `home-bg.jpg` is a taller crop kept for future use.
 - `assets/fonts/`: local Nunito and Fredoka variable fonts with their licenses.
 - `assets/audio/`: optional local scenario instructions. The listen control stays hidden when a scenario has no audio file.
 - `assets/images/memory/`: retained SVG memory artwork; Jogo dos Pares currently uses labeled Unicode picture symbols.

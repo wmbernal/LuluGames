@@ -217,57 +217,6 @@ body.app-page .game-page.game-page--correct #next-button {
   border: var(--border-width-thin) solid var(--color-error-border);
   border-radius: var(--radius-control);
 }
-.theme-picker-instructions {
-  margin: var(--space-3) 0 0;
-  color: var(--color-text-muted);
-}
-.level-picker {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
-  max-width: 960px;
-  margin: 0 auto;
-}
-.level-choice {
-  display: flex;
-  min-height: 200px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--space-2);
-  padding: var(--space-4);
-  color: var(--color-text);
-  text-align: center;
-  text-decoration: none;
-  background: var(--color-surface);
-  border: var(--border-width-medium) solid var(--color-border);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
-}
-.level-choice:hover,
-.level-choice:focus-visible {
-  background: var(--color-focus-soft);
-  border-color: var(--color-focus);
-}
-.level-choice:focus-visible {
-  outline: var(--border-width-medium) solid var(--color-focus);
-  outline-offset: var(--space-1);
-}
-.level-choice__icon {
-  min-height: 56px;
-  font-size: 48px;
-  line-height: 1.15;
-}
-.level-choice__title {
-  font-size: var(--font-size-h3);
-  font-weight: 700;
-}
-.level-choice__description {
-  flex: 1;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-small);
-}
-.level-choice__count { font-weight: 700; }
 .game-footer {
   display: flex;
   flex-wrap: wrap;
@@ -289,23 +238,6 @@ body.app-page .game-page.game-page--correct #next-button {
 
 @media (min-width: 720px) {
   .word-bank { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-
-@media (max-width: 680px) {
-  .level-picker { grid-template-columns: 1fr; }
-  .level-choice {
-    min-height: 0;
-    display: grid;
-    grid-template-columns: 48px minmax(0, 1fr);
-    justify-items: start;
-    text-align: left;
-  }
-  .level-choice__icon {
-    grid-row: span 3;
-    min-height: 48px;
-    font-size: 36px;
-  }
-  .level-choice__title { font-size: var(--font-size-body); }
 }
 
 @media (max-width: 420px) {
@@ -351,9 +283,7 @@ body.app-page .game-page.game-page--correct #next-button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .level-choice { transition: none; }
   body.app-page .word-bank__item { transition: none; }
 }
 
-:root[data-animations="off"] .level-choice:hover { transform: none; }
 :root[data-animations="off"] .word-bank__item:hover { transform: none; }

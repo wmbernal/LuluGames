@@ -20,7 +20,11 @@ test("shuffling preserves every card exactly once", () => {
 });
 
 test("every theme has five rounds of six distinct and complete pairings", () => {
-  assert.equal(THEMES.length, 7);
+  assert.equal(THEMES.length, 12);
+  assert.deepEqual(
+    THEMES.slice(-5).map((entry) => entry.id),
+    ["school", "beach", "music", "city", "space"],
+  );
   for (const entry of THEMES) {
     assert.equal(entry.rounds.length, 5, entry.label);
     const roundCombinations = new Set();

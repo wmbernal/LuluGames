@@ -4,7 +4,7 @@
 
 Practice visual interpretation, image-to-text association, reading, and everyday vocabulary. The player chooses a **theme**, then completes that theme's five illustrated situations in sequence.
 
-1. The theme chooser (`themes.html`) lists the available themes as large cards. Choosing one opens `index.html?theme=<id>` directly on the first exercise; there is no separate game introduction screen.
+1. The theme chooser (`themes.html`) lists the available themes as shared Home-style tiles with a big icon, a short label and their own pastel color; the Lulu Games logo and the **Escolha um tema** heading share a compact row inside the panel. Choosing one opens `index.html?theme=<id>` directly on the first exercise; there is no separate game introduction screen.
 2. Each exercise shows one illustrated situation, the fixed question, and three text choices in a fixed order.
 3. **Próxima** only appears after a correct answer, so the next exercise always follows a completed one.
 4. After the fifth exercise the completion screen plays the celebration feedback — the completion melody followed by a spoken "Parabéns!" — and shows **Parabéns!**, a message naming the theme, and the options **Escolher outro tema** and **Início**. No sound controls appear on this screen or anywhere inside the game. Audio follows saved global preferences, but general sound and volume controls are not currently exposed from the home page.

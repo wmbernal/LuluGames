@@ -4,7 +4,7 @@
 
 Practice noticing facial cues, gestures, and body posture, and connecting familiar situations with possible feelings. The game has no score, timer, locked level, or penalty.
 
-1. The level chooser (`levels.html`) offers four independent activities.
+1. The level chooser (`levels.html`) offers four independent activities, shown as shared Home-style tiles with the Lulu Games logo and the **Escolha um nível** heading in a compact row inside the panel.
 2. Each level randomly selects five different questions from `content.json`.
 3. The player chooses an answer. Mistakes can be retried without losing progress; a gentle clue appears after three incorrect attempts.
 4. A correct answer shows a short explanation and offers **Ouvir de novo** and **Próxima**. The explanation is spoken automatically unless the level sets `speakExplanation: false`.

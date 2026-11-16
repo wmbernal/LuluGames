@@ -1,32 +1,23 @@
 import { THEMES } from "./data.js?v=7";
 import { markSelectionLink, setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
+import { decorateSelectionTile } from "../../shared/js/selection.js?v=2";
 
 const themeList = document.querySelector("#theme-list");
 const orientationSuggested = setupOrientationSuggestion({ selection: true });
 
-for (const theme of THEMES) {
+THEMES.forEach((theme, index) => {
   const link = document.createElement("a");
-  link.className = "theme-choice";
+  link.className = "selection-tile";
   link.href = `./index.html?theme=${encodeURIComponent(theme.id)}`;
   markSelectionLink(link, orientationSuggested);
 
-  const icon = document.createElement("span");
-  icon.className = "theme-choice__icon";
-  icon.setAttribute("aria-hidden", "true");
-  icon.textContent = theme.icon;
+  decorateSelectionTile(link, {
+    icon: theme.icon,
+    label: theme.label,
+    description: theme.description,
+    count: `${theme.scenes.length} exercícios`,
+    index,
+  });
 
-  const title = document.createElement("span");
-  title.className = "theme-choice__title";
-  title.textContent = theme.label;
-
-  const description = document.createElement("span");
-  description.className = "theme-choice__description";
-  description.textContent = theme.description;
-
-  const count = document.createElement("span");
-  count.className = "theme-choice__count";
-  count.textContent = `${theme.scenes.length} exercícios`;
-
-  link.append(icon, title, description, count);
   themeList.append(link);
-}
+});

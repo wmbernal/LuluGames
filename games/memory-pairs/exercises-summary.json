@@ -1,0 +1,4463 @@
+{
+  "game": {
+    "id": "memory-pairs",
+    "name": "Jogo dos Pares",
+    "language": "pt-BR",
+    "source": [
+      "games/memory-pairs/data.js",
+      "games/memory-pairs/additional-themes.json"
+    ],
+    "exerciseCount": 12,
+    "roundsPerTheme": 5,
+    "pairsPerRound": 6,
+    "cardsPerRound": 12,
+    "totalRounds": 60,
+    "totalPairs": 360,
+    "totalCardEntries": 720,
+    "cardPresentation": "Each card displays a Unicode emoji and its Portuguese text label. The current card UI does not load image files.",
+    "boardLayout": "Six cards on the left and six on the right; positions on each side are shuffled independently.",
+    "matchingRule": "A pair matches when its two cards share pairId and are selected from opposite sides.",
+    "sessionOptions": [
+      3,
+      4,
+      5
+    ],
+    "sessionOptionsDescription": "The global setting selects the number of short boards played in one session; a theme has five different rounds available."
+  },
+  "authoringGuidance": {
+    "sourceFile": "games/memory-pairs/data.js",
+    "additionalThemeSourceFile": "games/memory-pairs/additional-themes.json",
+    "themeFields": [
+      "id",
+      "label",
+      "icon",
+      "description",
+      "rounds"
+    ],
+    "optionalThemeFields": [
+      "cardType"
+    ],
+    "pairFields": [
+      "pairId",
+      "cards"
+    ],
+    "cardFields": [
+      "icon",
+      "label"
+    ],
+    "cardTypeValues": [
+      "pictures",
+      "words"
+    ],
+    "constraints": [
+      "Each theme provides five rounds, each containing exactly six pairs.",
+      "Every pair has a stable pairId and exactly two cards, ordered left then right.",
+      "Each card has a non-empty emoji icon and a non-empty Portuguese label.",
+      "Within a round, pair IDs are unique; left-side labels and icons are unique, and right-side labels and icons are unique.",
+      "The two cards within a pair use different labels and different icons.",
+      "All five rounds in a theme use different sets of pair IDs.",
+      "For Palavras que rimam, set cardType to words and give every pair a rhymeGroup; each round must have six distinct rhymeGroup values."
+    ],
+    "contentNote": "Pair relationship categories are not stored separately; review the labels and pairId together to assess the intended association."
+  },
+  "themes": [
+    {
+      "id": "princess",
+      "name": "Princesas",
+      "icon": "👑",
+      "description": "Objetos de princesa que combinam.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "dress-coat",
+              "left": {
+                "emoji": "👗",
+                "label": "Vestido"
+              },
+              "right": {
+                "emoji": "🧥",
+                "label": "Casaco"
+              }
+            },
+            {
+              "pairId": "necklace-box",
+              "left": {
+                "emoji": "📿",
+                "label": "Colar"
+              },
+              "right": {
+                "emoji": "🎁",
+                "label": "Caixa de joias"
+              }
+            },
+            {
+              "pairId": "rose-vase",
+              "left": {
+                "emoji": "🌹",
+                "label": "Rosa"
+              },
+              "right": {
+                "emoji": "🏺",
+                "label": "Vaso"
+              }
+            },
+            {
+              "pairId": "brush-mirror",
+              "left": {
+                "emoji": "🪮",
+                "label": "Escova de cabelo"
+              },
+              "right": {
+                "emoji": "🪞",
+                "label": "Espelho"
+              }
+            },
+            {
+              "pairId": "invitation-envelope",
+              "left": {
+                "emoji": "💌",
+                "label": "Convite"
+              },
+              "right": {
+                "emoji": "✉️",
+                "label": "Envelope"
+              }
+            },
+            {
+              "pairId": "slipper-foot",
+              "left": {
+                "emoji": "🥿",
+                "label": "Sapatinho"
+              },
+              "right": {
+                "emoji": "🦶",
+                "label": "Pé"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "crown-princess",
+              "left": {
+                "emoji": "👑",
+                "label": "Coroa"
+              },
+              "right": {
+                "emoji": "👸",
+                "label": "Princesa"
+              }
+            },
+            {
+              "pairId": "glove-hand",
+              "left": {
+                "emoji": "🧤",
+                "label": "Luva"
+              },
+              "right": {
+                "emoji": "🖐️",
+                "label": "Mão"
+              }
+            },
+            {
+              "pairId": "umbrella-rain",
+              "left": {
+                "emoji": "☂️",
+                "label": "Guarda-chuva"
+              },
+              "right": {
+                "emoji": "🌧️",
+                "label": "Chuva"
+              }
+            },
+            {
+              "pairId": "candle-cake",
+              "left": {
+                "emoji": "🕯️",
+                "label": "Vela"
+              },
+              "right": {
+                "emoji": "🎂",
+                "label": "Bolo"
+              }
+            },
+            {
+              "pairId": "perfume-bottle",
+              "left": {
+                "emoji": "🧴",
+                "label": "Perfume"
+              },
+              "right": {
+                "emoji": "👃",
+                "label": "Nariz"
+              }
+            },
+            {
+              "pairId": "castle-flag",
+              "left": {
+                "emoji": "🏰",
+                "label": "Castelo"
+              },
+              "right": {
+                "emoji": "🚩",
+                "label": "Bandeira"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "horse-stable",
+              "left": {
+                "emoji": "🐴",
+                "label": "Cavalo"
+              },
+              "right": {
+                "emoji": "🏠",
+                "label": "Estábulo"
+              }
+            },
+            {
+              "pairId": "ring-finger",
+              "left": {
+                "emoji": "💍",
+                "label": "Anel"
+              },
+              "right": {
+                "emoji": "☝️",
+                "label": "Dedo"
+              }
+            },
+            {
+              "pairId": "hairbrush-hair",
+              "left": {
+                "emoji": "🪮",
+                "label": "Escova de cabelo"
+              },
+              "right": {
+                "emoji": "💇‍♀️",
+                "label": "Cabelo"
+              }
+            },
+            {
+              "pairId": "tea-cup",
+              "left": {
+                "emoji": "🫖",
+                "label": "Bule"
+              },
+              "right": {
+                "emoji": "☕",
+                "label": "Xícara"
+              }
+            },
+            {
+              "pairId": "wand-star",
+              "left": {
+                "emoji": "🪄",
+                "label": "Varinha"
+              },
+              "right": {
+                "emoji": "⭐",
+                "label": "Estrela"
+              }
+            },
+            {
+              "pairId": "shoe-sock",
+              "left": {
+                "emoji": "👠",
+                "label": "Sapato"
+              },
+              "right": {
+                "emoji": "🧦",
+                "label": "Meia"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "makeup-brush",
+              "left": {
+                "emoji": "🖌️",
+                "label": "Pincel de maquiagem"
+              },
+              "right": {
+                "emoji": "💄",
+                "label": "Maquiagem"
+              }
+            },
+            {
+              "pairId": "hair-ribbon",
+              "left": {
+                "emoji": "🎀",
+                "label": "Laço"
+              },
+              "right": {
+                "emoji": "💇‍♀️",
+                "label": "Cabelo"
+              }
+            },
+            {
+              "pairId": "earring-ear",
+              "left": {
+                "emoji": "💎",
+                "label": "Brinco"
+              },
+              "right": {
+                "emoji": "👂",
+                "label": "Orelha"
+              }
+            },
+            {
+              "pairId": "dress-closet",
+              "left": {
+                "emoji": "👗",
+                "label": "Vestido"
+              },
+              "right": {
+                "emoji": "🚪",
+                "label": "Guarda-roupa"
+              }
+            },
+            {
+              "pairId": "cake-fork",
+              "left": {
+                "emoji": "🍰",
+                "label": "Bolo"
+              },
+              "right": {
+                "emoji": "🍴",
+                "label": "Garfo"
+              }
+            },
+            {
+              "pairId": "ball-music",
+              "left": {
+                "emoji": "💃",
+                "label": "Dança"
+              },
+              "right": {
+                "emoji": "🎵",
+                "label": "Música"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "pillow-bed",
+              "left": {
+                "emoji": "🛌",
+                "label": "Travesseiro"
+              },
+              "right": {
+                "emoji": "🛏️",
+                "label": "Cama"
+              }
+            },
+            {
+              "pairId": "scepter-crown",
+              "left": {
+                "emoji": "🔱",
+                "label": "Cetro"
+              },
+              "right": {
+                "emoji": "👑",
+                "label": "Coroa"
+              }
+            },
+            {
+              "pairId": "slipper-princess",
+              "left": {
+                "emoji": "🥿",
+                "label": "Sapatinho"
+              },
+              "right": {
+                "emoji": "👸",
+                "label": "Princesa"
+              }
+            },
+            {
+              "pairId": "brush-lipstick",
+              "left": {
+                "emoji": "🖌️",
+                "label": "Pincel de maquiagem"
+              },
+              "right": {
+                "emoji": "💋",
+                "label": "Batom"
+              }
+            },
+            {
+              "pairId": "castle-gate",
+              "left": {
+                "emoji": "🏰",
+                "label": "Castelo"
+              },
+              "right": {
+                "emoji": "🚪",
+                "label": "Portão"
+              }
+            },
+            {
+              "pairId": "tiara-hair",
+              "left": {
+                "emoji": "👑",
+                "label": "Tiara"
+              },
+              "right": {
+                "emoji": "💇‍♀️",
+                "label": "Cabelo"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "name": "Casa",
+      "icon": "🏠",
+      "description": "Objetos de casa e o que usamos com eles.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "key-door",
+              "left": {
+                "emoji": "🔑",
+                "label": "Chave"
+              },
+              "right": {
+                "emoji": "🚪",
+                "label": "Porta"
+              }
+            },
+            {
+              "pairId": "bed-pillow",
+              "left": {
+                "emoji": "🛏️",
+                "label": "Cama"
+              },
+              "right": {
+                "emoji": "🛌",
+                "label": "Travesseiro"
+              }
+            },
+            {
+              "pairId": "lamp-light",
+              "left": {
+                "emoji": "💡",
+                "label": "Lâmpada"
+              },
+              "right": {
+                "emoji": "✨",
+                "label": "Luz"
+              }
+            },
+            {
+              "pairId": "table-chair",
+              "left": {
+                "emoji": "🍽️",
+                "label": "Mesa"
+              },
+              "right": {
+                "emoji": "🪑",
+                "label": "Cadeira"
+              }
+            },
+            {
+              "pairId": "toothbrush-toothpaste",
+              "left": {
+                "emoji": "🪥",
+                "label": "Escova de dentes"
+              },
+              "right": {
+                "emoji": "🦷",
+                "label": "Pasta de dente"
+              }
+            },
+            {
+              "pairId": "cup-water",
+              "left": {
+                "emoji": "🥛",
+                "label": "Copo"
+              },
+              "right": {
+                "emoji": "💧",
+                "label": "Água"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "soap-hands",
+              "left": {
+                "emoji": "🧼",
+                "label": "Sabonete"
+              },
+              "right": {
+                "emoji": "👐",
+                "label": "Mãos"
+              }
+            },
+            {
+              "pairId": "book-shelf",
+              "left": {
+                "emoji": "📚",
+                "label": "Livros"
+              },
+              "right": {
+                "emoji": "🗄️",
+                "label": "Estante"
+              }
+            },
+            {
+              "pairId": "broom-floor",
+              "left": {
+                "emoji": "🧹",
+                "label": "Vassoura"
+              },
+              "right": {
+                "emoji": "🧼",
+                "label": "Chão limpo"
+              }
+            },
+            {
+              "pairId": "remote-tv",
+              "left": {
+                "emoji": "🎮",
+                "label": "Controle remoto"
+              },
+              "right": {
+                "emoji": "📺",
+                "label": "Televisão"
+              }
+            },
+            {
+              "pairId": "fridge-food",
+              "left": {
+                "emoji": "🧊",
+                "label": "Geladeira"
+              },
+              "right": {
+                "emoji": "🥦",
+                "label": "Legumes"
+              }
+            },
+            {
+              "pairId": "oven-cake",
+              "left": {
+                "emoji": "🔥",
+                "label": "Forno"
+              },
+              "right": {
+                "emoji": "🍰",
+                "label": "Bolo"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "sink-dishes",
+              "left": {
+                "emoji": "🚰",
+                "label": "Pia"
+              },
+              "right": {
+                "emoji": "🍽️",
+                "label": "Louça"
+              }
+            },
+            {
+              "pairId": "shower-towel",
+              "left": {
+                "emoji": "🚿",
+                "label": "Chuveiro"
+              },
+              "right": {
+                "emoji": "🧖",
+                "label": "Toalha"
+              }
+            },
+            {
+              "pairId": "clock-time",
+              "left": {
+                "emoji": "🕰️",
+                "label": "Relógio"
+              },
+              "right": {
+                "emoji": "⏰",
+                "label": "Hora"
+              }
+            },
+            {
+              "pairId": "trash-bin",
+              "left": {
+                "emoji": "🛍️",
+                "label": "Saco de lixo"
+              },
+              "right": {
+                "emoji": "🗑️",
+                "label": "Lixeira"
+              }
+            },
+            {
+              "pairId": "pencil-paper",
+              "left": {
+                "emoji": "✏️",
+                "label": "Lápis"
+              },
+              "right": {
+                "emoji": "📄",
+                "label": "Papel"
+              }
+            },
+            {
+              "pairId": "laundry-washer",
+              "left": {
+                "emoji": "👕",
+                "label": "Roupa suja"
+              },
+              "right": {
+                "emoji": "🫧",
+                "label": "Máquina de lavar"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "blanket-bed",
+              "left": {
+                "emoji": "🛌",
+                "label": "Cobertor"
+              },
+              "right": {
+                "emoji": "🛏️",
+                "label": "Cama"
+              }
+            },
+            {
+              "pairId": "bowl-spoon",
+              "left": {
+                "emoji": "🥣",
+                "label": "Tigela"
+              },
+              "right": {
+                "emoji": "🥄",
+                "label": "Colher"
+              }
+            },
+            {
+              "pairId": "glasses-eyes",
+              "left": {
+                "emoji": "👓",
+                "label": "Óculos"
+              },
+              "right": {
+                "emoji": "👀",
+                "label": "Olhos"
+              }
+            },
+            {
+              "pairId": "doorbell-door",
+              "left": {
+                "emoji": "🔔",
+                "label": "Campainha"
+              },
+              "right": {
+                "emoji": "🚪",
+                "label": "Porta"
+              }
+            },
+            {
+              "pairId": "sponge-sink",
+              "left": {
+                "emoji": "🧽",
+                "label": "Esponja"
+              },
+              "right": {
+                "emoji": "🚰",
+                "label": "Pia"
+              }
+            },
+            {
+              "pairId": "basket-laundry",
+              "left": {
+                "emoji": "🧺",
+                "label": "Cesto"
+              },
+              "right": {
+                "emoji": "👕",
+                "label": "Roupa suja"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "pot-soup",
+              "left": {
+                "emoji": "🍲",
+                "label": "Panela"
+              },
+              "right": {
+                "emoji": "🥣",
+                "label": "Sopa"
+              }
+            },
+            {
+              "pairId": "knife-vegetable",
+              "left": {
+                "emoji": "🔪",
+                "label": "Faca"
+              },
+              "right": {
+                "emoji": "🥕",
+                "label": "Legume"
+              }
+            },
+            {
+              "pairId": "faucet-water",
+              "left": {
+                "emoji": "🚰",
+                "label": "Torneira"
+              },
+              "right": {
+                "emoji": "💧",
+                "label": "Água"
+              }
+            },
+            {
+              "pairId": "couch-cushion",
+              "left": {
+                "emoji": "🛋️",
+                "label": "Sofá"
+              },
+              "right": {
+                "emoji": "🛌",
+                "label": "Almofada"
+              }
+            },
+            {
+              "pairId": "window-curtain",
+              "left": {
+                "emoji": "🪟",
+                "label": "Janela"
+              },
+              "right": {
+                "emoji": "🧵",
+                "label": "Cortina"
+              }
+            },
+            {
+              "pairId": "watering-can-flower",
+              "left": {
+                "emoji": "🚿",
+                "label": "Regador"
+              },
+              "right": {
+                "emoji": "🌼",
+                "label": "Flor"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "animals",
+      "name": "Animais",
+      "icon": "🐱",
+      "description": "Animais e lugares ou coisas ligados a eles.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "dog-doghouse",
+              "left": {
+                "emoji": "🐶",
+                "label": "Cachorro"
+              },
+              "right": {
+                "emoji": "🏠",
+                "label": "Casinha de cachorro"
+              }
+            },
+            {
+              "pairId": "rabbit-burrow",
+              "left": {
+                "emoji": "🐰",
+                "label": "Coelho"
+              },
+              "right": {
+                "emoji": "🕳️",
+                "label": "Toca de coelho"
+              }
+            },
+            {
+              "pairId": "bird-tree-nest",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🪺",
+                "label": "Ninho na árvore"
+              }
+            },
+            {
+              "pairId": "fish-cave",
+              "left": {
+                "emoji": "🐠",
+                "label": "Peixe"
+              },
+              "right": {
+                "emoji": "🪨",
+                "label": "Caverna no mar"
+              }
+            },
+            {
+              "pairId": "cat-bed",
+              "left": {
+                "emoji": "🐱",
+                "label": "Gato"
+              },
+              "right": {
+                "emoji": "🛏️",
+                "label": "Caminha de gato"
+              }
+            },
+            {
+              "pairId": "turtle-pond",
+              "left": {
+                "emoji": "🐢",
+                "label": "Tartaruga"
+              },
+              "right": {
+                "emoji": "🪷",
+                "label": "Lagoa"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "dog-bone",
+              "left": {
+                "emoji": "🐶",
+                "label": "Cachorro"
+              },
+              "right": {
+                "emoji": "🦴",
+                "label": "Osso"
+              }
+            },
+            {
+              "pairId": "rabbit-carrot",
+              "left": {
+                "emoji": "🐰",
+                "label": "Coelho"
+              },
+              "right": {
+                "emoji": "🥕",
+                "label": "Cenoura"
+              }
+            },
+            {
+              "pairId": "bird-seeds",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🌻",
+                "label": "Sementes"
+              }
+            },
+            {
+              "pairId": "fish-flakes",
+              "left": {
+                "emoji": "🐠",
+                "label": "Peixe"
+              },
+              "right": {
+                "emoji": "🦐",
+                "label": "Comida de peixe"
+              }
+            },
+            {
+              "pairId": "cat-yarn",
+              "left": {
+                "emoji": "🐱",
+                "label": "Gato"
+              },
+              "right": {
+                "emoji": "🧶",
+                "label": "Novelo de lã"
+              }
+            },
+            {
+              "pairId": "horse-hay",
+              "left": {
+                "emoji": "🐴",
+                "label": "Cavalo"
+              },
+              "right": {
+                "emoji": "🌾",
+                "label": "Feno"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "dog-leash",
+              "left": {
+                "emoji": "🐶",
+                "label": "Cachorro"
+              },
+              "right": {
+                "emoji": "🪢",
+                "label": "Guia"
+              }
+            },
+            {
+              "pairId": "rabbit-hutch",
+              "left": {
+                "emoji": "🐰",
+                "label": "Coelho"
+              },
+              "right": {
+                "emoji": "🛖",
+                "label": "Casinha de coelho"
+              }
+            },
+            {
+              "pairId": "bird-nest",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🪹",
+                "label": "Ninho"
+              }
+            },
+            {
+              "pairId": "fish-coral",
+              "left": {
+                "emoji": "🐠",
+                "label": "Peixe"
+              },
+              "right": {
+                "emoji": "🪸",
+                "label": "Coral"
+              }
+            },
+            {
+              "pairId": "cat-scratcher",
+              "left": {
+                "emoji": "🐱",
+                "label": "Gato"
+              },
+              "right": {
+                "emoji": "🪵",
+                "label": "Arranhador"
+              }
+            },
+            {
+              "pairId": "turtle-shell",
+              "left": {
+                "emoji": "🐢",
+                "label": "Tartaruga"
+              },
+              "right": {
+                "emoji": "🐚",
+                "label": "Casco"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "puppy-mother",
+              "left": {
+                "emoji": "🐶",
+                "label": "Filhote de cachorro"
+              },
+              "right": {
+                "emoji": "🐕",
+                "label": "Cachorro adulto"
+              }
+            },
+            {
+              "pairId": "kitten-mother",
+              "left": {
+                "emoji": "🐱",
+                "label": "Filhote de gato"
+              },
+              "right": {
+                "emoji": "🐈",
+                "label": "Gato adulto"
+              }
+            },
+            {
+              "pairId": "chick-hen",
+              "left": {
+                "emoji": "🐣",
+                "label": "Pintinho"
+              },
+              "right": {
+                "emoji": "🐔",
+                "label": "Galinha"
+              }
+            },
+            {
+              "pairId": "lamb-sheep",
+              "left": {
+                "emoji": "🐑",
+                "label": "Cordeiro"
+              },
+              "right": {
+                "emoji": "🐏",
+                "label": "Ovelha"
+              }
+            },
+            {
+              "pairId": "foal-horse",
+              "left": {
+                "emoji": "🐴",
+                "label": "Potro"
+              },
+              "right": {
+                "emoji": "🐎",
+                "label": "Cavalo"
+              }
+            },
+            {
+              "pairId": "calf-cow",
+              "left": {
+                "emoji": "🐮",
+                "label": "Bezerro"
+              },
+              "right": {
+                "emoji": "🐄",
+                "label": "Vaca"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "dog-ball",
+              "left": {
+                "emoji": "🐶",
+                "label": "Cachorro"
+              },
+              "right": {
+                "emoji": "🎾",
+                "label": "Bola"
+              }
+            },
+            {
+              "pairId": "rabbit-cabbage",
+              "left": {
+                "emoji": "🐰",
+                "label": "Coelho"
+              },
+              "right": {
+                "emoji": "🥬",
+                "label": "Repolho"
+              }
+            },
+            {
+              "pairId": "bird-feeder",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🪹",
+                "label": "Comedouro"
+              }
+            },
+            {
+              "pairId": "fish-seaweed",
+              "left": {
+                "emoji": "🐠",
+                "label": "Peixe"
+              },
+              "right": {
+                "emoji": "🌿",
+                "label": "Alga marinha"
+              }
+            },
+            {
+              "pairId": "cat-mouse",
+              "left": {
+                "emoji": "🐱",
+                "label": "Gato"
+              },
+              "right": {
+                "emoji": "🐭",
+                "label": "Rato de brinquedo"
+              }
+            },
+            {
+              "pairId": "turtle-rock",
+              "left": {
+                "emoji": "🐢",
+                "label": "Tartaruga"
+              },
+              "right": {
+                "emoji": "🪨",
+                "label": "Pedra para tomar sol"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transportes",
+      "icon": "🚗",
+      "description": "Transportes e caminhos por onde passam.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "car-road",
+              "left": {
+                "emoji": "🚗",
+                "label": "Carro"
+              },
+              "right": {
+                "emoji": "🛣️",
+                "label": "Estrada"
+              }
+            },
+            {
+              "pairId": "train-rail",
+              "left": {
+                "emoji": "🚂",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🛤️",
+                "label": "Trilhos"
+              }
+            },
+            {
+              "pairId": "boat-water",
+              "left": {
+                "emoji": "⛵",
+                "label": "Barco"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Água"
+              }
+            },
+            {
+              "pairId": "airplane-sky",
+              "left": {
+                "emoji": "✈️",
+                "label": "Avião"
+              },
+              "right": {
+                "emoji": "☁️",
+                "label": "Céu"
+              }
+            },
+            {
+              "pairId": "bicycle-helmet",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "⛑️",
+                "label": "Capacete"
+              }
+            },
+            {
+              "pairId": "bus-stop",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🚏",
+                "label": "Ponto de ônibus"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "taxi-passenger",
+              "left": {
+                "emoji": "🚕",
+                "label": "Táxi"
+              },
+              "right": {
+                "emoji": "🧍",
+                "label": "Passageiro"
+              }
+            },
+            {
+              "pairId": "train-station",
+              "left": {
+                "emoji": "🚂",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🚉",
+                "label": "Estação"
+              }
+            },
+            {
+              "pairId": "boat-anchor",
+              "left": {
+                "emoji": "⛵",
+                "label": "Barco"
+              },
+              "right": {
+                "emoji": "⚓",
+                "label": "Âncora"
+              }
+            },
+            {
+              "pairId": "airplane-airport",
+              "left": {
+                "emoji": "✈️",
+                "label": "Avião"
+              },
+              "right": {
+                "emoji": "🛫",
+                "label": "Aeroporto"
+              }
+            },
+            {
+              "pairId": "bicycle-wheel",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "🛞",
+                "label": "Roda"
+              }
+            },
+            {
+              "pairId": "bus-ticket",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🎫",
+                "label": "Passagem"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "car-seatbelt",
+              "left": {
+                "emoji": "🚗",
+                "label": "Carro"
+              },
+              "right": {
+                "emoji": "💺",
+                "label": "Cinto de segurança"
+              }
+            },
+            {
+              "pairId": "train-conductor",
+              "left": {
+                "emoji": "🚂",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🧑‍🔧",
+                "label": "Maquinista"
+              }
+            },
+            {
+              "pairId": "boat-lifejacket",
+              "left": {
+                "emoji": "⛵",
+                "label": "Barco"
+              },
+              "right": {
+                "emoji": "🦺",
+                "label": "Colete salva-vidas"
+              }
+            },
+            {
+              "pairId": "airplane-pilot",
+              "left": {
+                "emoji": "✈️",
+                "label": "Avião"
+              },
+              "right": {
+                "emoji": "👨‍✈️",
+                "label": "Piloto"
+              }
+            },
+            {
+              "pairId": "bicycle-bell",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "🔔",
+                "label": "Campainha"
+              }
+            },
+            {
+              "pairId": "bus-driver",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🧑‍✈️",
+                "label": "Motorista"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "car-key",
+              "left": {
+                "emoji": "🚗",
+                "label": "Carro"
+              },
+              "right": {
+                "emoji": "🔑",
+                "label": "Chave"
+              }
+            },
+            {
+              "pairId": "train-track",
+              "left": {
+                "emoji": "🚆",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🛤️",
+                "label": "Trilho"
+              }
+            },
+            {
+              "pairId": "boat-oar",
+              "left": {
+                "emoji": "🚣",
+                "label": "Barco a remo"
+              },
+              "right": {
+                "emoji": "🛶",
+                "label": "Remo"
+              }
+            },
+            {
+              "pairId": "airplane-runway",
+              "left": {
+                "emoji": "✈️",
+                "label": "Avião"
+              },
+              "right": {
+                "emoji": "🛬",
+                "label": "Pista de pouso"
+              }
+            },
+            {
+              "pairId": "bicycle-basket",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "🧺",
+                "label": "Cesta"
+              }
+            },
+            {
+              "pairId": "bus-route",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🗺️",
+                "label": "Rota"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "car-garage",
+              "left": {
+                "emoji": "🚗",
+                "label": "Carro"
+              },
+              "right": {
+                "emoji": "🏠",
+                "label": "Garagem"
+              }
+            },
+            {
+              "pairId": "train-ticket",
+              "left": {
+                "emoji": "🚂",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🎫",
+                "label": "Passagem"
+              }
+            },
+            {
+              "pairId": "boat-harbor",
+              "left": {
+                "emoji": "🚤",
+                "label": "Barco"
+              },
+              "right": {
+                "emoji": "⚓",
+                "label": "Porto"
+              }
+            },
+            {
+              "pairId": "airplane-cloud",
+              "left": {
+                "emoji": "✈️",
+                "label": "Avião"
+              },
+              "right": {
+                "emoji": "☁️",
+                "label": "Nuvem"
+              }
+            },
+            {
+              "pairId": "bicycle-pedal",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "🦶",
+                "label": "Pedal"
+              }
+            },
+            {
+              "pairId": "bus-passengers",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🧍",
+                "label": "Passageiros"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Comidas",
+      "icon": "🍎",
+      "description": "Ingredientes e comidas feitas com eles.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "carrot-cake",
+              "left": {
+                "emoji": "🥕",
+                "label": "Cenoura"
+              },
+              "right": {
+                "emoji": "🍰",
+                "label": "Bolo de cenoura"
+              }
+            },
+            {
+              "pairId": "bread-sandwich",
+              "left": {
+                "emoji": "🍞",
+                "label": "Pão"
+              },
+              "right": {
+                "emoji": "🥪",
+                "label": "Sanduíche"
+              }
+            },
+            {
+              "pairId": "strawberry-jam",
+              "left": {
+                "emoji": "🍓",
+                "label": "Morango"
+              },
+              "right": {
+                "emoji": "🫙",
+                "label": "Geleia de morango"
+              }
+            },
+            {
+              "pairId": "banana-split",
+              "left": {
+                "emoji": "🍌",
+                "label": "Banana"
+              },
+              "right": {
+                "emoji": "🍨",
+                "label": "Banana split"
+              }
+            },
+            {
+              "pairId": "corn-popcorn",
+              "left": {
+                "emoji": "🌽",
+                "label": "Milho"
+              },
+              "right": {
+                "emoji": "🍿",
+                "label": "Pipoca"
+              }
+            },
+            {
+              "pairId": "apple-juice",
+              "left": {
+                "emoji": "🍎",
+                "label": "Maçã"
+              },
+              "right": {
+                "emoji": "🧃",
+                "label": "Suco de maçã"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "tomato-sauce",
+              "left": {
+                "emoji": "🍅",
+                "label": "Tomate"
+              },
+              "right": {
+                "emoji": "🥫",
+                "label": "Molho de tomate"
+              }
+            },
+            {
+              "pairId": "grape-juice",
+              "left": {
+                "emoji": "🍇",
+                "label": "Uva"
+              },
+              "right": {
+                "emoji": "🧃",
+                "label": "Suco de uva"
+              }
+            },
+            {
+              "pairId": "potato-fries",
+              "left": {
+                "emoji": "🥔",
+                "label": "Batata"
+              },
+              "right": {
+                "emoji": "🍟",
+                "label": "Batata frita"
+              }
+            },
+            {
+              "pairId": "milk-cheese",
+              "left": {
+                "emoji": "🥛",
+                "label": "Leite"
+              },
+              "right": {
+                "emoji": "🧀",
+                "label": "Queijo"
+              }
+            },
+            {
+              "pairId": "orange-cake",
+              "left": {
+                "emoji": "🍊",
+                "label": "Laranja"
+              },
+              "right": {
+                "emoji": "🍰",
+                "label": "Bolo de laranja"
+              }
+            },
+            {
+              "pairId": "cocoa-chocolate",
+              "left": {
+                "emoji": "🫘",
+                "label": "Cacau"
+              },
+              "right": {
+                "emoji": "🍫",
+                "label": "Chocolate"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "lemonade-lemon",
+              "left": {
+                "emoji": "🍋",
+                "label": "Limão"
+              },
+              "right": {
+                "emoji": "🥤",
+                "label": "Limonada"
+              }
+            },
+            {
+              "pairId": "pineapple-pizza",
+              "left": {
+                "emoji": "🍍",
+                "label": "Abacaxi"
+              },
+              "right": {
+                "emoji": "🍕",
+                "label": "Pizza de abacaxi"
+              }
+            },
+            {
+              "pairId": "egg-omelet",
+              "left": {
+                "emoji": "🥚",
+                "label": "Ovo"
+              },
+              "right": {
+                "emoji": "🍳",
+                "label": "Omelete"
+              }
+            },
+            {
+              "pairId": "rice-cooked",
+              "left": {
+                "emoji": "🌾",
+                "label": "Arroz"
+              },
+              "right": {
+                "emoji": "🍚",
+                "label": "Arroz cozido"
+              }
+            },
+            {
+              "pairId": "pumpkin-soup",
+              "left": {
+                "emoji": "🎃",
+                "label": "Abóbora"
+              },
+              "right": {
+                "emoji": "🥣",
+                "label": "Sopa de abóbora"
+              }
+            },
+            {
+              "pairId": "coconut-water",
+              "left": {
+                "emoji": "🥥",
+                "label": "Coco"
+              },
+              "right": {
+                "emoji": "💧",
+                "label": "Água de coco"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "peach-pie",
+              "left": {
+                "emoji": "🍑",
+                "label": "Pêssego"
+              },
+              "right": {
+                "emoji": "🥧",
+                "label": "Torta de pêssego"
+              }
+            },
+            {
+              "pairId": "blueberry-muffin",
+              "left": {
+                "emoji": "🫐",
+                "label": "Mirtilo"
+              },
+              "right": {
+                "emoji": "🧁",
+                "label": "Bolinho de mirtilo"
+              }
+            },
+            {
+              "pairId": "cucumber-salad",
+              "left": {
+                "emoji": "🥒",
+                "label": "Pepino"
+              },
+              "right": {
+                "emoji": "🥗",
+                "label": "Salada de pepino"
+              }
+            },
+            {
+              "pairId": "mushroom-pasta",
+              "left": {
+                "emoji": "🍄",
+                "label": "Cogumelo"
+              },
+              "right": {
+                "emoji": "🍝",
+                "label": "Macarrão com cogumelo"
+              }
+            },
+            {
+              "pairId": "honey-toast",
+              "left": {
+                "emoji": "🍯",
+                "label": "Mel"
+              },
+              "right": {
+                "emoji": "🍞",
+                "label": "Pão com mel"
+              }
+            },
+            {
+              "pairId": "lettuce-taco",
+              "left": {
+                "emoji": "🥬",
+                "label": "Alface"
+              },
+              "right": {
+                "emoji": "🌮",
+                "label": "Taco com alface"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "cherry-icecream",
+              "left": {
+                "emoji": "🍒",
+                "label": "Cereja"
+              },
+              "right": {
+                "emoji": "🍨",
+                "label": "Sorvete de cereja"
+              }
+            },
+            {
+              "pairId": "watermelon-juice",
+              "left": {
+                "emoji": "🍉",
+                "label": "Melancia"
+              },
+              "right": {
+                "emoji": "🥤",
+                "label": "Suco de melancia"
+              }
+            },
+            {
+              "pairId": "cheese-pizza",
+              "left": {
+                "emoji": "🧀",
+                "label": "Queijo"
+              },
+              "right": {
+                "emoji": "🍕",
+                "label": "Pizza de queijo"
+              }
+            },
+            {
+              "pairId": "flour-pancake",
+              "left": {
+                "emoji": "🌾",
+                "label": "Farinha"
+              },
+              "right": {
+                "emoji": "🥞",
+                "label": "Panqueca"
+              }
+            },
+            {
+              "pairId": "onion-soup",
+              "left": {
+                "emoji": "🧅",
+                "label": "Cebola"
+              },
+              "right": {
+                "emoji": "🥣",
+                "label": "Sopa de cebola"
+              }
+            },
+            {
+              "pairId": "bean-soup",
+              "left": {
+                "emoji": "🫘",
+                "label": "Feijão"
+              },
+              "right": {
+                "emoji": "🥘",
+                "label": "Sopa de feijão"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garden",
+      "name": "Jardim",
+      "icon": "🌷",
+      "description": "Plantas, ferramentas e animais do jardim.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "bee-flower",
+              "left": {
+                "emoji": "🐝",
+                "label": "Abelha"
+              },
+              "right": {
+                "emoji": "🌷",
+                "label": "Flor"
+              }
+            },
+            {
+              "pairId": "watering-plant",
+              "left": {
+                "emoji": "🚿",
+                "label": "Regador"
+              },
+              "right": {
+                "emoji": "🪴",
+                "label": "Planta"
+              }
+            },
+            {
+              "pairId": "seed-soil",
+              "left": {
+                "emoji": "🌰",
+                "label": "Semente"
+              },
+              "right": {
+                "emoji": "🟫",
+                "label": "Terra"
+              }
+            },
+            {
+              "pairId": "bird-nest",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🪺",
+                "label": "Ninho"
+              }
+            },
+            {
+              "pairId": "butterfly-caterpillar",
+              "left": {
+                "emoji": "🦋",
+                "label": "Borboleta"
+              },
+              "right": {
+                "emoji": "🐛",
+                "label": "Lagarta"
+              }
+            },
+            {
+              "pairId": "tree-fruit",
+              "left": {
+                "emoji": "🌳",
+                "label": "Árvore"
+              },
+              "right": {
+                "emoji": "🍎",
+                "label": "Fruta"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "shovel-soil",
+              "left": {
+                "emoji": "🪏",
+                "label": "Pá"
+              },
+              "right": {
+                "emoji": "🪴",
+                "label": "Terra"
+              }
+            },
+            {
+              "pairId": "flower-vase",
+              "left": {
+                "emoji": "🌷",
+                "label": "Flor"
+              },
+              "right": {
+                "emoji": "🏺",
+                "label": "Vaso"
+              }
+            },
+            {
+              "pairId": "sun-sunflower",
+              "left": {
+                "emoji": "☀️",
+                "label": "Sol"
+              },
+              "right": {
+                "emoji": "🌻",
+                "label": "Girassol"
+              }
+            },
+            {
+              "pairId": "mushroom-basket",
+              "left": {
+                "emoji": "🍄",
+                "label": "Cogumelo"
+              },
+              "right": {
+                "emoji": "🧺",
+                "label": "Cesta"
+              }
+            },
+            {
+              "pairId": "leaf-tree",
+              "left": {
+                "emoji": "🍃",
+                "label": "Folha"
+              },
+              "right": {
+                "emoji": "🌳",
+                "label": "Árvore"
+              }
+            },
+            {
+              "pairId": "bee-hive",
+              "left": {
+                "emoji": "🐝",
+                "label": "Abelha"
+              },
+              "right": {
+                "emoji": "🍯",
+                "label": "Colmeia"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "rose-thorn",
+              "left": {
+                "emoji": "🌹",
+                "label": "Rosa"
+              },
+              "right": {
+                "emoji": "🌵",
+                "label": "Espinho"
+              }
+            },
+            {
+              "pairId": "bird-feeder",
+              "left": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              },
+              "right": {
+                "emoji": "🥣",
+                "label": "Comedouro"
+              }
+            },
+            {
+              "pairId": "trowel-seed",
+              "left": {
+                "emoji": "🪏",
+                "label": "Pazinha"
+              },
+              "right": {
+                "emoji": "🌰",
+                "label": "Semente"
+              }
+            },
+            {
+              "pairId": "butterfly-flower",
+              "left": {
+                "emoji": "🦋",
+                "label": "Borboleta"
+              },
+              "right": {
+                "emoji": "🌸",
+                "label": "Flor"
+              }
+            },
+            {
+              "pairId": "tree-swing",
+              "left": {
+                "emoji": "🌳",
+                "label": "Árvore"
+              },
+              "right": {
+                "emoji": "🪢",
+                "label": "Balanço"
+              }
+            },
+            {
+              "pairId": "worm-soil",
+              "left": {
+                "emoji": "🪱",
+                "label": "Minhoca"
+              },
+              "right": {
+                "emoji": "🪴",
+                "label": "Terra"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "watering-flower",
+              "left": {
+                "emoji": "🚿",
+                "label": "Regador"
+              },
+              "right": {
+                "emoji": "🌼",
+                "label": "Flor"
+              }
+            },
+            {
+              "pairId": "sunflower-sun",
+              "left": {
+                "emoji": "🌻",
+                "label": "Girassol"
+              },
+              "right": {
+                "emoji": "☀️",
+                "label": "Sol"
+              }
+            },
+            {
+              "pairId": "apple-tree",
+              "left": {
+                "emoji": "🍎",
+                "label": "Maçã"
+              },
+              "right": {
+                "emoji": "🌳",
+                "label": "Macieira"
+              }
+            },
+            {
+              "pairId": "nest-eggs",
+              "left": {
+                "emoji": "🪺",
+                "label": "Ninho"
+              },
+              "right": {
+                "emoji": "🥚",
+                "label": "Ovos"
+              }
+            },
+            {
+              "pairId": "caterpillar-leaf",
+              "left": {
+                "emoji": "🐛",
+                "label": "Lagarta"
+              },
+              "right": {
+                "emoji": "🍃",
+                "label": "Folha"
+              }
+            },
+            {
+              "pairId": "rain-plant",
+              "left": {
+                "emoji": "🌧️",
+                "label": "Chuva"
+              },
+              "right": {
+                "emoji": "🌱",
+                "label": "Planta"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "garden-gloves",
+              "left": {
+                "emoji": "🧤",
+                "label": "Luvas de jardim"
+              },
+              "right": {
+                "emoji": "🪏",
+                "label": "Pá de jardim"
+              }
+            },
+            {
+              "pairId": "plant-pot",
+              "left": {
+                "emoji": "🪴",
+                "label": "Planta"
+              },
+              "right": {
+                "emoji": "🏺",
+                "label": "Vaso"
+              }
+            },
+            {
+              "pairId": "bee-honey",
+              "left": {
+                "emoji": "🐝",
+                "label": "Abelha"
+              },
+              "right": {
+                "emoji": "🍯",
+                "label": "Mel"
+              }
+            },
+            {
+              "pairId": "flower-seed",
+              "left": {
+                "emoji": "🌻",
+                "label": "Flor"
+              },
+              "right": {
+                "emoji": "🌰",
+                "label": "Semente"
+              }
+            },
+            {
+              "pairId": "tree-bird",
+              "left": {
+                "emoji": "🌳",
+                "label": "Árvore"
+              },
+              "right": {
+                "emoji": "🐦",
+                "label": "Pássaro"
+              }
+            },
+            {
+              "pairId": "rain-rainbow",
+              "left": {
+                "emoji": "🌧️",
+                "label": "Chuva"
+              },
+              "right": {
+                "emoji": "🌈",
+                "label": "Arco-íris"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rhymes",
+      "name": "Palavras que rimam",
+      "icon": "🔤",
+      "description": "Encontre palavras com sons finais parecidos.",
+      "cardType": "words",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "gato-pato",
+              "left": {
+                "emoji": "🐱",
+                "label": "Gato"
+              },
+              "right": {
+                "emoji": "🦆",
+                "label": "Pato"
+              },
+              "rhymeGroup": "ato"
+            },
+            {
+              "pairId": "mao-pao",
+              "left": {
+                "emoji": "✋",
+                "label": "Mão"
+              },
+              "right": {
+                "emoji": "🍞",
+                "label": "Pão"
+              },
+              "rhymeGroup": "ao"
+            },
+            {
+              "pairId": "bola-escola",
+              "left": {
+                "emoji": "⚽",
+                "label": "Bola"
+              },
+              "right": {
+                "emoji": "🏫",
+                "label": "Escola"
+              },
+              "rhymeGroup": "ola"
+            },
+            {
+              "pairId": "panela-janela",
+              "left": {
+                "emoji": "🍲",
+                "label": "Panela"
+              },
+              "right": {
+                "emoji": "🪟",
+                "label": "Janela"
+              },
+              "rhymeGroup": "ela"
+            },
+            {
+              "pairId": "baleia-areia",
+              "left": {
+                "emoji": "🐋",
+                "label": "Baleia"
+              },
+              "right": {
+                "emoji": "🏖️",
+                "label": "Areia"
+              },
+              "rhymeGroup": "eia"
+            },
+            {
+              "pairId": "cachorro-socorro",
+              "left": {
+                "emoji": "🐶",
+                "label": "Cachorro"
+              },
+              "right": {
+                "emoji": "🛟",
+                "label": "Socorro"
+              },
+              "rhymeGroup": "orro"
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "rato-prato",
+              "left": {
+                "emoji": "🐭",
+                "label": "Rato"
+              },
+              "right": {
+                "emoji": "🍽️",
+                "label": "Prato"
+              },
+              "rhymeGroup": "ato"
+            },
+            {
+              "pairId": "mel-pastel",
+              "left": {
+                "emoji": "🍯",
+                "label": "Mel"
+              },
+              "right": {
+                "emoji": "🥟",
+                "label": "Pastel"
+              },
+              "rhymeGroup": "el"
+            },
+            {
+              "pairId": "navio-rio",
+              "left": {
+                "emoji": "🚢",
+                "label": "Navio"
+              },
+              "right": {
+                "emoji": "🏞️",
+                "label": "Rio"
+              },
+              "rhymeGroup": "io"
+            },
+            {
+              "pairId": "flor-amor",
+              "left": {
+                "emoji": "🌸",
+                "label": "Flor"
+              },
+              "right": {
+                "emoji": "💖",
+                "label": "Amor"
+              },
+              "rhymeGroup": "or"
+            },
+            {
+              "pairId": "caneta-borboleta",
+              "left": {
+                "emoji": "🖊️",
+                "label": "Caneta"
+              },
+              "right": {
+                "emoji": "🦋",
+                "label": "Borboleta"
+              },
+              "rhymeGroup": "eta"
+            },
+            {
+              "pairId": "limao-violao",
+              "left": {
+                "emoji": "🍋",
+                "label": "Limão"
+              },
+              "right": {
+                "emoji": "🎸",
+                "label": "Violão"
+              },
+              "rhymeGroup": "ao"
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "coelho-joelho",
+              "left": {
+                "emoji": "🐰",
+                "label": "Coelho"
+              },
+              "right": {
+                "emoji": "🦵",
+                "label": "Joelho"
+              },
+              "rhymeGroup": "elho"
+            },
+            {
+              "pairId": "abelha-ovelha",
+              "left": {
+                "emoji": "🐝",
+                "label": "Abelha"
+              },
+              "right": {
+                "emoji": "🐑",
+                "label": "Ovelha"
+              },
+              "rhymeGroup": "elha"
+            },
+            {
+              "pairId": "foguete-chiclete",
+              "left": {
+                "emoji": "🚀",
+                "label": "Foguete"
+              },
+              "right": {
+                "emoji": "🫧",
+                "label": "Chiclete"
+              },
+              "rhymeGroup": "ete"
+            },
+            {
+              "pairId": "menina-bailarina",
+              "left": {
+                "emoji": "👧",
+                "label": "Menina"
+              },
+              "right": {
+                "emoji": "🩰",
+                "label": "Bailarina"
+              },
+              "rhymeGroup": "ina"
+            },
+            {
+              "pairId": "anel-pincel",
+              "left": {
+                "emoji": "💍",
+                "label": "Anel"
+              },
+              "right": {
+                "emoji": "🖌️",
+                "label": "Pincel"
+              },
+              "rhymeGroup": "el"
+            },
+            {
+              "pairId": "cama-pijama",
+              "left": {
+                "emoji": "🛏️",
+                "label": "Cama"
+              },
+              "right": {
+                "emoji": "👘",
+                "label": "Pijama"
+              },
+              "rhymeGroup": "ama"
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "mar-colar",
+              "left": {
+                "emoji": "🌊",
+                "label": "Mar"
+              },
+              "right": {
+                "emoji": "📿",
+                "label": "Colar"
+              },
+              "rhymeGroup": "ar"
+            },
+            {
+              "pairId": "estrada-fada",
+              "left": {
+                "emoji": "🛣️",
+                "label": "Estrada"
+              },
+              "right": {
+                "emoji": "🧚",
+                "label": "Fada"
+              },
+              "rhymeGroup": "ada"
+            },
+            {
+              "pairId": "botao-cancao",
+              "left": {
+                "emoji": "🔘",
+                "label": "Botão"
+              },
+              "right": {
+                "emoji": "🎶",
+                "label": "Canção"
+              },
+              "rhymeGroup": "ao"
+            },
+            {
+              "pairId": "cabelo-chinelo",
+              "left": {
+                "emoji": "💇",
+                "label": "Cabelo"
+              },
+              "right": {
+                "emoji": "🩴",
+                "label": "Chinelo"
+              },
+              "rhymeGroup": "elo"
+            },
+            {
+              "pairId": "sorvete-confete",
+              "left": {
+                "emoji": "🍦",
+                "label": "Sorvete"
+              },
+              "right": {
+                "emoji": "🎊",
+                "label": "Confete"
+              },
+              "rhymeGroup": "ete"
+            },
+            {
+              "pairId": "farol-girassol",
+              "left": {
+                "emoji": "🚦",
+                "label": "Farol"
+              },
+              "right": {
+                "emoji": "🌻",
+                "label": "Girassol"
+              },
+              "rhymeGroup": "ol"
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "lua-rua",
+              "left": {
+                "emoji": "🌙",
+                "label": "Lua"
+              },
+              "right": {
+                "emoji": "🛣️",
+                "label": "Rua"
+              },
+              "rhymeGroup": "ua"
+            },
+            {
+              "pairId": "dente-presente",
+              "left": {
+                "emoji": "🦷",
+                "label": "Dente"
+              },
+              "right": {
+                "emoji": "🎁",
+                "label": "Presente"
+              },
+              "rhymeGroup": "ente"
+            },
+            {
+              "pairId": "caneca-boneca",
+              "left": {
+                "emoji": "☕",
+                "label": "Caneca"
+              },
+              "right": {
+                "emoji": "🪆",
+                "label": "Boneca"
+              },
+              "rhymeGroup": "eca"
+            },
+            {
+              "pairId": "balao-tubarao",
+              "left": {
+                "emoji": "🎈",
+                "label": "Balão"
+              },
+              "right": {
+                "emoji": "🦈",
+                "label": "Tubarão"
+              },
+              "rhymeGroup": "ao"
+            },
+            {
+              "pairId": "queijo-beijo",
+              "left": {
+                "emoji": "🧀",
+                "label": "Queijo"
+              },
+              "right": {
+                "emoji": "😘",
+                "label": "Beijo"
+              },
+              "rhymeGroup": "eijo"
+            },
+            {
+              "pairId": "cafe-chule",
+              "left": {
+                "emoji": "🫘",
+                "label": "Café"
+              },
+              "right": {
+                "emoji": "🧦",
+                "label": "Chulé"
+              },
+              "rhymeGroup": "e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "school",
+      "name": "Escola",
+      "icon": "🏫",
+      "description": "Materiais, espaços e atividades da escola.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "caderno-lapis",
+              "left": {
+                "emoji": "📓",
+                "label": "Caderno"
+              },
+              "right": {
+                "emoji": "✏️",
+                "label": "Lápis"
+              }
+            },
+            {
+              "pairId": "livro-mochila",
+              "left": {
+                "emoji": "📖",
+                "label": "Livro"
+              },
+              "right": {
+                "emoji": "🎒",
+                "label": "Mochila"
+              }
+            },
+            {
+              "pairId": "tesoura-papel",
+              "left": {
+                "emoji": "✂️",
+                "label": "Tesoura"
+              },
+              "right": {
+                "emoji": "📄",
+                "label": "Papel"
+              }
+            },
+            {
+              "pairId": "cola-cartolina",
+              "left": {
+                "emoji": "🧴",
+                "label": "Cola"
+              },
+              "right": {
+                "emoji": "🖼️",
+                "label": "Cartolina"
+              }
+            },
+            {
+              "pairId": "regua-medida",
+              "left": {
+                "emoji": "📏",
+                "label": "Régua"
+              },
+              "right": {
+                "emoji": "📐",
+                "label": "Medida"
+              }
+            },
+            {
+              "pairId": "giz-de-cera-desenho",
+              "left": {
+                "emoji": "🖍️",
+                "label": "Giz de cera"
+              },
+              "right": {
+                "emoji": "🎨",
+                "label": "Desenho"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "ler-livro",
+              "left": {
+                "emoji": "📚",
+                "label": "Ler"
+              },
+              "right": {
+                "emoji": "📖",
+                "label": "Livro"
+              }
+            },
+            {
+              "pairId": "escrever-lapis",
+              "left": {
+                "emoji": "✍️",
+                "label": "Escrever"
+              },
+              "right": {
+                "emoji": "✏️",
+                "label": "Lápis"
+              }
+            },
+            {
+              "pairId": "pintar-pincel",
+              "left": {
+                "emoji": "🖌️",
+                "label": "Pintar"
+              },
+              "right": {
+                "emoji": "🎨",
+                "label": "Pincel"
+              }
+            },
+            {
+              "pairId": "recortar-tesoura",
+              "left": {
+                "emoji": "✂️",
+                "label": "Recortar"
+              },
+              "right": {
+                "emoji": "📄",
+                "label": "Tesoura"
+              }
+            },
+            {
+              "pairId": "apagar-borracha",
+              "left": {
+                "emoji": "🧽",
+                "label": "Apagar"
+              },
+              "right": {
+                "emoji": "🩹",
+                "label": "Borracha"
+              }
+            },
+            {
+              "pairId": "contar-numeros",
+              "left": {
+                "emoji": "🔢",
+                "label": "Contar"
+              },
+              "right": {
+                "emoji": "🔟",
+                "label": "Números"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "sala-de-aula-quadro",
+              "left": {
+                "emoji": "🏫",
+                "label": "Sala de aula"
+              },
+              "right": {
+                "emoji": "🟩",
+                "label": "Quadro"
+              }
+            },
+            {
+              "pairId": "biblioteca-livros",
+              "left": {
+                "emoji": "📚",
+                "label": "Biblioteca"
+              },
+              "right": {
+                "emoji": "📖",
+                "label": "Livros"
+              }
+            },
+            {
+              "pairId": "patio-brincadeira",
+              "left": {
+                "emoji": "🛝",
+                "label": "Pátio"
+              },
+              "right": {
+                "emoji": "⚽",
+                "label": "Brincadeira"
+              }
+            },
+            {
+              "pairId": "refeitorio-bandeja",
+              "left": {
+                "emoji": "🍽️",
+                "label": "Refeitório"
+              },
+              "right": {
+                "emoji": "🥣",
+                "label": "Bandeja"
+              }
+            },
+            {
+              "pairId": "banheiro-sabonete",
+              "left": {
+                "emoji": "🚻",
+                "label": "Banheiro"
+              },
+              "right": {
+                "emoji": "🧼",
+                "label": "Sabonete"
+              }
+            },
+            {
+              "pairId": "secretaria-documentos",
+              "left": {
+                "emoji": "🗂️",
+                "label": "Secretaria"
+              },
+              "right": {
+                "emoji": "📄",
+                "label": "Documentos"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "estojo-canetas",
+              "left": {
+                "emoji": "🖊️",
+                "label": "Estojo"
+              },
+              "right": {
+                "emoji": "🖋️",
+                "label": "Canetas"
+              }
+            },
+            {
+              "pairId": "mochila-lancheira",
+              "left": {
+                "emoji": "🎒",
+                "label": "Mochila"
+              },
+              "right": {
+                "emoji": "🍱",
+                "label": "Lancheira"
+              }
+            },
+            {
+              "pairId": "uniforme-camiseta",
+              "left": {
+                "emoji": "👕",
+                "label": "Uniforme"
+              },
+              "right": {
+                "emoji": "👔",
+                "label": "Camiseta"
+              }
+            },
+            {
+              "pairId": "carteira-cadeira",
+              "left": {
+                "emoji": "🪑",
+                "label": "Carteira"
+              },
+              "right": {
+                "emoji": "💺",
+                "label": "Cadeira"
+              }
+            },
+            {
+              "pairId": "campainha-entrada",
+              "left": {
+                "emoji": "🔔",
+                "label": "Campainha"
+              },
+              "right": {
+                "emoji": "🚪",
+                "label": "Entrada"
+              }
+            },
+            {
+              "pairId": "mapa-globo",
+              "left": {
+                "emoji": "🗺️",
+                "label": "Mapa"
+              },
+              "right": {
+                "emoji": "🌐",
+                "label": "Globo"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "professor-quadro",
+              "left": {
+                "emoji": "🧑‍🏫",
+                "label": "Professor"
+              },
+              "right": {
+                "emoji": "🟩",
+                "label": "Quadro"
+              }
+            },
+            {
+              "pairId": "estudante-caderno",
+              "left": {
+                "emoji": "🧒",
+                "label": "Estudante"
+              },
+              "right": {
+                "emoji": "📓",
+                "label": "Caderno"
+              }
+            },
+            {
+              "pairId": "merenda-lanche",
+              "left": {
+                "emoji": "🍎",
+                "label": "Merenda"
+              },
+              "right": {
+                "emoji": "🥪",
+                "label": "Lanche"
+              }
+            },
+            {
+              "pairId": "educacao-fisica-bola",
+              "left": {
+                "emoji": "🏃",
+                "label": "Educação física"
+              },
+              "right": {
+                "emoji": "⚽",
+                "label": "Bola"
+              }
+            },
+            {
+              "pairId": "aula-de-arte-tinta",
+              "left": {
+                "emoji": "🖼️",
+                "label": "Aula de arte"
+              },
+              "right": {
+                "emoji": "🎨",
+                "label": "Tinta"
+              }
+            },
+            {
+              "pairId": "aula-de-musica-instrumento",
+              "left": {
+                "emoji": "🎵",
+                "label": "Aula de música"
+              },
+              "right": {
+                "emoji": "🎸",
+                "label": "Instrumento"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beach",
+      "name": "Praia",
+      "icon": "🏖️",
+      "description": "Objetos, natureza e atividades da praia.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "sol-protetor-solar",
+              "left": {
+                "emoji": "☀️",
+                "label": "Sol"
+              },
+              "right": {
+                "emoji": "🧴",
+                "label": "Protetor solar"
+              }
+            },
+            {
+              "pairId": "areia-balde",
+              "left": {
+                "emoji": "🏖️",
+                "label": "Areia"
+              },
+              "right": {
+                "emoji": "🪣",
+                "label": "Balde"
+              }
+            },
+            {
+              "pairId": "onda-prancha",
+              "left": {
+                "emoji": "🌊",
+                "label": "Onda"
+              },
+              "right": {
+                "emoji": "🏄",
+                "label": "Prancha"
+              }
+            },
+            {
+              "pairId": "concha-mar",
+              "left": {
+                "emoji": "🐚",
+                "label": "Concha"
+              },
+              "right": {
+                "emoji": "🏝️",
+                "label": "Mar"
+              }
+            },
+            {
+              "pairId": "toalha-roupa-de-banho",
+              "left": {
+                "emoji": "🧺",
+                "label": "Toalha"
+              },
+              "right": {
+                "emoji": "🩱",
+                "label": "Roupa de banho"
+              }
+            },
+            {
+              "pairId": "oculos-de-sol-bone",
+              "left": {
+                "emoji": "🕶️",
+                "label": "Óculos de sol"
+              },
+              "right": {
+                "emoji": "🧢",
+                "label": "Boné"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "pipa-vento",
+              "left": {
+                "emoji": "🪁",
+                "label": "Pipa"
+              },
+              "right": {
+                "emoji": "💨",
+                "label": "Vento"
+              }
+            },
+            {
+              "pairId": "caranguejo-areia",
+              "left": {
+                "emoji": "🦀",
+                "label": "Caranguejo"
+              },
+              "right": {
+                "emoji": "🏖️",
+                "label": "Areia"
+              }
+            },
+            {
+              "pairId": "guarda-sol-sombra",
+              "left": {
+                "emoji": "⛱️",
+                "label": "Guarda-sol"
+              },
+              "right": {
+                "emoji": "🌞",
+                "label": "Sombra"
+              }
+            },
+            {
+              "pairId": "chinelo-pe",
+              "left": {
+                "emoji": "🩴",
+                "label": "Chinelo"
+              },
+              "right": {
+                "emoji": "🦶",
+                "label": "Pé"
+              }
+            },
+            {
+              "pairId": "nadar-agua",
+              "left": {
+                "emoji": "🏊",
+                "label": "Nadar"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Água"
+              }
+            },
+            {
+              "pairId": "bebida-copo",
+              "left": {
+                "emoji": "🧃",
+                "label": "Bebida"
+              },
+              "right": {
+                "emoji": "🥤",
+                "label": "Copo"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "castelo-de-areia-balde",
+              "left": {
+                "emoji": "🏰",
+                "label": "Castelo de areia"
+              },
+              "right": {
+                "emoji": "🪣",
+                "label": "Balde"
+              }
+            },
+            {
+              "pairId": "volei-de-praia-rede",
+              "left": {
+                "emoji": "🏐",
+                "label": "Vôlei de praia"
+              },
+              "right": {
+                "emoji": "🥅",
+                "label": "Rede"
+              }
+            },
+            {
+              "pairId": "peixe-mar",
+              "left": {
+                "emoji": "🐟",
+                "label": "Peixe"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Mar"
+              }
+            },
+            {
+              "pairId": "boia-nadar",
+              "left": {
+                "emoji": "🛟",
+                "label": "Boia"
+              },
+              "right": {
+                "emoji": "🏊",
+                "label": "Nadar"
+              }
+            },
+            {
+              "pairId": "pedra-poca-de-mare",
+              "left": {
+                "emoji": "🪨",
+                "label": "Pedra"
+              },
+              "right": {
+                "emoji": "🦀",
+                "label": "Poça de maré"
+              }
+            },
+            {
+              "pairId": "sorvete-colher",
+              "left": {
+                "emoji": "🍦",
+                "label": "Sorvete"
+              },
+              "right": {
+                "emoji": "🥄",
+                "label": "Colher"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "por-do-sol-fim-da-tarde",
+              "left": {
+                "emoji": "🌅",
+                "label": "Pôr do sol"
+              },
+              "right": {
+                "emoji": "🌇",
+                "label": "Fim da tarde"
+              }
+            },
+            {
+              "pairId": "bandeira-vermelha-atencao",
+              "left": {
+                "emoji": "🚩",
+                "label": "Bandeira vermelha"
+              },
+              "right": {
+                "emoji": "⚠️",
+                "label": "Atenção"
+              }
+            },
+            {
+              "pairId": "lixeira-reciclagem",
+              "left": {
+                "emoji": "🗑️",
+                "label": "Lixeira"
+              },
+              "right": {
+                "emoji": "♻️",
+                "label": "Reciclagem"
+              }
+            },
+            {
+              "pairId": "chuveiro-tirar-a-areia",
+              "left": {
+                "emoji": "🚿",
+                "label": "Chuveiro"
+              },
+              "right": {
+                "emoji": "🧂",
+                "label": "Tirar a areia"
+              }
+            },
+            {
+              "pairId": "salva-vidas-pedido-de-resgate",
+              "left": {
+                "emoji": "🛟",
+                "label": "Salva-vidas"
+              },
+              "right": {
+                "emoji": "🆘",
+                "label": "Pedido de resgate"
+              }
+            },
+            {
+              "pairId": "barco-mar",
+              "left": {
+                "emoji": "⛵",
+                "label": "Barco"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Mar"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "chinelo-praia",
+              "left": {
+                "emoji": "🩴",
+                "label": "Chinelo"
+              },
+              "right": {
+                "emoji": "🏖️",
+                "label": "Praia"
+              }
+            },
+            {
+              "pairId": "bone-sol",
+              "left": {
+                "emoji": "🧢",
+                "label": "Boné"
+              },
+              "right": {
+                "emoji": "☀️",
+                "label": "Sol"
+              }
+            },
+            {
+              "pairId": "balde-brincar-na-areia",
+              "left": {
+                "emoji": "🪣",
+                "label": "Balde"
+              },
+              "right": {
+                "emoji": "🦀",
+                "label": "Brincar na areia"
+              }
+            },
+            {
+              "pairId": "toalha-secar",
+              "left": {
+                "emoji": "🧺",
+                "label": "Toalha"
+              },
+              "right": {
+                "emoji": "💧",
+                "label": "Secar"
+              }
+            },
+            {
+              "pairId": "prancha-surfar",
+              "left": {
+                "emoji": "🏄",
+                "label": "Prancha"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Surfar"
+              }
+            },
+            {
+              "pairId": "concha-ouvir-o-mar",
+              "left": {
+                "emoji": "🐚",
+                "label": "Concha"
+              },
+              "right": {
+                "emoji": "👂",
+                "label": "Ouvir o mar"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Música",
+      "icon": "🎵",
+      "description": "Instrumentos e elementos de fazer música.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "violao-cordas",
+              "left": {
+                "emoji": "🎸",
+                "label": "Violão"
+              },
+              "right": {
+                "emoji": "🎶",
+                "label": "Cordas"
+              }
+            },
+            {
+              "pairId": "tambor-baquetas",
+              "left": {
+                "emoji": "🥁",
+                "label": "Tambor"
+              },
+              "right": {
+                "emoji": "🥢",
+                "label": "Baquetas"
+              }
+            },
+            {
+              "pairId": "piano-teclas",
+              "left": {
+                "emoji": "🎹",
+                "label": "Piano"
+              },
+              "right": {
+                "emoji": "🔲",
+                "label": "Teclas"
+              }
+            },
+            {
+              "pairId": "trompete-bocal",
+              "left": {
+                "emoji": "🎺",
+                "label": "Trompete"
+              },
+              "right": {
+                "emoji": "👄",
+                "label": "Bocal"
+              }
+            },
+            {
+              "pairId": "violino-arco",
+              "left": {
+                "emoji": "🎻",
+                "label": "Violino"
+              },
+              "right": {
+                "emoji": "🏹",
+                "label": "Arco"
+              }
+            },
+            {
+              "pairId": "chocalho-sementes",
+              "left": {
+                "emoji": "🪇",
+                "label": "Chocalho"
+              },
+              "right": {
+                "emoji": "🌰",
+                "label": "Sementes"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "microfone-cantar",
+              "left": {
+                "emoji": "🎤",
+                "label": "Microfone"
+              },
+              "right": {
+                "emoji": "🎙️",
+                "label": "Cantar"
+              }
+            },
+            {
+              "pairId": "fones-ouvir-musica",
+              "left": {
+                "emoji": "🎧",
+                "label": "Fones"
+              },
+              "right": {
+                "emoji": "🎵",
+                "label": "Ouvir música"
+              }
+            },
+            {
+              "pairId": "partitura-notas-musicais",
+              "left": {
+                "emoji": "🎼",
+                "label": "Partitura"
+              },
+              "right": {
+                "emoji": "🎶",
+                "label": "Notas musicais"
+              }
+            },
+            {
+              "pairId": "palheta-tocar-violao",
+              "left": {
+                "emoji": "🎸",
+                "label": "Palheta"
+              },
+              "right": {
+                "emoji": "🤘",
+                "label": "Tocar violão"
+              }
+            },
+            {
+              "pairId": "alto-falante-som",
+              "left": {
+                "emoji": "🔊",
+                "label": "Alto-falante"
+              },
+              "right": {
+                "emoji": "🔉",
+                "label": "Som"
+              }
+            },
+            {
+              "pairId": "maestro-batuta",
+              "left": {
+                "emoji": "🎩",
+                "label": "Maestro"
+              },
+              "right": {
+                "emoji": "🪄",
+                "label": "Batuta"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "nota-musical-partitura",
+              "left": {
+                "emoji": "🎵",
+                "label": "Nota musical"
+              },
+              "right": {
+                "emoji": "🎼",
+                "label": "Partitura"
+              }
+            },
+            {
+              "pairId": "ritmo-palmas",
+              "left": {
+                "emoji": "🥁",
+                "label": "Ritmo"
+              },
+              "right": {
+                "emoji": "👏",
+                "label": "Palmas"
+              }
+            },
+            {
+              "pairId": "cantor-cancao",
+              "left": {
+                "emoji": "🎤",
+                "label": "Cantor"
+              },
+              "right": {
+                "emoji": "🎶",
+                "label": "Canção"
+              }
+            },
+            {
+              "pairId": "banda-show",
+              "left": {
+                "emoji": "🎸",
+                "label": "Banda"
+              },
+              "right": {
+                "emoji": "🎤",
+                "label": "Show"
+              }
+            },
+            {
+              "pairId": "danca-musica",
+              "left": {
+                "emoji": "💃",
+                "label": "Dança"
+              },
+              "right": {
+                "emoji": "🎹",
+                "label": "Música"
+              }
+            },
+            {
+              "pairId": "fone-escutar",
+              "left": {
+                "emoji": "🎧",
+                "label": "Fone"
+              },
+              "right": {
+                "emoji": "👂",
+                "label": "Escutar"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "piano-teclado-musical",
+              "left": {
+                "emoji": "🎹",
+                "label": "Piano"
+              },
+              "right": {
+                "emoji": "🎼",
+                "label": "Teclado musical"
+              }
+            },
+            {
+              "pairId": "trompete-sopro",
+              "left": {
+                "emoji": "🎺",
+                "label": "Trompete"
+              },
+              "right": {
+                "emoji": "🎷",
+                "label": "Sopro"
+              }
+            },
+            {
+              "pairId": "banjo-cordas",
+              "left": {
+                "emoji": "🪕",
+                "label": "Banjo"
+              },
+              "right": {
+                "emoji": "🪢",
+                "label": "Cordas"
+              }
+            },
+            {
+              "pairId": "atabaque-percussao",
+              "left": {
+                "emoji": "🪘",
+                "label": "Atabaque"
+              },
+              "right": {
+                "emoji": "🥁",
+                "label": "Percussão"
+              }
+            },
+            {
+              "pairId": "flauta-soprar",
+              "left": {
+                "emoji": "🪈",
+                "label": "Flauta"
+              },
+              "right": {
+                "emoji": "💨",
+                "label": "Soprar"
+              }
+            },
+            {
+              "pairId": "violoncelo-arco",
+              "left": {
+                "emoji": "🎻",
+                "label": "Violoncelo"
+              },
+              "right": {
+                "emoji": "🏹",
+                "label": "Arco"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "ingresso-concerto",
+              "left": {
+                "emoji": "🎟️",
+                "label": "Ingresso"
+              },
+              "right": {
+                "emoji": "🎤",
+                "label": "Concerto"
+              }
+            },
+            {
+              "pairId": "palco-apresentacao",
+              "left": {
+                "emoji": "🎭",
+                "label": "Palco"
+              },
+              "right": {
+                "emoji": "🎬",
+                "label": "Apresentação"
+              }
+            },
+            {
+              "pairId": "silencio-ouvir-com-atencao",
+              "left": {
+                "emoji": "🔇",
+                "label": "Silêncio"
+              },
+              "right": {
+                "emoji": "🤫",
+                "label": "Ouvir com atenção"
+              }
+            },
+            {
+              "pairId": "comeco-primeira-nota",
+              "left": {
+                "emoji": "⏱️",
+                "label": "Começo"
+              },
+              "right": {
+                "emoji": "🎵",
+                "label": "Primeira nota"
+              }
+            },
+            {
+              "pairId": "aplauso-fim-do-show",
+              "left": {
+                "emoji": "👏",
+                "label": "Aplauso"
+              },
+              "right": {
+                "emoji": "🎉",
+                "label": "Fim do show"
+              }
+            },
+            {
+              "pairId": "melodia-cancao-favorita",
+              "left": {
+                "emoji": "🎶",
+                "label": "Melodia"
+              },
+              "right": {
+                "emoji": "😊",
+                "label": "Canção favorita"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "name": "Cidade",
+      "icon": "🏙️",
+      "description": "Lugares, serviços e espaços da cidade.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "biblioteca-emprestimo-de-livros",
+              "left": {
+                "emoji": "📚",
+                "label": "Biblioteca"
+              },
+              "right": {
+                "emoji": "📖",
+                "label": "Empréstimo de livros"
+              }
+            },
+            {
+              "pairId": "padaria-pao",
+              "left": {
+                "emoji": "🍞",
+                "label": "Padaria"
+              },
+              "right": {
+                "emoji": "🥖",
+                "label": "Pão"
+              }
+            },
+            {
+              "pairId": "hospital-atendimento-medico",
+              "left": {
+                "emoji": "🏥",
+                "label": "Hospital"
+              },
+              "right": {
+                "emoji": "🩺",
+                "label": "Atendimento médico"
+              }
+            },
+            {
+              "pairId": "correio-cartas",
+              "left": {
+                "emoji": "📮",
+                "label": "Correio"
+              },
+              "right": {
+                "emoji": "✉️",
+                "label": "Cartas"
+              }
+            },
+            {
+              "pairId": "bombeiros-apagar-incendio",
+              "left": {
+                "emoji": "🚒",
+                "label": "Bombeiros"
+              },
+              "right": {
+                "emoji": "🔥",
+                "label": "Apagar incêndio"
+              }
+            },
+            {
+              "pairId": "delegacia-policia",
+              "left": {
+                "emoji": "👮",
+                "label": "Delegacia"
+              },
+              "right": {
+                "emoji": "🚓",
+                "label": "Polícia"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "mercado-compras",
+              "left": {
+                "emoji": "🛒",
+                "label": "Mercado"
+              },
+              "right": {
+                "emoji": "🧺",
+                "label": "Compras"
+              }
+            },
+            {
+              "pairId": "praca-brinquedos",
+              "left": {
+                "emoji": "🌳",
+                "label": "Praça"
+              },
+              "right": {
+                "emoji": "🛝",
+                "label": "Brinquedos"
+              }
+            },
+            {
+              "pairId": "cinema-filme",
+              "left": {
+                "emoji": "🎬",
+                "label": "Cinema"
+              },
+              "right": {
+                "emoji": "🎟️",
+                "label": "Filme"
+              }
+            },
+            {
+              "pairId": "escola-estudar",
+              "left": {
+                "emoji": "🏫",
+                "label": "Escola"
+              },
+              "right": {
+                "emoji": "📚",
+                "label": "Estudar"
+              }
+            },
+            {
+              "pairId": "ponto-de-onibus-onibus",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ponto de ônibus"
+              },
+              "right": {
+                "emoji": "🚍",
+                "label": "Ônibus"
+              }
+            },
+            {
+              "pairId": "estacao-trem",
+              "left": {
+                "emoji": "🚉",
+                "label": "Estação"
+              },
+              "right": {
+                "emoji": "🚆",
+                "label": "Trem"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "semaforo-atravessar-a-rua",
+              "left": {
+                "emoji": "🚦",
+                "label": "Semáforo"
+              },
+              "right": {
+                "emoji": "🚶",
+                "label": "Atravessar a rua"
+              }
+            },
+            {
+              "pairId": "faixa-de-pedestres-caminhar-com-seguranca",
+              "left": {
+                "emoji": "🚸",
+                "label": "Faixa de pedestres"
+              },
+              "right": {
+                "emoji": "🚶‍♀️",
+                "label": "Caminhar com segurança"
+              }
+            },
+            {
+              "pairId": "lixeira-publica-reciclar",
+              "left": {
+                "emoji": "🗑️",
+                "label": "Lixeira pública"
+              },
+              "right": {
+                "emoji": "♻️",
+                "label": "Reciclar"
+              }
+            },
+            {
+              "pairId": "bebedouro-beber-agua",
+              "left": {
+                "emoji": "🚰",
+                "label": "Bebedouro"
+              },
+              "right": {
+                "emoji": "💧",
+                "label": "Beber água"
+              }
+            },
+            {
+              "pairId": "banco-da-praca-descansar",
+              "left": {
+                "emoji": "🪑",
+                "label": "Banco da praça"
+              },
+              "right": {
+                "emoji": "🌳",
+                "label": "Descansar"
+              }
+            },
+            {
+              "pairId": "placa-de-rua-encontrar-o-caminho",
+              "left": {
+                "emoji": "🗺️",
+                "label": "Placa de rua"
+              },
+              "right": {
+                "emoji": "🧭",
+                "label": "Encontrar o caminho"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "medica-hospital",
+              "left": {
+                "emoji": "🧑‍⚕️",
+                "label": "Médica"
+              },
+              "right": {
+                "emoji": "🏥",
+                "label": "Hospital"
+              }
+            },
+            {
+              "pairId": "professora-escola",
+              "left": {
+                "emoji": "👩‍🏫",
+                "label": "Professora"
+              },
+              "right": {
+                "emoji": "🏫",
+                "label": "Escola"
+              }
+            },
+            {
+              "pairId": "bombeiro-caminhao-de-bombeiros",
+              "left": {
+                "emoji": "👨‍🚒",
+                "label": "Bombeiro"
+              },
+              "right": {
+                "emoji": "🚒",
+                "label": "Caminhão de bombeiros"
+              }
+            },
+            {
+              "pairId": "padeiro-padaria",
+              "left": {
+                "emoji": "👩‍🍳",
+                "label": "Padeiro"
+              },
+              "right": {
+                "emoji": "🥖",
+                "label": "Padaria"
+              }
+            },
+            {
+              "pairId": "carteiro-entregar-cartas",
+              "left": {
+                "emoji": "📮",
+                "label": "Carteiro"
+              },
+              "right": {
+                "emoji": "✉️",
+                "label": "Entregar cartas"
+              }
+            },
+            {
+              "pairId": "policial-viatura",
+              "left": {
+                "emoji": "👮",
+                "label": "Policial"
+              },
+              "right": {
+                "emoji": "🚓",
+                "label": "Viatura"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "bicicleta-ciclovia",
+              "left": {
+                "emoji": "🚲",
+                "label": "Bicicleta"
+              },
+              "right": {
+                "emoji": "🚴",
+                "label": "Ciclovia"
+              }
+            },
+            {
+              "pairId": "onibus-ponto-de-onibus",
+              "left": {
+                "emoji": "🚌",
+                "label": "Ônibus"
+              },
+              "right": {
+                "emoji": "🚏",
+                "label": "Ponto de ônibus"
+              }
+            },
+            {
+              "pairId": "taxi-passageiro",
+              "left": {
+                "emoji": "🚕",
+                "label": "Táxi"
+              },
+              "right": {
+                "emoji": "📍",
+                "label": "Passageiro"
+              }
+            },
+            {
+              "pairId": "caminhao-de-bombeiros-sirene",
+              "left": {
+                "emoji": "🚒",
+                "label": "Caminhão de bombeiros"
+              },
+              "right": {
+                "emoji": "🚨",
+                "label": "Sirene"
+              }
+            },
+            {
+              "pairId": "trem-trilhos",
+              "left": {
+                "emoji": "🚆",
+                "label": "Trem"
+              },
+              "right": {
+                "emoji": "🛤️",
+                "label": "Trilhos"
+              }
+            },
+            {
+              "pairId": "ambulancia-atendimento-de-emergencia",
+              "left": {
+                "emoji": "🚑",
+                "label": "Ambulância"
+              },
+              "right": {
+                "emoji": "🏥",
+                "label": "Atendimento de emergência"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "name": "Espaço",
+      "icon": "🚀",
+      "description": "Planetas, céu e viagens espaciais.",
+      "cardType": "pictures",
+      "rounds": [
+        {
+          "round": 1,
+          "pairs": [
+            {
+              "pairId": "terra-lua",
+              "left": {
+                "emoji": "🌍",
+                "label": "Terra"
+              },
+              "right": {
+                "emoji": "🌙",
+                "label": "Lua"
+              }
+            },
+            {
+              "pairId": "saturno-aneis",
+              "left": {
+                "emoji": "🪐",
+                "label": "Saturno"
+              },
+              "right": {
+                "emoji": "💍",
+                "label": "Anéis"
+              }
+            },
+            {
+              "pairId": "sol-estrela",
+              "left": {
+                "emoji": "☀️",
+                "label": "Sol"
+              },
+              "right": {
+                "emoji": "🌟",
+                "label": "Estrela"
+              }
+            },
+            {
+              "pairId": "marte-planeta-rochoso",
+              "left": {
+                "emoji": "🔴",
+                "label": "Marte"
+              },
+              "right": {
+                "emoji": "🪨",
+                "label": "Planeta rochoso"
+              }
+            },
+            {
+              "pairId": "foguete-astronauta",
+              "left": {
+                "emoji": "🚀",
+                "label": "Foguete"
+              },
+              "right": {
+                "emoji": "🧑‍🚀",
+                "label": "Astronauta"
+              }
+            },
+            {
+              "pairId": "via-lactea-estrelas",
+              "left": {
+                "emoji": "🌌",
+                "label": "Via Láctea"
+              },
+              "right": {
+                "emoji": "⭐",
+                "label": "Estrelas"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "pairs": [
+            {
+              "pairId": "astronauta-capacete",
+              "left": {
+                "emoji": "🧑‍🚀",
+                "label": "Astronauta"
+              },
+              "right": {
+                "emoji": "🪖",
+                "label": "Capacete"
+              }
+            },
+            {
+              "pairId": "foguete-lancamento",
+              "left": {
+                "emoji": "🚀",
+                "label": "Foguete"
+              },
+              "right": {
+                "emoji": "🔥",
+                "label": "Lançamento"
+              }
+            },
+            {
+              "pairId": "satelite-antena",
+              "left": {
+                "emoji": "🛰️",
+                "label": "Satélite"
+              },
+              "right": {
+                "emoji": "📡",
+                "label": "Antena"
+              }
+            },
+            {
+              "pairId": "lua-cheia-lua-nova",
+              "left": {
+                "emoji": "🌕",
+                "label": "Lua cheia"
+              },
+              "right": {
+                "emoji": "🌑",
+                "label": "Lua nova"
+              }
+            },
+            {
+              "pairId": "telescopio-observar-o-ceu",
+              "left": {
+                "emoji": "🔭",
+                "label": "Telescópio"
+              },
+              "right": {
+                "emoji": "👁️",
+                "label": "Observar o céu"
+              }
+            },
+            {
+              "pairId": "cometa-cauda-brilhante",
+              "left": {
+                "emoji": "☄️",
+                "label": "Cometa"
+              },
+              "right": {
+                "emoji": "✨",
+                "label": "Cauda brilhante"
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "pairs": [
+            {
+              "pairId": "terra-oceanos",
+              "left": {
+                "emoji": "🌍",
+                "label": "Terra"
+              },
+              "right": {
+                "emoji": "🌊",
+                "label": "Oceanos"
+              }
+            },
+            {
+              "pairId": "lua-fases-da-lua",
+              "left": {
+                "emoji": "🌙",
+                "label": "Lua"
+              },
+              "right": {
+                "emoji": "🌑",
+                "label": "Fases da Lua"
+              }
+            },
+            {
+              "pairId": "planeta-orbita",
+              "left": {
+                "emoji": "🪐",
+                "label": "Planeta"
+              },
+              "right": {
+                "emoji": "☀️",
+                "label": "Órbita"
+              }
+            },
+            {
+              "pairId": "estrela-luz-no-ceu",
+              "left": {
+                "emoji": "⭐",
+                "label": "Estrela"
+              },
+              "right": {
+                "emoji": "✨",
+                "label": "Luz no céu"
+              }
+            },
+            {
+              "pairId": "estrela-cadente-risco-luminoso",
+              "left": {
+                "emoji": "🌠",
+                "label": "Estrela cadente"
+              },
+              "right": {
+                "emoji": "💫",
+                "label": "Risco luminoso"
+              }
+            },
+            {
+              "pairId": "nuvem-chuva",
+              "left": {
+                "emoji": "☁️",
+                "label": "Nuvem"
+              },
+              "right": {
+                "emoji": "🌧️",
+                "label": "Chuva"
+              }
+            }
+          ]
+        },
+        {
+          "round": 4,
+          "pairs": [
+            {
+              "pairId": "nave-espacial-espaco",
+              "left": {
+                "emoji": "🛸",
+                "label": "Nave espacial"
+              },
+              "right": {
+                "emoji": "🌌",
+                "label": "Espaço"
+              }
+            },
+            {
+              "pairId": "traje-espacial-astronauta",
+              "left": {
+                "emoji": "🧑‍🚀",
+                "label": "Traje espacial"
+              },
+              "right": {
+                "emoji": "👩‍🚀",
+                "label": "Astronauta"
+              }
+            },
+            {
+              "pairId": "satelite-terra",
+              "left": {
+                "emoji": "🛰️",
+                "label": "Satélite"
+              },
+              "right": {
+                "emoji": "🌍",
+                "label": "Terra"
+              }
+            },
+            {
+              "pairId": "observatorio-telescopio",
+              "left": {
+                "emoji": "🔭",
+                "label": "Observatório"
+              },
+              "right": {
+                "emoji": "🔬",
+                "label": "Telescópio"
+              }
+            },
+            {
+              "pairId": "asteroide-cinturao-de-asteroides",
+              "left": {
+                "emoji": "🪨",
+                "label": "Asteroide"
+              },
+              "right": {
+                "emoji": "🛰️",
+                "label": "Cinturão de asteroides"
+              }
+            },
+            {
+              "pairId": "eclipse-sol-encoberto",
+              "left": {
+                "emoji": "🌑",
+                "label": "Eclipse"
+              },
+              "right": {
+                "emoji": "☀️",
+                "label": "Sol encoberto"
+              }
+            }
+          ]
+        },
+        {
+          "round": 5,
+          "pairs": [
+            {
+              "pairId": "amanhecer-nascer-do-sol",
+              "left": {
+                "emoji": "🌅",
+                "label": "Amanhecer"
+              },
+              "right": {
+                "emoji": "🌞",
+                "label": "Nascer do sol"
+              }
+            },
+            {
+              "pairId": "entardecer-por-do-sol",
+              "left": {
+                "emoji": "🌇",
+                "label": "Entardecer"
+              },
+              "right": {
+                "emoji": "🌆",
+                "label": "Pôr do sol"
+              }
+            },
+            {
+              "pairId": "noite-ceu-estrelado",
+              "left": {
+                "emoji": "🌌",
+                "label": "Noite"
+              },
+              "right": {
+                "emoji": "⭐",
+                "label": "Céu estrelado"
+              }
+            },
+            {
+              "pairId": "astronomia-estudo-dos-planetas",
+              "left": {
+                "emoji": "🔭",
+                "label": "Astronomia"
+              },
+              "right": {
+                "emoji": "🪐",
+                "label": "Estudo dos planetas"
+              }
+            },
+            {
+              "pairId": "missao-espacial-explorar-o-espaco",
+              "left": {
+                "emoji": "🚀",
+                "label": "Missão espacial"
+              },
+              "right": {
+                "emoji": "🧑‍🚀",
+                "label": "Explorar o espaço"
+              }
+            },
+            {
+              "pairId": "cratera-lunar-superficie-da-lua",
+              "left": {
+                "emoji": "🌕",
+                "label": "Cratera lunar"
+              },
+              "right": {
+                "emoji": "🌙",
+                "label": "Superfície da Lua"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

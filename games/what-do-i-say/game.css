@@ -170,8 +170,9 @@
   }
   body.app-page.what-do-i-say-page .round-count {
     grid-column: 1 / -1;
+    justify-self: center;
     margin-bottom: var(--space-1);
-    padding: 2px var(--space-2);
+    padding: 2px var(--space-3);
     font-size: var(--font-size-small);
   }
   body.app-page.what-do-i-say-page .scene-image {
@@ -226,5 +227,10 @@
   body.app-page.what-do-i-say-page .game-nav-button {
     min-height: var(--target-size);
     padding: var(--space-1) var(--space-3);
+  }
+  /* The compact landscape layout fills the top-left band with the status pill
+     and the picture, so the shared logo has no empty corner to sit in. */
+  body.app-page.what-do-i-say-page .game-panel .game-panel__logo {
+    display: none;
   }
 }

@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#B7E88B">
     <title>O que está acontecendo? — escolha um tema</title>
-    <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
+    <link rel="stylesheet" href="../../shared/css/tokens.css?v=7">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=7">
-    <link rel="stylesheet" href="./game.css?v=9">
-    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./themes.js?v=4"></script>
+    <link rel="stylesheet" href="../../shared/css/components.css?v=11">
+    <link rel="stylesheet" href="../../shared/css/brand.css?v=3">
+    <link rel="stylesheet" href="./game.css?v=11">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=6">
+    <script type="module" src="./themes.js?v=6"></script>
   </head>
   <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header class="site-header">
-      <a class="brand" href="../../index.html" aria-label="Lulu Games, início">
-        <img class="brand__icon" src="../../assets/images/ui/brand.svg" alt="">
-        <span>Lulu Games</span>
-      </a>
-    </header>
 
     <main class="game-page" id="main-content">
-      <section class="game-heading" aria-labelledby="page-title">
-        <p class="eyebrow">O que está acontecendo?</p>
-        <h1 id="page-title">Escolha um tema para jogar</h1>
-        <p class="theme-picker-instructions">Cada tema tem cinco imagens e três frases para escolher. Sem pressa.</p>
+      <section class="selection-panel" aria-label="Temas disponíveis">
+        <header class="selection-header">
+          <a class="brand-logo selection-header__logo" href="../../index.html" aria-label="Lulu Games, início">
+            <img class="brand-logo__icon" src="../../assets/images/ui/brand.svg" alt="">
+            <span class="brand-logo__text">Lulu<em>Games</em></span>
+          </a>
+          <h1 id="page-title">Escolha um tema</h1>
+        </header>
+        <div class="selection-grid" id="theme-list"></div>
       </section>
-
-      <section class="theme-picker" id="theme-list" aria-label="Temas disponíveis"></section>
 
       <footer class="game-footer">
         <nav class="game-footer__navigation" aria-label="Navegação do jogo">

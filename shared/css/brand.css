@@ -1,0 +1,67 @@
+/* Shared Lulu Games logo pill, reused by the home page, the selection pages and
+   the compact mark in landscape game panels. */
+:root {
+  --brand-logo-icon-size: 44px;
+  --brand-logo-height: calc(var(--brand-logo-icon-size) + 12px);
+  --brand-logo-inset-block: clamp(12px, 3vw, 24px);
+  --brand-logo-inset-inline: clamp(16px, 5vw, 64px);
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--brand-logo-height);
+  padding: 6px 18px 6px 8px;
+  color: var(--color-primary);
+  text-decoration: none;
+  background: rgb(255 253 243 / 90%);
+  border-radius: var(--radius-pill);
+}
+
+.brand-logo__icon {
+  width: var(--brand-logo-icon-size);
+  height: var(--brand-logo-icon-size);
+}
+
+.brand-logo__text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.brand-logo__text em {
+  margin-top: 0.18em;
+  padding-left: 0.12em;
+  color: #3f6b2a;
+  font-size: 0.42em;
+  font-style: normal;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.brand-logo--compact {
+  --brand-logo-icon-size: 32px;
+  gap: 6px;
+  min-height: 44px;
+  padding: 4px 10px;
+  background: rgb(255 253 243 / 92%);
+  box-shadow: 0 2px 0 rgb(68 111 42 / 12%);
+}
+
+.brand-logo--compact .brand-logo__text {
+  font-size: 1.15rem;
+}
+
+.brand-logo--compact .brand-logo__text em {
+  font-size: 0.4em;
+}
+
+@media (max-width: 900px) {
+  .brand-logo--compact .brand-logo__text {
+    display: none;
+  }
+}

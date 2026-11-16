@@ -33,9 +33,11 @@ The interface uses the CSS custom properties in `shared/css/tokens.css`; compone
 | `--color-highlight-soft` | `#FFF4C7` | Gentle hint background |
 | `--color-highlight-border` | `#B59442` | Gentle hint border |
 | `--color-backdrop` | `rgb(38 61 39 / 38%)` | Modal backdrop |
-| `--color-theme-*` | translucent rose, apricot, lavender, blue, peach, green and periwinkle | Jogo dos Pares theme choices |
+| `--color-theme-*` | translucent rose, apricot, lavender, blue, peach, green and periwinkle, each with `-border` and `-strong` shades | Theme/level selection tiles |
 
 Primary and secondary button text must remain legible against their backgrounds. Do not rely on color alone to communicate a state.
+
+Footer navigation (Início, Níveis, Temas) uses translucent colored pills: green for back/level actions and gold for Início, with a light border, a dashed inner ring, a small corner sparkle and a soft grounded shadow. Keep the tint and the playful details subtle; the label remains the primary cue.
 
 ## Typography
 
@@ -47,15 +49,32 @@ Spacing uses a 4px base scale: 4, 8, 12, 16, 24, 32, and 48px. Cards use a 24px 
 
 ## Photo backdrop and glass panels
 
-The home page and every game/theme page share one full-screen photograph: Pexels photo 8709295 by Polina. Inner pages use `assets/images/ui/home-bg.jpg` with a soft blur and a cream veil so cards stay readable. The home uses the top crop, `assets/images/ui/home-bg-top.jpg`, a centered warm menu panel and a cream brand pill. The backdrop is decorative and never carries information.
+The home page and every game/theme page share one full-screen photograph: Pexels photo 8709295 by Polina. Both use `assets/images/ui/home-bg-top.jpg` at full clarity — no blur filter and no scaling offset — with the same 20% cream veil, so inner pages match the home backdrop exactly. The taller `assets/images/ui/home-bg.jpg` crop is kept for future use but is not referenced. The cream Lulu Games logo pill is a shared component in `shared/css/brand.css` (`.brand-logo`); the home, the selection pages and the landscape game panels reuse it. The backdrop is decorative and never carries information.
 
-Cards use a warm surface, a light border and a soft grounded shadow. Theme choices and game cards may lift gently on hover; selected, correct and matched states keep their stronger focus/success colors. All movement is decorative and disabled when motion is reduced. Game screens have no top header: the brand stays on the home and theme chooser, while game pages keep all navigation in the footer (Voltar/Temas + Início) to give the game the full viewport. Footer navigation uses distinct token-based colors and visible Portuguese labels so color is never the only cue.
+Cards use a warm surface, a light border and a soft grounded shadow. Selection tiles and game cards may lift gently on hover; selected, correct and matched states keep their stronger focus/success colors. All movement is decorative and disabled when motion is reduced. Game screens have no top header. Selection pages keep one compact header row inside the cream panel: the shared logo on the left and the short heading beside it, with no eyebrow or instruction paragraph. In landscape game screens with an empty top-left corner the logo becomes a compact pill inside the panel; it always links home and never covers content. Game pages keep all navigation in the footer (Voltar/Temas + Início) to give the game the full viewport. Footer navigation uses translucent token-based colors, a dashed inner ring and a small sparkle, with visible Portuguese labels so color is never the only cue.
 
-The Jogo dos Pares theme chooser uses a distinct translucent pastel token per theme, with readable dark text and a visible focus ring. Keep its tint on hover and focus; color supplements the icon and label rather than identifying a choice on its own.
+The selection pages use the same pastel token per tile (`--color-theme-*`) with matching `-border` and `-strong` shades. Keep the tint on hover and focus; only the border and focus ring change to the tile's own saturated shade, never to a shared dark blue. Color supplements the icon and label rather than identifying a choice on its own.
 
-The home menu uses large square, fully clickable game tiles in a two- or three-column grid. Each combines a recognizable local SVG, a distinct soft token color and a one-to-three-word Portuguese label, without descriptions. Use few words and large meaningful icons on future selection screens too; keep full accessible names when abbreviated labels need context. The grid wraps and scrolls vertically when necessary, including at high zoom or in short windows.
+The home menu and the in-game theme/level pickers share one selection pattern from `shared/css/components.css`: large square, fully clickable tiles in a wrapping grid. Each tile combines a recognizable icon, a distinct soft token color and a one-to-three-word Portuguese label, without descriptions. Keep full accessible names (label, description and count) when the visible label is abbreviated. The grid wraps and scrolls vertically when necessary, including at high zoom or in short windows.
 
 On playing screens, show the game name in the compact green round-status pill instead of a separate large title panel. Retain a semantic page heading for assistive technology; theme and level selection screens keep their own headings.
+
+## Selection tiles
+
+The home menu and the in-game theme/level pickers use the same component from `shared/css/components.css` (`.selection-panel`, `.selection-header`, `.selection-grid`, `.selection-tile`). The selection header is a compact row inside the panel — shared logo plus the single heading, separated from the tiles by a light dashed rule — not a separate card above the panel. Do not create a separate picker style.
+
+- Tiles are large, square and fully clickable, with one big icon and a one-to-three-word Portuguese label. Descriptions and counts are not shown; keep them in the link's accessible name.
+- Each tile sets `--tile-color` from a soft palette token, `--tile-border` for its resting border and `--tile-border-strong` for hover and focus. Use the matching `--color-theme-*-border` and `--color-theme-*-strong` tokens; never use a fixed blue focus color for every tile.
+- Hover and focus change only the border and focus ring to the tile's own darker, more saturated shade, keeping the tile color. The 3px focus ring must stay visible against the panel.
+- Keep the 48×48px minimum target even when the grid is compact. The grid wraps and scrolls vertically when necessary.
+
+## Logo placement
+
+The shared logo lives in `shared/css/brand.css` and always links to the home page.
+
+- Home: `.brand-logo` inside `.home-header`.
+- Selection pages: `.brand-logo` inside the panel's `.selection-header` row, beside the single short heading and vertically centred. Keep the row compact; there is no eyebrow or instruction paragraph. On phones the wordmark may hide but the icon stays.
+- Game screens in landscape: `.brand-logo--compact` inside the game panel's empty top-left corner, absolutely positioned so it never pushes or covers content. The compact pill keeps a 44px-tall target and shows the wordmark from 900px wide. It is hidden in portrait and wherever the top-left band is occupied: O que eu digo? in its compressed short-landscape layout (its status pill and picture fill the corner) and Jogo dos Pares below 600px wide landscape (its round pill reaches the left edge).
 
 ## Layout and screen space
 
