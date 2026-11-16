@@ -140,10 +140,10 @@
 @media (orientation: landscape) and (max-height: 480px) and (min-width: 600px) {
   body.app-page.what-do-i-say-page .game-page {
     display: grid;
-    grid-template-columns: minmax(112px, 0.2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
-      "heading panel"
-      "footer footer";
+      "panel"
+      "footer";
     align-content: center;
     align-items: start;
     gap: var(--space-1);

@@ -3,7 +3,9 @@ import assert from "node:assert/strict";
 import {
   PORTRAIT_SCREEN_QUERY,
   markOrientationSuggested,
+  markSelectionLink,
   consumeOrientationSuggestion,
+  setupOrientationSuggestion,
   suggestLandscapeOnEntry,
 } from "./orientation.js";
 
@@ -70,4 +72,57 @@ test("a direct game entry is not treated as an already shown suggestion", () => 
   const url = new URL("https://example.test/games/memory-pairs/index.html?theme=casa");
   assert.equal(consumeOrientationSuggestion(url), false);
   assert.equal(url.searchParams.get("theme"), "casa");
+});
+
+test("selection links carry the signal only when the suggestion was shown", () => {
+  const link = { href: "https://example.test/games/emotions/index.html?level=match" };
+  markSelectionLink(link, false);
+  assert.equal(new URL(link.href).searchParams.has("orientationSuggested"), false);
+  markSelectionLink(link, true);
+  const url = new URL(link.href);
+  assert.equal(url.searchParams.get("level"), "match");
+  assert.equal(consumeOrientationSuggestion(url), true);
+});
+
+test("entry setup shows a dialog and consumes a selection signal without losing the level", () => {
+  const media = new EventTarget();
+  media.matches = true;
+  const dialogs = [];
+  const body = { append: (dialog) => dialogs.push(dialog) };
+  const main = { setAttribute() {}, focus() {} };
+  globalThis.document = {
+    body,
+    activeElement: body,
+    querySelector: () => main,
+    createElement() {
+      const dialog = new EventTarget();
+      dialog.open = false;
+      dialog.setAttribute = () => {};
+      dialog.showModal = () => { dialog.open = true; };
+      dialog.close = () => {
+        dialog.open = false;
+        dialog.dispatchEvent(new Event("close"));
+      };
+      dialog.remove = () => {};
+      return dialog;
+    },
+  };
+  globalThis.window = {
+    location: { href: "https://example.test/games/emotions/index.html?level=match" },
+    history: { state: null, replaceState(_state, _title, url) { window.location.href = url; } },
+    matchMedia: () => media,
+  };
+  try {
+    assert.equal(setupOrientationSuggestion(), true);
+    assert.equal(dialogs[0].open, true);
+    dialogs[0].close();
+    window.location.href += "&orientationSuggested=1";
+    assert.equal(setupOrientationSuggestion(), false);
+    assert.equal(dialogs.length, 1);
+    assert.equal(new URL(window.location.href).searchParams.get("level"), "match");
+    assert.equal(new URL(window.location.href).searchParams.has("orientationSuggested"), false);
+  } finally {
+    delete globalThis.window;
+    delete globalThis.document;
+  }
 });

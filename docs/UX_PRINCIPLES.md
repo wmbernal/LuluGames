@@ -12,6 +12,7 @@ These principles guide every screen, interaction, and game mechanic.
 - **Clear navigation:** Keep visible **Voltar** and **Início** navigation on game screens. Confirm before abandoning an unfinished session when progress would otherwise be lost.
 - **Choice and calm:** Offer a small, manageable set of options at once. Do not add timers, flashing effects, or startling audio.
 - **Efficient use of the screen:** Avoid excessive empty space above and below exercise content. Aim to fit the complete exercise and primary actions within one viewport without scrolling; reduce decorative and header spacing first, and consider placing the header beside the exercise when helpful. Never hide essential content or controls just to force a fit. Check mobile layouts at an iPhone 14 viewport (390×844 CSS pixels in portrait), in landscape, and at browser zoom; keep all controls usable and prevent horizontal overflow.
+- **Orientation suggestion:** New games show the shared, optional **Vire na horizontal** dialog on entry to a portrait viewport up to 1024 CSS pixels wide, regardless of pointer type. Let the player choose **Continuar assim**, and close it automatically when the viewport turns landscape. Show it once when moving from a theme or level chooser to its game, but also support direct game entry. Never require rotation to play or reopen the suggestion during the same page visit.
 
 ## Applying these principles
 

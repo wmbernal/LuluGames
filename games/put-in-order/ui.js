@@ -182,7 +182,7 @@ export function createGameUI(callbacks) {
       }
 
       const question = currentQuestion(state);
-      roundCount.textContent = `${level.label} · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
+      roundCount.textContent = `Coloque em Ordem · ${level.label} · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
       if (renderedQuestionId !== question.id) {
         renderedQuestionId = question.id;
         image.src = question.image;

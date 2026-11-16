@@ -1,12 +1,15 @@
 import { validateContent } from "./game.js?v=1";
+import { markSelectionLink, setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const levelList = document.querySelector("#level-list");
 const loadError = document.querySelector("#load-error");
+const orientationSuggested = setupOrientationSuggestion({ selection: true });
 
 function createLevelChoice(level) {
   const link = document.createElement("a");
   link.className = "level-choice";
   link.href = `./index.html?level=${encodeURIComponent(level.id)}`;
+  markSelectionLink(link, orientationSuggested);
 
   const icon = document.createElement("span");
   icon.className = "level-choice__icon";

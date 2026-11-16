@@ -102,7 +102,7 @@ export function createGameUI(callbacks) {
       }
 
       const question = state.questions[state.roundIndex];
-      roundCount.textContent = `${level.label} · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
+      roundCount.textContent = `Jogo das Emoções · ${level.label} · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
       questionText.textContent = question.question ?? level.question;
 
       if (renderedQuestionId !== question.id) {

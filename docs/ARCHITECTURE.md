@@ -32,6 +32,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 - `shared/js/settings.js`: validated shared settings API and defaults; games consume saved audio and round preferences. The home page has no general settings panel, so saved global preferences remain active but are not currently configurable there; Vestir a Princesa exposes its own settings form.
 - `shared/js/storage.js`: guarded `localStorage` read/write wrapper.
 - `shared/js/audio.js`: optional short audio feedback, initialized only after user interaction.
+- `shared/js/orientation.js`: optional portrait-entry suggestion and one-navigation signal for game selection links.
 - `shared/js/catalog.js`: data for games shown on the home page.
 - `assets/images/`: temporary SVG clothing layers with a shared `viewBox` of `0 0 240 320`; replace the art by swapping files and updating item paths in `data.js`.
 - `assets/images/ui/home-bg.jpg`: shared Pexels photo used by the home and inner-page backdrops.
@@ -55,3 +56,5 @@ In O que eu digo?, `content.json` is the source of truth for the whole game. Eac
 ## Add a catalog game
 
 Create a new `games/<game-name>/` entry point and modules, then add a catalog object in `shared/js/catalog.js` with a stable `id`, Portuguese `title`, short `description`, `icon`, relative `href`, and `available` boolean. The home page renders catalog data rather than hard-coding individual game cards. Keep unavailable entries clearly marked and non-interactive until their page is ready.
+
+Import `setupOrientationSuggestion` from `shared/js/orientation.js` on each game entry and call it once on page entry. Selection pages call it with `{ selection: true }` and pass its return value to `markSelectionLink(link, suggested)` for each game link, including links generated asynchronously. The game page calls it without options, consuming the one-navigation signal while preserving the theme or level parameter. Include `shared/css/components.css` for the dialog. For asynchronous game initialization, use `focusGameOnEntry` from `shared/js/initial-focus.js` so initial focus waits for an open orientation dialog. Keep the dialog optional; do not lock orientation.

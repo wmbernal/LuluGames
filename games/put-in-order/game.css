@@ -166,9 +166,6 @@
 body.app-page .game-page.game-page--correct {
   padding-block: var(--space-2);
 }
-body.app-page .game-page.game-page--correct .game-heading {
-  display: none;
-}
 body.app-page .game-page.game-page--correct .card.game-panel {
   padding: var(--space-2);
 }

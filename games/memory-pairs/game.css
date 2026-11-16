@@ -324,37 +324,6 @@
   gap: var(--space-2);
 }
 
-.orientation-dialog {
-  text-align: center;
-}
-
-.orientation-dialog__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
-  font-size: var(--font-size-h1);
-  line-height: 1;
-}
-
-.orientation-dialog__arrow {
-  color: var(--color-primary);
-}
-
-.orientation-dialog__landscape {
-  transform: rotate(90deg);
-}
-
-.orientation-dialog h2 {
-  margin-bottom: var(--space-6);
-}
-
-.orientation-dialog button:focus {
-  outline: var(--border-width-medium) solid var(--color-focus);
-  outline-offset: var(--space-1);
-}
-
 @media (max-width: 640px) {
   .theme-picker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -380,6 +349,53 @@
 
   .match-card--word .match-card__label {
     font-size: var(--font-size-body);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) and (max-height: 500px) {
+  .memory-panel {
+    min-height: 0;
+  }
+
+  .memory-feedback:empty {
+    min-height: 0;
+    margin: 0;
+  }
+
+  .game-footer {
+    margin-top: var(--space-2);
+  }
+
+  .match-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+  }
+
+  .match-column {
+    padding: var(--space-2);
+  }
+
+  .match-column h3 {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-body);
+  }
+
+  .match-column__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .match-card {
+    min-height: 72px;
+    padding: var(--space-1);
+  }
+
+  .match-card__icon {
+    min-height: 32px;
+    font-size: 28px;
+  }
+
+  .match-card__label {
+    line-height: 1.25;
   }
 }
 

@@ -10,4 +10,5 @@
 - Preserve keyboard access, visible focus, meaningful labels, text alternatives, and reduced-motion behavior.
 - Any drag-and-drop interaction must also work with keyboard and direct item selection.
 - Keep feedback supportive and non-punitive. Essential instructions and results must not rely on audio or animation.
+- Add the shared orientation suggestion to every new game's entry screens, following the integration instructions in `ARCHITECTURE.md`; preserve optional portrait play and avoid repeating it between selection and play.
 - Before submitting, manually test each page, all game outcomes, keyboard navigation, narrow layouts, sound/animation settings, and reduced-motion mode.

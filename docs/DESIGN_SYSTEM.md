@@ -50,6 +50,8 @@ The home page and every game/theme page share one full-screen photograph: Pexels
 
 Cards use a translucent warm surface with `backdrop-filter: blur()`, a light border and a soft grounded shadow. Large cards repeat the dashed inner border from the home menu to tie the screens together. Theme choices and game cards lift 2–4px on hover with a gold border; selected, correct and matched states keep their stronger focus/success colors. All effects are decorative and disabled when motion is reduced. Game screens have no top header: the brand stays on the home and theme chooser, while game pages keep all navigation in the footer (Voltar/Temas + Início) to give the game the full viewport. Footer navigation uses distinct token-based colors and visible Portuguese labels so color is never the only cue.
 
+On playing screens, show the game name in the compact green round-status pill instead of a separate large title panel. Retain a semantic page heading for assistive technology; theme and level selection screens keep their own headings.
+
 ## Layout and screen space
 
 The main content of every screen must use the available viewport, on any orientation:

@@ -2,7 +2,9 @@ import { getSettings } from "../../shared/js/settings.js?v=2";
 import { celebrateCompletion, playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=6";
 import { THEMES } from "./data.js?v=7";
 import { chooseAnswer, createSession, nextRound } from "./game.js?v=4";
-import { createGameUI } from "./ui.js?v=7";
+import { createGameUI } from "./ui.js?v=8";
+import { focusGameOnEntry } from "../../shared/js/initial-focus.js?v=2";
+import { setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const requestedTheme = new URLSearchParams(window.location.search).get("theme");
 const theme = THEMES.find((item) => item.id === requestedTheme) ?? THEMES[0];
@@ -34,4 +36,5 @@ const ui = createGameUI({
 });
 
 ui.render(state);
-ui.focusFirstAnswer();
+focusGameOnEntry(() => ui.focusFirstAnswer());
+setupOrientationSuggestion();

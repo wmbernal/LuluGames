@@ -1,11 +1,14 @@
 import { getSettings } from "../../shared/js/settings.js?v=2";
 import { celebrateCompletion, playMismatchSound, speakCardName } from "../../shared/js/audio.js?v=8";
 import { chooseAnswer, createSession, currentQuestion, nextRound, validateContent } from "./game.js?v=2";
-import { createGameUI } from "./ui.js?v=4";
+import { createGameUI } from "./ui.js?v=5";
+import { focusGameOnEntry } from "../../shared/js/initial-focus.js?v=2";
+import { setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const loadError = document.querySelector("#load-error");
 let completionId = 0;
 let questionSpeechId = 0;
+setupOrientationSuggestion();
 
 async function loadContent() {
   const response = await fetch("./content.json", { cache: "no-cache" });
@@ -91,7 +94,7 @@ function start(content) {
   });
 
   ui.render(state);
-  ui.focusQuestion();
+  focusGameOnEntry(() => ui.focusQuestion());
 }
 
 loadContent()

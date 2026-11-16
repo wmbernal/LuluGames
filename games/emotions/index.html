@@ -7,24 +7,24 @@
     <title>Jogo das Emoções — Lulu Games</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=6">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
+    <link rel="stylesheet" href="../../shared/css/components.css?v=7">
     <link rel="stylesheet" href="./game.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./session.js?v=4"></script>
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=3">
+    <script type="module" src="./session.js?v=6"></script>
   </head>
   <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <main class="game-page" id="main-content">
-      <section class="game-heading" aria-labelledby="game-title">
+      <section class="game-heading game-heading--hidden" aria-labelledby="game-title">
         <p class="eyebrow" id="game-eyebrow">Jogo das Emoções</p>
         <h1 id="game-title">Como essa pessoa se sente?</h1>
       </section>
       <section class="card game-panel">
         <p class="load-error" id="load-error" role="alert" hidden>
-          Não consegui abrir as perguntas agora. Tente recarregar a página.
+          Não consegui abrir as perguntas do Jogo das Emoções. Tente recarregar a página.
         </p>
         <div id="playing-panel" hidden>
-          <p class="round-count" id="round-count" role="status" aria-live="polite"></p>
+          <p class="round-count" id="round-count" role="status" aria-live="polite" tabindex="-1"></p>
           <img class="scene-image" id="scene-image" width="640" height="480" alt="">
           <h2 class="question" id="question-text"></h2>
           <div class="answer-list" id="answer-list" role="group" aria-label="Opções de resposta"></div>

@@ -199,7 +199,7 @@ export function createGameUI(callbacks) {
       }
 
       roundCountElement.textContent =
-        `Tema ${state.game.themeLabel} · Partida ${state.sessionRound} de ${state.sessionRounds} · ${state.game.matchedPairs} de ${state.game.totalPairs} pares`;
+        `Jogo dos Pares · Tema ${state.game.themeLabel} · Partida ${state.sessionRound} de ${state.sessionRounds} · ${state.game.matchedPairs} de ${state.game.totalPairs} pares`;
       feedbackElement.textContent = state.game.feedback;
       feedbackElement.classList.toggle("memory-feedback--positive", state.game.feedbackType === "positive");
       const matchedCardIds = new Set(

@@ -1,11 +1,14 @@
 import { THEMES } from "./data.js?v=7";
+import { markSelectionLink, setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const themeList = document.querySelector("#theme-list");
+const orientationSuggested = setupOrientationSuggestion({ selection: true });
 
 for (const theme of THEMES) {
   const link = document.createElement("a");
   link.className = "theme-choice";
   link.href = `./index.html?theme=${encodeURIComponent(theme.id)}`;
+  markSelectionLink(link, orientationSuggested);
 
   const icon = document.createElement("span");
   icon.className = "theme-choice__icon";

@@ -15,3 +15,4 @@
 - [ ] Respect `prefers-reduced-motion` and provide an in-app animation setting.
 - [ ] Make audio optional; never communicate an essential instruction or result only through sound.
 - [ ] Check the interface at narrow viewport widths and browser zoom.
+- [ ] On game entry, make the shared orientation suggestion dismissible by keyboard, restore meaningful focus, and keep portrait play available without requiring rotation.

@@ -230,7 +230,7 @@ export function createGameUI(callbacks) {
 
       const scenario = state.scenario;
       document.querySelector("#round-count").textContent =
-        `Rodada ${state.roundIndex + 1} de ${state.rounds} · faltam ${state.rounds - state.roundIndex}`;
+        `Vestir a Princesa · Rodada ${state.roundIndex + 1} de ${state.rounds} · faltam ${state.rounds - state.roundIndex}`;
       document.querySelector("#round-progress-fill").style.width =
         `${((state.roundIndex + 1) / state.rounds) * 100}%`;
       document.querySelector("#scenario-icon").textContent = scenario.icon;

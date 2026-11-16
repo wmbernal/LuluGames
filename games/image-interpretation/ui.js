@@ -49,7 +49,7 @@ export function createGameUI(callbacks) {
         return;
       }
       const scene = state.scenes[state.roundIndex];
-      roundCount.textContent = `Tema ${callbacks.theme.label} · Exercício ${state.roundIndex + 1} de ${state.rounds}`;
+      roundCount.textContent = `O que está acontecendo? · Tema ${callbacks.theme.label} · Exercício ${state.roundIndex + 1} de ${state.rounds}`;
       if (renderedSceneId !== scene.id || !answers.children.length) {
         renderedSceneId = scene.id;
         image.src = scene.image;

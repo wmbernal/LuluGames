@@ -10,10 +10,13 @@ import {
   placeWord,
   validateContent,
 } from "./game.js?v=2";
-import { createGameUI } from "./ui.js?v=3";
+import { createGameUI } from "./ui.js?v=4";
+import { focusGameOnEntry } from "../../shared/js/initial-focus.js?v=2";
+import { setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const requestedLevel = new URLSearchParams(window.location.search).get("level");
 const loadError = document.querySelector("#load-error");
+setupOrientationSuggestion();
 
 async function loadContent() {
   const response = await fetch("./content.json", { cache: "no-cache" });
@@ -73,7 +76,7 @@ function start(content) {
   });
 
   ui.render(state);
-  ui.focusFirstWord();
+  focusGameOnEntry(() => ui.focusFirstWord());
 }
 
 loadContent()

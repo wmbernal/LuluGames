@@ -59,7 +59,7 @@ export function createGameUI(callbacks) {
       }
 
       const question = state.questions[state.roundIndex];
-      roundCount.textContent = `Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
+      roundCount.textContent = `O que eu digo? · Pergunta ${state.roundIndex + 1} de ${state.rounds}`;
       questionText.textContent = question.question;
 
       if (renderedQuestionId !== question.id) {

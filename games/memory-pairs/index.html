@@ -7,16 +7,16 @@
     <title>Jogo dos Pares — Lulu Games</title>
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
-    <link rel="stylesheet" href="../../shared/css/components.css?v=6">
-    <link rel="stylesheet" href="./game.css?v=9">
-    <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./session.js?v=9"></script>
+    <link rel="stylesheet" href="../../shared/css/components.css?v=7">
+    <link rel="stylesheet" href="./game.css?v=10">
+    <link rel="stylesheet" href="../../shared/css/scene.css?v=3">
+    <script type="module" src="./session.js?v=11"></script>
   </head>
   <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
     <main class="game-page" id="main-content">
-      <section class="game-heading" aria-labelledby="game-title">
+      <section class="game-heading game-heading--hidden" aria-labelledby="game-title">
         <p class="eyebrow">Jogo de combinar</p>
         <h1 id="game-title">Jogo dos Pares</h1>
       </section>
@@ -52,16 +52,6 @@
         </nav>
       </footer>
     </main>
-
-    <dialog class="leave-dialog orientation-dialog" id="orientation-dialog" aria-labelledby="orientation-title">
-      <form method="dialog">
-        <div class="orientation-dialog__icon" aria-hidden="true">
-          <span>📱</span><span class="orientation-dialog__arrow">↻</span><span class="orientation-dialog__landscape">📱</span>
-        </div>
-        <h2 id="orientation-title">Vire na horizontal</h2>
-        <button class="button button--secondary" type="submit" autofocus>Continuar assim</button>
-      </form>
-    </dialog>
 
     <dialog class="leave-dialog" id="leave-dialog" aria-labelledby="leave-title">
       <form method="dialog">

@@ -42,6 +42,49 @@
   background: var(--color-surface-soft);
 }
 
+.orientation-dialog {
+  width: min(calc(100% - var(--space-8)), var(--layout-dialog-width));
+  padding: var(--space-8);
+  color: var(--color-text);
+  text-align: center;
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.orientation-dialog::backdrop {
+  background: var(--color-backdrop);
+}
+
+.orientation-dialog__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-h1);
+  line-height: 1;
+}
+
+.orientation-dialog__arrow {
+  color: var(--color-primary);
+}
+
+.orientation-dialog__landscape {
+  transform: rotate(90deg);
+}
+
+.orientation-dialog h2 {
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-h3);
+}
+
+.orientation-dialog button:focus {
+  outline: var(--border-width-medium) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+
 .game-nav-button {
   min-width: calc(var(--target-size) * 3);
   min-height: calc(var(--target-size) + var(--space-2));

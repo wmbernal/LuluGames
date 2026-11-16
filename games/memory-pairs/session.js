@@ -7,12 +7,9 @@ import {
 } from "../../shared/js/audio.js?v=5";
 import { createMatchBoard, isGameFinished, matchCards } from "./game.js?v=5";
 import { getTheme } from "./data.js?v=4";
-import { createGameUI } from "./ui.js?v=7";
-import {
-  PORTRAIT_SCREEN_QUERY,
-  consumeOrientationSuggestion,
-  suggestLandscapeOnEntry,
-} from "./orientation.js?v=2";
+import { createGameUI } from "./ui.js?v=8";
+import { alignBoardOnLandscape } from "./landscape.js?v=1";
+import { setupOrientationSuggestion } from "../../shared/js/orientation.js?v=1";
 
 const COMPLETION_DELAY_MS = 350;
 const selectedTheme = getTheme(new URLSearchParams(window.location.search).get("theme"));
@@ -99,14 +96,9 @@ function advanceSession() {
 }
 
 startBoard();
-const entryUrl = new URL(window.location.href);
-const alreadySuggested = consumeOrientationSuggestion(entryUrl);
-if (entryUrl.href !== window.location.href) {
-  window.history.replaceState(window.history.state, "", entryUrl.href);
-}
-if (!alreadySuggested) {
-  suggestLandscapeOnEntry(
-    document.querySelector("#orientation-dialog"),
-    window.matchMedia(PORTRAIT_SCREEN_QUERY),
-  );
-}
+alignBoardOnLandscape(
+  window,
+  document.querySelector("#round-count"),
+  () => state.phase === "playing",
+);
+setupOrientationSuggestion();
