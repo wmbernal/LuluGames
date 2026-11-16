@@ -8,6 +8,7 @@ import {
 import { createMatchBoard, isGameFinished, matchCards } from "./game.js?v=5";
 import { getTheme } from "./data.js?v=4";
 import { createGameUI } from "./ui.js?v=7";
+import { suggestLandscapeOnEntry } from "./orientation.js?v=1";
 
 const COMPLETION_DELAY_MS = 350;
 const selectedTheme = getTheme(new URLSearchParams(window.location.search).get("theme"));
@@ -94,3 +95,7 @@ function advanceSession() {
 }
 
 startBoard();
+suggestLandscapeOnEntry(
+  document.querySelector("#orientation-dialog"),
+  window.matchMedia("(orientation: portrait) and (max-width: 1024px) and (pointer: coarse)"),
+);

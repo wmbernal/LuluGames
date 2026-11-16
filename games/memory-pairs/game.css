@@ -324,6 +324,37 @@
   gap: var(--space-2);
 }
 
+.orientation-dialog {
+  text-align: center;
+}
+
+.orientation-dialog__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-h1);
+  line-height: 1;
+}
+
+.orientation-dialog__arrow {
+  color: var(--color-primary);
+}
+
+.orientation-dialog__landscape {
+  transform: rotate(90deg);
+}
+
+.orientation-dialog h2 {
+  margin-bottom: var(--space-6);
+}
+
+.orientation-dialog button:focus {
+  outline: var(--border-width-medium) solid var(--color-focus);
+  outline-offset: var(--space-1);
+}
+
 @media (max-width: 640px) {
   .theme-picker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
