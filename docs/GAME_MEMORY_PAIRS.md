@@ -10,7 +10,7 @@ Each selected card is spoken in Brazilian Portuguese. Correct pairs receive spec
 
 The playing header keeps only a live status pill with the theme, current round, and matched-pair count. The separate theme icon/name and introductory drag/select instruction are omitted to save space at the user's request; the cards remain keyboard-operable.
 
-On entering the playing screen on a portrait-oriented touch device with a viewport up to 1024 CSS pixels wide, a dialog suggests **Vire na horizontal**. It closes when the viewport no longer matches that condition, or the player may choose **Continuar assim**. The suggestion appears only on entry, not again when the device is turned during the same page visit; it does not appear on the theme picker.
+On entering the theme picker or directly entering the playing screen with a portrait viewport up to 1024 CSS pixels wide, a dialog suggests **Vire na horizontal**, regardless of pointer type. It closes when the viewport no longer matches that condition, or the player may choose **Continuar assim**. When the suggestion was shown on the theme picker, it is not repeated when a theme is selected. It appears only on entry, not again when the device is turned during the same page visit.
 
 ## Match rules
 

@@ -1,4 +1,9 @@
 import { THEMES } from "./data.js?v=4";
+import {
+  PORTRAIT_SCREEN_QUERY,
+  markOrientationSuggested,
+  suggestLandscapeOnEntry,
+} from "./orientation.js?v=2";
 
 const themeList = document.querySelector("#theme-list");
 
@@ -26,4 +31,15 @@ for (const theme of THEMES) {
 
   link.append(icon, title, description, pairCount);
   themeList.append(link);
+}
+
+if (suggestLandscapeOnEntry(
+  document.querySelector("#orientation-dialog"),
+  window.matchMedia(PORTRAIT_SCREEN_QUERY),
+)) {
+  for (const link of themeList.querySelectorAll("a")) {
+    const url = new URL(link.href);
+    markOrientationSuggested(url);
+    link.href = url.href;
+  }
 }

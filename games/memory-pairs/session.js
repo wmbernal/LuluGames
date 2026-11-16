@@ -8,7 +8,11 @@ import {
 import { createMatchBoard, isGameFinished, matchCards } from "./game.js?v=5";
 import { getTheme } from "./data.js?v=4";
 import { createGameUI } from "./ui.js?v=7";
-import { suggestLandscapeOnEntry } from "./orientation.js?v=1";
+import {
+  PORTRAIT_SCREEN_QUERY,
+  consumeOrientationSuggestion,
+  suggestLandscapeOnEntry,
+} from "./orientation.js?v=2";
 
 const COMPLETION_DELAY_MS = 350;
 const selectedTheme = getTheme(new URLSearchParams(window.location.search).get("theme"));
@@ -95,7 +99,14 @@ function advanceSession() {
 }
 
 startBoard();
-suggestLandscapeOnEntry(
-  document.querySelector("#orientation-dialog"),
-  window.matchMedia("(orientation: portrait) and (max-width: 1024px) and (pointer: coarse)"),
-);
+const entryUrl = new URL(window.location.href);
+const alreadySuggested = consumeOrientationSuggestion(entryUrl);
+if (entryUrl.href !== window.location.href) {
+  window.history.replaceState(window.history.state, "", entryUrl.href);
+}
+if (!alreadySuggested) {
+  suggestLandscapeOnEntry(
+    document.querySelector("#orientation-dialog"),
+    window.matchMedia(PORTRAIT_SCREEN_QUERY),
+  );
+}
