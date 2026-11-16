@@ -1,4 +1,4 @@
-import { gameCatalog } from "./catalog.js?v=8";
+import { gameCatalog } from "./catalog.js?v=11";
 import "./settings.js?v=2";
 
 const catalogElement = document.querySelector("#game-catalog");
@@ -6,6 +6,7 @@ const catalogElement = document.querySelector("#game-catalog");
 function createGameItem(game) {
   const item = document.createElement(game.available ? "a" : "button");
   item.className = "menu-game";
+  item.style.setProperty("--tile-color", game.color);
   if (game.available) {
     item.href = game.href;
   } else {
@@ -22,25 +23,13 @@ function createGameItem(game) {
   iconImage.alt = "";
   icon.append(iconImage);
 
-  const text = document.createElement("span");
-  text.className = "menu-game__text";
   const title = document.createElement("span");
   title.className = "menu-game__title";
-  title.textContent = game.title;
-  const description = document.createElement("span");
-  description.className = "menu-game__desc";
-  description.textContent = game.description;
-  text.append(title, description);
+  title.textContent = game.label;
 
-  item.append(icon, text);
+  item.append(icon, title);
 
-  if (game.available) {
-    const go = document.createElement("span");
-    go.className = "menu-game__go";
-    go.setAttribute("aria-hidden", "true");
-    go.textContent = "›";
-    item.append(go);
-  } else {
+  if (!game.available) {
     const badge = document.createElement("span");
     badge.className = "menu-game__badge";
     badge.textContent = "Em breve";

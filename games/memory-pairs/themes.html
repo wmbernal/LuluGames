@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="../../shared/css/tokens.css?v=5">
     <link rel="stylesheet" href="../../shared/css/base.css?v=5">
     <link rel="stylesheet" href="../../shared/css/components.css?v=7">
-    <link rel="stylesheet" href="./game.css?v=9">
+    <link rel="stylesheet" href="./game.css?v=11">
     <link rel="stylesheet" href="../../shared/css/scene.css?v=2">
-    <script type="module" src="./themes.js?v=5"></script>
+    <script type="module" src="./themes.js?v=6"></script>
   </head>
   <body class="app-page">
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
@@ -22,12 +22,11 @@
     </header>
 
     <main class="game-page" id="main-content">
-      <section class="game-heading" aria-labelledby="page-title">
-        <p class="eyebrow">Jogo dos Pares</p>
-        <h1 id="page-title">Escolha um tema para jogar</h1>
-        <p class="theme-picker-instructions">Cada tema tem seis pares de figuras ou palavras por rodada.</p>
+      <section class="game-heading game-heading--hidden" aria-labelledby="page-title">
+        <h1 id="page-title">Jogo dos Pares</h1>
       </section>
 
+      <p class="theme-picker-instructions">Escolha um tema. Cada rodada tem seis pares.</p>
       <section class="theme-picker" id="theme-list" aria-label="Temas disponíveis"></section>
 
       <footer class="game-footer">

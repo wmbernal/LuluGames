@@ -19,14 +19,6 @@ for (const theme of THEMES) {
   title.className = "theme-choice__title";
   title.textContent = theme.label;
 
-  const description = document.createElement("span");
-  description.className = "theme-choice__description";
-  description.textContent = theme.description;
-
-  const pairCount = document.createElement("span");
-  pairCount.className = "theme-choice__count";
-  pairCount.textContent = "6 pares por rodada";
-
-  link.append(icon, title, description, pairCount);
+  link.append(icon, title);
   themeList.append(link);
 }

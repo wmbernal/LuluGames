@@ -5,7 +5,7 @@ The project is a static site: HTML entry points, CSS, and browser-native JavaScr
 ## Structure and responsibilities
 
 - `index.html`: game selection home.
-- `shared/js/home.js`: renders catalog data and opens/saves the home-page preferences panel.
+- `shared/js/home.js`: renders the home catalog and initializes saved shared preferences.
 - `games/dress-princess/index.html`: game entry point and accessible page structure.
 - `games/dress-princess/game.js`: session state, category-based outfit validation, rounds, reward unlock, and orchestration.
 - `games/dress-princess/ui.js`: DOM rendering, item tray, layered outfit, pointer/keyboard interactions, and settings.
@@ -55,6 +55,6 @@ In O que eu digo?, `content.json` is the source of truth for the whole game. Eac
 
 ## Add a catalog game
 
-Create a new `games/<game-name>/` entry point and modules, then add a catalog object in `shared/js/catalog.js` with a stable `id`, Portuguese `title`, short `description`, `icon`, relative `href`, and `available` boolean. The home page renders catalog data rather than hard-coding individual game cards. Keep unavailable entries clearly marked and non-interactive until their page is ready.
+Create a new `games/<game-name>/` entry point and modules, then add an object in `shared/js/catalog.js`: stable `id`, full Portuguese `title`, one-to-three-word Portuguese `label`, local SVG `icon`, soft design-token `color` (for example `var(--color-surface-soft)`), relative `href`, and `available` boolean. Add a recognizable icon in the existing outlined SVG style; no layout code change is needed. The tile shows only the label and icon; its accessible name uses the visible label. Choose a label that clearly identifies the game. Use `hidden: true` to omit an entry, and keep unavailable entries marked and non-interactive until ready. The grid wraps and scrolls as needed.
 
 Import `setupOrientationSuggestion` from `shared/js/orientation.js` on each game entry and call it once on page entry. Selection pages call it with `{ selection: true }` and pass its return value to `markSelectionLink(link, suggested)` for each game link, including links generated asynchronously. The game page calls it without options, consuming the one-navigation signal while preserving the theme or level parameter. Include `shared/css/components.css` for the dialog. For asynchronous game initialization, use `focusGameOnEntry` from `shared/js/initial-focus.js` so initial focus waits for an open orientation dialog. Keep the dialog optional; do not lock orientation.

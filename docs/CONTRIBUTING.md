@@ -6,6 +6,7 @@
 - Use clear camelCase identifiers and English code/comments. Keep all player-facing text in Brazilian Portuguese.
 - Avoid global variables, inline event handlers, and unnecessary comments.
 - Reuse design tokens and components from `shared/css/`; do not introduce harsh colors, motion, or undersized targets.
+- For a new home tile, add its catalog entry and consistent local SVG as described in `ARCHITECTURE.md`; use a recognizable large icon and a one-to-three-word Portuguese label, without a description.
 - Treat user settings as optional preferences. Validate persisted values and continue gracefully if browser storage is unavailable.
 - Preserve keyboard access, visible focus, meaningful labels, text alternatives, and reduced-motion behavior.
 - Any drag-and-drop interaction must also work with keyboard and direct item selection.

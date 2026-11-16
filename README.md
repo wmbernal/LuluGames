@@ -59,11 +59,11 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for module responsibilities and
 
 1. Create a folder under `games/` with an `index.html` entry point and game-specific files.
 2. Keep game data separate from rendering and game rules. Use ES modules and shared CSS tokens/components.
-3. Add a catalog entry in `shared/js/catalog.js`, including a Portuguese title, short description, URL, and availability state.
+3. Add a catalog entry in `shared/js/catalog.js` with a full Portuguese title, a one-to-three-word label, local SVG icon, soft token color, relative URL, and availability state. The menu automatically adds a square tile; see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 4. Follow [docs/UX_PRINCIPLES.md](docs/UX_PRINCIPLES.md), [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md), and [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
 5. Test keyboard navigation, pointer/touch interactions, small screens, reduced motion, and the complete session flow before publishing.
 
-Set `hidden: true` on a catalog entry to hide it from the home menu without removing the game or disabling its direct URL. **Vestir a Princesa** is currently hidden.
+Set `hidden: true` on a catalog entry to hide it from the home menu without removing the game or disabling its direct URL. **Vestir a Princesa** is currently hidden this way.
 
 To add clothing or a scenario to **Vestir a Princesa**, add an SVG item with the shared `viewBox` to `assets/images/`, then add its category, image path, and context tags in `games/dress-princess/data.js`. Add the scenario's required tag and an option matching every category. See [docs/GAME_VESTIR_PRINCESA.md](docs/GAME_VESTIR_PRINCESA.md) for the matching rule.
 

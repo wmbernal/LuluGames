@@ -2,7 +2,7 @@
 
 ## Goal and session flow
 
-The player first chooses one of seven themes: Princesas, Casa, Animais, Transportes, Comidas, Jardim, or Palavras que rimam. Each theme has five different rounds of six pairs. Every card has an image; the rhymes theme also shows the word and pairs words that rhyme. The board has six cards on each side. The player can drag a card to its pair from either side. Keyboard and other click-based users can select a card and then select a card on the opposite side.
+The player first chooses one of seven themes: Princesas, Casa, Animais, Transportes, Comidas, Jardim, or Palavras que rimam. Each theme choice shows only its icon and name; the picker retains a short shared instruction and an accessible game heading. Each theme has five different rounds of six pairs. Every card has an image; the rhymes theme also shows the word and pairs words that rhyme. The board has six cards on each side. The player can drag a card to its pair from either side. Keyboard and other click-based users can select a card and then select a card on the opposite side.
 
 Matched cards stay visible and receive a check mark. Card positions are shuffled. The selected theme stays the same during a session, and each next round has a different set of pairs. The global session setting controls the number of short boards in a session (3, 4, or 5). After a board, show **Você encontrou todos os pares!** and the option to continue. After the last board, show **Terminamos por hoje!** and offer **Jogar de novo** or **Início**. No clock, attempt count, score, or ranking is displayed.
 

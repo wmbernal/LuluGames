@@ -2,7 +2,8 @@ export const gameCatalog = [
   {
     id: "dress-princess",
     title: "Vestir a Princesa",
-    description: "Escolha roupas que combinam com cada situação do dia.",
+    label: "Vestir a princesa",
+    color: "var(--color-error-soft)",
     icon: "./assets/images/ui/dress-princess.svg",
     href: "./games/dress-princess/index.html",
     available: true,
@@ -11,7 +12,8 @@ export const gameCatalog = [
   {
     id: "memory-pairs",
     title: "Jogo dos Pares",
-    description: "Escolha um tema e combine figuras relacionadas.",
+    label: "Encontrar pares",
+    color: "var(--color-surface-soft)",
     icon: "./assets/images/ui/memory-pairs.svg",
     href: "./games/memory-pairs/themes.html",
     available: true,
@@ -19,7 +21,8 @@ export const gameCatalog = [
   {
     id: "image-interpretation",
     title: "O que está acontecendo?",
-    description: "Observe a imagem e escolha a frase que combina.",
+    label: "O que acontece?",
+    color: "var(--color-focus-soft)",
     icon: "./assets/images/ui/image-interpretation.svg",
     href: "./games/image-interpretation/themes.html",
     available: true,
@@ -27,7 +30,8 @@ export const gameCatalog = [
   {
     id: "emotions",
     title: "Jogo das Emoções",
-    description: "Observe rostos, gestos e situações para reconhecer emoções.",
+    label: "Como se sente?",
+    color: "var(--color-highlight-soft)",
     icon: "./assets/images/ui/emotions.svg",
     href: "./games/emotions/levels.html",
     available: true,
@@ -35,7 +39,8 @@ export const gameCatalog = [
   {
     id: "what-do-i-say",
     title: "O que eu digo?",
-    description: "Escolha o que dizer em situações do dia a dia.",
+    label: "O que dizer?",
+    color: "var(--color-feedback-soft)",
     icon: "./assets/images/ui/what-do-i-say.svg",
     href: "./games/what-do-i-say/index.html",
     available: true,
@@ -43,7 +48,8 @@ export const gameCatalog = [
   {
     id: "put-in-order",
     title: "Coloque em Ordem",
-    description: "Organize palavras para montar frases.",
+    label: "Coloque em ordem",
+    color: "var(--color-secondary)",
     icon: "./assets/images/ui/put-in-order.svg",
     href: "./games/put-in-order/levels.html",
     available: true,
