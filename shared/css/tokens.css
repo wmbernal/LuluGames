@@ -27,6 +27,13 @@
   --color-highlight-soft: #FFF4C7;
   --color-highlight-border: #B59442;
   --color-backdrop: rgb(38 61 39 / 38%);
+  --color-theme-rose: rgb(244 214 228 / 80%);
+  --color-theme-apricot: rgb(248 222 197 / 80%);
+  --color-theme-lavender: rgb(228 220 243 / 80%);
+  --color-theme-blue: rgb(210 233 243 / 80%);
+  --color-theme-peach: rgb(247 219 209 / 80%);
+  --color-theme-green: rgb(217 236 205 / 80%);
+  --color-theme-periwinkle: rgb(217 228 246 / 80%);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;

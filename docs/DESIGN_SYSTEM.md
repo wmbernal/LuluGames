@@ -33,6 +33,7 @@ The interface uses the CSS custom properties in `shared/css/tokens.css`; compone
 | `--color-highlight-soft` | `#FFF4C7` | Gentle hint background |
 | `--color-highlight-border` | `#B59442` | Gentle hint border |
 | `--color-backdrop` | `rgb(38 61 39 / 38%)` | Modal backdrop |
+| `--color-theme-*` | translucent rose, apricot, lavender, blue, peach, green and periwinkle | Jogo dos Pares theme choices |
 
 Primary and secondary button text must remain legible against their backgrounds. Do not rely on color alone to communicate a state.
 
@@ -49,6 +50,8 @@ Spacing uses a 4px base scale: 4, 8, 12, 16, 24, 32, and 48px. Cards use a 24px 
 The home page and every game/theme page share one full-screen photograph: Pexels photo 8709295 by Polina. Inner pages use `assets/images/ui/home-bg.jpg` with a soft blur and a cream veil so cards stay readable. The home uses the top crop, `assets/images/ui/home-bg-top.jpg`, a centered warm menu panel and a cream brand pill. The backdrop is decorative and never carries information.
 
 Cards use a warm surface, a light border and a soft grounded shadow. Theme choices and game cards may lift gently on hover; selected, correct and matched states keep their stronger focus/success colors. All movement is decorative and disabled when motion is reduced. Game screens have no top header: the brand stays on the home and theme chooser, while game pages keep all navigation in the footer (Voltar/Temas + Início) to give the game the full viewport. Footer navigation uses distinct token-based colors and visible Portuguese labels so color is never the only cue.
+
+The Jogo dos Pares theme chooser uses a distinct translucent pastel token per theme, with readable dark text and a visible focus ring. Keep its tint on hover and focus; color supplements the icon and label rather than identifying a choice on its own.
 
 The home menu uses large square, fully clickable game tiles in a two- or three-column grid. Each combines a recognizable local SVG, a distinct soft token color and a one-to-three-word Portuguese label, without descriptions. Use few words and large meaningful icons on future selection screens too; keep full accessible names when abbreviated labels need context. The grid wraps and scrolls vertically when necessary, including at high zoom or in short windows.
 
